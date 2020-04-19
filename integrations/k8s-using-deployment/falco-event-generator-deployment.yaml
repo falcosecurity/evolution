@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: falco-event-generator
-        image: sysdig/falco-event-generator:latest
+        image: falcosecurity/event-generator:latest
