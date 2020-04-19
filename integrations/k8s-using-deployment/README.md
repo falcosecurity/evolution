@@ -6,7 +6,8 @@ To deploy Falco on Kubernetes for audit:
 - `k8s-with-rbac` - This directory provides a definition to deploy a Deployment on Kubernetes with RBAC enabled.
 
 Also provided:
-- `falco-event-generator-deployment.yaml` - A Kubernetes Deployment to generate sample events. This is useful for testing, but note it will generate a large number of events.
+- `falco-event-generator-deployment.yaml` - A Kubernetes Deployment to generate sample events in a loop. This is useful for testing, but note it will generate a large number of events.
+- `falco-event-generator-job.yaml` - A Kubernetes Job to generate sample events once. This is useful for testing, but note it will generate a large number of events.
 
 ## Deploying to Kubernetes with RBAC enabled
 
