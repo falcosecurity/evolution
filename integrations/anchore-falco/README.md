@@ -75,7 +75,7 @@ docker build -t sysdig/anchore-falco .
 
 ### Running the image
 
-An image exists on DockerHub, its name is ```sysdig/anchore-falco```.
+Once the ```anchore-falco``` has been built locally, you can use it.
 
 So you can run directly with Docker:
 
