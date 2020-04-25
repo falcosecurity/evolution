@@ -109,7 +109,7 @@ k8s-using-daemonset$ kubectl logs falco-74htl
 k8s-using-daemonset$
 ```
 
-Alternatively, you can deploy the [Falco Event Generator](https://github.com/draios/falco/wiki/Generating-Sample-Events) deployement to have events automatically generated. Please note that this Deployment will generate a large number of events.
+Alternatively, you can deploy the [event-generator](https://github.com/falcosecurity/event-generator) deployement to have events automatically generated. Please note that this Deployment will generate a large number of events.
 
 ```
 k8s-using-daemonset$ kubectl create -f falco-event-generator-deployment.yaml \
