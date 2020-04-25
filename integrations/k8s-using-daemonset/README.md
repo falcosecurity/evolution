@@ -108,11 +108,4 @@ k8s-using-daemonset$
 
 Alternatively, you can deploy the [event-generator](https://github.com/falcosecurity/event-generator) deployement to have events automatically generated. Please note that this Deployment will generate a large number of events.
 
-```
-k8s-using-daemonset$ kubectl create -f falco-event-generator-deployment.yaml \
-&& sleep 1 \
-&& kubectl delete -f falco-event-generator-deployment.yaml
-deployment "falco-event-generator-deployment" created
-deployment "falco-event-generator-deployment" deleted
-k8s-using-daemonset$
-```
+You can follow [these steps](https://github.com/falcosecurity/event-generator#with-kubernetes) in order to deploy it in Kubernetes.
