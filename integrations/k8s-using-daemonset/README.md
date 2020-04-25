@@ -6,7 +6,6 @@ The two options are provided to deploy a Daemon Set:
 - `k8s-with-rbac` - This directory provides a definition to deploy a Daemon Set on Kubernetes with RBAC enabled.
 - `k8s-without-rbac` - This directory provides a definition to deploy a Daemon Set on Kubernetes without RBAC enabled. **This method is deprecated in favor of RBAC-based installs, and won't be updated going forward.**
 
-Also provided:
 
 ## Deploying to Kubernetes with RBAC enabled
 
