@@ -83,7 +83,7 @@ So you can run directly with Docker:
 docker run --rm -e ANCHORE_CLI_USER=<user-for-custom-anchore-engine> \
                 -e ANCHORE_CLI_PASS=<password-for-user-for-custom-anchore-engine> \
                 -e ANCHORE_CLI_URL=http://<custom-anchore-engine-host>:8228/v1 \
-                sysdig/anchore-falco
+                anchore-falco
 ```
 
 And this will output the Falco rule based on *custom-anchore-engine-host*.
