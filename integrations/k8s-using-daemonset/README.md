@@ -8,7 +8,6 @@ The two options are provided to deploy a Daemon Set:
 
 Also provided:
 - `falco-event-generator-deployment.yaml` - A Kubernetes Deployment to generate sample events in a loop. This is useful for testing, but note it will generate a large number of events.
-- `falco-event-generator-job.yaml` - A Kubernetes Job to generate sample events once. This is useful for testing, but note it will generate a large number of events.
 
 ## Deploying to Kubernetes with RBAC enabled
 
