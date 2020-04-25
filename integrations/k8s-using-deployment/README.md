@@ -5,10 +5,6 @@ This directory gives you the required YAML files to stand up Falco on Kubernetes
 To deploy Falco on Kubernetes for audit:
 - `k8s-with-rbac` - This directory provides a definition to deploy a Deployment on Kubernetes with RBAC enabled.
 
-Also provided:
-- `falco-event-generator-deployment.yaml` - A Kubernetes Deployment to generate sample events in a loop. This is useful for testing, but note it will generate a large number of events.
-- `falco-event-generator-job.yaml` - A Kubernetes Job to generate sample events once. This is useful for testing, but note it will generate a large number of events.
-
 ## Deploying to Kubernetes with RBAC enabled
 
 Since v1.8 RBAC has been available in Kubernetes, and running with RBAC enabled is considered the best practice. The `k8s-with-rbac` directory provides the YAML to create a Service Account for Falco, as well as the ClusterRoles and bindings to grant the appropriate permissions to the Service Account.
