@@ -70,7 +70,7 @@ pipenv run mamba --format=documentation
 ### Build the image
 
 ```
-docker build -t sysdig/anchore-falco .
+docker build -t anchore-falco .
 ```
 
 ### Running the image
