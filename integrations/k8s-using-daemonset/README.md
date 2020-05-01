@@ -31,9 +31,9 @@ The Daemon Set also relies on a Kubernetes ConfigMap to store the Falco configur
 
 ```
 k8s-using-daemonset$ mkdir -p k8s-with-rbac/falco-config
-k8s-using-daemonset$ cp ../../falco.yaml k8s-with-rbac/falco-config/
-k8s-using-daemonset$ cp ../../rules/falco_rules.* k8s-with-rbac/falco-config/
-k8s-using-daemonset$ cp ../../rules/k8s_audit_rules.yaml k8s-with-rbac/falco-config/
+k8s-using-daemonset$ cp ./falco.yaml k8s-with-rbac/falco-config/
+k8s-using-daemonset$ cp ./rules/falco_rules.* k8s-with-rbac/falco-config/
+k8s-using-daemonset$ cp ./rules/k8s_audit_rules.yaml k8s-with-rbac/falco-config/
 ```
 
 If you want to send Falco alerts to a Slack channel, you'll want to modify the `falco.yaml` file to point to your Slack webhook. For more information on getting a webhook URL for your Slack team, refer to the [Slack documentation](https://api.slack.com/incoming-webhooks). Add the below to the bottom of the `falco.yaml` config file you just copied to enable Slack messages.
