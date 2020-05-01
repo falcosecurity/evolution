@@ -4,7 +4,6 @@ This directory gives you the required YAML files to stand up Falco on Kubernetes
 
 The two options are provided to deploy a Daemon Set:
 - `k8s-with-rbac` - This directory provides a definition to deploy a Daemon Set on Kubernetes with RBAC enabled.
-- `k8s-without-rbac` - This directory provides a definition to deploy a Daemon Set on Kubernetes without RBAC enabled. **This method is deprecated in favor of RBAC-based installs, and won't be updated going forward.**
 
 
 ## Deploying to Kubernetes with RBAC enabled
@@ -60,34 +59,6 @@ k8s-using-daemonset$ kubectl create -f k8s-with-rbac/falco-daemonset-configmap.y
 daemonset "falco" created
 k8s-using-daemonset$
 ```
-
-
-## Deploying to Kubernetes without RBAC enabled (**Deprecated**)
-
-If you are running Kubernetes with Legacy Authorization enabled, you can use `kubectl` to deploy the Daemon Set provided in the `k8s-without-rbac` directory. The example provides the ability to post messages to a Slack channel via a webhook. For more information on getting a webhook URL for your Slack team, refer to the [Slack documentation](https://api.slack.com/incoming-webhooks). Modify the [`args`](https://github.com/draios/falco/blob/dev/examples/k8s-using-daemonset/falco-daemonset.yaml#L21) passed to the Falco container to point to the appropriate URL for your webhook.
-
-```
-k8s-using-daemonset$ kubectl create -f k8s-without-rbac/falco-daemonset.yaml
-```
-
-When running falco via a container, you might see error messages like the following:
-```
-mkdir: cannot create directory '/lib/modules/3.10.0-693.el7.centos.test.x86_64/kernel/extra': Read-only file system
-cp: cannot create regular file '/lib/modules/3.10.0-693.el7.centos.test.x86_64/kernel/extra/falco-probe.ko.xz': No such file or directory
-```
-
-These error messages are innocuous, but if you would like to remove them you can change the /host/lib/modules mount to read-write, by doing below change in `k8s-with-rbac/falco
-daemonset-configmap.yaml`:
-
-```
-             - mountPath: /host/lib/modules
-               name: lib-modules
--              readOnly: true
-+              #readOnly: true
-```
-
-However, note that this will result in the `falco-probe.ko.xz` file being saved to `/lib/modules` on the host, even after the falco container is removed.
-
 
 ## Verifying the installation
 
