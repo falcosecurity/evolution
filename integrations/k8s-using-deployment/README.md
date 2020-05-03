@@ -2,7 +2,7 @@
 
 This directory gives you the required YAML files to stand up Falco on Kubernetes only for audit purpose as a Deployment.
 
-## Deploying to Kubernetes with RBAC enabled
+## Deploying to Kubernetes
 
 Since v1.8 RBAC has been available in Kubernetes, and running with RBAC enabled is considered the best practice. This directory provides the YAML to create a Service Account for Falco, as well as the ClusterRoles and bindings to grant the appropriate permissions to the Service Account.
 
