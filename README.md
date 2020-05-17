@@ -7,8 +7,9 @@ The intention is to give users easier access to them but to keep them separated 
 
 ## Repo structure
 
-- [`/integrations`](integrations/) - third-party integrations
+- [`/deploy`](deploy/) - deployment resources
 - [`/examples`](examples/) - various examples
+- [`/integrations`](integrations/) - third-party integrations
 - *More will come soon!*
 
 > When adding a new top-level directory, propose your motivations to the [maintainers](OWNERS).
