@@ -50,3 +50,15 @@ Now that we have the requirements for our Deployment in place, we can create our
 $ kubectl create -f ./deployment.yaml
 daemonset "falco" created
 ```
+
+### Deploy AuditSink objects
+
+[audit-sink.yaml.in](./audit-sink.yaml.in), in this directory, is a template audit sink configuration that defines the dynamic audit policy and webhook to route Kubernetes audit events to Falco.
+
+Run the following to fill in the template file with the `ClusterIP` IP address you created with the `falco-service` service above. Although services like `falco-service.default.svc.cluster.local` can not be resolved from the kube-apiserver, the ClusterIPs associated with those services are routable.
+
+```
+FALCO_SERVICE_CLUSTERIP=$(kubectl get service falco-k8s-audit -o=jsonpath={.spec.clusterIP}) envsubst < audit-sink.yaml.in > audit-sink.yaml
+```
+
+> The example above is not intended to be used in production. To register the webhook using a service reference please see the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#service-reference) and enable SSL for `webserver` feature in `falco.yaml`.
