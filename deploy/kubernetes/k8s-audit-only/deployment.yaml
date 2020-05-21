@@ -19,9 +19,7 @@ spec:
       serviceAccount: falco-account
       containers:
         - name: falco
-          image: falcosecurity/falco:latest
-          securityContext:
-            privileged: true
+          image: falcosecurity/falco-no-driver:latest
           args: [ "/usr/bin/falco", "--disable-source", "syscall", "-K", "/var/run/secrets/kubernetes.io/serviceaccount/token", "-k", "https://$(KUBERNETES_SERVICE_HOST)", "-pk"]
           volumeMounts:
             - mountPath: /etc/falco
