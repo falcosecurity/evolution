@@ -4,7 +4,6 @@ about: 'Request adoption or promotion to the "incubating" status'
 title: ''
 labels: kind/incubating
 assignees: ''
-
 ---
 
 **Description of Request**
