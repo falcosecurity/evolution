@@ -1,5 +1,0 @@
-blank_issues_enabled: true
-contact_links:
-  - name: Support
-    url: https://slack.k8s.io
-    about: "Please ask and answer questions in the #falco channel on the Kubernetes Slack"
