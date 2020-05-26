@@ -53,6 +53,7 @@ Run the following to fill in the template file with the `ClusterIP` IP address y
 
 ```
 FALCO_SERVICE_CLUSTERIP=$(kubectl get service falco-k8s-audit -o=jsonpath={.spec.clusterIP}) envsubst < audit-sink.yaml.in > audit-sink.yaml
+kubectl create -f audit-sink.yaml
 ```
 
 > The example above is not intended to be used in production. To register the webhook using a service reference please see the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#service-reference) and enable SSL for `webserver` feature in `falco.yaml`.
