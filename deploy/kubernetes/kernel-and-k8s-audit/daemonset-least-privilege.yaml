@@ -17,25 +17,10 @@ spec:
         role: security
     spec:
       serviceAccount: falco-account
+      hostPID: true
       initContainers:
-        - name: probeloader
-          image: falcosecurity/probeloader:latest
-          securityContext:
-            privileged: true
-          #env:
-          #  - name: FALCOCTL_FALCO_VERSION
-          #    value: 0.21.0
-          #  - name: FALCOCTL_FALCO_PROBE_URL
-          #    value:
-          #  - name: FALCOCTL_FALCO_PROBE_REPO
-          #    value: "https://s3.amazonaws.com/download.draios.com/stable/sysdig-probe-binaries/"
-          volumeMounts:
-            - mountPath: /host/boot
-              name: boot-fs
-              readOnly: true
-      containers:
-        - name: falco
-          image: falcosecurity/falco:0.21.0-slim
+        - name: falco-driver-loader
+          image: falcosecurity/falco-driver-loader:latest
           securityContext:
             privileged: true
 # Uncomment the 3 lines below to enable eBPF support for Falco.
@@ -45,14 +30,9 @@ spec:
 #          env:
 #          - name: FALCO_BPF_PROBE
 #            value: ""
-          args: [ "/usr/bin/falco", "--cri", "/run/containerd/containerd.sock", "-K", "/var/run/secrets/kubernetes.io/serviceaccount/token", "-k", "https://$(KUBERNETES_SERVICE_HOST)", "-pk"]
           volumeMounts:
-            - mountPath: /host/var/run/docker.sock
-              name: docker-socket
-            - mountPath: /host/run/containerd/containerd.sock
-              name: containerd-socket
-            - mountPath: /host/dev
-              name: dev-fs
+            - mountPath: /root/.falco
+              name: root-falco-fs
             - mountPath: /host/proc
               name: proc-fs
               readOnly: true
@@ -68,9 +48,34 @@ spec:
             - mountPath: /host/etc/
               name: etc-fs
               readOnly: true
+      containers:
+        - name: falco
+          image: falcosecurity/falco:0.23.0
+          securityContext:
+            capabilities: 
+              add: ["SYS_PTRACE"]
+# Uncomment the 3 lines below to enable eBPF support for Falco.
+# This allows Falco to run on Google COS.
+# Leave blank for the default probe location, or set to the path
+# of a precompiled probe.
+#          env:
+#          - name: FALCO_BPF_PROBE
+#            value: ""
+          args: [ "/usr/bin/falco", "--cri", "/run/containerd/containerd.sock", "-K", "/var/run/secrets/kubernetes.io/serviceaccount/token", "-k", "https://$(KUBERNETES_SERVICE_HOST)", "-pk"]
+          volumeMounts:
+            - mountPath: /root/.falco
+              name: root-falco-fs
+              readOnly: true
+            - mountPath: /host/var/run/docker.sock
+              name: docker-socket
+            - mountPath: /host/run/containerd/containerd.sock
+              name: containerd-socket
+            - mountPath: /host/dev
+              name: dev-fs
             - mountPath: /etc/falco
               name: falco-config
       volumes:
+        - name: root-falco-fs
         - name: docker-socket
           hostPath:
             path: /var/run/docker.sock
