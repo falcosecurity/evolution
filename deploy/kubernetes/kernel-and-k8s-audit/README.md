@@ -4,6 +4,15 @@ This directory gives you the required YAML files to stand up Falco on Kubernetes
 
 ## Kernel audit - deploying Falco to Kubernetes
 
+### Single step with Kustomize
+
+```
+$ kubectl apply -k .
+```
+
+
+### Step by step
+
 Since v1.8 RBAC has been available in Kubernetes, and running with RBAC enabled is considered the best practice. This directory provides the YAML to create a Service Account for Falco, as well as the ClusterRoles and bindings to grant the appropriate permissions to the Service Account.
 
 ```
@@ -59,7 +68,7 @@ daemonset "falco" created
 Run the following to fill in the template file with the `ClusterIP` IP address you created with the `falco-service` service above. Although services like `falco-service.default.svc.cluster.local` can not be resolved from the kube-apiserver, the ClusterIPs associated with those services are routable.
 
 ```
-FALCO_SERVICE_CLUSTERIP=$(kubectl get service falco-k8s-audit -o=jsonpath={.spec.clusterIP}) envsubst < audit-sink.yaml.in > audit-sink.yaml
+FALCO_SERVICE_CLUSTERIP=$(kubectl get service falco-service -o=jsonpath={.spec.clusterIP}) envsubst < audit-sink.yaml.in > audit-sink.yaml
 kubectl create -f audit-sink.yaml
 ```
 
