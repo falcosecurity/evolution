@@ -2,7 +2,7 @@
 
 This directory gives you the required YAML files to stand up Falco on Kubernetes as a Daemon Set. This will result in a Falco Pod being deployed to each node, and thus the ability to monitor any running containers for abnormal behavior.
 
-## Deploying to Kubernetes
+## Kernel audit - deploying Falco to Kubernetes
 
 Since v1.8 RBAC has been available in Kubernetes, and running with RBAC enabled is considered the best practice. This directory provides the YAML to create a Service Account for Falco, as well as the ClusterRoles and bindings to grant the appropriate permissions to the Service Account.
 
@@ -52,7 +52,7 @@ $ kubectl create -f ./daemonset.yaml
 daemonset "falco" created
 ```
 
-### Deploy AuditSink objects
+## Kubernetes audit - deploy AuditSink objects
 
 [audit-sink.yaml.in](./audit-sink.yaml.in), in this directory, is a template audit sink configuration that defines the dynamic audit policy and webhook to route Kubernetes audit events to Falco.
 
