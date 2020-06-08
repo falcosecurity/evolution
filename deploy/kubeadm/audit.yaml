@@ -1,0 +1,9 @@
+apiVersion: kubeadm.k8s.io/v1beta2
+kind: ClusterConfiguration
+metadata:
+  name: config
+apiServer:
+  extraArgs:
+    "audit-dynamic-configuration": "true"
+    "feature-gates=DynamicAuditing": "true"
+    "runtime-config=auditregistration.k8s.io/v1alpha1": "true"
