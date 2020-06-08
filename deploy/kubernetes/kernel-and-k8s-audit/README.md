@@ -52,6 +52,25 @@ $ kubectl create -f ./daemonset.yaml
 daemonset "falco" created
 ```
 
+### Deploy AuditSink objects
+
+[audit-sink.yaml.in](./audit-sink.yaml.in), in this directory, is a template audit sink configuration that defines the dynamic audit policy and webhook to route Kubernetes audit events to Falco.
+
+Run the following to fill in the template file with the `ClusterIP` IP address you created with the `falco-service` service above. Although services like `falco-service.default.svc.cluster.local` can not be resolved from the kube-apiserver, the ClusterIPs associated with those services are routable.
+
+```
+FALCO_SERVICE_CLUSTERIP=$(kubectl get service falco-k8s-audit -o=jsonpath={.spec.clusterIP}) envsubst < audit-sink.yaml.in > audit-sink.yaml
+kubectl create -f audit-sink.yaml
+```
+
+> The example above is not intended to be used in production. To register the webhook using a service reference please see the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#service-reference) and enable SSL for `webserver` feature in `falco.yaml`.
+
+## Verifying the installation
+
+In order to test that Falco is working correctly you can deploy the [event-generator](https://github.com/falcosecurity/event-generator) deployement to have events automatically generated. Please note that this Deployment will generate a large number of events.
+
+You can follow [these steps](https://github.com/falcosecurity/event-generator#with-kubernetes) in order to deploy it in Kubernetes.
+
 ## Verifying the installation
 
 In order to test that Falco is working correctly, you can launch a shell in a Pod. You should see a message in your Slack channel (if configured), or in the logs of the Falco pod.
@@ -62,8 +81,10 @@ NAME          READY     STATUS    RESTARTS   AGE
 falco-74htl   1/1       Running   0          13h
 falco-fqz2m   1/1       Running   0          13h
 falco-sgjfx   1/1       Running   0          13h
+
 $ kubectl exec -it falco-74htl bash
 root@falco-74htl:/# exit
+
 $ kubectl logs falco-74htl
 {"output":"17:48:58.590038385: Notice A shell was spawned in a container with an attached terminal (user=root k8s.pod=falco-74htl container=a98c2aa8e670 shell=bash parent=<NA> cmdline=bash  terminal=34816)","priority":"Notice","rule":"Terminal shell in container","time":"2017-12-20T17:48:58.590038385Z", "output_fields": {"container.id":"a98c2aa8e670","evt.time":1513792138590038385,"k8s.pod.name":"falco-74htl","proc.cmdline":"bash ","proc.name":"bash","proc.pname":null,"proc.tty":34816,"user.name":"root"}}
 ```
