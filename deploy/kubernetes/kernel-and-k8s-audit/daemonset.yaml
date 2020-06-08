@@ -17,6 +17,9 @@ spec:
         role: security
     spec:
       serviceAccount: falco-account
+      tolerations:
+        - key: node-role.kubernetes.io/master
+          effect: NoSchedule
       containers:
         - name: falco
           image: falcosecurity/falco:latest
