@@ -35,6 +35,9 @@ spec:
               name: docker-socket
             - mountPath: /host/run/containerd/containerd.sock
               name: containerd-socket
+            # required to create falco.sock
+            - mountPath: /var/run/falco
+              name: run-falco-fs
             - mountPath: /host/dev
               name: dev-fs
               readOnly: true
@@ -50,7 +53,7 @@ spec:
             - mountPath: /host/usr
               name: usr-fs
               readOnly: true
-            - mountPath: /host/etc/
+            - mountPath: /host/etc
               name: etc-fs
               readOnly: true
             - mountPath: /etc/falco
@@ -62,6 +65,10 @@ spec:
         - name: containerd-socket
           hostPath:
             path: /run/containerd/containerd.sock
+        # required to create falco.sock
+        - name: run-falco-fs
+          hostPath:
+              path: /var/run/falco
         - name: dev-fs
           hostPath:
             path: /dev
