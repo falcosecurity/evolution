@@ -3,7 +3,7 @@ kind: Config
 clusters:
 - name: falco
   cluster:
-    server: http://$FALCO_SERVICE_CLUSTERIP:8765/k8s_audit
+    server: http://$FALCO_SERVICE_CLUSTERIP:8765/k8s-audit
 contexts:
 - context:
     cluster: falco
