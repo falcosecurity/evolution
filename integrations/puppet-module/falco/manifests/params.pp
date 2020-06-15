@@ -35,7 +35,7 @@ class falco::params {
   $webserver = {
     'enabled'            => false,
     'listen_port'        => 8765,
-    'k8s_audit_endpoint' => '/k8s_audit',
+    'k8s_audit_endpoint' => '/k8s-audit',
     'ssl_enabled'        => false,
     'ssl_certificate'    => '/etc/falco/falco.pem'
   }
