@@ -43,3 +43,31 @@ See the [contributing guide](https://github.com/falcosecurity/falco/blob/master/
 ## Join the Community
 
 To get involved with the evolution of The Falco Project, please visit [the community repository](https://github.com/falcosecurity/community) to find more.
+
+# Adding a new project walk-through 
+
+So you have an idea for some new Falco work and are ready to get started. 
+
+Falco values speed, and innovation so we try to never stand in the way or block progress in any way. As projects gain traction, we exchange flexability for structure. For instance a project that is 1 day old is relatively ungoverned, wheras the official production ready Falco packages are heavily governed. 
+
+Below find instructions on how to contribute your work to Falco.
+
+### Getting Started (sandbox) 
+
+**Quick, Simple, Ungoverned, Unofficial**
+
+If you have a small change, or just would like to add a small amount of sample code to share with the community you can add it to the evolution repository [here](https://github.com/falcosecurity/evolution). We call changes like this `sandbox` contributions, and are the most flexible and ungoverned contributions. 
+
+### Getting Started (incubation)
+
+**Concept of OWNERS, Release Process, New falcosecurity Repository, Unofficial**
+
+If you would like to start a new project to donate to Falco you can get started by creating a [new github repository](https://github.com/new) under your own account or organization. Work on your project until you are ready to bring it to the Falco community. There is no standard here for how mature this needs to be, it can be a proof of concept or a well used tool. Open up an issue in the [issue tracker](https://github.com/falcosecurity/evolution/issues) for the community to adopt the project. A great example of this is the [helm chart](https://github.com/falcosecurity/evolution/issues/12) adoption issue.
+
+The most **critical** component of an `incubation` project is that it **must** have an `OWNERS` file and a concept of a release for the community. Without these defined the community will not be able to adopt a new `incubation` repository. 
+
+### Getting Started (official support) 
+
+**The most coveted of all status, official support**
+
+After an `incubation` level project has at least 1 well understood production user, a steady release process, and timely response from the `OWNERS` the Flaco maintainers can decide to promote this to `official support` such that it will be added to the official [downloads](https://falco.org/docs/download/) page on falco.org.
