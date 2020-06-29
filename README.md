@@ -48,7 +48,7 @@ To get involved with the evolution of The Falco Project, please visit [the commu
 
 So you have an idea for some new Falco work and are ready to get started. 
 
-Falco values speed, and innovation so we try to never stand in the way or block progress in any way. As projects gain traction, we exchange flexability for structure. For instance a project that is 1 day old is relatively ungoverned, wheras the official production ready Falco packages are heavily governed. 
+Falco values speed, and innovation so we try to never stand in the way or block progress in any way. As projects gain traction, we exchange flexibility for structure. For instance, a project that is 1 day old is relatively ungoverned, whereas the official production ready Falco packages are heavily governed. 
 
 Below find instructions on how to contribute your work to Falco.
 
@@ -70,4 +70,4 @@ The most **critical** component of an `incubation` project is that it **must** h
 
 **The most coveted of all status, official support**
 
-After an `incubation` level project has at least 1 well understood production user, a steady release process, and timely response from the `OWNERS` the Flaco maintainers can decide to promote this to `official support` such that it will be added to the official [downloads](https://falco.org/docs/download/) page on falco.org.
+After an `incubation` level project has at least 1 well understood production user, a steady release process, and timely response from the `OWNERS` the Falco maintainers can decide to promote this to `official support` such that it will be added to the official [downloads](https://falco.org/docs/download/) page on falco.org.
