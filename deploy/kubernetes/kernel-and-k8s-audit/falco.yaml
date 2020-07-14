@@ -182,7 +182,7 @@ http_output:
 # grpc:
 #   enabled: true
 #   bind_address: "0.0.0.0:5060"
-#   threadiness: 8
+#   threadiness: 0
 #   private_key: "/etc/falco/certs/server.key"
 #   cert_chain: "/etc/falco/certs/server.crt"
 #   root_certs: "/etc/falco/certs/ca.crt"
@@ -191,7 +191,7 @@ http_output:
 grpc:
   enabled: false
   bind_address: "unix:///var/run/falco/falco.sock"
-  threadiness: 8
+  threadiness: 0
 
 # gRPC output service.
 # By default it is off.
