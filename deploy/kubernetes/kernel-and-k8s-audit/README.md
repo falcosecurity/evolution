@@ -13,6 +13,12 @@ clusterrole "falco-cluster-role" created
 clusterrolebinding "falco-cluster-role-binding" created
 ```
 
+We create a least privilege PodSecurityPolicy tailored to Falco. The Falco service account is authorized to use it, as configured in `rbac.yaml` manifest.
+
+```
+$ kubectl create -f ./psp.yaml
+```
+
 We also create a service that allows other services to reach the embedded webserver in falco, which listens on https port 8765:
 
 ```
