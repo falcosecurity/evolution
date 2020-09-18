@@ -1,4 +1,4 @@
-package kilt_lib
+package lib
 
 const (
 	defaultUserID      = 0

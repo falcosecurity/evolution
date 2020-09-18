@@ -1,4 +1,4 @@
-package kilt_lib
+package lib
 
 import (
 	"github.com/go-akka/configuration"
@@ -22,7 +22,7 @@ func extractToStringMap(config *configuration.Config, path string) map[string]st
 func getWithDefaultUint16(object *hocon.HoconObject, key string, fallback uint16) uint16 {
 	t := object.GetKey(key)
 
-	if t.IsEmpty() {
+	if t == nil || t.IsEmpty() {
 		return fallback
 	}
 
@@ -32,9 +32,14 @@ func getWithDefaultUint16(object *hocon.HoconObject, key string, fallback uint16
 func getWithDefaultUint32(object *hocon.HoconObject, key string, fallback uint32) uint32 {
 	t := object.GetKey(key)
 
-	if t.IsEmpty() {
+	if  t==nil ||  t.IsEmpty() {
 		return fallback
 	}
 
 	return uint32(t.GetInt64())
+}
+
+
+func emptyIncludeCallback(filename string) *hocon.HoconRoot {
+	return hocon.Parse("", emptyIncludeCallback)
 }

@@ -1,16 +1,13 @@
-package kilt_lib
+package lib
 
 import (
+	"encoding/json"
 	"errors"
 	"github.com/go-akka/configuration"
 	"io/ioutil"
 )
 
-type defaultData struct {
-	Original TargetInfo `json:"original"`
-}
-
-var defaults = configuration.ParseString(`
+var defaults = `
 build {
 	entry_point: ${original.entry_point}
 	command: ${original.command}
@@ -19,20 +16,23 @@ build {
 
 	mount: []
 }
-`)
+`
 
-func KiltFromString(info TargetInfo, config string) (*KiltBuild, *KiltRuntime, error) {
-	vars := configuration.FromObject(defaultData{info})
-	kiltDefaults := configuration.NewConfigFromConfig(defaults, vars)
+func KiltFromString(info *TargetInfo, config string) (*KiltBuild, *KiltRuntime, error) {
+	rawVars, err := json.Marshal(info)
+	if err != nil {
+		return nil, nil, err
+	}
 
-	userConfig := configuration.ParseString(config)
+	initialConfig := "original:" + string(rawVars) + "\n" + defaults
+	fullConfig := initialConfig + config
 
-	finalConfig := configuration.NewConfigFromConfig(userConfig, kiltDefaults)
+	userConfig := configuration.ParseString(fullConfig)
 
 	if !userConfig.HasPath("build") {
 		return nil, nil, errors.New("kilt definition needs at least 'build' directive")
 	}
-	build, err := extractBuild(finalConfig)
+	build, err := extractBuild(userConfig)
 
 	if err != nil {
 		return nil, nil, err
@@ -43,7 +43,7 @@ func KiltFromString(info TargetInfo, config string) (*KiltBuild, *KiltRuntime, e
 		return build, nil, nil
 	}
 
-	run, err := extractRuntime(finalConfig)
+	run, err := extractRuntime(userConfig)
 
 	if err != nil {
 		return nil, nil, err
@@ -52,7 +52,7 @@ func KiltFromString(info TargetInfo, config string) (*KiltBuild, *KiltRuntime, e
 	return build, run, nil
 }
 
-func KiltFromFile(info TargetInfo, configurationPath string) (*KiltBuild, *KiltRuntime, error) {
+func KiltFromFile(info *TargetInfo, configurationPath string) (*KiltBuild, *KiltRuntime, error) {
 	config, err := ioutil.ReadFile(configurationPath)
 	if err != nil {
 		return nil, nil, err

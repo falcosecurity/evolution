@@ -1,4 +1,4 @@
-package kilt_lib
+package lib
 
 import (
 	"fmt"
@@ -29,6 +29,8 @@ func extractBuild(config *configuration.Config) (*KiltBuild, error) {
 				if resource.Image == "" || len(resource.Volumes) == 0 || len(resource.EntryPoint) == 0 {
 					return nil, fmt.Errorf("error at build.mount.%d: image, volumes and entry_point are all required ", k)
 				}
+
+				b.Resources = append(b.Resources, resource)
 			}
 		}
 	}
