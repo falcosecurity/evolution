@@ -1,0 +1,24 @@
+{
+  "Resources": {
+    "taskdef": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "ContainerDefinitions": [
+          {
+            "Name": "app",
+            "Image": "busybox",
+            "EntryPoint": ["/bin/sh"],
+            "VolumesFrom": [
+              {
+                "SourceContainer": "SomeOtherContainer"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

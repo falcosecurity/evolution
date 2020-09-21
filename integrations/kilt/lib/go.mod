@@ -1,4 +1,4 @@
-module lib
+module github.com/admiral0/evolution/integrations/kilt/lib
 
 go 1.15
 

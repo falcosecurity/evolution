@@ -2,7 +2,7 @@ package lib
 
 import (
 	"encoding/json"
-	"errors"
+	"fmt"
 	"github.com/go-akka/configuration"
 	"io/ioutil"
 )
@@ -18,10 +18,31 @@ build {
 }
 `
 
-func KiltFromString(info *TargetInfo, config string) (*KiltBuild, *KiltRuntime, error) {
+type Kilt struct {
+	config *configuration.Config
+	hasRuntimePatching bool
+	// TODO(admiral0): add custom payload interpreter
+}
+
+func (k *Kilt) Build() (*KiltBuild, error) {
+	return extractBuild(k.config)
+}
+
+func (k *Kilt) Runtime() (*KiltRuntime, error) {
+	if k.hasRuntimePatching {
+		return extractRuntime(k.config)
+	}
+	return nil, fmt.Errorf("kilt does not have 'runtime' instructions")
+}
+
+func (k *Kilt) HasRuntime() bool {
+	return k.hasRuntimePatching
+}
+
+func KiltFromString(info *TargetInfo, config string) (*Kilt, error) {
 	rawVars, err := json.Marshal(info)
 	if err != nil {
-		return nil, nil, err
+		return nil, err
 	}
 
 	initialConfig := "original:" + string(rawVars) + "\n" + defaults
@@ -29,33 +50,18 @@ func KiltFromString(info *TargetInfo, config string) (*KiltBuild, *KiltRuntime, 
 
 	userConfig := configuration.ParseString(fullConfig)
 
-	if !userConfig.HasPath("build") {
-		return nil, nil, errors.New("kilt definition needs at least 'build' directive")
-	}
-	build, err := extractBuild(userConfig)
-
-	if err != nil {
-		return nil, nil, err
+	kilt := &Kilt{
+		userConfig,
+		userConfig.HasPath("runtime"),
 	}
 
-	// runtime patching is optional
-	if !userConfig.HasPath("runtime") {
-		return build, nil, nil
-	}
-
-	run, err := extractRuntime(userConfig)
-
-	if err != nil {
-		return nil, nil, err
-	}
-
-	return build, run, nil
+	return kilt, nil
 }
 
-func KiltFromFile(info *TargetInfo, configurationPath string) (*KiltBuild, *KiltRuntime, error) {
+func KiltFromFile(info *TargetInfo, configurationPath string) (*Kilt, error) {
 	config, err := ioutil.ReadFile(configurationPath)
 	if err != nil {
-		return nil, nil, err
+		return nil, err
 	}
 	return KiltFromString(info, string(config))
 }

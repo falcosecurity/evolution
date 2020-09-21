@@ -1,0 +1,29 @@
+{
+  "Resources": {
+    "taskdef": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "Tags": [
+          {
+            "Key": "antani",
+            "Value": "sbiribuda"
+          },
+          {
+            "Key": "kiltinclude",
+            "Value": "itisignored"
+          }
+        ],
+        "ContainerDefinitions": [
+          {
+            "Name": "app",
+            "Image": "busybox",
+            "Command": ["/bin/sh"]
+          }
+        ]
+      }
+    }
+  }
+}

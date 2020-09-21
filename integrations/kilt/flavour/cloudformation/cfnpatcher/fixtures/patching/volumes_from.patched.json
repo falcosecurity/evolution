@@ -1,0 +1,38 @@
+{
+  "Resources": {
+    "taskdef": {
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Command": [
+              "/bin/sh"
+            ],
+            "EntryPoint": [
+              "/kilt/run",
+              "--"
+            ],
+            "Image": "busybox",
+            "Name": "app",
+            "VolumesFrom": [
+              {
+                "SourceContainer": "SomeOtherContainer"
+              },
+              {
+                "ReadOnly": true,
+                "SourceContainer": "KiltImage"
+              }
+            ]
+          },
+          {
+            "Image": "KILT:latest",
+            "Name": "KiltImage"
+          }
+        ],
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ]
+      },
+      "Type": "AWS::ECS::TaskDefinition"
+    }
+  }
+}

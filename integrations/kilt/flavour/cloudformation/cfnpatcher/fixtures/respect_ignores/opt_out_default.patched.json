@@ -1,0 +1,40 @@
+{
+  "Resources": {
+    "willpatch": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "Tags": [
+          {
+            "Key": "antani",
+            "Value": "sbiribuda"
+          },
+          {
+            "Key": "kiltinclude",
+            "Value": "itisignored"
+          }
+        ],
+        "ContainerDefinitions": [
+          {
+            "Name": "app",
+            "Image": "busybox",
+            "EntryPoint": ["/kilt/run", "--"],
+            "Command": ["/bin/sh"],
+            "VolumesFrom": [
+              {
+                "ReadOnly": true,
+                "SourceContainer": "KiltImage"
+              }
+            ]
+          },
+          {
+            "Image": "KILT:latest",
+            "Name": "KiltImage"
+          }
+        ]
+      }
+    }
+  }
+}

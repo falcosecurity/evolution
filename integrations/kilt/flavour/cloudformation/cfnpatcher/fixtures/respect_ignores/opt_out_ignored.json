@@ -1,0 +1,29 @@
+{
+  "Resources": {
+    "willnotpatch": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "Tags": [
+          {
+            "Key": "antani",
+            "Value": "sbiribuda"
+          },
+          {
+            "Key": "kiltignore",
+            "Value": "itisignored"
+          }
+        ],
+        "ContainerDefinitions": [
+          {
+            "Name": "app",
+            "Image": "busybox",
+            "EntryPoint": ["/bin/sh"]
+          }
+        ]
+      }
+    }
+  }
+}

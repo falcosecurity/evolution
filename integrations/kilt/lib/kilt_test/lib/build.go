@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/spf13/cobra"
 	"io/ioutil"
-	kiltlib "kilt-lib"
+	kiltlib "lib"
 )
 
 var buildCmd = &cobra.Command{
@@ -41,13 +41,25 @@ func buildKilt(cmd *cobra.Command, args []string)  {
 		panic(err)
 	}
 
-	b, r, err := kiltlib.KiltFromFile(input, kiltPatch)
+	k, err := kiltlib.KiltFromFile(input, kiltPatch)
 
 	if err != nil {
 		panic(err)
 	}
 
+	b, err := k.Build()
+
+	if err != nil {
+		panic(err)
+	}
 	fmt.Printf("%+v\n", b)
-	fmt.Printf("%+v\n", r)
+	if k.HasRuntime() {
+		r, err := k.Runtime()
+		if err != nil {
+			panic(err)
+		}
+		fmt.Printf("%+v\n", r)
+	}
+
 }
 
