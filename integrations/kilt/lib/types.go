@@ -17,12 +17,14 @@ type TargetInfo struct {
 }
 
 type KiltBuildResource struct {
+	Name string
 	Image      string
 	Volumes    []string
 	EntryPoint []string
 }
 
 type KiltBuild struct {
+	Image string
 	EntryPoint           []string
 	Command              []string
 	EnvironmentVariables map[string]string

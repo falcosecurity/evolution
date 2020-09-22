@@ -24,6 +24,9 @@
             ]
           },
           {
+            "EntryPoint": [
+              "/kilt/wait"
+            ],
             "Image": "KILT:latest",
             "Name": "KiltImage"
           }

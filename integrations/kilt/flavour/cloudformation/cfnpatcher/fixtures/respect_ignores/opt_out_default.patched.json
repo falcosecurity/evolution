@@ -1,8 +1,33 @@
 {
   "Resources": {
     "willpatch": {
-      "Type": "AWS::ECS::TaskDefinition",
       "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Command": [
+              "/bin/sh"
+            ],
+            "EntryPoint": [
+              "/kilt/run",
+              "--"
+            ],
+            "Image": "busybox",
+            "Name": "app",
+            "VolumesFrom": [
+              {
+                "ReadOnly": true,
+                "SourceContainer": "KiltImage"
+              }
+            ]
+          },
+          {
+            "EntryPoint": [
+              "/kilt/wait"
+            ],
+            "Image": "KILT:latest",
+            "Name": "KiltImage"
+          }
+        ],
         "RequiresCompatibilities": [
           "FARGATE"
         ],
@@ -15,26 +40,9 @@
             "Key": "kiltinclude",
             "Value": "itisignored"
           }
-        ],
-        "ContainerDefinitions": [
-          {
-            "Name": "app",
-            "Image": "busybox",
-            "EntryPoint": ["/kilt/run", "--"],
-            "Command": ["/bin/sh"],
-            "VolumesFrom": [
-              {
-                "ReadOnly": true,
-                "SourceContainer": "KiltImage"
-              }
-            ]
-          },
-          {
-            "Image": "KILT:latest",
-            "Name": "KiltImage"
-          }
         ]
-      }
+      },
+      "Type": "AWS::ECS::TaskDefinition"
     }
   }
 }

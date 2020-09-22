@@ -28,12 +28,27 @@ var defaultTests = [...]string{
 	"patching/volumes_from",
 }
 
+const defaultConfig = `
+build {
+	entry_point: ["/kilt/run", "--"] 
+	command: ${?original.entry_point} ${?original.command}
+	mount: [
+		{
+			name: "KiltImage"
+			image: "KILT:latest"
+			volumes: ["/kilt"]
+			entry_point: ["/kilt/wait"]
+		}
+	]
+}
+`
+
 func runTest(t *testing.T, name string, context context.Context, config Configuration){
 	fragment, err := ioutil.ReadFile("fixtures/" + name + ".json")
 	if err != nil {
 		t.Fatalf("cannot find fixtures/%s.json", name)
 	}
-	result, err := Patch(context, config, fragment)
+	result, err := Patch(context, &config, fragment)
 	if err != nil {
 		t.Fatalf("error patching: %s", err.Error())
 	}
@@ -73,8 +88,7 @@ func TestPatchingOptIn(t *testing.T) {
 		t.Run(testName, func(t *testing.T) {
 			runTest(t, testName, l.WithContext(context.Background()),
 				Configuration{
-				Image:      "KILT:latest",
-				Executable: "/kilt/run",
+				Kilt: defaultConfig,
 				OptIn:      true,
 			})
 		})
@@ -88,8 +102,7 @@ func TestPatching(t *testing.T) {
 		t.Run(testName, func(t *testing.T) {
 			runTest(t, testName, l.WithContext(context.Background()),
 				Configuration{
-					Image:      "KILT:latest",
-					Executable: "/kilt/run",
+					Kilt: defaultConfig,
 					OptIn:      false,
 				})
 		})

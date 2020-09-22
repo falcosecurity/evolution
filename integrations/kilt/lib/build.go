@@ -8,6 +8,7 @@ import (
 func extractBuild(config *configuration.Config) (*KiltBuild, error) {
 	b := new(KiltBuild)
 
+	b.Image = config.GetString("build.image")
 	b.EntryPoint = config.GetStringList("build.entry_point")
 	b.Command = config.GetStringList("build.command")
 
@@ -21,6 +22,7 @@ func extractBuild(config *configuration.Config) (*KiltBuild, error) {
 				mount := m.GetObject()
 
 				resource := KiltBuildResource{
+					Name:       mount.GetKey("name").GetString(),
 					Image:      mount.GetKey("image").GetString(),
 					Volumes:    mount.GetKey("volumes").GetStringList(),
 					EntryPoint: mount.GetKey("entry_point").GetStringList(),

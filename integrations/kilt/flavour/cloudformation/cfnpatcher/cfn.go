@@ -2,7 +2,6 @@ package cfnpatcher
 
 import (
 	"context"
-
 	"github.com/Jeffail/gabs/v2"
 	"github.com/rs/zerolog/log"
 )
@@ -24,7 +23,7 @@ func isIgnored(resource *gabs.Container, isOptIn bool) bool{
 	return !((isOptIn && included) || (!isOptIn && !ignored))
 }
 
-func Patch(ctx context.Context, config *Configuration , fragment []byte) ([]byte, error) {
+func Patch(ctx context.Context, configuration *Configuration , fragment []byte) ([]byte, error) {
 	l := log.Ctx(ctx)
 	template, err := gabs.ParseJSON(fragment)
 	if err != nil {
@@ -32,16 +31,19 @@ func Patch(ctx context.Context, config *Configuration , fragment []byte) ([]byte
 		return nil, err
 	}
 
-
-
 	for name, resource := range template.S("Resources").ChildrenMap() {
 		if matchFargate(resource) {
-			if isIgnored(resource, config.OptIn) {
+			if isIgnored(resource, configuration.OptIn) {
 				l.Info().Str("resource", name).Msg("ignored resource due to tag")
 				continue
 			}
 			l.Info().Str("resource", name).Msg("patching task definition")
-			_, err := applyTaskDefinitionPatch(ctx, name, resource, config)
+			if err != nil {
+				l.Error().Err(err).Str("resource", name).Msg("could not generate kilt instructions")
+				continue
+			}
+
+			_, err = applyTaskDefinitionPatch(ctx, name, resource, configuration)
 			if err != nil {
 				l.Error().Err(err).Str("resource", name).Msgf("could not patch resource")
 			}
