@@ -1,0 +1,55 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Macro kilt-{{macro_name}} deployment
+Resources:
+  KiltRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action:
+              - sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: '*'
+  KiltLambda{{ macro_name }}:
+    Type: AWS::Lambda::Function
+    Properties:
+      Runtime: go1.x
+      Handler: handler
+      Role:
+        Fn::GetAtt:
+          - KiltRole
+          - Arn
+      Environment:
+        Variables:
+          KILT_DEFINITION_TYPE: s3
+          KILT_DEFINITION: "{{ bucket_name }}/{{ macro_name }}.kilt.cfg"
+          {% if kilt_opt_in %}
+          KILT_OPT_IN: "YES"
+          {% endif %}
+      Code:
+        S3Bucket: {{ bucket_name }}
+        S3Key: {{ kilt_zip_name }}
+
+  KiltMacro:
+    Type: AWS::CloudFormation::Macro
+    Properties:
+      Name: {{ macro_name }}
+      Description: Kilt - Applies kilt patching in s3://{{bucket_name}}/{{ macro_name }}.kilt.cfg to fargate tasks
+      FunctionName:
+        Fn::GetAtt:
+          - KiltLambda{{ macro_name }}
+          - Arn
