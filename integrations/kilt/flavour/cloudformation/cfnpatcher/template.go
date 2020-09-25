@@ -10,6 +10,8 @@ func extractContainerInfo(group *gabs.Container, groupName string, container *ga
 
 	info.ContainerName = container.S("Name").Data().(string)
 	info.ContainerGroupName = groupName
+	info.EnvironmentVariables = make(map[string]string)
+	info.Metadata = make(map[string]string)
 
 	if container.Exists("Image") {
 		info.Image = container.S("Image").Data().(string)
@@ -33,7 +35,15 @@ func extractContainerInfo(group *gabs.Container, groupName string, container *ga
 		}
 	}
 
-	// TODO(admiral0): cloud tags
+	if group.Exists("Properties", "Tags") {
+		for _, tag := range group.S("Properties", "Tags").Children() {
+			if tag.Exists("Key") && tag.Exists("Value") {
+				info.Metadata[tag.S("Key").Data().(string)] = tag.S("Value").Data().(string)
+			}
+		}
+	}
+
+	// TODO(admiral0): metadata tags
 
 	return info
 }

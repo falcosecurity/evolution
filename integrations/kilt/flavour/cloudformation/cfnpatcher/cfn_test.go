@@ -26,12 +26,13 @@ var defaultTests = [...]string{
 	"patching/entrypoint",
 	"patching/command",
 	"patching/volumes_from",
+	"patching/tags",
 }
 
 const defaultConfig = `
 build {
-	entry_point: ["/kilt/run", "--"] 
-	command: ${?original.entry_point} ${?original.command}
+	entry_point: ["/kilt/run", "--", ${?original.metadata.captured_tag}]
+	command: [] ${?original.entry_point} ${?original.command}
 	mount: [
 		{
 			name: "KiltImage"
@@ -60,6 +61,7 @@ func runTest(t *testing.T, name string, context context.Context, config Configur
 	}
 
 	differ := diff.New()
+	println(string(result))
 	d, err := differ.Compare(expected, result)
 
 	if err != nil {
@@ -69,7 +71,7 @@ func runTest(t *testing.T, name string, context context.Context, config Configur
 	if d.Modified() {
 		var expectedJson map[string]interface{}
 		t.Log("Found differences!")
-		_ = json.Unmarshal(expected, &expectedJson) // would error during diff
+		_ = json.Unmarshal(result, &expectedJson) // would error during diff
 		formatter := formatter.NewAsciiFormatter(expectedJson, formatter.AsciiFormatterConfig{
 			ShowArrayIndex: true,
 			Coloring: true,

@@ -1,3 +1,5 @@
 kilt.zip
 kilt-cfn
 build/
+installer/build
+installer/dist

@@ -10,19 +10,18 @@
             "EntryPoint": [
               "/kilt/run",
               "--",
-              ""
+              "somearg"
             ],
             "Image": "busybox",
-            "Name": "app",
             "LinuxParameters": {
               "Capabilities": {
-                "Add": ["SYS_PTRACE"]
+                "Add": [
+                  "SYS_PTRACE"
+                ]
               }
             },
+            "Name": "app",
             "VolumesFrom": [
-              {
-                "SourceContainer": "SomeOtherContainer"
-              },
               {
                 "ReadOnly": true,
                 "SourceContainer": "KiltImage"
@@ -39,6 +38,16 @@
         ],
         "RequiresCompatibilities": [
           "FARGATE"
+        ],
+        "Tags": [
+          {
+            "Key": "antani",
+            "Value": "sbiribuda"
+          },
+          {
+            "Key": "captured_tag",
+            "Value": "somearg"
+          }
         ]
       },
       "Type": "AWS::ECS::TaskDefinition"
