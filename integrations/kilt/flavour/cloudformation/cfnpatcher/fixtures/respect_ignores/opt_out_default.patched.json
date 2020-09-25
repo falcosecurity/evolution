@@ -13,6 +13,11 @@
             ],
             "Image": "busybox",
             "Name": "app",
+            "LinuxParameters": {
+              "Capabilities": {
+                "Add": ["SYS_PTRACE"]
+              }
+            },
             "VolumesFrom": [
               {
                 "ReadOnly": true,

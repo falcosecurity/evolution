@@ -101,6 +101,29 @@ func applyContainerDefinitionPatch(ctx context.Context, container *gabs.Containe
 
 	}
 
+	// We need to add SYS_PTRACE capability to the container
+	if ! container.Exists("LinuxParameters") {
+		emptyMap := make(map[string]interface{})
+		_, err = container.Set(emptyMap, "LinuxParameters")
+		if err != nil {
+			return fmt.Errorf("could not add LinuxParameters: %w", err)
+		}
+	}
+
+	if ! container.Exists("LinuxParameters", "Capabilities") {
+		emptyMap := make(map[string]interface{})
+		_, err = container.Set(emptyMap, "LinuxParameters", "Capabilities")
+		if err != nil {
+			return fmt.Errorf("could not add LinuxParameters.Capabilities: %w", err)
+		}
+	}
+
+	// fargate only supports SYS_PTRACE
+	_, err = container.Set([]string{"SYS_PTRACE"}, "LinuxParameters", "Capabilities", "Add")
+	if err != nil {
+		return fmt.Errorf("could not add LinuxParamaters.Capabilities.Add: %w", err)
+	}
+
 	return nil
 }
 
