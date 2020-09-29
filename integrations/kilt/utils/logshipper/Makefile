@@ -1,0 +1,2 @@
+logshipper:
+	go build .

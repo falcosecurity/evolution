@@ -18,11 +18,13 @@ func applyTaskDefinitionPatch(ctx context.Context, name string, resource *gabs.C
 	if resource.Exists("Properties", "ContainerDefinitions") {
 		for _, container := range resource.S("Properties", "ContainerDefinitions").Children() {
 			info := extractContainerInfo(resource, name, container)
+			l.Info().Msgf("extracted info for container: %v", info)
 			kilt, err := lib.KiltFromString(info, configuration.Kilt)
 			if err != nil {
 				return nil, fmt.Errorf("could not construct kilt: %w", err)
 			}
 			patch, err  := kilt.Build()
+			l.Info().Msgf("created patch for container: %v", patch)
 			if err != nil {
 				return nil, fmt.Errorf("could not construct kilt patch: %w", err)
 			}

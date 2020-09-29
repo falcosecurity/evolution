@@ -3,9 +3,9 @@ package lib
 import (
 	"encoding/json"
 	"fmt"
+	kiltlib "github.com/falcosecurity/evolution/integrations/kilt/lib"
 	"github.com/spf13/cobra"
 	"io/ioutil"
-	kiltlib "lib"
 )
 
 var buildCmd = &cobra.Command{

@@ -1,0 +1,2 @@
+launcher:
+	go build .

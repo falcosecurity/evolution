@@ -1,0 +1,2 @@
+waitforever:
+	go build .

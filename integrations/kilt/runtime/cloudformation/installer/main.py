@@ -5,10 +5,10 @@ from os import path
 from jinja2 import Environment, FileSystemLoader
 
 KILT_CFN = path.join(path.dirname(__file__), 'kilt.yaml')
-KILT_ZIP = path.join(path.dirname(__file__), '..', 'kilt.zip')
+KILT_ZIP = path.join(path.dirname(__file__), 'kilt.zip')
 
-assert path.exists(KILT_CFN), 'Could not find cloudformation defaults'
-assert path.exists(KILT_ZIP), 'Could not find ../kilt.zip - did you build it?'
+assert path.exists(KILT_CFN), 'Could not find cloudformation jinja template'
+assert path.exists(KILT_ZIP), 'Could not find kilt.zip - did you build it?'
 
 
 class CallbackProgress:

@@ -1,2 +1,8 @@
 .idea/
 lib/kilt_test/kilt_test
+__pycache__
+utils/launcher/launcher
+utils/logshipper/logshipper
+utils/waitforever/waitforever
+
+definitions/falco-pdig/binaries
