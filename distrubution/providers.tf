@@ -13,3 +13,12 @@ provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
   profile                 = "default"
 }
+
+provider "aws" {
+  version                 = ">= 3.0"
+  alias                   = "us"
+  region                  = "us-east-1"
+  shared_credentials_file = "~/.aws/credentials"
+  profile                 = "default"
+}
+

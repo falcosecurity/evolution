@@ -18,7 +18,7 @@ variable "distribution_origin_id" {
   default = "falcoDistributionOrigin"
 }
 
-variable "distribution_name_aliases" {
-  type = list(string)
-  default = ["download.falco.org"]
+variable "distribution_name_alias" {
+  type = string
+  default = "download.falco.org"
 }
