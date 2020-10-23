@@ -16,6 +16,16 @@ resource "aws_s3_bucket" "logging_bucket" {
   }
 }
 
+resource "aws_acm_certificate" "cert" {
+  domain_name       = var.distribution_name_alias
+  validation_method = "DNS"
+  provider = aws.us
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
 resource "aws_cloudfront_distribution" "distribution" {
   origin {
     domain_name = aws_s3_bucket.distribution_bucket.bucket_regional_domain_name
@@ -33,8 +43,7 @@ resource "aws_cloudfront_distribution" "distribution" {
     prefix          = "falco-distribution"
   }
 
-  # todo(fntlnz): open a CNCF service account ticket to get the CNAME done and figure out a certificate we can use.
-  # aliases = var.distribution_name_aliases
+  aliases = [var.distribution_name_alias]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
@@ -64,6 +73,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn = aws_acm_certificate.cert.arn
+    ssl_support_method  = "sni-only"
   }
 }
