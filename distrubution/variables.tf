@@ -3,7 +3,22 @@ variable "bucket_name" {
   default = "falco-distribution"
 }
 
+variable "logging_bucket_name" {
+  type = string
+  default = "logging-falco-distribution"
+}
+
 variable "region" {
   type = string
   default = "eu-west-1"
+}
+
+variable "distribution_origin_id" {
+  type = string
+  default = "falcoDistributionOrigin"
+}
+
+variable "distribution_name_aliases" {
+  type = list(string)
+  default = ["download.falco.org"]
 }

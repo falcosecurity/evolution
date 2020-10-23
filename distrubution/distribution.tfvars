@@ -1,3 +1,5 @@
-bucket_name = "falco-distribution"
-region      = "eu-west-1"
-
+bucket_name                = "falco-distribution"
+region                     = "eu-west-1"
+distribution_origin_id     = "falcoDistributionOrigin"
+logging_bucket_name        = "logging-falco-distribution"
+distribution_name_aliases  = "download.falco.org"
