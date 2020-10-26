@@ -16,15 +16,17 @@ resource "aws_s3_bucket" "logging_bucket" {
   }
 }
 
-resource "aws_acm_certificate" "cert" {
-  domain_name       = var.distribution_name_alias
-  validation_method = "DNS"
-  provider          = aws.us
+# todo(fntlnz): enable this once the CNAME is handled on the CNCF's DNS.
+# also re-enable aliases and viewer_certificate in the Cloudfront distribution.
+# resource "aws_acm_certificate" "cert" {
+#   domain_name       = var.distribution_name_alias
+#   validation_method = "DNS"
+#   provider          = aws.us
 
-  lifecycle {
-    create_before_destroy = true
-  }
-}
+#   lifecycle {
+#     create_before_destroy = true
+#   }
+# }
 
 resource "aws_cloudfront_distribution" "distribution" {
   origin {
@@ -43,7 +45,7 @@ resource "aws_cloudfront_distribution" "distribution" {
     prefix          = "falco-distribution"
   }
 
-  aliases = [var.distribution_name_alias]
+  # aliases = [var.distribution_name_alias]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
@@ -72,8 +74,12 @@ resource "aws_cloudfront_distribution" "distribution" {
     }
   }
 
+  # viewer_certificate {
+  #   acm_certificate_arn = aws_acm_certificate.cert.arn
+  #   ssl_support_method  = "sni-only"
+  # }
+
   viewer_certificate {
-    acm_certificate_arn = aws_acm_certificate.cert.arn
-    ssl_support_method  = "sni-only"
+    cloudfront_default_certificate = true
   }
 }
