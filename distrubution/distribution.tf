@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "distribution_bucket" {
   acl    = "public-read"
 
   tags = {
-    Name        = var.bucket_name
+    Name = var.bucket_name
   }
 }
 
@@ -12,14 +12,14 @@ resource "aws_s3_bucket" "logging_bucket" {
   acl    = "private"
 
   tags = {
-    Name        = var.logging_bucket_name
+    Name = var.logging_bucket_name
   }
 }
 
 resource "aws_acm_certificate" "cert" {
   domain_name       = var.distribution_name_alias
   validation_method = "DNS"
-  provider = aws.us
+  provider          = aws.us
 
   lifecycle {
     create_before_destroy = true
