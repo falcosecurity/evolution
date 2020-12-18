@@ -1,0 +1,106 @@
+{
+    "leodido": {
+        "name": "Leonardo Di Donato",
+        "company": "Sysdig"
+    },
+    "fntlnz": {
+        "name": "Lorenzo Fontana",
+        "company": "Sysdig"
+    },
+    "leog": {
+        "name": "Leonardo Grasso",
+        "company": "Sysdig"
+    },
+    "issif": {
+        "name": "Thomas Labarussias",
+        "company": "Qonto"
+    },
+    "cpanato": {
+        "name": "Carlos Tadeu Panato Junior",
+        "company": "Mattermost"
+    },
+    "nibalizer": {
+        "name": "Spencer Krum",
+        "company": "IBM"
+    },
+    "ldegio": {
+        "name": "Loris Degioianni",
+        "company": "Sysdig"
+    },
+    "jonahjon": {
+        "name": "Jonah Jones",
+        "company": "Amazon"
+    },
+    "admiral0": {
+        "name": "Radu Andries",
+        "company": "Sysdig"
+    },
+    "airadier": {
+        "name": "Álvaro Iradier",
+        "company": "Sysdig"
+    },
+    "bencer": {
+        "name": "Jorge Salamero Sanz",
+        "company": "Sysdig"
+    },
+    "danpopsd": {
+        "name": "Dan POP Papandrea",
+        "company": "Sysdig"
+    },
+    "gnosek": {
+        "name": "Grzegorz Nosek",
+        "company": "Sysdig"
+    },
+    "kaizhe": {
+        "name": "Kaizhe Huang",
+        "company": "Sysdig"
+    },
+    "kris-nova": {
+        "name": "Kris Nóva",
+        "company": "Independent"
+    },
+    "lucperkins": {
+        "name": "Luc Perkins",
+        "company": "Timber"
+    },
+    "markyjackson-taulia": {
+        "name": "Marky Jackson",
+        "company": "Packet"
+    },
+    "mumoshu": {
+        "name": "Yusuke Kuoka",
+        "company": "Z Lab"
+    },
+    "maxgio92": {
+        "name": "Massimiliano Giovagnoli",
+        "company": "DeltaTre"
+    },
+    "mmat11": {
+        "name": "Mattia Meleleo",
+        "company": "Hetzner Cloud"
+    },
+    "mstemm": {
+        "name": "Mark Stemm",
+        "company": "Sysdig"
+    },
+    "nestorsalceda": {
+        "name": "Néstor Salceda",
+        "company": "Sysdig"
+    },
+    "radhikapc": {
+        "name": "Radhika Puthiyetath",
+        "company": "Sysdig"
+    },
+    "rajakavitha1": {
+        "name": "Rajakavitha",
+        "company": "Independent"
+    },
+    "tembleking": {
+        "name": "Fede Barcelona",
+        "company": "Sysdig"
+    },
+    "mfdii": {
+        "name": "Michael Ducy",
+        "company": "RedHat"
+    }
+}
