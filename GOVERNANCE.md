@@ -28,7 +28,7 @@
   occurrence, if a serious vulnerability is found, the process may take up to several full days of
   work to implement. This reality should be taken into account when discussing time commitment
   obligations with employers.
-* In general continue to be willing to spend at least 25% of ones time working on Falco (~1.25
+* In general continue to be willing to spend at least 25% of one's time working on Falco (~1.25
   business days per week).
 
 ## When does a maintainer lose maintainer status
