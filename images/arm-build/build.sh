@@ -2,7 +2,7 @@
 
 set -xeu
 
-#Clone-dir drops the pwd inside the cloned directory so drop one back
+#Clone dirs pod utility drops the pwd inside the cloned directory so drop one back
 cd ..
 
 cmake -DUSE_BUNDLED_DEPS=On -DMUSL_OPTIMIZED_BUILD=On -DBUILD_DRIVER=Off /falco
