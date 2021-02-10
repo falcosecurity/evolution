@@ -106,5 +106,9 @@
     "mfdii": {
         "name": "Michael Ducy",
         "company": "RedHat"
+    },
+    "fjogeleit" : {
+        "name": "Frank Jogeleit",
+        "company": "move:elevator GmbH"
     }
 }
