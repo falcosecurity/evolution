@@ -38,7 +38,7 @@ The full list of those artifacts can be found within the [official documentation
 
 ## Contributing
 
-See the [contributing guide](https://github.com/falcosecurity/falco/blob/master/CONTRIBUTING.md) and the [community code of conduct](https://github.com/falcosecurity/falco/blob/master/CODE_OF_CONDUCT.md).
+See the [contributing guide](https://github.com/falcosecurity/.github/blob/master/CONTRIBUTING.md) and the [community code of conduct](https://github.com/falcosecurity/.github/blob/master/CODE_OF_CONDUCT.md).
 
 ## Join the Community
 
