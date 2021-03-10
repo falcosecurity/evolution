@@ -12,7 +12,7 @@
 
 ## Maintainers
 
-The list of the current [maintainers](./maintainers.yaml) is automatically updated by the Falco Infra.
+The list of the current [maintainers](./maintainers.yaml) is automatically updated by the [Falco Infra](https://github.com/falcosecurity/test-infra).
 
 ## Process for becoming a maintainer
 
@@ -96,7 +96,7 @@ In all the other cases, the voting process is a simple majority in which each ma
 
 ## Adding new projects to the falcosecurity GitHub organization
 
-New projects will be added to the falcosecurity organization via GitHub issue discussion in the `falcosecurity/evolution` repository.
+New projects will be added to the falcosecurity organization via GitHub issue discussion in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository.
 
 Once sufficient discussion has taken place (~3-5 business
 days but depending on the volume of conversation), the maintainers will
