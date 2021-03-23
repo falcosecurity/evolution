@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && apt-get clean
 
+RUN curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
 COPY --from=pullrequestcreator /go/test-infra/robots/pr-creator/pr-creator /bin
 COPY entrypoint.sh /
 
