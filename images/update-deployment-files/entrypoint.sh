@@ -29,6 +29,33 @@ export GIT_COMMITTER_EMAIL=${BOT_MAIL}
 export GIT_AUTHOR_NAME=${BOT_NAME}
 export GIT_AUTHOR_EMAIL=${BOT_MAIL}
 
+# Generate template files with helm, otherwise errors out.
+# $1: output directory
+generate_deployment_files() {
+    echo "> configuring helm"
+    helm repo add falcosecurity https://falcosecurity.github.io/charts
+    helm repo update
+
+    echo "> generating template files"
+    # inspired by https://github.com/helm/helm/issues/4680#issuecomment-613201032
+    helm template falco falcosecurity/falco --dry-run | awk -vout=$1 -F": " '
+        $0~/^# Source: / {
+            file=out"/"$2;
+            if (!(file in filemap)) {
+                filemap[file] = 1
+                print "Creating "file;
+                system ("mkdir -p $(dirname "file"); echo -n "" > "file);
+            }
+        }
+        $0!~/^#/ {
+            if (file) {
+                print $0 >> file;
+            }
+        }' && return 0
+    echo "ERROR: Unable to generate deployment files from helm template" >&2
+    return 1
+}
+
 # Sets git user configs, otherwise errors out.
 # $1: git user name
 # $2: git user email
@@ -113,12 +140,15 @@ main() {
     check_program "git"
     check_program "curl"
     check_program "pr-creator"
+    check_program "helm"
+
     # Settings
     ensure_git_config "${BOT_NAME}" "${BOT_MAIL}"
     ensure_gpg_key "${BOT_GPG_KEY_PATH}" "${BOT_GPG_PUBLIC_KEY}"
-    
-    # todo(leogr): generate deployment files
-    
+
+    # Generate deployment files
+    generate_deployment_files "deploy/kubernetes"
+
     # Create PR (in case there are changes)
     create_pr "$1"
 }
