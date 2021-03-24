@@ -140,6 +140,7 @@ main() {
     check_program "git"
     check_program "curl"
     check_program "pr-creator"
+    check_program "awk"
     check_program "helm"
 
     # Settings
