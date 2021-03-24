@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 IMG_SLUG := test-infra
-IMG_NAME := update-deployment-files
+IMG_NAME := update-falco-k8s-manifests
 IMG_TAG ?= latest
 
 ACCOUNT := 292999226676
