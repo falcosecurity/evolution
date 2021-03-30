@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: falcosidekick
+  namespace: default
+  labels:
+    app.kubernetes.io/name: falcosidekick
+    helm.sh/chart: falcosidekick-0.2.9
+    app.kubernetes.io/instance: falcosidekick
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: falcosidekick
+      app.kubernetes.io/instance: falcosidekick
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: falcosidekick
+        app.kubernetes.io/instance: falcosidekick
+    spec:
+      serviceAccountName: falcosidekick
+      securityContext:
+        runAsUser: 1234
+        fsGroup: 1234
+      containers:
+        - name: falcosidekick
+          image: "falcosecurity/falcosidekick:2.21.0"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 2801
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          envFrom:
+            - secretRef:
+                name: falcosidekick
+          env:
+            - name: DEBUG
+              value: "false"
+            - name: CUSTOMFIELDS
+              value: ""
+            - name: CHECKCERT
+              value: "true"
+          resources:
+            {}
+---
