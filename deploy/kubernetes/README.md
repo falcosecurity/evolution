@@ -53,7 +53,7 @@ $ kubectl apply -k falco-psp
 
 # [DEPRECATED] Kubernetes AuditSink for Falco
 
-> **Important**: this implementation for dyanmic auditing in Kubernetes has been removed in Kubernetes 1.19. More info [here](https://groups.google.com/g/kubernetes-sig-auth/c/aV_nXpa5uWU?pli=1). More info on current implementation proposals [here](https://docs.google.com/document/d/16cy_ZD94ooBAvlH-rFOel8RPDWRiGFg4Cz11l4sfEII) and [here](https://docs.google.com/document/d/1MqA-RR_wUrMNMbPB6eDyghn9z3z6CDgKK2lsQcciSE8).
+> **Important**: this implementation for dyanmic auditing in Kubernetes has been removed in Kubernetes 1.19. More info [here](https://groups.google.com/g/kubernetes-sig-auth/c/aV_nXpa5uWU?pli=1). More info on implementation proposals [here](https://docs.google.com/document/d/16cy_ZD94ooBAvlH-rFOel8RPDWRiGFg4Cz11l4sfEII) and [here](https://docs.google.com/document/d/1MqA-RR_wUrMNMbPB6eDyghn9z3z6CDgKK2lsQcciSE8).
 
 In [falco-k8s-audit-sink](./falco-k8s-audit-sink) directory, there is a `AuditSink` API object configuration template that defines:
 - the dynamic audit policy 
