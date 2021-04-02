@@ -1,13 +1,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: falco-service
+  name: falco
   labels:
-    app: falco-example
+    app: falco
     role: security
 spec:
   selector:
-    app: falco-example
+    app: falco
   ports:
   - protocol: TCP
     port: 8765
