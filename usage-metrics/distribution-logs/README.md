@@ -27,13 +27,14 @@ driverversion,target,kernelrelease,kernelversion,drivertype,sourceip,200,2xx,3xx
 ## Limitations
 
 This only generate statistics for driver (probe and kernel module) now.
-Support for packages (deb,rpm,tgz) is not present.
+Support for packages (deb, rpm, tgz) is not present.
 
 ## Tools Included:
 
 ### `fetch.sh`
 
 #### Requirements:
+
 - The [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
 - Access to the `logging-falco-distribution` bucket
 
@@ -59,4 +60,3 @@ first.
 ```
 ./distribution-logs > /tmp/statistics.csv
 ```
-
