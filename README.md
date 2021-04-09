@@ -1,4 +1,7 @@
 
+<p><img align="right" src="./img/pidgeotto.gif"/></p>
+<p></p>
+
 # Falco Project Evolution
 
 This repo aims to document the evolution process of The Falco Project.
