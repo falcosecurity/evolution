@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.7.10"
+    chart: "falco-1.9.0"
     release: "falco"
     heritage: "Helm"
 spec:
@@ -20,7 +20,7 @@ spec:
         app: falco
         role: security
       annotations:
-        checksum/config: 7e270ccd4470bcb27021d30dbd9b24204e7ae0160b6840a4fc6c03e852a9aa30
+        checksum/config: f2df6aeba1ab819a7b00459cd0e2c8aa4841ed1bf4aad7aacdf8acd5fd1784fd
         checksum/rules: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
         checksum/certs: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
     spec:
@@ -30,7 +30,7 @@ spec:
           key: node-role.kubernetes.io/master
       containers:
         - name: falco
-          image: docker.io/falcosecurity/falco:0.27.0
+          image: docker.io/falcosecurity/falco:0.28.0
           imagePullPolicy: IfNotPresent
           resources:
             limits:
