@@ -1,14 +1,16 @@
 # Governance
 
-* [Governance](#governance)
-  * [Maintainers](#maintainers)
-  * [Process for becoming a maintainer](#process-for-becoming-a-maintainer)
-  * [Maintainer responsibilities](#maintainer-responsibilities)
-  * [When does a maintainer lose maintainer status](#when-does-a-maintainer-lose-maintainer-status)
-    * [How to step down](#how-to-step-down)
-    * [Project inactivity](#project-inactivity)
-  * [Conflict resolution and voting](#conflict-resolution-and-voting)
-  * [Adding new projects to the falcosecurity GitHub organization](#adding-new-projects-to-the-falcosecurity-github-organization)
+- [Governance](#governance)
+  - [Maintainers](#maintainers)
+  - [Process for becoming a maintainer](#process-for-becoming-a-maintainer)
+  - [Maintainer responsibilities](#maintainer-responsibilities)
+  - [When does a maintainer lose maintainer status](#when-does-a-maintainer-lose-maintainer-status)
+    - [How to step down](#how-to-step-down)
+    - [Project inactivity](#project-inactivity)
+  - [Conflict resolution and voting](#conflict-resolution-and-voting)
+    - [Single project conflicts](#single-project-conflicts)
+    - [Organization conflicts](#organization-conflicts)
+  - [Adding new projects to the falcosecurity GitHub organization](#adding-new-projects-to-the-falcosecurity-github-organization)
 
 ## Maintainers
 
@@ -84,19 +86,35 @@ In general, we prefer that governance issues, technical issues, and maintainer m
 between the persons involved. If a dispute cannot be decided independently, the maintainers can be
 called in to decide an issue.
 
-If the maintainers themselves cannot decide an issue, the issue will be resolved by voting.
+If the [maintainers](maintainers.yaml) themselves cannot decide an issue, the issue will be resolved by **voting**.
 
-When a conflict regards a single project, each one of its maintainers can use a single vote.
+Unless specified otherwise, a vote passes when greater than 50% + 1 of the votes are in favour.
 
-When a conflict regards organization-wide issues, each maintainer can use a single vote.
+Voting can happen through GitHub issues, GitHub pull requests, or on the CNCF Falco mailing list.
 
-Maintainers of [offically supported projects](https://github.com/falcosecurity/evolution#official-support) can use a double vote
-in organization-wide issues or when in deadlocks.
+### Single project conflicts
 
-In case the conflict is about changing this governance or on maintainership status it is required a majority of 66% of votes
+When a conflict regards a single project (or single area of a project), each one of its maintainers can use a single vote.
+
+The voting rights on a conflict regarding a single area of a project are given to:
+
+- the maintainers of the specific project area (those listed in the OWNERS file of the specific area/subfolder)
+- the maintainers of the whole project (those listed in the root ONWERS file)
+
+In case the conflict is on the maintainership status it is required a majority of 66% of votes to resolve the dispute.
+
+### Organization conflicts
+
+When a conflict regards organization-wide issues, maintainers will use **organizational voting**.
+
+So that no single company/organization can dominate the choices:
+
+- Individuals not associated with or employed by a company or organization are allowed 1 organization vote
+- Each company or organization receives 1 organization vote
+  - Any maintainer from a company/organization may cast the vote for that organization, but it is common sense to first discuss the vote with other maintainers from the same company/organization
+
+In case the conflict is about changing this governance document, it is required a majority of 66% of votes
 to resolve the disputes.
-
-In all the other cases, the voting process is a simple majority in which each maintainer receives one vote.
 
 ## Adding new projects to the falcosecurity GitHub organization
 
