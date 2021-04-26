@@ -4,7 +4,7 @@
 
 This example shows how a server could have a poorly designed API that
 allowed a client to execute arbitrary programs on the server, and how
-that behavior can be detected using Sysdig Falco.
+that behavior can be detected using Falco.
 
 `server.js` in this directory defines the server. The poorly designed
 API is this route handler:
@@ -20,7 +20,7 @@ app.use('/api', router);
 
 It blindly takes the url portion after `/api/exec/<cmd>` and tries to
 execute it. A horrible design choice(!), but allows us to easily show
-Sysdig falco's capabilities.
+Falco's capabilities.
 
 ## Demo architecture
 
