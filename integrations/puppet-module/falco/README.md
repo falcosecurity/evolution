@@ -14,11 +14,11 @@
 
 ## Overview
 
-Sysdig Falco is a behavioral activity monitor designed to detect anomalous activity in your applications. Powered by sysdig’s system call capture infrastructure, Falco lets you continuously monitor and detect container, application, host, and network activity... all in one place, from one source of data, with one set of rules.
+Falco is a behavioral activity monitor designed to detect anomalous activity in your applications. Powered by [Falco libraries](https://github.com/falcosecurity/libs)' system call capture and inspection infrastructure, Falco lets you continuously monitor and detect container, application, host, and network activity... all in one place, from one source of data, with one set of rules.
 
 #### What kind of behaviors can Falco detect?
 
-Falco can detect and alert on any behavior that involves making Linux system calls. Thanks to Sysdig's core decoding and state tracking functionality, Falco alerts can be triggered by the use of specific system calls, their arguments, and by properties of the calling process. For example, you can easily detect things like:
+Falco can detect and alert on any behavior that involves making Linux system calls. Thanks to `libscap` and `libsinsp` [Falco libraries](https://github.com/falcosecurity/libs)' which capture, parse, enrich and filter collected system calls as raw data source, Falco alerts can be triggered by the use of specific system calls, their arguments, and by properties of the calling process. For example, you can easily detect things like:
 
 - A shell is run inside a container
 - A container is running in privileged mode, or is mounting a sensitive path like `/proc` from the host.
@@ -238,4 +238,4 @@ The module works where Falco works as a daemonized service (generally, Linux onl
 
 ## Development
 
-For more information on Sysdig Falco, visit our [github](https://github.com/falcosecurity/falco) or [web site](https://sysdig.com/opensource/falco/).
+For more information on Falco, visit our [github](https://github.com/falcosecurity/falco) or [web site](https://falco.org).
