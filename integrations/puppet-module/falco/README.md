@@ -18,7 +18,7 @@ Falco is a behavioral activity monitor designed to detect anomalous activity in 
 
 #### What kind of behaviors can Falco detect?
 
-Falco can detect and alert on any behavior that involves making Linux system calls. Thanks to `libscap` and `libsinsp` [Falco libraries](https://github.com/falcosecurity/libs)' which capture, parse, enrich and filter collected system calls as raw data source, Falco alerts can be triggered by the use of specific system calls, their arguments, and by properties of the calling process. For example, you can easily detect things like:
+Falco can detect and alert on any behavior that involves making Linux system calls. Thanks to the Falco drivers,  `libscap` and `libsinsp` [Falco libraries](https://github.com/falcosecurity/libs) which capture, parse, enrich and filter collected system calls as a raw data source, Falco alerts can be triggered by the use of specific system calls, their arguments, and by properties of the calling process. For example, you can easily detect things like:
 
 - A shell is run inside a container
 - A container is running in privileged mode, or is mounting a sensitive path like `/proc` from the host.
