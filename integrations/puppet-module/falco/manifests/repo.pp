@@ -4,16 +4,16 @@ class falco::repo inherits falco {
     'Debian': {
       include apt::update
 
-      Apt::Source [ 'sysdig' ]
+      Apt::Source [ 'falco' ]
       -> Class [ 'apt::update' ]
 
-      apt::source { 'sysdig':
-        location => 'http://download.draios.com/stable/deb',
-        release  => 'stable-$(ARCH)/',
+      apt::source { 'falco':
+        location => 'https://download.falco.org/packages/deb',
+        release  => 'stable',
         repos    => '',
         key      => {
-          source => 'https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public',
-          id     => 'D27A72F32D867DF9300A241574490FD6EC51E8C4'
+          source => 'https://falco.org/repo/falcosecurity-3672BA8F.asc',
+          id     => '3672BA8F'
         },
       }
 
@@ -22,12 +22,12 @@ class falco::repo inherits falco {
     'RedHat': {
       include 'epel'
 
-      Yumrepo [ 'sysdig' ]
+      Yumrepo [ 'falco' ]
       -> Class [ 'epel' ]
 
-      yumrepo { 'sysdig':
-        baseurl  => 'http://download.draios.com/stable/rpm/$basearch',
-        descr    => 'Sysdig repository by Draios',
+      yumrepo { 'falco':
+        baseurl  => 'https://download.falco.org/packages/rpm',
+        descr    => 'Falco repository',
         enabled  => 1,
         gpgcheck => 0,
       }
