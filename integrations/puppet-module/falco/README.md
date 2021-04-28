@@ -14,7 +14,7 @@
 
 ## Overview
 
-Falco is a behavioral activity monitor designed to detect anomalous activity in your applications. Powered by [Falco libraries](https://github.com/falcosecurity/libs)' system call capture and inspection infrastructure, Falco lets you continuously monitor and detect container, application, host, and network activity... all in one place, from one source of data, with one set of rules.
+Falco is a behavioral activity monitor designed to detect anomalous activity in your applications. Powered by [Falco libraries](https://github.com/falcosecurity/libs) system call capture and inspection infrastructure, Falco lets you continuously monitor and detect container, application, host, and network activity... all in one place, from one source of data, with one set of rules.
 
 #### What kind of behaviors can Falco detect?
 
