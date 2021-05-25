@@ -33,7 +33,7 @@ This status is assigned as needed, and can best be measured by the need to cut a
 
 ### Official Support
 
-As the need for a project grows, it can ultimately achieve the highest and most coveted status within The Falco Project: "*Offical support*."
+As the need for a project grows, it can ultimately achieve the highest and most coveted status within The Falco Project: "*Official support*."
 
 Currently, only those artifacts included in the [falcosecurity/falco](https://github.com/falcosecurity/falco) repository got the "Official support" status. These artifacts will be refined and amended as per the [Falco Artifacts Scope - Part 2](https://github.com/falcosecurity/falco/blob/master/proposals/20200506-artifacts-scope-part-2.md).
 
