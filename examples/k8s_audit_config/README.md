@@ -13,7 +13,9 @@ Either using static audit backends in Kubernetes 1.11, or in Kubernetes 1.13 wit
   * [Restart the API Server to enable Audit Logging](#restart-the-api-server-to-enable-audit-logging-1)
   * [Deploy AuditSink objects](#deploy-auditsink-objects)
   * [Observe Kubernetes audit events at falco](#observe-kubernetes-audit-events-at-falco-1)
-- [Instructions for Kubernetes 1.13 with dynamic webhook and local log file](#instructions-for-kubernetes-113-with-dynamic-webhook-and-local-log-file)
+- [Instructions for Kubernetes 1.13 with dynamic webhook and local log file]
+(#instructions-for-kubernetes-113-with-dynamic-webhook-and-local-log-file)
+- [Instructions for OpenShift 4.x](#instructions-for-openshift-4x)
 
 <!-- tocstop -->
 
@@ -134,3 +136,38 @@ audit-policy.yaml                                                               
 ```
 
 The audit log will be available on the apiserver host at `/var/lib/k8s_audit/audit.log`.
+
+## Instructions for OpenShift 4.x
+
+To enable audit log processing on OpenShift 4.x, you must complete two steps:
+
+1. OpenShift node configuration
+2. OpenShift KubeAPIServer configuration
+
+### OpenShift node configuration
+
+The nodes in your OpenShift cluster must contain the `webhook-config.yaml` file that defines where the audit events will be sent.  
+A `MachineConfig` resource allows you to update the OpenShift nodes to contain a file that is encoded into the contents of the resource.
+Apply the `MachineConfig` resource by running the commands below.  Note that the `webhook-config.yaml` file must already be generated
+as described in the section **Define your audit policy and webhook configuration**.
+
+```
+FALCO_WEBHOOK_CONFIG=$(cat webhook-config.yaml | base64) envsub < machine-config.yaml.in > machine-config.yaml
+oc apply -f machine-config.yaml
+```
+
+### OpenShift KubeAPIServer configuration
+
+After the `MachineConfig` has been applied, you must edit the `KubeAPIServer` resource so audit events will be sent to the address
+in the `webhook-config.yaml` configuration file.
+Run the command: `oc edit KubeAPIServer cluster`. 
+Find the entry for `unsupportedConfigOverrides` and update it to include the content below:
+
+```
+  unsupportedConfigOverrides:
+    apiServerArguments:
+      audit-webhook-config-file:
+      - /var/log/kube-apiserver/webhook-config.yaml
+```
+
+Save and quit the editor.  This will cause the api servers to recycle and can take several minutes to complete.
