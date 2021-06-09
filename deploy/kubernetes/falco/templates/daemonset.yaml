@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.13.0"
+    chart: "falco-1.13.1"
     release: "falco"
     heritage: "Helm"
 spec:
@@ -20,7 +20,7 @@ spec:
         app: falco
         role: security
       annotations:
-        checksum/config: 2c735b06a57dbab2157270a14afa98f63b4ae409993787aabb743ee4f696aacd
+        checksum/config: cf709352e983f707e8dda49aa19d6292540a013304b8cf5acfc6ee4be5b69f51
         checksum/rules: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
         checksum/certs: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
     spec:
@@ -57,14 +57,14 @@ spec:
             periodSeconds: 15
             httpGet:
               path: /healthz
-              port: http
+              port: 8765
           readinessProbe:
             initialDelaySeconds: 30
             timeoutSeconds: 5
             periodSeconds: 15
             httpGet:
               path: /healthz
-              port: http
+              port: 8765
           volumeMounts:
             - mountPath: /host/var/run/docker.sock
               name: docker-socket
