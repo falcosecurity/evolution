@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app.kubernetes.io/name: falcosidekick
-    helm.sh/chart: falcosidekick-0.3.7
+    helm.sh/chart: falcosidekick-0.3.8
     app.kubernetes.io/instance: falcosidekick
     app.kubernetes.io/managed-by: Helm
 spec:
@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: falcosidekick
         app.kubernetes.io/instance: falcosidekick
       annotations:
-        checksum/config: bc684d52ad7c616503bbb1277b01c5547883521707eda34e2175b6b1e2b9ca58
+        checksum/config: 6f11c7190757265232649aec19f108084b3c32fced7357a24bd31b2839619c40
     spec:
       serviceAccountName: falcosidekick
       securityContext:
@@ -28,7 +28,7 @@ spec:
         fsGroup: 1234
       containers:
         - name: falcosidekick
-          image: "falcosecurity/falcosidekick:2.22.0"
+          image: "falcosecurity/falcosidekick:2.23.1"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -54,7 +54,7 @@ spec:
               value: "false"
             - name: CUSTOMFIELDS
               value: ""
-            - name: CHECKCERT
-              value: "true"
+            - name: MUTUALTLSFILESPATH
+              value: "/etc/certs"
           resources:
             {}
