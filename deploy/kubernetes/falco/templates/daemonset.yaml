@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.15.0"
+    chart: "falco-1.15.1"
     release: "falco"
     heritage: "Helm"
 spec:
@@ -20,7 +20,7 @@ spec:
         app: falco
         role: security
       annotations:
-        checksum/config: d02402bf85249c253eb0b81dc42533e055474fae57be6ff6222f2bd9c7cbb5c7
+        checksum/config: 3a0c01c09e4b668607f53a7c2a69923f3de466b442c94f97964359d30f37f93a
         checksum/rules: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
         checksum/certs: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
     spec:
@@ -44,9 +44,9 @@ spec:
           args:
             - /usr/bin/falco
             - --cri
-            - /run/containerd/containerd.sock 
+            - /run/containerd/containerd.sock
             - -K
-            - /var/run/secrets/kubernetes.io/serviceaccount/token 
+            - /var/run/secrets/kubernetes.io/serviceaccount/token
             - -k
             - https://$(KUBERNETES_SERVICE_HOST)
             - -pk
