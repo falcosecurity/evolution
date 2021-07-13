@@ -59,6 +59,17 @@ As per [our governance model](https://github.com/falcosecurity/.github/blob/mast
 | [falcosecurity/pdig](https://github.com/falcosecurity/pdig) | Incubating | |
 | [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra) | Incubating | The prebuilt-driver artifacts are provided on a best-effort basis. |
 
+### Special repositories
+
+Some repositories have a special meaning and do not fit the above statuses. These are:
+
+| Repository | Description |
+| --- | --- |
+| [falcosecurity/.github](https://github.com/falcosecurity/.github) |  This repository holds default community health files, such as the [`CONTRIBUTING.md`](https://github.com/falcosecurity/.github/blob/master/CONTRIBUTING.md), [`CODE_OF_CONDUCT.md`](https://github.com/falcosecurity/.github/blob/master/CODE_OF_CONDUCT.md), and [`GOVERNANCE.md`](https://github.com/falcosecurity/.github/blob/master/GOVERNANCE.md) files.  |
+| [falcosecurity/community](https://github.com/falcosecurity/community) |  Community-related stuff of The Falco Project.  |
+| [falcosecurity/evolution](https://github.com/falcosecurity/evolution) |  This repository holds the evolution process of The Falco Project.  |
+| [falcosecurity/template-repository](https://github.com/falcosecurity/template-repository) |  This repository holds the template for creating a new project under the [falcosecurity](https://falcosecurity) GitHub's organization.  |
+
 ## Contributing
 
 See the [contributing guide](https://github.com/falcosecurity/.github/blob/master/CONTRIBUTING.md) and the [community code of conduct](https://github.com/falcosecurity/.github/blob/master/CODE_OF_CONDUCT.md).
