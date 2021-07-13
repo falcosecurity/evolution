@@ -35,9 +35,29 @@ This status is assigned as needed, and can best be measured by the need to cut a
 
 As the need for a project grows, it can ultimately achieve the highest and most coveted status within The Falco Project: "*Official support*."
 
-Currently, only those artifacts included in the [falcosecurity/falco](https://github.com/falcosecurity/falco) repository got the "Official support" status. These artifacts will be refined and amended as per the [Falco Artifacts Scope - Part 2](https://github.com/falcosecurity/falco/blob/master/proposals/20200506-artifacts-scope-part-2.md).
+## Projects
 
-The full list of those artifacts can be found within the [official documentation](https://falco.org/docs/download/.)
+As per [our governance model](https://github.com/falcosecurity/.github/blob/master/GOVERNANCE.md#adding-new-projects-to-the-falcosecurity-github-organization), to request a project to be added or promoted, please open an [issue](https://github.com/falcosecurity/evolution/issues/new/choose), and choose the appropriate template. Once sufficient discussion has taken place and the proposal has been accepted, the project will be listed in the table below with the given status.
+
+
+| Project | Status | Note |
+| --- | --- | --- |
+| [falcosecurity/falco](https://github.com/falcosecurity/falco) | Official support | The list of official artifacts can be found within the [official documentation](https://falco.org/docs/download/). These artifacts will be refined and amended as per the [Falco Artifacts Scope - Part 2](https://github.com/falcosecurity/falco/blob/master/proposals/20200506-artifacts-scope-part-2.md).  |
+| [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website) | Official support | | 
+| [falcosecurity/libs](https://github.com/falcosecurity/libs) | Official support | Artifacts will be avialable once [Versioning and release process of the libs artifacts](https://github.com/falcosecurity/libs/blob/master/proposals/20210524-versioning-and-release-of-the-libs-artifacts.md) proposal is fully implemented. |
+| [falcosecurity/charts](https://github.com/falcosecurity/charts) | Incubating | |
+| [falcosecurity/client-go](https://github.com/falcosecurity/client-go) | Incubating | |
+| [falcosecurity/client-py](https://github.com/falcosecurity/client-py) | Incubating | |
+| [falcosecurity/client-rs](https://github.com/falcosecurity/client-rs) | Incubating | |
+| [falcosecurity/driverkit](https://github.com/falcosecurity/driverkit) | Incubating | |
+| [falcosecurity/event-generator](https://github.com/falcosecurity/event-generator) | Incubating | |
+| [falcosecurity/falco-exporter](https://github.com/falcosecurity/falco-exporter) | Incubating | |
+| [falcosecurity/falcoctl](https://github.com/falcosecurity/falcoctl) | Incubating | |
+| [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick) | Incubating | |
+| [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui) | Incubating | |
+| [falcosecurity/kilt](https://github.com/falcosecurity/kilt) | Incubating | |
+| [falcosecurity/pdig](https://github.com/falcosecurity/pdig) | Incubating | |
+| [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra) | Incubating | The prebuilt-driver artifacts are provided on a best-effort basis. |
 
 ## Contributing
 
