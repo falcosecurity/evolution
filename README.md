@@ -44,7 +44,7 @@ As per [our governance model](https://github.com/falcosecurity/.github/blob/mast
 | --- | --- | --- |
 | [falcosecurity/falco](https://github.com/falcosecurity/falco) | Official support | The list of official artifacts can be found within the [official documentation](https://falco.org/docs/download/). These artifacts will be refined and amended as per the [Falco Artifacts Scope - Part 2](https://github.com/falcosecurity/falco/blob/master/proposals/20200506-artifacts-scope-part-2.md).  |
 | [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website) | Official support | | 
-| [falcosecurity/libs](https://github.com/falcosecurity/libs) | Official support | Artifacts will be avialable once [Versioning and release process of the libs artifacts](https://github.com/falcosecurity/libs/blob/master/proposals/20210524-versioning-and-release-of-the-libs-artifacts.md) proposal is fully implemented. |
+| [falcosecurity/libs](https://github.com/falcosecurity/libs) | Official support | Artifacts will be available once [Versioning and release process of the libs artifacts](https://github.com/falcosecurity/libs/blob/master/proposals/20210524-versioning-and-release-of-the-libs-artifacts.md) proposal is fully implemented. |
 | [falcosecurity/charts](https://github.com/falcosecurity/charts) | Incubating | |
 | [falcosecurity/client-go](https://github.com/falcosecurity/client-go) | Incubating | |
 | [falcosecurity/client-py](https://github.com/falcosecurity/client-py) | Incubating | |
