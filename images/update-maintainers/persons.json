@@ -114,5 +114,9 @@
     "sreedaum" : {
         "name": "Sreeda U M",
         "company": "Independent"
+    },
+    "pabloopez" : {
+        "name": "Pablo Zaldivar",
+        "company": "Sysdig"
     }
 }
