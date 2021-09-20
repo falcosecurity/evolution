@@ -58,6 +58,7 @@ As per [our governance model](https://github.com/falcosecurity/.github/blob/mast
 | [falcosecurity/katacoda-scenarios](https://github.com/falcosecurity/katacoda-scenarios) | Incubating | |
 | [falcosecurity/kilt](https://github.com/falcosecurity/kilt) | Incubating | |
 | [falcosecurity/pdig](https://github.com/falcosecurity/pdig) | Incubating | |
+| [falcosecurity/plugin-sdk-go](https://github.com/falcosecurity/plugin-sdk-go) | Incubating | |
 | [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra) | Incubating | The prebuilt-driver artifacts are provided on a best-effort basis. |
 
 ### Special repositories
