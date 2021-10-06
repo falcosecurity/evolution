@@ -73,7 +73,7 @@ Some repositories have a special meaning and do not fit the above statuses. Thes
 | [falcosecurity/evolution](https://github.com/falcosecurity/evolution) |  This repository holds the evolution process of The Falco Project.  |
 | [falcosecurity/template-repository](https://github.com/falcosecurity/template-repository) |  This repository holds the template for creating a new project under the [falcosecurity](https://falcosecurity) GitHub's organization.  |
 
-### Archivied repositories
+### Archived repositories
 
 In general, a repository can be archived at the discretion of The Falco Project community. Usually, maintainers can decide to archive a project that has not been maintained for a long time or does not fit the guidelines for the projects under the [falcosecurity](https://falcosecurity) GitHub's organization anymore. In other cases, a repository is archived to reserve its name for future use.
 
