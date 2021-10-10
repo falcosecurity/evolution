@@ -5,9 +5,9 @@ metadata:
   labels:
     app.kubernetes.io/name: falco-exporter
     app.kubernetes.io/instance: falco-exporter
-    app.kubernetes.io/version: "0.5.0"
+    app.kubernetes.io/version: "0.6.0"
     app.kubernetes.io/managed-by: Helm
-    helm.sh/chart: falco-exporter-0.5.2
+    helm.sh/chart: falco-exporter-0.6.0
   namespace: default
 spec:
   selector:
@@ -27,7 +27,7 @@ spec:
         - name: falco-exporter
           securityContext:
             {}
-          image: "docker.io/falcosecurity/falco-exporter:0.5.0"
+          image: "docker.io/falcosecurity/falco-exporter:0.6.0"
           imagePullPolicy: IfNotPresent
           args:
             - /usr/bin/falco-exporter
