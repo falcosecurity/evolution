@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM debian:buster
 
 LABEL usage="docker run -i -t -v /path/to/source:/workspace test-infra/build-libs [cmake options]"
 
@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libncurses-dev \
     pkg-config \
     autoconf \ 
+    automake \
     libtool \
     libelf-dev \
     wget \
