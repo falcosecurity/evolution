@@ -1,0 +1,7 @@
+[
+  {
+    "op":"add",
+    "path":"/rules/0/verbs/-",
+    "value": "patch"
+  }
+]

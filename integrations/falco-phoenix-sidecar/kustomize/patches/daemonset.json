@@ -1,0 +1,37 @@
+[
+  {"op": "add",
+   "path": "/spec/template/spec/containers/-",
+   "value": {
+     "name": "python",
+     "image": "phoenixop/falco-phoenix-sidecar:latest",
+     "env":[
+       {
+         "name": "MAXIMUM_NUMBER_OF_EVENTS",
+         "value": "5"
+       },
+       {
+         "name": "ANNOTATION_KEY",
+         "value": "phoenix.r6security.com/falcoevent"
+       }],
+     "volumeMounts": [
+       {
+         "name": "grpc-socket-dir",
+         "mountPath": "/var/run/falco"
+       },
+       {
+         "name": "sidecar-config-volume",
+         "mountPath": "/app/conf"
+       }
+     ]
+   }
+  },
+  {
+    "op":"add",
+    "path":"/spec/template/spec/volumes/-",
+    "value":
+      {
+        "name":"sidecar-config-volume",
+        "configMap":{"name":"events"}
+      }
+  }
+]
