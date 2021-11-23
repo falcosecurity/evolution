@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: falcoproducer-deployment
+  namespace: phoenix-operator
+spec:
+  selector:
+    matchLabels:
+      app: falcoproducer
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: falcoproducer
+    spec:
+      containers:
+      - name: python
+        image: tuti/falcoproducer:v0.0.1
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: tmp-fs
+          mountPath: /host/tmp
+          readOnly: true
+        - name: grpc-socket-dir
+          mountPath: /var/run/falco
+      volumes:
+      - name: tmp-fs
+        hostPath:
+          path: /tmp
+      - name: grpc-socket-dir
+        hostPath:
+          path: /var/run/falco 
+
