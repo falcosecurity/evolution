@@ -1,0 +1,33 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+#helmCharts:
+#- name: falco
+#  releaseName: falco
+#  repo: https://falcosecurity.github.io/charts
+#  valuesInline:
+#    falco:
+#      grpc:
+#        enabled: true
+#      grpcOutput:
+#        enabled: true
+configMapGenerator:
+- files:
+  - ./config/falco-phoenix-sidecar.conf
+  name: events
+  options:
+    disableNameSuffixHash: true
+patches:
+- path: ./patches/daemonset.json
+  target:
+    group: apps
+    kind: DaemonSet
+    name: falco-phoenix
+    version: v1
+- path: ./patches/clusterrole.json
+  target:
+    group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: falco-phoenix
+    version: v1
+resources:
+- chart.yaml
