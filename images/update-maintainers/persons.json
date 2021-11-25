@@ -43,7 +43,7 @@
         "name": "Jorge Salamero Sanz",
         "company": "Sysdig"
     },
-    "danpopsd": {
+    "danpopnyc": {
         "name": "Dan POP Papandrea",
         "company": "Sysdig"
     },
@@ -117,10 +117,6 @@
     },
     "pabloopez" : {
         "name": "Pablo Zaldivar",
-        "company": "Sysdig"
-    },
-    "jasondellaluce" : {
-        "name": "Jason Dellaluce",
         "company": "Sysdig"
     }
 }
