@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/instance: falco-exporter
     app.kubernetes.io/version: "0.6.0"
     app.kubernetes.io/managed-by: Helm
-    helm.sh/chart: falco-exporter-0.6.2
+    helm.sh/chart: falco-exporter-0.6.3
   namespace: default
 spec:
   clusterIP: None
