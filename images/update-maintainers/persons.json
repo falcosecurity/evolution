@@ -122,5 +122,9 @@
     "jasondellaluce" : {
         "name": "Jason Dellaluce",
         "company": "Sysdig"
+    },
+    "fededp" : {
+        "name": "Federico Di Pierro",
+        "company": "Sysdig"
     }
 }
