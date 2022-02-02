@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.16.4"
+    chart: "falco-1.17.0"
     release: "falco"
     heritage: "Helm"
 spec:
@@ -20,7 +20,7 @@ spec:
         app: falco
         role: security
       annotations:
-        checksum/config: f749d22ac33e10f9b71ea8be217d1b5499a48ed8d818b8ba851ffa80955420be
+        checksum/config: d51467e30ee6999eebd9192740e3fb0e49df210c229505a560c24bc58dddc005
         checksum/rules: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
         checksum/certs: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
     spec:
@@ -30,7 +30,7 @@ spec:
           key: node-role.kubernetes.io/master
       containers:
         - name: falco
-          image: docker.io/falcosecurity/falco:0.30.0
+          image: docker.io/falcosecurity/falco:0.31.0
           imagePullPolicy: IfNotPresent
           resources:
             limits:
@@ -131,5 +131,7 @@ spec:
                 path: falco_rules.local.yaml
               - key: application_rules.yaml
                 path: rules.available/application_rules.yaml
+              - key: aws_cloudtrail_rules.yaml
+                path: aws_cloudtrail_rules.yaml
   updateStrategy:
     type: RollingUpdate
