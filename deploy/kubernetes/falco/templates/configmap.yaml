@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.16.4"
+    chart: "falco-1.17.0"
     release: "falco"
     heritage: "Helm"
 data:
@@ -27,6 +27,23 @@ data:
       - /etc/falco/falco_rules.local.yaml
       - /etc/falco/k8s_audit_rules.yaml
       - /etc/falco/rules.d
+
+    plugins:
+        - init_config: ""
+          library_path: libcloudtrail.so
+          name: cloudtrail
+          open_params: ""
+        - init_config: ""
+          library_path: libjson.so
+          name: json
+
+    # Setting this list to empty ensures that the above plugins are *not*
+    # loaded and enabled by default. If you want to use the above plugins,
+    # set a meaningful init_config/open_params for the cloudtrail plugin
+    # and then change this to:
+    # load_plugins: [cloudtrail, json]
+    load_plugins:
+        []
 
     # If true, the times displayed in log messages and output messages
     # will be in ISO 8601. By default, times are displayed in the local
@@ -69,23 +86,50 @@ data:
     buffered_outputs: false
 
     # Falco uses a shared buffer between the kernel and userspace to pass
-    # system call information. When falco detects that this buffer is
+    # system call information. When Falco detects that this buffer is
     # full and system calls have been dropped, it can take one or more of
     # the following actions:
-    #   - "ignore": do nothing. If an empty list is provided, ignore is assumed.
-    #   - "log": log a CRITICAL message noting that the buffer was full.
-    #   - "alert": emit a falco alert noting that the buffer was full.
-    #   - "exit": exit falco with a non-zero rc.
+    #   - ignore: do nothing (default when list of actions is empty)
+    #   - log: log a DEBUG message noting that the buffer was full
+    #   - alert: emit a Falco alert noting that the buffer was full
+    #   - exit: exit Falco with a non-zero rc
+    #
+    # Notice it is not possible to ignore and log/alert messages at the same time.
     #
     # The rate at which log/alert messages are emitted is governed by a
     # token bucket. The rate corresponds to one message every 30 seconds
-    # with a burst of 10 messages.
+    # with a burst of one message (by default).
+    #
+    # The messages are emitted when the percentage of dropped system calls
+    # with respect the number of events in the last second
+    # is greater than the given threshold (a double in the range [0, 1]).
+    #
+    # For debugging/testing it is possible to simulate the drops using
+    # the `simulate_drops: true`. In this case the threshold does not apply.
     syscall_event_drops:
+      threshold: 0.1
       actions:
         - log
         - alert
       rate: 0.03333
-      max_burst: 10
+      max_burst: 1
+
+    # Falco uses a shared buffer between the kernel and userspace to receive
+    # the events (eg., system call information) in userspace.
+    #
+    # Anyways, the underlying libraries can also timeout for various reasons.
+    # For example, there could have been issues while reading an event.
+    # Or the particular event needs to be skipped.
+    # Normally, it's very unlikely that Falco does not receive events consecutively.
+    #
+    # Falco is able to detect such uncommon situation.
+    #
+    # Here you can configure the maximum number of consecutive timeouts without an event
+    # after which you want Falco to alert.
+    # By default this value is set to 1000 consecutive timeouts without an event at all.
+    # How this value maps to a time interval depends on the CPU frequency.
+    syscall_event_timeouts:
+      max_consecutives: 1000
 
     # Falco continuously monitors outputs performance. When an output channel does not allow
     # to deliver an alert within a given deadline, an error is reported indicating
@@ -101,7 +145,6 @@ data:
     #
     # With a 2000ms default, the notification consumer can block the Falco output
     # for up to 2 seconds without reaching the timeout.
-
     output_timeout: 2000
 
     # A throttling mechanism implemented as a token bucket limits the
@@ -121,7 +164,6 @@ data:
 
     # Where security notifications should go.
     # Multiple outputs can be enabled.
-
     syslog_output:
       enabled: true
 
@@ -132,7 +174,6 @@ data:
     #
     # Also, the file will be closed and reopened if falco is signaled with
     # SIGUSR1.
-
     file_output:
       enabled: false
       keep_alive: false
@@ -151,7 +192,6 @@ data:
     # $ openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
     # $ cat certificate.pem key.pem > falco.pem
     # $ sudo cp falco.pem /etc/falco/falco.pem
-
     webserver:
       enabled: true
       listen_port: 8765
@@ -159,14 +199,6 @@ data:
       k8s_healthz_endpoint: /healthz
       ssl_enabled: false
       ssl_certificate: /etc/falco/certs/server.pem
-
-    # Possible additional things you might want to do with program output:
-    #   - send to a slack webhook:
-    #         program: "\"jq '{text: .output}' | curl -d @- -X POST https://hooks.slack.com/services/XXX\""
-    #   - logging (alternate method than syslog):
-    #         program: logger -t falco-test
-    #   - send over a network connection:
-    #         program: nc host.example.com 80
 
     # If keep_alive is set to true, the program will be started once and
     # continuously written to, with each output message on its own
@@ -184,13 +216,39 @@ data:
     http_output:
       enabled: false
       url: http://some.url
+      user_agent: falcosecurity/falco
 
+
+    # Falco supports running a gRPC server with two main binding types
+    # 1. Over the network with mandatory mutual TLS authentication (mTLS)
+    # 2. Over a local unix socket with no authentication
+    # By default, the gRPC server is disabled, with no enabled services (see grpc_output)
+    # please comment/uncomment and change accordingly the options below to configure it.
+    # Important note: if Falco has any troubles creating the gRPC server
+    # this information will be logged, however the main Falco daemon will not be stopped.
+    # gRPC server over network with (mandatory) mutual TLS configuration.
+    # This gRPC server is secure by default so you need to generate certificates and update their paths here.
+    # By default the gRPC server is off.
+    # You can configure the address to bind and expose it.
+    # By modifying the threadiness configuration you can fine-tune the number of threads (and context) it will use.
+    # grpc:
+    #   enabled: true
+    #   bind_address: "0.0.0.0:5060"
+    #   # when threadiness is 0, Falco sets it by automatically figuring out the number of online cores
+    #   threadiness: 0
+    #   private_key: "/etc/falco/certs/server.key"
+    #   cert_chain: "/etc/falco/certs/server.crt"
+    #   root_certs: "/etc/falco/certs/ca.crt"
     grpc:
       enabled: false
       threadiness: 0
       bind_address: "unix:///var/run/falco/falco.sock"
       
 
+    # gRPC output service.
+    # By default it is off.
+    # By enabling this all the output events will be kept in memory until you read them with a gRPC client.
+    # Make sure to have a consumer for them or leave this disabled.
     grpc_output:
       enabled: false
     
@@ -389,7 +447,449 @@ data:
     #   condition: proc.name in (http_server_binaries) and inbound and fd.sport != 80 and fd.sport != 443
     #   output: "Inbound network traffic to HTTP Server on unexpected port (connection=%fd.name)"
     #   priority: WARNING
-  falco_rules.local.yaml: |
+  aws_cloudtrail_rules.yaml: |
+    #
+    # Copyright (C) 2022 The Falco Authors.
+    #
+    #
+    # Licensed under the Apache License, Version 2.0 (the "License");
+    # you may not use this file except in compliance with the License.
+    # You may obtain a copy of the License at
+    #
+    #     http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+    #
+  
+    # All rules files related to plugins should require engine version 10
+    - required_engine_version: 10
+  
+    # These rules can be read by cloudtrail plugin version 0.1.0, or
+    # anything semver-compatible.
+    - required_plugin_versions:
+      - name: cloudtrail
+        version: 0.2.3
+      - name: json
+        version: 0.2.2
+  
+    # Note that this rule is disabled by default. It's useful only to
+    # verify that the cloudtrail plugin is sending events properly.  The
+    # very broad condition evt.num > 0 only works because the rule source
+    # is limited to aws_cloudtrail. This ensures that the only events that
+    # are matched against the rule are from the cloudtrail plugin (or
+    # a different plugin with the same source).
+    - rule: All Cloudtrail Events
+      desc: Match all cloudtrail events.
+      condition:
+        evt.num > 0
+      output: Some Cloudtrail Event (evtnum=%evt.num info=%evt.plugininfo ts=%evt.time.iso8601 id=%ct.id error=%ct.error)
+      priority: DEBUG
+      tags:
+      - cloud
+      - aws
+      source: aws_cloudtrail
+      enabled: false
+  
+    - rule: Console Login Through Assume Role
+      desc: Detect a console login through Assume Role.
+      condition:
+        ct.name="ConsoleLogin" and not ct.error exists
+        and ct.user.identitytype="AssumedRole"
+        and json.value[/responseElements/ConsoleLogin]="Success"
+      output:
+        Detected a console login through Assume Role
+        (principal=%ct.user.principalid,
+        assumedRole=%ct.user.arn,
+        requesting IP=%ct.srcip,
+        AWS region=%ct.region)
+      priority: WARNING
+      tags:
+      - cloud
+      - aws
+      - aws_console
+      - aws_iam
+      source: aws_cloudtrail
+  
+    - rule: Console Login Without MFA
+      desc: Detect a console login without MFA.
+      condition:
+        ct.name="ConsoleLogin" and not ct.error exists
+        and ct.user.identitytype!="AssumedRole"
+        and json.value[/responseElements/ConsoleLogin]="Success"
+        and json.value[/additionalEventData/MFAUsed]="No"
+      output:
+        Detected a console login without MFA
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region)
+      priority: CRITICAL
+      tags:
+        - cloud
+        - aws
+        - aws_console
+        - aws_iam
+      source: aws_cloudtrail
+  
+    - rule: Console Root Login Without MFA
+      desc: Detect root console login without MFA.
+      condition:
+        ct.name="ConsoleLogin" and not ct.error exists
+        and json.value[/additionalEventData/MFAUsed]="No"
+        and ct.user.identitytype!="AssumedRole"
+        and json.value[/responseElements/ConsoleLogin]="Success"
+        and ct.user.identitytype="Root"
+      output:
+        Detected a root console login without MFA.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region)
+      priority: CRITICAL
+      tags:
+        - cloud
+        - aws
+        - aws_console
+        - aws_iam
+      source: aws_cloudtrail
+  
+    - rule: Deactivate MFA for Root User
+      desc: Detect deactivating MFA configuration for root.
+      condition:
+        ct.name="DeactivateMFADevice" and not ct.error exists
+        and ct.user.identitytype="Root"
+        and ct.request.username="AWS ROOT USER"
+      output:
+        Multi Factor Authentication configuration has been disabled for root
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         MFA serial number=%ct.request.serialnumber)
+      priority: CRITICAL
+      tags:
+        - cloud
+        - aws
+        - aws_iam
+      source: aws_cloudtrail
+  
+    - rule: Create AWS user
+      desc: Detect creation of a new AWS user.
+      condition:
+        ct.name="CreateUser" and not ct.error exists
+      output:
+        A new AWS user has been created
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         new user created=%ct.request.username)
+      priority: INFO
+      tags:
+        - cloud
+        - aws
+        - aws_iam
+      source: aws_cloudtrail
+  
+    - rule: Create Group
+      desc: Detect creation of a new user group.
+      condition:
+        ct.name="CreateGroup" and not ct.error exists
+      output:
+        A new user group has been created.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         group name=%ct.request.groupname)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_iam
+      source: aws_cloudtrail
+  
+    - rule: Delete Group
+      desc: Detect deletion of a user group.
+      condition:
+        ct.name="DeleteGroup" and not ct.error exists
+      output:
+        A user group has been deleted.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         group name=%ct.request.groupname)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_iam
+      source: aws_cloudtrail
+  
+    - rule: ECS Service Created
+      desc: Detect a new service is created in ECS.
+      condition:
+        ct.src="ecs.amazonaws.com" and
+        ct.name="CreateService" and
+        not ct.error exists
+      output:
+        A new service has been created in ECS
+        (requesting user=%ct.user,
+        requesting IP=%ct.srcip,
+        AWS region=%ct.region,
+        cluster=%ct.request.cluster,
+        service name=%ct.request.servicename,
+        task definition=%ct.request.taskdefinition)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_ecs
+        - aws_fargate
+      source: aws_cloudtrail
+  
+    - rule: ECS Task Run or Started
+      desc: Detect a new task is started in ECS.
+      condition:
+        ct.src="ecs.amazonaws.com" and
+        (ct.name="RunTask" or ct.name="StartTask") and
+        not ct.error exists
+      output:
+        A new task has been started in ECS
+        (requesting user=%ct.user,
+        requesting IP=%ct.srcip,
+        AWS region=%ct.region,
+        cluster=%ct.request.cluster,
+        task definition=%ct.request.taskdefinition)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_ecs
+        - aws_fargate
+      source: aws_cloudtrail
+  
+    - rule: Create Lambda Function
+      desc: Detect creation of a Lambda function.
+      condition:
+        ct.name="CreateFunction20150331" and not ct.error exists
+      output:
+        Lambda function has been created.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         lambda function=%ct.request.functionname)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_lambda
+      source: aws_cloudtrail
+  
+    - rule: Update Lambda Function Code
+      desc: Detect updates to a Lambda function code.
+      condition:
+        ct.name="UpdateFunctionCode20150331v2" and not ct.error exists
+      output:
+        The code of a Lambda function has been updated.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         lambda function=%ct.request.functionname)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_lambda
+      source: aws_cloudtrail
+  
+    - rule: Update Lambda Function Configuration
+      desc: Detect updates to a Lambda function configuration.
+      condition:
+        ct.name="UpdateFunctionConfiguration20150331v2" and not ct.error exists
+      output:
+        The configuration of a Lambda function has been updated.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         lambda function=%ct.request.functionname)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_lambda
+      source: aws_cloudtrail
+  
+    - rule: Run Instances
+      desc: Detect launching of a specified number of instances.
+      condition:
+        ct.name="RunInstances" and not ct.error exists
+      output:
+        A number of instances have been launched.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         availability zone=%ct.request.availabilityzone,
+         subnet id=%ct.response.subnetid,
+         reservation id=%ct.response.reservationid)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_ec2
+      source: aws_cloudtrail
+  
+    # Only instances launched on regions in this list are approved.
+    - list: approved_regions
+      items:
+        - us-east-0
+  
+    - rule: Run Instances in Non-approved Region
+      desc: Detect launching of a specified number of instances in a non-approved region.
+      condition:
+        ct.name="RunInstances" and not ct.error exists and
+        not ct.region in (approved_regions)
+      output:
+        A number of instances have been launched in a non-approved region.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         availability zone=%ct.request.availabilityzone,
+         subnet id=%ct.response.subnetid,
+         reservation id=%ct.response.reservationid,
+         image id=%json.value[/responseElements/instancesSet/items/0/instanceId])
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_ec2
+      source: aws_cloudtrail
+  
+    - rule: Delete Bucket Encryption
+      desc: Detect deleting configuration to use encryption for bucket storage.
+      condition:
+        ct.name="DeleteBucketEncryption" and not ct.error exists
+      output:
+        A encryption configuration for a bucket has been deleted
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         bucket=%s3.bucket)
+      priority: CRITICAL
+      tags:
+        - cloud
+        - aws
+        - aws_s3
+      source: aws_cloudtrail
+  
+    - rule: Delete Bucket Public Access Block
+      desc: Detect deleting blocking public access to bucket.
+      condition:
+        ct.name="PutBucketPublicAccessBlock" and not ct.error exists and
+        json.value[/requestParameters/publicAccessBlock]="" and
+          (json.value[/requestParameters/PublicAccessBlockConfiguration/RestrictPublicBuckets]=false or
+          json.value[/requestParameters/PublicAccessBlockConfiguration/BlockPublicPolicy]=false or
+          json.value[/requestParameters/PublicAccessBlockConfiguration/BlockPublicAcls]=false or
+          json.value[/requestParameters/PublicAccessBlockConfiguration/IgnorePublicAcls]=false)
+      output:
+        A pulic access block for a bucket has been deleted
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         bucket=%s3.bucket)
+      priority: CRITICAL
+      tags:
+        - cloud
+        - aws
+        - aws_s3
+      source: aws_cloudtrail
+  
+    - rule: List Buckets
+      desc: Detect listing of all S3 buckets.
+      condition:
+        ct.name="ListBuckets" and not ct.error exists
+      output:
+        A list of all S3 buckets has been requested.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         host=%ct.request.host)
+      priority: WARNING
+      enabled: false
+      tags:
+        - cloud
+        - aws
+        - aws_s3
+      source: aws_cloudtrail
+  
+    - rule: Put Bucket ACL
+      desc: Detect setting the permissions on an existing bucket using access control lists.
+      condition:
+        ct.name="PutBucketAcl" and not ct.error exists
+      output:
+        The permissions on an existing bucket have been set using access control lists.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         bucket name=%s3.bucket)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_s3
+      source: aws_cloudtrail
+  
+    - rule: Put Bucket Policy
+      desc: Detect applying an Amazon S3 bucket policy to an Amazon S3 bucket.
+      condition:
+        ct.name="PutBucketPolicy" and not ct.error exists
+      output:
+        An Amazon S3 bucket policy has been applied to an Amazon S3 bucket.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         bucket name=%s3.bucket,
+         policy=%ct.request.policy)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_s3
+      source: aws_cloudtrail
+  
+    - rule: CloudTrail Trail Created
+      desc: Detect creation of a new trail.
+      condition:
+        ct.name="CreateTrail" and not ct.error exists
+      output:
+        A new trail has been created.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         trail name=%ct.request.name)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_cloudtrail
+      source: aws_cloudtrail
+  
+    - rule: CloudTrail Logging Disabled
+      desc: The CloudTrail logging has been disabled, this could be potentially malicious.
+      condition:
+        ct.name="StopLogging" and not ct.error exists
+      output:
+        The CloudTrail logging has been disabled.
+        (requesting user=%ct.user,
+         requesting IP=%ct.srcip,
+         AWS region=%ct.region,
+         resource name=%ct.request.name)
+      priority: WARNING
+      tags:
+        - cloud
+        - aws
+        - aws_cloudtrail
+      source: aws_cloudtrail
+  falco_rules.local.yaml: |-
     #
     # Copyright (C) 2019 The Falco Authors.
     #
@@ -422,7 +922,7 @@ data:
     # Or override/append to any rule, macro, or list from the Default Rules
   falco_rules.yaml: |
     #
-    # Copyright (C) 2020 The Falco Authors.
+    # Copyright (C) 2022 The Falco Authors.
     #
     #
     # Licensed under the Apache License, Version 2.0 (the "License");
@@ -452,13 +952,13 @@ data:
     #   condition: (syscall.type=read and evt.dir=> and fd.type in (file, directory))
   
     - macro: open_write
-      condition: (evt.type=open or evt.type=openat) and evt.is_open_write=true and fd.typechar='f' and fd.num>=0
+      condition: evt.type in (open,openat,openat2) and evt.is_open_write=true and fd.typechar='f' and fd.num>=0
   
     - macro: open_read
-      condition: (evt.type=open or evt.type=openat) and evt.is_open_read=true and fd.typechar='f' and fd.num>=0
+      condition: evt.type in (open,openat,openat2) and evt.is_open_read=true and fd.typechar='f' and fd.num>=0
   
     - macro: open_directory
-      condition: (evt.type=open or evt.type=openat) and evt.is_open_read=true and fd.typechar='d' and fd.num>=0
+      condition: evt.type in (open,openat,openat2) and evt.is_open_read=true and fd.typechar='d' and fd.num>=0
   
     - macro: never_true
       condition: (evt.num=0)
@@ -486,10 +986,13 @@ data:
       condition: rename or remove
   
     - macro: spawned_process
-      condition: evt.type = execve and evt.dir=<
+      condition: evt.type in (execve, execveat) and evt.dir=<
   
     - macro: create_symlink
       condition: evt.type in (symlink, symlinkat) and evt.dir=<
+  
+    - macro: create_hardlink
+      condition: evt.type in (link, linkat) and evt.dir=<
   
     - macro: chmod
       condition: (evt.type in (chmod, fchmod, fchmodat) and evt.dir=<)
@@ -639,11 +1142,11 @@ data:
     - list: deb_binaries
       items: [dpkg, dpkg-preconfigu, dpkg-reconfigur, dpkg-divert, apt, apt-get, aptitude,
         frontend, preinst, add-apt-reposit, apt-auto-remova, apt-key,
-        apt-listchanges, unattended-upgr, apt-add-reposit, apt-config, apt-cache, apt.systemd.dai
+        apt-listchanges, unattended-upgr, apt-add-reposit, apt-cache, apt.systemd.dai
         ]
   
     # The truncated dpkg-preconfigu is intentional, process names are
-    # truncated at the sysdig level.
+    # truncated at the falcosecurity-libs level.
     - list: package_mgmt_binaries
       items: [rpm_binaries, deb_binaries, update-alternat, gem, pip, pip3, sane-utils.post, alternatives, chef-client, apk, snapd]
   
@@ -756,7 +1259,7 @@ data:
     # for efficiency.
     - macro: inbound_outbound
       condition: >
-        ((((evt.type in (accept,listen,connect) and evt.dir=<)) or
+        ((((evt.type in (accept,listen,connect) and evt.dir=<)) and
          (fd.typechar = 4 or fd.typechar = 6)) and
          (fd.ip != "0.0.0.0" and fd.net != "127.0.0.0/8") and
          (evt.rawres >= 0 or evt.res = EINPROGRESS))
@@ -2249,6 +2752,7 @@ data:
         k8s.gcr.io/ip-masq-agent-amd64,
         k8s.gcr.io/kube-proxy,
         k8s.gcr.io/prometheus-to-sd,
+        public.ecr.aws/falcosecurity/falco,
         quay.io/calico/node,
         sysdig/sysdig,
         sematext_images
@@ -2277,7 +2781,7 @@ data:
     - list: falco_sensitive_mount_images
       items: [
         docker.io/sysdig/sysdig, sysdig/sysdig,
-        docker.io/falcosecurity/falco, falcosecurity/falco,
+        docker.io/falcosecurity/falco, falcosecurity/falco, public.ecr.aws/falcosecurity/falco,
         gcr.io/google_containers/hyperkube,
         gcr.io/google_containers/kube-proxy, docker.io/calico/node,
         docker.io/rook/toolbox, docker.io/cloudnativelabs/kube-router, docker.io/consul,
@@ -2292,19 +2796,6 @@ data:
                   container.image.repository in (trusted_images) or
                   container.image.repository in (falco_sensitive_mount_images) or
                   container.image.repository startswith quay.io/sysdig/)
-  
-    # These container images are allowed to run with hostnetwork=true
-    - list: falco_hostnetwork_images
-      items: [
-        gcr.io/google-containers/prometheus-to-sd,
-        gcr.io/projectcalico-org/typha,
-        gcr.io/projectcalico-org/node,
-        gke.gcr.io/gke-metadata-server,
-        gke.gcr.io/kube-proxy,
-        gke.gcr.io/netd-amd64,
-        k8s.gcr.io/ip-masq-agent-amd64
-        k8s.gcr.io/prometheus-to-sd,
-        ]
   
     # Add conditions to this macro (probably in a separate file,
     # overwriting this macro) to specify additional containers that are
@@ -2328,12 +2819,13 @@ data:
   
     # For now, only considering a full mount of /etc as
     # sensitive. Ideally, this would also consider all subdirectories
-    # below /etc as well, but the globbing mechanism used by sysdig
+    # below /etc as well, but the globbing mechanism
     # doesn't allow exclusions of a full pattern, only single characters.
     - macro: sensitive_mount
       condition: (container.mount.dest[/proc*] != "N/A" or
                   container.mount.dest[/var/run/docker.sock] != "N/A" or
                   container.mount.dest[/var/run/crio/crio.sock] != "N/A" or
+                  container.mount.dest[/run/containerd/containerd.sock] != "N/A" or
                   container.mount.dest[/var/lib/kubelet] != "N/A" or
                   container.mount.dest[/var/lib/kubelet/pki] != "N/A" or
                   container.mount.dest[/] != "N/A" or
@@ -2718,7 +3210,7 @@ data:
       desc: creating any files below /dev other than known programs that manage devices. Some rootkits hide files in /dev.
       condition: >
         fd.directory = /dev and
-        (evt.type = creat or ((evt.type = open or evt.type = openat) and evt.arg.flags contains O_CREAT))
+        (evt.type = creat or (evt.type in (open,openat,openat2) and evt.arg.flags contains O_CREAT))
         and not proc.name in (dev_creation_binaries)
         and not fd.name in (allowed_dev_files)
         and not fd.name startswith /dev/tty
@@ -2786,7 +3278,8 @@ data:
          docker.io/sysdig/sysdig, docker.io/falcosecurity/falco,
          sysdig/sysdig, falcosecurity/falco,
          fluent/fluentd-kubernetes-daemonset, prom/prometheus,
-         ibm_cloud_containers)
+         ibm_cloud_containers,
+         public.ecr.aws/falcosecurity/falco)
          or (k8s.ns.name = "kube-system"))
   
     - macro: k8s_api_server
@@ -3128,8 +3621,18 @@ data:
         create_symlink and
         (evt.arg.target in (sensitive_file_names) or evt.arg.target in (sensitive_directory_names))
       output: >
-        Symlinks created over senstivie files (user=%user.name user_loginuid=%user.loginuid command=%proc.cmdline target=%evt.arg.target linkpath=%evt.arg.linkpath parent_process=%proc.pname)
-      priority: NOTICE
+        Symlinks created over sensitive files (user=%user.name user_loginuid=%user.loginuid command=%proc.cmdline target=%evt.arg.target linkpath=%evt.arg.linkpath parent_process=%proc.pname)
+      priority: WARNING
+      tags: [file, mitre_exfiltration]
+  
+    - rule: Create Hardlink Over Sensitive Files
+      desc: Detect hardlink created over sensitive files
+      condition: >
+        create_hardlink and
+        (evt.arg.oldpath in (sensitive_file_names))
+      output: >
+        Hardlinks created over sensitive files (user=%user.name user_loginuid=%user.loginuid command=%proc.cmdline target=%evt.arg.oldpath linkpath=%evt.arg.newpath parent_process=%proc.pname)
+      priority: WARNING
       tags: [file, mitre_exfiltration]
   
     - list: miner_ports
@@ -3225,7 +3728,7 @@ data:
       condition: (evt.type in (sendto, sendmsg) and evt.dir=< and (fd.net != "127.0.0.0/8" and not fd.snet in (rfc_1918_addresses)) and ((minerpool_http) or (minerpool_https) or (minerpool_other)))
   
     - macro: trusted_images_query_miner_domain_dns
-      condition: (container.image.repository in (docker.io/falcosecurity/falco, falcosecurity/falco))
+      condition: (container.image.repository in (docker.io/falcosecurity/falco, falcosecurity/falco, public.ecr.aws/falcosecurity/falco))
       append: false
   
     # The rule is disabled by default.
@@ -3240,7 +3743,7 @@ data:
   
     - rule: Detect crypto miners using the Stratum protocol
       desc: Miners typically specify the mining pool to connect to with a URI that begins with 'stratum+tcp'
-      condition: spawned_process and proc.cmdline contains "stratum+tcp"
+      condition: spawned_process and (proc.cmdline contains "stratum+tcp" or proc.cmdline contains "stratum2+tcp" or proc.cmdline contains "stratum+ssl" or proc.cmdline contains "stratum2+ssl")
       output: Possible miner running (command=%proc.cmdline container=%container.info image=%container.image.repository)
       priority: CRITICAL
       tags: [process, mitre_execution]
@@ -3376,7 +3879,7 @@ data:
   
     # The two Container Drift rules below will fire when a new executable is created in a container.
     # There are two ways to create executables - file is created with execution permissions or permissions change of existing file.
-    # We will use a new sysdig filter, is_open_exec, to find all files creations with execution permission, and will trace all chmods in a container.
+    # We will use a new filter, is_open_exec, to find all files creations with execution permission, and will trace all chmods in a container.
     # The use case we are targeting here is an attempt to execute code that was not shipped as part of a container (drift) -
     # an activity that might be malicious or non-compliant.
     # Two things to pay attention to:
@@ -3409,7 +3912,7 @@ data:
     - rule: Container Drift Detected (open+create)
       desc: New executable created in a container due to open+create
       condition: >
-        evt.type in (open,openat,creat) and
+        evt.type in (open,openat,openat2,creat) and
         evt.is_open_exec=true and
         container and
         not runc_writing_exec_fifo and
@@ -3459,7 +3962,7 @@ data:
     # A privilege escalation to root through heap-based buffer overflow
     - rule: Sudo Potential Privilege Escalation
       desc: Privilege escalation vulnerability affecting sudo (<= 1.9.5p2). Executing sudo using sudoedit -s or sudoedit -i command with command-line argument that ends with a single backslash character from an unprivileged user it's possible to elevate the user privileges to root.
-      condition: spawned_process and user.uid != 0 and proc.name=sudoedit and (proc.args contains -s or proc.args contains -i) and (proc.args contains "\ " or proc.args endswith \)
+      condition: spawned_process and user.uid != 0 and (proc.name=sudoedit or proc.name = sudo) and (proc.args contains -s or proc.args contains -i or proc.args contains --login) and (proc.args contains "\ " or proc.args endswith \)
       output: "Detect Sudo Privilege Escalation Exploit (CVE-2021-3156) (user=%user.name parent=%proc.pname cmdline=%proc.cmdline %container.info)"
       priority: CRITICAL
       tags: [filesystem, mitre_privilege_escalation]
@@ -3505,6 +4008,40 @@ data:
       output: An userfaultfd syscall was successfully executed by an unprivileged user (user=%user.name user_loginuid=%user.loginuid process=%proc.name command=%proc.cmdline %container.info image=%container.image.repository:%container.image.tag)
       priority: CRITICAL
       tags: [syscall, mitre_defense_evasion]
+  
+    - list: ingress_remote_file_copy_binaries
+      items: [wget]
+  
+    - macro: ingress_remote_file_copy_procs
+      condition: (proc.name in (ingress_remote_file_copy_binaries))
+  
+    # Users should overwrite this macro to specify conditions under which a
+    # Custom condition for use of ingress remote file copy tool in container
+    - macro: user_known_ingress_remote_file_copy_activities
+      condition: (never_true)
+  
+    -  macro: curl_download
+       condition: proc.name = curl and
+                  (proc.cmdline contains " > " or
+                  proc.cmdline contains " >> " or
+                  proc.cmdline contains " | " or
+                  proc.cmdline contains " -o " or
+                  proc.cmdline contains " --output " or
+                  proc.cmdline contains " -O " or
+                  proc.cmdline contains " --remote-name ")
+  
+    - rule: Launch Ingress Remote File Copy Tools in Container
+      desc: Detect ingress remote file copy tools launched in container
+      condition: >
+        spawned_process and
+        container and
+        (ingress_remote_file_copy_procs or curl_download) and
+        not user_known_ingress_remote_file_copy_activities
+      output: >
+        Ingress remote file copy tool launched in container (user=%user.name user_loginuid=%user.loginuid command=%proc.cmdline parent_process=%proc.pname
+        container_id=%container.id container_name=%container.name image=%container.image.repository:%container.image.tag)
+      priority: NOTICE
+      tags: [network, process, mitre_command_and_control]
   
     # Application rules have moved to application_rules.yaml. Please look
     # there if you want to enable them by adding to
@@ -3664,6 +4201,19 @@ data:
       source: k8s_audit
       tags: [k8s]
   
+    # These container images are allowed to run with hostnetwork=true
+    - list: falco_hostnetwork_images
+      items: [
+        gcr.io/google-containers/prometheus-to-sd,
+        gcr.io/projectcalico-org/typha,
+        gcr.io/projectcalico-org/node,
+        gke.gcr.io/gke-metadata-server,
+        gke.gcr.io/kube-proxy,
+        gke.gcr.io/netd-amd64,
+        k8s.gcr.io/ip-masq-agent-amd64
+        k8s.gcr.io/prometheus-to-sd,
+        ]
+  
     # Corresponds to K8s CIS Benchmark 1.7.4
     - rule: Create HostNetwork Pod
       desc: Detect an attempt to start a pod using the host network.
@@ -3814,9 +4364,31 @@ data:
       items: []
   
     - list: known_sa_list
-      items: ["pod-garbage-collector","resourcequota-controller","cronjob-controller","generic-garbage-collector",
-              "daemon-set-controller","endpointslice-controller","deployment-controller", "replicaset-controller",
-              "endpoint-controller", "namespace-controller", "statefulset-controller", "disruption-controller"]
+      items: [
+        coredns,
+        coredns-autoscaler,
+        cronjob-controller,
+        daemon-set-controller,
+        deployment-controller,
+        disruption-controller,
+        endpoint-controller,
+        endpointslice-controller,
+        endpointslicemirroring-controller,
+        generic-garbage-collector,
+        horizontal-pod-autoscaler,
+        job-controller,
+        namespace-controller,
+        node-controller,
+        persistent-volume-binder,
+        pod-garbage-collector,
+        pv-protection-controller,
+        pvc-protection-controller,
+        replicaset-controller,
+        resourcequota-controller,
+        root-ca-cert-publisher,
+        service-account-controller,
+        statefulset-controller
+        ]
   
     - macro: trusted_sa
       condition: (ka.target.name in (known_sa_list, user_known_sa_list))
