@@ -18,6 +18,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libtool \
     libelf-dev \
     wget \
+    libb64-dev \
+    libc-ares-dev \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libtbb-dev \
+    libjq-dev \
+    libjsoncpp-dev \
+    libgrpc++-dev \
+    protobuf-compiler-grpc \
+    libgtest-dev \
     linux-headers-${ARCH} \
     && apt-get clean
 
