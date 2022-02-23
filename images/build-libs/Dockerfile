@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgrpc++-dev \
     protobuf-compiler-grpc \
     libgtest-dev \
+    libprotobuf-dev \
     linux-headers-${ARCH} \
     && apt-get clean
 
