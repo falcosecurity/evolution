@@ -12,7 +12,11 @@ IMAGE := "$(ACCOUNT).$(DOCKER_PUSH_REPOSITORY)/$(IMG_SLUG)/$(IMG_NAME):$(IMG_TAG
 build-push: build-image push-image
 
 build-image:
+ifeq ($(shell uname -m),aarch64)
+	docker build --no-cache --build-arg ARCH=arm64 -t "$(IMG_SLUG)/$(IMG_NAME)" .
+else
 	docker build --no-cache -t "$(IMG_SLUG)/$(IMG_NAME)" .
+endif
 
 push-image:
 	docker tag "$(IMG_SLUG)/$(IMG_NAME)" $(IMAGE)
