@@ -1,0 +1,507 @@
+orgs:
+  falcosecurity:
+    name: Falco
+    description: Falco is Container Native Runtime Security
+
+    default_repository_permission: read
+    has_organization_projects: true
+    has_repository_projects: true
+    members_can_create_repositories: false
+
+    admins:
+      - caniszczyk
+      - fntlnz
+      - kris-nova
+      - ldegio
+      - leodido
+      - leogr
+      - mstemm
+      - poiana
+      - thelinuxfoundation
+
+    members:
+      - admiral0
+      - airadier
+      - bencer
+      - cpanato
+      - danpopnyc
+      - developer-guy
+      - FedeDP
+      - fjogeleit
+      - gnosek
+      - henridf
+      - Issif
+      - jasondellaluce
+      - jonahjon
+      - Kaizhe
+      - KeisukeYamashita
+      - lucperkins
+      - markyjackson-taulia
+      - mattpag
+      - maxgio92
+      - mfdii
+      - mmat11
+      - mumoshu
+      - nestorsalceda
+      - nibalizer
+      - pabloopez
+      - radhikapc
+      - Rajakavitha1
+      - sreedaum
+      - tembleking
+      - zuc
+
+    repos:
+      .github:
+        description: Default community health files
+        has_projects: false
+        has_wiki: false
+      advocacy:
+        archived: true
+        description: Advocacy machinery
+        has_projects: true
+      charts:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Community managed Helm charts for running Falco with Kubernetes
+        has_projects: true
+        has_wiki: false
+      client-go:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Go client and SDK for Falco
+        has_projects: true
+      client-py:
+        allow_merge_commit: false
+        description: Python client and SDK for Falco
+        has_projects: true
+        has_wiki: false
+      client-rs:
+        description: The rust language implementation of the Falco client
+        has_projects: true
+      community:
+        allow_merge_commit: false
+        description: The Falco Project Community
+        has_projects: true
+        has_wiki: false
+      driverkit:
+        description: "Kit for building Falco drivers: kernel modules or eBPF probes"
+        has_projects: true
+      ebpf-probe:
+        archived: true
+        description: eBPF probe for syscall events
+        has_projects: true
+      event-generator:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Generate a variety of suspect actions that are detected by Falco rulesets
+        has_projects: true
+      evolution:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Evolution process of The Falco Project
+        has_projects: true
+        has_wiki: false
+      falco:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Cloud Native Runtime Security
+        has_projects: true
+        has_wiki: false
+        homepage: https://falco.org
+      falco-exporter:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Prometheus Metrics Exporter for Falco output events
+        has_projects: true
+      falco-website:
+        description: Hugo content to generate website content. Hosted by the CNCF
+        has_projects: true
+        homepage: https://falco.org
+      falcoctl:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Administrative tooling for Falco
+        has_projects: true
+        has_wiki: false
+      falcosidekick:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Connect Falco to your ecosystem
+        has_projects: true
+        has_wiki: false
+      falcosidekick-ui:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: A simple WebUI with latest events from Falco
+        has_projects: true
+        has_wiki: false
+      katacoda-scenarios:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Content more https://katacoda.com/falco/
+        has_projects: false
+        has_wiki: false
+      kernel-module:
+        archived: true
+        has_projects: true
+      kilt:
+        description: Kilt is a project that defines how to inject foreign apps into containers
+        has_projects: false
+        has_wiki: false
+      libs:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: libsinsp, libscap, the kernel module driver, and the eBPF driver sources
+        has_projects: true
+        has_wiki: false
+      libscap:
+        archived: true
+        has_projects: true
+      libsinsp:
+        archived: true
+        description: System inspection library
+        has_projects: true
+      pdig:
+        description: ptrace-based event producer for udig
+        has_projects: true
+        has_wiki: false
+      plugin-sdk-cpp:
+        has_projects: true
+      plugin-sdk-go:
+        default_branch: main
+        has_projects: true
+      plugins:
+        has_projects: true
+      template-repository:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Acts as a template for new repositories
+        has_projects: true
+      test-infra:
+        allow_merge_commit: false
+        description: Falco workflow & testing infrastructure
+        has_projects: true
+        has_wiki: false
+        homepage: https://prow.falco.org
+
+    teams:
+      admins:
+        description: admins of the org
+        maintainers:
+          - caniszczyk
+          - leodido
+          - ldegio
+          - fntlnz
+          - leogr
+          - thelinuxfoundation
+          - mstemm
+          - kris-nova
+        privacy: closed
+        repos:
+          advocacy: admin
+      charts-maintainers:
+        description: maintainers of the Falco Helm charts
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+          - kris-nova
+        members:
+          - nibalizer
+          - cpanato
+          - Issif
+        privacy: closed
+        repos:
+          charts: maintain
+      client-go-maintainers:
+        description: maintainers of client-go
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+          - kris-nova
+        members:
+          - mfdii
+          - markyjackson-taulia
+        privacy: closed
+        repos:
+          client-go: maintain
+      client-py-maintainers:
+        description: maintainers of client-py
+        maintainers:
+          - leodido
+        members:
+          - mmat11
+        privacy: closed
+        repos:
+          client-py: maintain
+      client-rs-maintainers:
+        description: ""
+        maintainers:
+          - leodido
+          - fntlnz
+        privacy: closed
+        repos:
+          client-rs: maintain
+      community-maintainers:
+        description: maintainers of the community repository
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+          - kris-nova
+        members:
+          - nibalizer
+          - mfdii
+          - danpopnyc
+        privacy: closed
+        repos:
+          community: maintain
+      driverkit-maintainers:
+        description: maintainers of driverkit
+        maintainers:
+          - leodido
+          - fntlnz
+        privacy: closed
+        repos:
+          driverkit: maintain
+      event-generator-maintainers:
+        description: maintainers of the event-generator
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+          - kris-nova
+        privacy: closed
+        repos:
+          event-generator: maintain
+      evolution-maintainers:
+        description: maintainers of the evolution repository
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+          - kris-nova
+        members:
+          - nestorsalceda
+          - maxgio92
+        privacy: closed
+        repos:
+          evolution: maintain
+      falco-exporter-maintainers:
+        description: maintainers of falco-exporter
+        maintainers:
+          - leodido
+          - leogr
+        privacy: closed
+        repos:
+          falco-exporter: maintain
+      falco-maintainers:
+        description: maintainers of the main Falco repository
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+          - mstemm
+          - kris-nova
+        members:
+          - Kaizhe
+          - jasondellaluce
+        privacy: closed
+        repos:
+          falco: maintain
+      falcoctl-maintainers:
+        description: falcoctl maintainers
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+          - mstemm
+          - kris-nova
+        members:
+          - markyjackson-taulia
+        privacy: closed
+        repos:
+          falcoctl: maintain
+      falcosidekick-maintainers:
+        description: maintainers of falcosidekick
+        maintainers:
+          - leodido
+          - leogr
+          - Issif
+        members:
+          - nibalizer
+          - cpanato
+          - fjogeleit
+          - developer-guy
+          - KeisukeYamashita
+        privacy: closed
+        repos:
+          falcosidekick: maintain
+      falcosidekick-ui-maintainers:
+        description: maintainers of falcosidekick-ui
+        maintainers:
+          - leogr
+        members:
+          - cpanato
+          - Issif
+          - fjogeleit
+        privacy: closed
+        repos:
+          falcosidekick-ui: maintain
+      katacoda-scenarios-maintainers:
+        description: ""
+        maintainers:
+          - leogr
+        members:
+          - developer-guy
+          - pabloopez
+        privacy: closed
+        repos:
+          katacoda-scenarios: maintain
+      kilt-maintainers:
+        description: ""
+        maintainers:
+          - leodido
+          - fntlnz
+        members:
+          - admiral0
+        privacy: closed
+        repos:
+          kilt: maintain
+      libs-maintainers:
+        description: libs maintainers
+        maintainers:
+          - leodido
+          - ldegio
+          - fntlnz
+          - leogr
+        members:
+          - gnosek
+          - FedeDP
+        privacy: closed
+        repos:
+          libs: maintain
+      machine_users:
+        description: bots
+        maintainers:
+          - poiana
+        privacy: secret
+        repos:
+          .github: admin
+          charts: admin
+          client-go: admin
+          client-py: admin
+          client-rs: admin
+          community: admin
+          driverkit: admin
+          event-generator: admin
+          evolution: admin
+          falco: admin
+          falco-exporter: admin
+          falco-website: admin
+          falcoctl: admin
+          falcosidekick: admin
+          falcosidekick-ui: admin
+          katacoda-scenarios: admin
+          kilt: admin
+          libs: admin
+          pdig: admin
+          plugin-sdk-go: admin
+          plugins: admin
+          template-repository: admin
+          test-infra: admin
+      maintainers:
+        description: falconers (can dismiss reviews and apply milestones)
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+          - kris-nova
+        members:
+          - jasondellaluce
+        privacy: secret
+        repos:
+          .github: maintain
+      pdig-maintainers:
+        description: maintainers of pdig
+        maintainers:
+          - leodido
+          - ldegio
+          - fntlnz
+        members:
+          - gnosek
+        privacy: closed
+        repos:
+          pdig: maintain
+      plugin-sdk-cpp-maintainers:
+        description: ""
+        maintainers:
+          - leodido
+          - ldegio
+          - fntlnz
+          - leogr
+          - mstemm
+        members:
+          - FedeDP
+        privacy: closed
+        repos:
+          plugin-sdk-cpp: read
+      plugin-sdk-go-maintainers:
+        description: ""
+        maintainers:
+          - leodido
+          - ldegio
+          - fntlnz
+          - leogr
+          - mstemm
+          - kris-nova
+        members:
+          - jasondellaluce
+        privacy: closed
+        repos:
+          plugin-sdk-go: maintain
+      plugins-maintainers:
+        description: ""
+        maintainers:
+          - leodido
+          - ldegio
+          - fntlnz
+          - leogr
+          - mstemm
+          - kris-nova
+        members:
+          - jasondellaluce
+        privacy: closed
+        repos:
+          plugins: maintain
+      test-infra-maintainers:
+        description: Maintainers of falcosecurity/test-infra
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+        members:
+          - maxgio92
+          - zuc
+          - jonahjon
+        privacy: closed
+        repos:
+          test-infra: maintain
+      website-maintainers:
+        description: maintainers of falco-website and docs
+        maintainers:
+          - leodido
+          - fntlnz
+          - leogr
+          - kris-nova
+        members:
+          - lucperkins
+          - mfdii
+          - radhikapc
+          - jasondellaluce
+          - Rajakavitha1
+        privacy: closed
+        repos:
+          falco-website: maintain
