@@ -2,7 +2,7 @@ FROM debian:buster
 
 LABEL usage="docker run -i -t -v /path/to/source:/workspace test-infra/build-libs [cmake options]"
 
-ARG ARCH=amd64
+ARG TARGETARCH
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
@@ -29,7 +29,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     protobuf-compiler-grpc \
     libgtest-dev \
     libprotobuf-dev \
-    linux-headers-${ARCH} \
+    linux-headers-${TARGETARCH} \
     && apt-get clean
 
 COPY build.sh /
