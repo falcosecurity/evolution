@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.17.2"
+    chart: "falco-1.17.4"
     release: "falco"
     heritage: "Helm"
 spec:
@@ -20,7 +20,7 @@ spec:
         app: falco
         role: security
       annotations:
-        checksum/config: 136a29cf32292a85bedfb0dff90272ea6137097854f185b325ec20d5f17f7bcb
+        checksum/config: 828286e0226557cc929ac7f588f4fd885a9bc868e9a1fcfd9fe13812fd3a5f25
         checksum/rules: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
         checksum/certs: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
     spec:
@@ -30,7 +30,7 @@ spec:
           key: node-role.kubernetes.io/master
       containers:
         - name: falco
-          image: docker.io/falcosecurity/falco:0.31.0
+          image: docker.io/falcosecurity/falco:0.31.1
           imagePullPolicy: IfNotPresent
           resources:
             limits:
@@ -49,7 +49,8 @@ spec:
             - /var/run/secrets/kubernetes.io/serviceaccount/token
             - -k
             - https://$(KUBERNETES_SERVICE_HOST)
-            - --k8s-node="$(FALCO_K8S_NODE_NAME)"
+            - --k8s-node
+            - "$(FALCO_K8S_NODE_NAME)"
             - -pk
           env:
             - name: FALCO_K8S_NODE_NAME
