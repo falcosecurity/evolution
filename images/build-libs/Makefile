@@ -16,14 +16,17 @@ ARCHS := "arm64,amd64"
 # buildx manages build and push in one step
 build-push: push-image
 
-build-image:
+create-builder:
+	# Workaround for buildx issue, see https://github.com/docker/buildx/issues/495#issuecomment-761562905
+	docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 	docker buildx create --name libsbuilder --driver docker-container --use
+	docker buildx inspect --bootstrap
+
+build-image: create-builder
 	docker buildx build --platform $(ARCHS) -o type=image,push="false" .
 
-push-image:
-	docker buildx create --name libsbuilder --driver docker-container --use
+push-image: create-builder
 	docker buildx build --push --platform $(ARCHS) -t "$(IMAGE)" .
 
-local-registry:
-	docker buildx create --name libsbuilder --driver docker-container --use
+local-registry: create-builder
 	docker buildx build --push --platform $(ARCHS) -t "localhost:5000/$(IMG_NAME)" .
