@@ -15,6 +15,7 @@ orgs:
       - ldegio
       - leodido
       - leogr
+      - ldegio
       - mstemm
       - poiana
       - thelinuxfoundation
@@ -298,7 +299,7 @@ orgs:
           - mstemm
           - leogr
           - jasondellaluce
-          - loris
+          - ldegio
           - zuc
         privacy: closed
         repos:
