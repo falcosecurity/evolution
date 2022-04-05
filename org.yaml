@@ -114,6 +114,9 @@ orgs:
         allow_squash_merge: false
         description: Prometheus Metrics Exporter for Falco output events
         has_projects: true
+      falco-aws-terraform:
+        default_branch: main
+        has_projects: true
       falco-website:
         description: Hugo content to generate website content. Hosted by the CNCF
         has_projects: true
@@ -289,6 +292,17 @@ orgs:
         privacy: closed
         repos:
           evolution: maintain
+      falco-aws-terraform-maintainers:
+        description: ""
+        maintainers:
+          - mstemm
+          - leogr
+          - jasondellaluce
+          - loris
+          - zuc
+        privacy: closed
+        repos:
+          falco-aws-terraform: maintain
       falco-exporter-maintainers:
         description: maintainers of falco-exporter
         maintainers:
@@ -399,6 +413,7 @@ orgs:
           event-generator: admin
           evolution: admin
           falco: admin
+          falco-aws-terraform: admin
           falco-exporter: admin
           falco-website: admin
           falcoctl: admin
