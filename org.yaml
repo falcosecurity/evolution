@@ -15,12 +15,12 @@ orgs:
       - ldegio
       - leodido
       - leogr
-      - ldegio
       - mstemm
       - poiana
       - thelinuxfoundation
 
     members:
+      - Andreagit97
       - admiral0
       - airadier
       - bencer
@@ -393,6 +393,7 @@ orgs:
           - fntlnz
           - leogr
         members:
+          - Andreagit97
           - gnosek
           - FedeDP
         privacy: closed
