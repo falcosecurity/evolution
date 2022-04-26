@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.17.4"
+    chart: "falco-1.17.6"
     release: "falco"
     heritage: "Helm"
 data:
@@ -215,7 +215,7 @@ data:
 
     http_output:
       enabled: false
-      url: http://some.url
+      url: 'http://falco-falcosidekick:2801'
       user_agent: falcosecurity/falco
 
 
@@ -251,7 +251,7 @@ data:
     # Make sure to have a consumer for them or leave this disabled.
     grpc_output:
       enabled: false
-    
+
     # Container orchestrator metadata fetching params
     metadata_download:
       max_mb: 100
