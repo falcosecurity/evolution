@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.17.6"
+    chart: "falco-1.18.1"
     release: "falco"
     heritage: "Helm"
 spec:
@@ -20,7 +20,7 @@ spec:
         app: falco
         role: security
       annotations:
-        checksum/config: 75515295113035f4d82acda763f30284294d66977c8ba278797e40205514c40b
+        checksum/config: f6034948650d384597575f31adfca5f944dc4d9e5484de5605a827ddbf23df53
         checksum/rules: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
         checksum/certs: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
     spec:
@@ -45,6 +45,8 @@ spec:
             - /usr/bin/falco
             - --cri
             - /run/containerd/containerd.sock
+            - --cri
+            - /run/crio/crio.sock
             - -K
             - /var/run/secrets/kubernetes.io/serviceaccount/token
             - -k
@@ -76,6 +78,8 @@ spec:
               name: docker-socket
             - mountPath: /host/run/containerd/containerd.sock
               name: containerd-socket
+            - mountPath: /host/run/crio/crio.sock
+              name: crio-socket
             - mountPath: /host/dev
               name: dev-fs
               readOnly: true
@@ -102,6 +106,9 @@ spec:
         - name: containerd-socket
           hostPath:
             path: /run/containerd/containerd.sock
+        - name: crio-socket
+          hostPath:
+            path: /run/crio/crio.sock
         - name: dev-fs
           hostPath:
             path: /dev
