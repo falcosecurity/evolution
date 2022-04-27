@@ -4,7 +4,7 @@ metadata:
   name: falco
   labels:
     app: falco
-    chart: "falco-1.17.6"
+    chart: "falco-1.18.1"
     release: "falco"
     heritage: "Helm"
 subjects:
