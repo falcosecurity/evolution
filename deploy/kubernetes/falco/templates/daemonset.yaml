@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.18.1"
+    chart: "falco-1.18.2"
     release: "falco"
     heritage: "Helm"
 spec:
@@ -20,7 +20,7 @@ spec:
         app: falco
         role: security
       annotations:
-        checksum/config: f6034948650d384597575f31adfca5f944dc4d9e5484de5605a827ddbf23df53
+        checksum/config: a0bd8b13f001f45f22384faa0185806993d0f731d5516763b108a5c1d9271123
         checksum/rules: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
         checksum/certs: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
     spec:
