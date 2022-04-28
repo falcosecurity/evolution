@@ -146,6 +146,12 @@ orgs:
         description: Content more https://katacoda.com/falco/
         has_projects: false
         has_wiki: false
+      kernel-crawler:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: A tool to crawl Linux kernel versions
+        has_projects: false
+        has_wiki: false
       kernel-module:
         archived: true
         has_projects: true
@@ -375,6 +381,16 @@ orgs:
         privacy: closed
         repos:
           katacoda-scenarios: maintain
+      kernel-crawler-maintainers:
+        description: kernel-crawler maintainers
+        maintainers:
+          - fededp
+          - maxgio92
+          - leogr
+          - zuc
+        privacy: closed
+        repos:
+          kernel-crawler: maintain
       kilt-maintainers:
         description: ""
         maintainers:
