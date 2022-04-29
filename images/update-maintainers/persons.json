@@ -126,5 +126,9 @@
     "fededp" : {
         "name": "Federico Di Pierro",
         "company": "Sysdig"
+    },
+    "andreagit97" : {
+        "name": "Andrea Terzolo",
+        "company": "Polytechnic of Turin"
     }
 }
