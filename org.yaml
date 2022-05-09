@@ -165,6 +165,12 @@ orgs:
         description: libsinsp, libscap, the kernel module driver, and the eBPF driver sources
         has_projects: true
         has_wiki: false
+      libs-sdk-go:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Go SDK for Falco libs
+        has_projects: true
+        has_wiki: false
       libscap:
         archived: true
         has_projects: true
@@ -412,6 +418,17 @@ orgs:
           - Andreagit97
           - gnosek
           - FedeDP
+        privacy: closed
+        repos:
+          libs: maintain
+      libs-sdk-go-maintainers:
+        description: libs-sdk-go maintainers
+        maintainers:
+          - araujof
+          - terylt
+          - leogr
+          - jasondellaluce
+          - Andreagit97
         privacy: closed
         repos:
           libs: maintain
