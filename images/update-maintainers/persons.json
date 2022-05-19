@@ -134,5 +134,9 @@
     "araujof" : {
         "name": "Fred Araujo",
         "company": "IBM"
+    },
+    "dwindsor" : {
+        "name": "David Windsor",
+        "company": "Secureworks"
     }
 }
