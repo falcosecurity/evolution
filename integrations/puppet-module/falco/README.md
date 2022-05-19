@@ -239,3 +239,5 @@ The module works where Falco works as a daemonized service (generally, Linux onl
 ## Development
 
 For more information on Falco, visit our [github](https://github.com/falcosecurity/falco) or [web site](https://falco.org).
+
+The source code for this module can be found on [github](https://github.com/falcosecurity/falco-evolution/tree/master/integrations/puppet-module/falco).

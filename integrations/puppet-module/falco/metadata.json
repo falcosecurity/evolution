@@ -4,9 +4,9 @@
   "author": "The Falco Authors",
   "summary": "Falco: Behavioral Activity Monitoring With Container Support",
   "license": "Apache-2.0",
-  "source": "https://github.com/falcosecurity/falco",
-  "project_page": "https://github.com/falcosecurity/falco",
-  "issues_url": "https://github.com/falcosecurity/falco/issues",
+  "source": "https://github.com/falcosecurity/evolution",
+  "project_page": "https://github.com/falcosecurity/falco-evolution/tree/master/integrations/puppet-module/falco",
+  "issues_url": "https://github.com/falcosecurity/evolution/issues",
   "requirements": [
     {
       "name": "puppet",
