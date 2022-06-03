@@ -28,6 +28,7 @@ orgs:
       - cpanato
       - danpopnyc
       - developer-guy
+      - dwindsor
       - FedeDP
       - fjogeleit
       - gnosek
@@ -281,6 +282,7 @@ orgs:
         maintainers:
           - leodido
           - fntlnz
+          - dwindsor
         privacy: closed
         repos:
           driverkit: maintain
