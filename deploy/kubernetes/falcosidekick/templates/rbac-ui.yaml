@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app.kubernetes.io/name: falcosidekick-ui
-    helm.sh/chart: falcosidekick-0.5.1
+    helm.sh/chart: falcosidekick-0.5.2
     app.kubernetes.io/instance: falcosidekick
     app.kubernetes.io/managed-by: Helm
 ---
@@ -16,7 +16,7 @@ metadata:
   namespace: default
   labels:
     app.kubernetes.io/name: falcosidekick-ui
-    helm.sh/chart: falcosidekick-0.5.1
+    helm.sh/chart: falcosidekick-0.5.2
     app.kubernetes.io/instance: falcosidekick
     app.kubernetes.io/managed-by: Helm
 rules: []
@@ -28,7 +28,7 @@ metadata:
   namespace: default
   labels:
     app.kubernetes.io/name: falcosidekick-ui
-    helm.sh/chart: falcosidekick-0.5.1
+    helm.sh/chart: falcosidekick-0.5.2
     app.kubernetes.io/instance: falcosidekick
     app.kubernetes.io/managed-by: Helm
 roleRef:
