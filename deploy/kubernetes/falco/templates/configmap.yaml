@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels:
     app: falco
-    chart: "falco-1.18.4"
+    chart: "falco-1.18.5"
     release: "falco"
     heritage: "Helm"
 data:
