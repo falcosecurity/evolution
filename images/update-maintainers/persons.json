@@ -43,10 +43,6 @@
         "name": "Jorge Salamero Sanz",
         "company": "Sysdig"
     },
-    "danpopnyc": {
-        "name": "Dan POP Papandrea",
-        "company": "Sysdig"
-    },
     "gnosek": {
         "name": "Grzegorz Nosek",
         "company": "Sysdig"
@@ -107,39 +103,39 @@
         "name": "Michael Ducy",
         "company": "RedHat"
     },
-    "fjogeleit" : {
+    "fjogeleit": {
         "name": "Frank Jogeleit",
         "company": "move:elevator GmbH"
     },
-    "sreedaum" : {
+    "sreedaum": {
         "name": "Sreeda U M",
         "company": "Independent"
     },
-    "pabloopez" : {
+    "pabloopez": {
         "name": "Pablo Zaldivar",
         "company": "Sysdig"
     },
-    "jasondellaluce" : {
+    "jasondellaluce": {
         "name": "Jason Dellaluce",
         "company": "Sysdig"
     },
-    "fededp" : {
+    "fededp": {
         "name": "Federico Di Pierro",
         "company": "Sysdig"
     },
-    "andreagit97" : {
+    "andreagit97": {
         "name": "Andrea Terzolo",
         "company": "Polytechnic of Turin"
     },
-    "araujof" : {
+    "araujof": {
         "name": "Fred Araujo",
         "company": "IBM"
     },
-    "dwindsor" : {
+    "dwindsor": {
         "name": "David Windsor",
         "company": "Secureworks"
     },
-    "terylt" : {
+    "terylt": {
         "name": "Teryl Taylor",
         "company": "IBM"
     }
