@@ -26,7 +26,6 @@ orgs:
       - airadier
       - bencer
       - cpanato
-      - danpopnyc
       - developer-guy
       - dwindsor
       - FedeDP
@@ -279,7 +278,6 @@ orgs:
         members:
           - nibalizer
           - mfdii
-          - danpopnyc
         privacy: closed
         repos:
           community: maintain
