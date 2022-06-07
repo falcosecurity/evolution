@@ -88,6 +88,12 @@ orgs:
         description: The Falco Project Community
         has_projects: true
         has_wiki: false
+      deploy-kubernetes:
+        allow_merge_commit: false
+        allow_squash_merge: false
+        description: Kubernetes deployment resources for Falco
+        has_projects: false
+        has_wiki: false
       driverkit:
         description: "Kit for building Falco drivers: kernel modules or eBPF probes"
         has_projects: true
@@ -277,6 +283,15 @@ orgs:
         privacy: closed
         repos:
           community: maintain
+      deploy-kubernetes-maintainers:
+        description: maintainers of deploy-kubernetes
+        maintainers:
+          - leogr
+          - maxgio92
+          - jasondellaluce
+        privacy: closed
+        repos:
+          deploy-kubernetes: maintain
       driverkit-maintainers:
         description: maintainers of driverkit
         maintainers:
