@@ -448,7 +448,7 @@ orgs:
           - Andreagit97
         privacy: closed
         repos:
-          libs: maintain
+          libs-sdk-go: maintain
       machine_users:
         description: bots
         maintainers:
