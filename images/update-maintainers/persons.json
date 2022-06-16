@@ -138,5 +138,9 @@
     "terylt": {
         "name": "Teryl Taylor",
         "company": "IBM"
+    },
+    "zuc": {
+        "name": "Michele Zuccala",
+        "company": "Sysdig"
     }
 }
