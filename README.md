@@ -43,6 +43,7 @@ As per [our governance model](https://github.com/falcosecurity/.github/blob/mast
 | Project | Status | Note |
 | --- | --- | --- |
 | [falcosecurity/charts](https://github.com/falcosecurity/charts) | Official support | Each chart inherits its status from the related project, for example the Falco chart is official |
+| [falcosecurity/deploy-kubernetes](https://github.com/falcosecurity/deploy-kubernetes) | Official support | Each artifacts group inherits its status from the related project, for example the Falco manifests are official |
 | [falcosecurity/falco](https://github.com/falcosecurity/falco) | Official support | The list of official artifacts can be found within the [official documentation](https://falco.org/docs/download/). These artifacts will be refined and amended as per the [Falco Artifacts Scope - Part 2](https://github.com/falcosecurity/falco/blob/master/proposals/20200506-artifacts-scope-part-2.md).  |
 | [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website) | Official support | | 
 | [falcosecurity/libs](https://github.com/falcosecurity/libs) | Official support | Artifacts will be available once [Versioning and release process of the libs artifacts](https://github.com/falcosecurity/libs/blob/master/proposals/20210524-versioning-and-release-of-the-libs-artifacts.md) proposal is fully implemented. |
