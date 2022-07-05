@@ -55,12 +55,14 @@ As per [our governance model](https://github.com/falcosecurity/.github/blob/mast
 | [falcosecurity/driverkit](https://github.com/falcosecurity/driverkit) | Incubating | |
 | [falcosecurity/event-generator](https://github.com/falcosecurity/event-generator) | Incubating | |
 | [falcosecurity/falco-exporter](https://github.com/falcosecurity/falco-exporter) | Incubating | |
+| [falcosecurity/falco-aws-terraform](https://github.com/falcosecurity/falco-aws-terraform) | Incubating | |
 | [falcosecurity/falcoctl](https://github.com/falcosecurity/falcoctl) | Incubating | |
 | [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick) | Incubating | |
 | [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui) | Incubating | |
 | [falcosecurity/katacoda-scenarios](https://github.com/falcosecurity/katacoda-scenarios) | Incubating | |
 | [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler) | Incubating | |
 | [falcosecurity/kilt](https://github.com/falcosecurity/kilt) | Incubating | |
+| [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go) | Incubating | |
 | [falcosecurity/pdig](https://github.com/falcosecurity/pdig) | Incubating | |
 | [falcosecurity/plugin-sdk-cpp](https://github.com/falcosecurity/plugin-sdk-cpp) | Incubating | |
 | [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra) | Incubating | The prebuilt-driver artifacts are provided on a best-effort basis. |
