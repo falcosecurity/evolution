@@ -1,14 +1,8 @@
 approvers:
+  - leogr
+  - maxgio92
+emeritus_approvers:
   - leodido
   - fntlnz
   - kris-nova
-  - leogr
   - nestorsalceda
-  - maxgio92
-reviewers:
-  - leodido
-  - fntlnz
-  - kris-nova
-  - leogr
-  - nestorsalceda
-  - maxgio92
