@@ -28,7 +28,7 @@ orgs:
       - cpanato
       - developer-guy
       - dwindsor
-      - FedeDP
+      - fededp
       - fjogeleit
       - gnosek
       - henridf
@@ -298,6 +298,7 @@ orgs:
           - leodido
           - fntlnz
           - dwindsor
+          - fededp
         privacy: closed
         repos:
           driverkit: maintain
@@ -308,6 +309,7 @@ orgs:
           - fntlnz
           - leogr
           - kris-nova
+          - fededp
         privacy: closed
         repos:
           event-generator: maintain
@@ -352,7 +354,7 @@ orgs:
           - mstemm
           - kris-nova
           - jasondellaluce
-          - FedeDP
+          - fededp
         members:
           - Kaizhe
         privacy: closed
@@ -438,7 +440,7 @@ orgs:
         members:
           - Andreagit97
           - gnosek
-          - FedeDP
+          - fededp
           - Molter73
         privacy: closed
         repos:
@@ -516,7 +518,7 @@ orgs:
           - leogr
           - mstemm
         members:
-          - FedeDP
+          - fededp
         privacy: closed
         repos:
           plugin-sdk-cpp: read
