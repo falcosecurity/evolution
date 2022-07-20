@@ -422,6 +422,7 @@ orgs:
         maintainers:
           - leodido
           - fntlnz
+          - gnosek
         members:
           - admiral0
         privacy: closed
