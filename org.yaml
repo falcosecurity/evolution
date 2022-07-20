@@ -199,6 +199,7 @@ orgs:
       plugins:
         has_projects: true
       template-repository:
+        archived: true
         allow_merge_commit: false
         allow_squash_merge: false
         description: Acts as a template for new repositories
