@@ -59,7 +59,6 @@ As per [our governance model](https://github.com/falcosecurity/.github/blob/mast
 | [falcosecurity/falcoctl](https://github.com/falcosecurity/falcoctl) | Incubating | |
 | [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick) | Incubating | |
 | [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui) | Incubating | |
-| [falcosecurity/katacoda-scenarios](https://github.com/falcosecurity/katacoda-scenarios) | Incubating | |
 | [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler) | Incubating | |
 | [falcosecurity/kilt](https://github.com/falcosecurity/kilt) | Incubating | |
 | [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go) | Incubating | |
