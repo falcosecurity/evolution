@@ -150,6 +150,7 @@ orgs:
         has_projects: true
         has_wiki: false
       katacoda-scenarios:
+        archived: true
         allow_merge_commit: false
         allow_squash_merge: false
         description: Content more https://katacoda.com/falco/
