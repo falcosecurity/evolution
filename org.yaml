@@ -351,14 +351,6 @@ orgs:
           - maxgio92
         repos:
           .github: maintain
-      katacoda-scenarios-maintainers:
-        description: ""
-        members:
-          - leogr
-          - developer-guy
-        privacy: closed
-        repos:
-          katacoda-scenarios: maintain
       kernel-crawler-maintainers:
         description: kernel-crawler maintainers
         members:
