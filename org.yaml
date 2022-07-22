@@ -12,7 +12,6 @@ orgs:
       - caniszczyk
       - kris-nova
       - ldegio
-      - leodido
       - leogr
       - mstemm
       - poiana
@@ -37,6 +36,7 @@ orgs:
       - jonahjon
       - Kaizhe
       - KeisukeYamashita
+      - leodido
       - lucperkins
       - markyjackson-taulia
       - mattpag
@@ -217,7 +217,6 @@ orgs:
         description: admins of the org
         maintainers:
           - caniszczyk
-          - leodido
           - ldegio
           - leogr
           - thelinuxfoundation
@@ -229,7 +228,6 @@ orgs:
       charts-maintainers:
         description: maintainers of the Falco Helm charts
         maintainers:
-          - leodido
           - leogr
           - kris-nova
         members:
@@ -270,7 +268,6 @@ orgs:
       community-maintainers:
         description: maintainers of the community repository
         maintainers:
-          - leodido
           - leogr
           - kris-nova
         members:
@@ -300,7 +297,6 @@ orgs:
       event-generator-maintainers:
         description: maintainers of the event-generator
         maintainers:
-          - leodido
           - leogr
           - kris-nova
           - fededp
@@ -310,7 +306,6 @@ orgs:
       evolution-maintainers:
         description: maintainers of the evolution repository
         maintainers:
-          - leodido
           - leogr
           - kris-nova
         members:
@@ -333,7 +328,6 @@ orgs:
       falco-exporter-maintainers:
         description: maintainers of falco-exporter
         maintainers:
-          - leodido
           - leogr
         privacy: closed
         repos:
@@ -341,7 +335,6 @@ orgs:
       falco-maintainers:
         description: maintainers of the main Falco repository
         maintainers:
-          - leodido
           - leogr
           - mstemm
           - kris-nova
@@ -355,7 +348,6 @@ orgs:
       falcoctl-maintainers:
         description: falcoctl maintainers
         maintainers:
-          - leodido
           - leogr
           - mstemm
           - kris-nova
@@ -367,7 +359,6 @@ orgs:
       falcosidekick-maintainers:
         description: maintainers of falcosidekick
         maintainers:
-          - leodido
           - leogr
           - Issif
         members:
@@ -423,7 +414,6 @@ orgs:
       libs-maintainers:
         description: libs maintainers
         maintainers:
-          - leodido
           - ldegio
           - leogr
         members:
@@ -478,7 +468,6 @@ orgs:
       maintainers:
         description: falconers (can dismiss reviews and apply milestones)
         maintainers:
-          - leodido
           - leogr
           - kris-nova
         members:
@@ -511,7 +500,6 @@ orgs:
       plugin-sdk-go-maintainers:
         description: ""
         maintainers:
-          - leodido
           - ldegio
           - leogr
           - mstemm
@@ -524,7 +512,6 @@ orgs:
       plugins-maintainers:
         description: ""
         maintainers:
-          - leodido
           - ldegio
           - leogr
           - mstemm
@@ -537,7 +524,6 @@ orgs:
       test-infra-maintainers:
         description: Maintainers of falcosecurity/test-infra
         maintainers:
-          - leodido
           - leogr
         members:
           - maxgio92
@@ -549,7 +535,6 @@ orgs:
       website-maintainers:
         description: maintainers of falco-website and docs
         maintainers:
-          - leodido
           - leogr
           - kris-nova
         members:
