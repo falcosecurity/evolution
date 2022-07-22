@@ -212,25 +212,24 @@ orgs:
         repos:
           advocacy: admin
       charts-maintainers:
-        description: maintainers of the Falco Helm charts
+        description: maintainers of falcosecurity/charts
         members:
           - leogr
-          - cpanato
           - Issif
+          - cpanato
         privacy: closed
         repos:
           charts: maintain
       client-go-maintainers:
-        description: maintainers of client-go
+        description: maintainers of falcosecurity/client-go
         members:
           - leodido
           - leogr
-          - markyjackson-taulia
         privacy: closed
         repos:
           client-go: maintain
       client-py-maintainers:
-        description: maintainers of client-py
+        description: maintainers of falcosecurity/client-py
         members:
           - leodido
           - mmat11
@@ -238,30 +237,36 @@ orgs:
         repos:
           client-py: maintain
       client-rs-maintainers:
-        description: ""
+        description: maintainers of falcosecurity/client-rs
         members:
           - leodido
         privacy: closed
         repos:
           client-rs: maintain
       community-maintainers:
-        description: maintainers of the community repository
+        description: maintainers of falcosecurity/community
         members:
           - leogr
+          - Issif
+          - Andreagit97
+          - terylt
+          - maxgio92
+          - araujof
         privacy: closed
         repos:
           community: maintain
       deploy-kubernetes-maintainers:
-        description: maintainers of deploy-kubernetes
+        description: maintainers of falcosecurity/deploy-kubernetes
         members:
           - leogr
           - maxgio92
           - jasondellaluce
+          - zuc
         privacy: closed
         repos:
           deploy-kubernetes: maintain
       driverkit-maintainers:
-        description: maintainers of driverkit
+        description: maintainers of falcosecurity/driverkit
         members:
           - leodido
           - dwindsor
@@ -270,7 +275,7 @@ orgs:
         repos:
           driverkit: maintain
       event-generator-maintainers:
-        description: maintainers of the event-generator
+        description: maintainers of falcosecurity/event-generator
         members:
           - leogr
           - fededp
@@ -278,16 +283,15 @@ orgs:
         repos:
           event-generator: maintain
       evolution-maintainers:
-        description: maintainers of the evolution repository
+        description: maintainers of falcosecurity/evolution
         members:
           - leogr
-          - nestorsalceda
           - maxgio92
         privacy: closed
         repos:
           evolution: maintain
       falco-aws-terraform-maintainers:
-        description: ""
+        description: maintainers of falcosecurity/falco-aws-terraform
         members:
           - mstemm
           - leogr
@@ -298,46 +302,52 @@ orgs:
         repos:
           falco-aws-terraform: maintain
       falco-exporter-maintainers:
-        description: maintainers of falco-exporter
+        description: maintainers of falcosecurity/falco-exporter
         members:
           - leogr
+          - jasondellaluce
         privacy: closed
         repos:
           falco-exporter: maintain
       falco-maintainers:
-        description: maintainers of the main Falco repository
+        description: maintainers of falcosecurity/falco
         members:
-          - leogr
           - mstemm
+          - leogr
           - jasondellaluce
           - fededp
-          - Kaizhe
         privacy: closed
         repos:
           falco: maintain
-      falcoctl-maintainers:
-        description: falcoctl maintainers
+      falco-website-maintainers:
+        description: maintainers of falcosecurity/falco-website
         members:
           - leogr
-          - mstemm
-          - markyjackson-taulia
+          - jasondellaluce
+          - Issif
+        privacy: closed
+        repos:
+          falco-website: maintain
+      falcoctl-maintainers:
+        description: maintainers of falcosecurity/falcoctl
+        members:
+          - leogr
         privacy: closed
         repos:
           falcoctl: maintain
       falcosidekick-maintainers:
-        description: maintainers of falcosidekick
+        description: maintainers of falcosecurity/falcosidekick
         members:
-          - leogr
           - Issif
+          - leogr
           - cpanato
           - fjogeleit
         privacy: closed
         repos:
           falcosidekick: maintain
       falcosidekick-ui-maintainers:
-        description: maintainers of falcosidekick-ui
+        description: maintainers of falcosecurity/falcosidekick-ui
         members:
-          - leogr
           - Issif
           - cpanato
           - fjogeleit
@@ -345,14 +355,14 @@ orgs:
         repos:
           falcosidekick-ui: maintain
       github-maintainers:
-        description: maintainers of the .github repository
+        description: maintainers of falcosecurity/.github
         members:
           - leogr
           - maxgio92
         repos:
           .github: maintain
       kernel-crawler-maintainers:
-        description: kernel-crawler maintainers
+        description: maintainers of falcosecurity/kernel-crawler
         members:
           - fededp
           - maxgio92
@@ -362,34 +372,34 @@ orgs:
         repos:
           kernel-crawler: maintain
       kilt-maintainers:
-        description: ""
+        description: maintainers of falcosecurity/kilt
         members:
+          - admiral0
           - leodido
           - gnosek
-          - admiral0
         privacy: closed
         repos:
           kilt: maintain
       libs-maintainers:
-        description: libs maintainers
+        description: maintainers of falcosecurity/libs
         members:
-          - ldegio
           - leogr
-          - Andreagit97
           - gnosek
+          - mstemm
           - fededp
-          - Molter73
+          - andreagit97
+          - molter73
         privacy: closed
         repos:
           libs: maintain
       libs-sdk-go-maintainers:
-        description: libs-sdk-go maintainers
+        description: maintainers of falcosecurity/libs-sdk-go
         members:
           - araujof
           - terylt
           - leogr
           - jasondellaluce
-          - Andreagit97
+          - andreagit97
         privacy: closed
         repos:
           libs-sdk-go: maintain
@@ -405,6 +415,7 @@ orgs:
           client-py: admin
           client-rs: admin
           community: admin
+          deploy-kubernetes: admin
           driverkit: admin
           event-generator: admin
           evolution: admin
@@ -415,70 +426,59 @@ orgs:
           falcoctl: admin
           falcosidekick: admin
           falcosidekick-ui: admin
-          katacoda-scenarios: admin
+          kernel-crawler: admin
           kilt: admin
           libs: admin
+          libs-sdk-go: admin
           pdig: admin
+          plugin-sdk-cpp: admin
           plugin-sdk-go: admin
           plugins: admin
-          template-repository: admin
           test-infra: admin
       pdig-maintainers:
-        description: maintainers of pdig
+        description: maintainers of falcosecurity/pdig
         members:
-          - leodido
           - ldegio
           - gnosek
+          - leodido
         privacy: closed
         repos:
           pdig: maintain
       plugin-sdk-cpp-maintainers:
-        description: ""
+        description: maintainers of falcosecurity/plugin-sdk-cpp
         members:
-          - leodido
           - ldegio
-          - leogr
+          - leodido
           - mstemm
+          - leogr
           - fededp
         privacy: closed
         repos:
-          plugin-sdk-cpp: read
+          plugin-sdk-cpp: maintain
       plugin-sdk-go-maintainers:
-        description: ""
+        description: maintainers of falcosecurity/plugin-sdk-go
         members:
-          - ldegio
           - leogr
-          - mstemm
           - jasondellaluce
         privacy: closed
         repos:
           plugin-sdk-go: maintain
       plugins-maintainers:
-        description: ""
+        description: maintainers of falcosecurity/plugins
         members:
-          - ldegio
-          - leogr
           - mstemm
+          - leogr
           - jasondellaluce
         privacy: closed
         repos:
           plugins: maintain
       test-infra-maintainers:
-        description: Maintainers of falcosecurity/test-infra
+        description: maintainers of falcosecurity/test-infra
         members:
-          - leogr
           - maxgio92
-          - zuc
           - jonahjon
+          - leogr
+          - zuc
         privacy: closed
         repos:
           test-infra: maintain
-      website-maintainers:
-        description: maintainers of falco-website and docs
-        members:
-          - leogr
-          - jasondellaluce
-          - Issif
-        privacy: closed
-        repos:
-          falco-website: maintain
