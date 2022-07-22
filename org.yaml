@@ -20,38 +20,25 @@ orgs:
       - araujof
       - Andreagit97
       - admiral0
-      - airadier
       - bencer
       - cpanato
       - darryk10
-      - developer-guy
       - dwindsor
       - fededp
       - fjogeleit
       - gnosek
-      - henridf
       - Issif
       - jasondellaluce
       - jonahjon
       - Kaizhe
-      - KeisukeYamashita
       - kris-nova
       - leodido
-      - lucperkins
-      - markyjackson-taulia
-      - mattpag
-      - maxgio92
       - mfdii
+      - markyjackson-taulia
+      - maxgio92
       - mmat11
       - Molter73
-      - mumoshu
       - nestorsalceda
-      - nibalizer
-      - pabloopez
-      - radhikapc
-      - Rajakavitha1
-      - sreedaum
-      - tembleking
       - terylt
       - zuc
 
@@ -229,7 +216,6 @@ orgs:
         maintainers:
           - leogr
         members:
-          - nibalizer
           - cpanato
           - Issif
         privacy: closed
@@ -241,7 +227,6 @@ orgs:
           - leodido
           - leogr
         members:
-          - mfdii
           - markyjackson-taulia
         privacy: closed
         repos:
@@ -267,8 +252,6 @@ orgs:
         maintainers:
           - leogr
         members:
-          - nibalizer
-          - mfdii
         privacy: closed
         repos:
           community: maintain
@@ -354,11 +337,8 @@ orgs:
           - leogr
           - Issif
         members:
-          - nibalizer
           - cpanato
           - fjogeleit
-          - developer-guy
-          - KeisukeYamashita
         privacy: closed
         repos:
           falcosidekick: maintain
@@ -379,7 +359,6 @@ orgs:
           - leogr
         members:
           - developer-guy
-          - pabloopez
         privacy: closed
         repos:
           katacoda-scenarios: maintain
@@ -526,11 +505,7 @@ orgs:
         maintainers:
           - leogr
         members:
-          - lucperkins
-          - mfdii
-          - radhikapc
           - jasondellaluce
-          - Rajakavitha1
           - Issif
         privacy: closed
         repos:
