@@ -10,7 +10,6 @@ orgs:
 
     admins:
       - caniszczyk
-      - fntlnz
       - kris-nova
       - ldegio
       - leodido
@@ -220,7 +219,6 @@ orgs:
           - caniszczyk
           - leodido
           - ldegio
-          - fntlnz
           - leogr
           - thelinuxfoundation
           - mstemm
@@ -232,7 +230,6 @@ orgs:
         description: maintainers of the Falco Helm charts
         maintainers:
           - leodido
-          - fntlnz
           - leogr
           - kris-nova
         members:
@@ -246,7 +243,6 @@ orgs:
         description: maintainers of client-go
         maintainers:
           - leodido
-          - fntlnz
           - leogr
           - kris-nova
         members:
@@ -268,7 +264,6 @@ orgs:
         description: ""
         maintainers:
           - leodido
-          - fntlnz
         privacy: closed
         repos:
           client-rs: maintain
@@ -276,7 +271,6 @@ orgs:
         description: maintainers of the community repository
         maintainers:
           - leodido
-          - fntlnz
           - leogr
           - kris-nova
         members:
@@ -298,7 +292,6 @@ orgs:
         description: maintainers of driverkit
         maintainers:
           - leodido
-          - fntlnz
           - dwindsor
           - fededp
         privacy: closed
@@ -308,7 +301,6 @@ orgs:
         description: maintainers of the event-generator
         maintainers:
           - leodido
-          - fntlnz
           - leogr
           - kris-nova
           - fededp
@@ -319,7 +311,6 @@ orgs:
         description: maintainers of the evolution repository
         maintainers:
           - leodido
-          - fntlnz
           - leogr
           - kris-nova
         members:
@@ -351,7 +342,6 @@ orgs:
         description: maintainers of the main Falco repository
         maintainers:
           - leodido
-          - fntlnz
           - leogr
           - mstemm
           - kris-nova
@@ -366,7 +356,6 @@ orgs:
         description: falcoctl maintainers
         maintainers:
           - leodido
-          - fntlnz
           - leogr
           - mstemm
           - kris-nova
@@ -425,7 +414,6 @@ orgs:
         description: ""
         maintainers:
           - leodido
-          - fntlnz
           - gnosek
         members:
           - admiral0
@@ -437,7 +425,6 @@ orgs:
         maintainers:
           - leodido
           - ldegio
-          - fntlnz
           - leogr
         members:
           - Andreagit97
@@ -492,7 +479,6 @@ orgs:
         description: falconers (can dismiss reviews and apply milestones)
         maintainers:
           - leodido
-          - fntlnz
           - leogr
           - kris-nova
         members:
@@ -505,7 +491,6 @@ orgs:
         maintainers:
           - leodido
           - ldegio
-          - fntlnz
         members:
           - gnosek
         privacy: closed
@@ -516,7 +501,6 @@ orgs:
         maintainers:
           - leodido
           - ldegio
-          - fntlnz
           - leogr
           - mstemm
         members:
@@ -529,7 +513,6 @@ orgs:
         maintainers:
           - leodido
           - ldegio
-          - fntlnz
           - leogr
           - mstemm
           - kris-nova
@@ -543,7 +526,6 @@ orgs:
         maintainers:
           - leodido
           - ldegio
-          - fntlnz
           - leogr
           - mstemm
           - kris-nova
@@ -556,7 +538,6 @@ orgs:
         description: Maintainers of falcosecurity/test-infra
         maintainers:
           - leodido
-          - fntlnz
           - leogr
         members:
           - maxgio92
@@ -569,7 +550,6 @@ orgs:
         description: maintainers of falco-website and docs
         maintainers:
           - leodido
-          - fntlnz
           - leogr
           - kris-nova
         members:
