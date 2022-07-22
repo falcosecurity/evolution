@@ -353,6 +353,13 @@ orgs:
         privacy: closed
         repos:
           falcosidekick-ui: maintain
+      github-maintainers:
+        description: maintainers of the .github repository
+        maintainers:
+          - leogr
+          - maxgio92
+        repos:
+          .github: maintain
       katacoda-scenarios-maintainers:
         description: ""
         maintainers:
@@ -436,15 +443,6 @@ orgs:
           plugins: admin
           template-repository: admin
           test-infra: admin
-      maintainers:
-        description: falconers (can dismiss reviews and apply milestones)
-        maintainers:
-          - leogr
-        members:
-          - jasondellaluce
-        privacy: secret
-        repos:
-          .github: maintain
       pdig-maintainers:
         description: maintainers of pdig
         maintainers:
