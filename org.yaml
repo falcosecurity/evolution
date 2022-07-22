@@ -417,7 +417,7 @@ orgs:
         description: bots
         maintainers:
           - poiana
-        privacy: secret
+        privacy: closed
         repos:
           .github: admin
           charts: admin
