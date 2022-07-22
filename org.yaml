@@ -10,7 +10,6 @@ orgs:
 
     admins:
       - caniszczyk
-      - kris-nova
       - ldegio
       - leogr
       - mstemm
@@ -36,6 +35,7 @@ orgs:
       - jonahjon
       - Kaizhe
       - KeisukeYamashita
+      - kris-nova
       - leodido
       - lucperkins
       - markyjackson-taulia
@@ -221,7 +221,6 @@ orgs:
           - leogr
           - thelinuxfoundation
           - mstemm
-          - kris-nova
         privacy: closed
         repos:
           advocacy: admin
@@ -229,7 +228,6 @@ orgs:
         description: maintainers of the Falco Helm charts
         maintainers:
           - leogr
-          - kris-nova
         members:
           - nibalizer
           - cpanato
@@ -242,7 +240,6 @@ orgs:
         maintainers:
           - leodido
           - leogr
-          - kris-nova
         members:
           - mfdii
           - markyjackson-taulia
@@ -269,7 +266,6 @@ orgs:
         description: maintainers of the community repository
         maintainers:
           - leogr
-          - kris-nova
         members:
           - nibalizer
           - mfdii
@@ -298,7 +294,6 @@ orgs:
         description: maintainers of the event-generator
         maintainers:
           - leogr
-          - kris-nova
           - fededp
         privacy: closed
         repos:
@@ -307,7 +302,6 @@ orgs:
         description: maintainers of the evolution repository
         maintainers:
           - leogr
-          - kris-nova
         members:
           - nestorsalceda
           - maxgio92
@@ -337,7 +331,6 @@ orgs:
         maintainers:
           - leogr
           - mstemm
-          - kris-nova
           - jasondellaluce
           - fededp
         members:
@@ -350,7 +343,6 @@ orgs:
         maintainers:
           - leogr
           - mstemm
-          - kris-nova
         members:
           - markyjackson-taulia
         privacy: closed
@@ -469,7 +461,6 @@ orgs:
         description: falconers (can dismiss reviews and apply milestones)
         maintainers:
           - leogr
-          - kris-nova
         members:
           - jasondellaluce
         privacy: secret
@@ -503,7 +494,6 @@ orgs:
           - ldegio
           - leogr
           - mstemm
-          - kris-nova
         members:
           - jasondellaluce
         privacy: closed
@@ -515,7 +505,6 @@ orgs:
           - ldegio
           - leogr
           - mstemm
-          - kris-nova
         members:
           - jasondellaluce
         privacy: closed
@@ -536,7 +525,6 @@ orgs:
         description: maintainers of falco-website and docs
         maintainers:
           - leogr
-          - kris-nova
         members:
           - lucperkins
           - mfdii
