@@ -2,6 +2,15 @@
 
 This document describes the fundamental principles **The Falco Project** adheres to. It defines the project governance, and regulates its extension and modification.
 
+## Project Evolution
+
+The project source code and documentation live in various repositories under the [falcosecurity](https://github.com/falcosecurity) GitHub organization. Each repository represents a component or a subproject of The Falco Project. For transparency, project decisions are publicly made using GitHub issues and pull requests.
+
+The Falco Project documents its evolution in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository, which is also a place designed to:
+ - make decisions that regard the whole project, and
+ - define rules and structures which span beyond the extent of a single repository (i.e., organization-wide).
+
+
 ## Maintainers
 
 The list of the current [maintainers](./maintainers.yaml) is automatically updated by the [Falco Infra](https://github.com/falcosecurity/test-infra).
