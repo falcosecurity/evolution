@@ -1,16 +1,6 @@
-# Governance
+# The Falco Project Governance
 
-- [Governance](#governance)
-  - [Maintainers](#maintainers)
-  - [Process for becoming a maintainer](#process-for-becoming-a-maintainer)
-  - [Maintainer responsibilities](#maintainer-responsibilities)
-  - [When does a maintainer lose maintainer status](#when-does-a-maintainer-lose-maintainer-status)
-    - [How to step down](#how-to-step-down)
-    - [Project inactivity](#project-inactivity)
-  - [Conflict resolution and voting](#conflict-resolution-and-voting)
-    - [Single project conflicts](#single-project-conflicts)
-    - [Organization conflicts](#organization-conflicts)
-  - [Adding new projects to the falcosecurity GitHub organization](#adding-new-projects-to-the-falcosecurity-github-organization)
+This document describes the fundamental principles **The Falco Project** adheres to. It defines the project governance, and regulates its extension and modification.
 
 ## Maintainers
 
