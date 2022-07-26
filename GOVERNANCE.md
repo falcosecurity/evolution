@@ -11,6 +11,18 @@ The Falco Project documents its evolution in the [falcosecurity/evolution](https
  - define rules and structures which span beyond the extent of a single repository (i.e., organization-wide).
 
 
+## Repositories
+
+The process of adding, removing, and managing repositories under the [falcosecurity](https://github.com/falcosecurity) GitHub organization is described in [REPOSITORIES.md](REPOSITORIES.md). The document assigns a scope and a status to each repository.
+
+### Core repositories
+
+In particular, repositories essential for building, installing, running, documenting, or using Falco are considered **core repositories** and are given the *Official* status.
+
+### Repository ownership
+
+[OWNERS](https://www.kubernetes.dev/docs/guide/owners/) files are used to designate responsibility over different parts of The Falco Project codebase, and serve as the implementation mechanism for the code review process. Each repository must have an `OWNERS` file in the root directory, and can optionally have other `OWNERS` files in subdirectories. The `OWNERS` file applies to everything within the directory, including the OWNERS file itself, sibling files, and child directories.
+
 ## Maintainers
 
 The list of the current [maintainers](./maintainers.yaml) is automatically updated by the [Falco Infra](https://github.com/falcosecurity/test-infra).
@@ -114,13 +126,3 @@ So that no single company/organization can dominate the choices:
 
 In case the conflict is about changing this governance document, it is required a majority of 66% of votes
 to resolve the disputes.
-
-## Adding new projects to the falcosecurity GitHub organization
-
-New projects will be added to the falcosecurity organization via GitHub issue discussion in the
-[falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository.
-
-Once sufficient discussion has taken place (~3-5 business days but depending on the volume of conversation), the maintainers will
-decide whether the new project should be added.
-
-See the [section above on voting](#conflict-resolution-and-voting) if the maintainers cannot easily decide.
