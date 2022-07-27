@@ -131,38 +131,100 @@ Responsibilities:
  - May be consulted by [Maintainers](#maintainers).
  - May serve as sponsors, and commit to the long-term success of The Falco Project.
 
-## Conflict resolution and voting
+## Decision making
 
-In general, we prefer that governance issues, technical issues, and maintainer membership are amicably worked out
-between the persons involved. If a dispute cannot be decided independently, the maintainers can be
-called in to decide an issue.
+The Falco Project tries by default to find consensus. Using lazy consensus has to date never resulted in later disputes. However, sometimes voting is required to solve disputes, or for specific matters, as described in this section.
 
-If the [maintainers](maintainers.yaml) themselves cannot decide an issue, the issue will be resolved by **voting**.
+Our [communication channels](https://github.com/falcosecurity/community) should be used to find agreement before deciding to call a vote. Discussions can happen on any official channel. Cross-posting is recommended to give more visibility to essential topics.
 
-Unless specified otherwise, a vote passes when greater than 50% + 1 of the votes are in favour.
+### Governance changes
 
-Voting can happen through GitHub issues, GitHub pull requests, or on the CNCF Falco mailing list.
+Material changes to this document must be discussed publicly on the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository, via GitHub issues or pull requests. Any change requires a [supermajority vote](#supermajority-vote) of [Core Maintainers](#core-maintainers).
 
-### Single project conflicts
+#### Editorial changes
 
-When a conflict regards a single project (or single area of a project), each one of its maintainers can use a single vote.
+Editorial changes are changes that fix spelling or grammar, update links, or similar; they update the style, or keep the document up to date with obvious external changes. They do not change the intent or meaning of anything in this document. Such changes must be made via pull request, and are accepted by [lazy consensus](#consensus).
 
-The voting rights on a conflict regarding a single area of a project are given to:
+### Maintainership
 
-- the maintainers of the specific project area (those listed in the OWNERS file of the specific area/subfolder)
-- the maintainers of the whole project (those listed in the root ONWERS file)
+A [Maintainer](#maintainers) may resign by notifying their willing using a GitHub issue or pull request. In such a case, they can be moved to [Emeritus Maintainers](#emeritus-maintainers) using [lazy consensus](#consensus).
 
-In case the conflict is on the maintainership status it is required a majority of 66% of votes to resolve the dispute.
+[Maintainers](#maintainers) can be added or moved to or from [Emeritus Maintainers](#emeritus-maintainers) with a [majority vote](#majority-vote), if the criteria in this document and the [MAINTAINERS-GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS-GUIDELINES.md) file are met. If inactivity is the criteria, at least the past six months must be considered.
 
-### Organization conflicts
+In all other cases, to remove [Maintainers](#maintainers) from their role, a [supermajority vote](#supermajority-vote) is required.
 
-When a conflict regards organization-wide issues, maintainers will use **organizational voting**.
+If the decision regards a [Core Maintainer](#core-maintainers) appointment or removal, any [Core Maintainer](#core-maintainers) can request to escalate the decision to all [Core Maintainers](#core-maintainers).
 
-So that no single company/organization can dominate the choices:
+In any case, the persons in question are not eligible to vote, and do not count towards the quorum.
 
-- Individuals not associated with or employed by a company or organization are allowed 1 organization vote
-- Each company or organization receives 1 organization vote
-  - Any maintainer from a company/organization may cast the vote for that organization, but it is common sense to first discuss the vote with other maintainers from the same company/organization
+### Sensitive decisions
 
-In case the conflict is about changing this governance document, it is required a majority of 66% of votes
-to resolve the disputes.
+Any sensitive matter that needs a decision to be taken privately, including but not limited to security disclosure or financial matters, may be discussed and voted on secretly if [Core Maintainers](#core-maintainers) are present and agree.
+
+In such situations, [Core Maintainers](#core-maintainers) must be notified promptly using the CNCF mailing list for Falco maintainers: [cncf-falco-maintainers@lists.cncf.io](mailto:cncf-falco-maintainers@lists.cncf.io).
+
+[Lazy consensus](#consensus) is allowed only in urgent situations that render a vote impractical.
+
+### Ordinary decisions
+
+Technical decisions, and decisions about any other matter, are made informally by the [Maintainers](#maintainers), and [lazy consensus](#consensus) is assumed.
+
+A [majority vote](#majority-vote) is required only if:
+- an eligible voter proposes a vote, or
+- a guideline documented in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository requires a vote.
+
+## Voting
+
+Different voting methods are used depending on the circumstance, as laid out [above](#decision-making).
+
+For all votes, voting must be open for **one week**. If reasonably justified, the voting period can be extended up to three weeks. The end date should be clearly stated in the call to vote. A vote may be called and closed early if enough votes have been cast, and further votes cannot change the outcome.
+
+Unless otherwise specified in this document, the voting process must be public, and the only allowed voting mechanism is using **comments on issues or pull requests** in the [falcosecurity](https://github.com/falcosecurity) GitHub organization.
+
+For public discussions, anyone interested is encouraged to participate and cast non-binding votes. 
+ 
+Formal power to object or cast a binding vote is limited to **eligible voters**:
+
+| Scope | Eligible voters |
+| -------- | -------- | 
+| Subdirectory | [Maintainers](#maintainers) of the directory, the parent directories, if any, and [Maintainers](#maintainers) of the whole repository |
+| One or more repositories | [Maintainers](#maintainers) of those repositories |
+| Any other | The [Core Maintainers](#core-maintainers) team |
+
+Notes:
+  - If the matter regards multiple repositories, maintainers from those repositories can join and make a voting together.
+  - Some decisions are reserved for [Core Maintainers](#core-maintainers), such as [changes in governance](#governance-changes).
+
+When a decision cannot be taken within its default scope, or there are less than two eligible voters, the decision must be escalated to the parent scope.
+
+### Consensus
+
+The default decision making mechanism for The Falco Project is [lazy consensus](https://openoffice.apache.org/docs/governance/lazyConsensus.html). This means that any decision is considered supported by all concerned persons, as long as nobody objects.
+
+Silence on any consensus decision is implicit agreement, and equivalent to explicit agreement. Explicit agreement may be stated at will. Decisions may, but do not need to, be called out and put up for discussion on any [communication channels](https://github.com/falcosecurity/community) at any time and by anyone.
+
+Consensus decisions can never override or go against the spirit of an earlier explicit vote.
+
+If anybody raises objections, all the interested parties should work together towards a solution that all involved can accept. This solution is again subject to lazy consensus.
+
+In case no consensus can be found, but a decision one way or the other must be made, any potential eligible voters in the scope of the decision may call a formal [majority vote](#majority-vote).
+
+### Majority vote
+
+Majority votes must be called explicitly. The subject must be prefixed with `vote:`. In the body, the call to vote must state the proposal being voted on. It should reference any discussion leading up to this point.
+
+Votes may take the form of a single proposal, with the option to vote yes or no, or the form of multiple alternatives.
+
+A vote on a single proposal is considered successful if more vote in favor than against.
+
+If there are multiple alternatives, members may vote for one or more alternatives, or vote “no” to object to all alternatives. It is not possible to cast an “abstain” vote. A vote on multiple alternatives is considered decided in favor of one alternative if it has received the most votes in favor, and a vote from more than half of those voting. Should no alternative reach this quorum, another vote on a reduced number of options may be called separately.
+
+### Supermajority vote
+
+Supermajority votes must be called explicitly. The subject must be prefixed with `vote:`. In the body, the call to vote must state the proposal being voted on. It should reference any discussion leading up to this point.
+
+Votes may take the form of a single proposal, with the option to vote yes or no, or the form of multiple alternatives.
+
+A vote on a single proposal is considered successful if at least two thirds of those eligible vote in favor.
+
+If there are multiple alternatives, members may vote for one or more alternatives, or vote “no” to object to all alternatives. A vote on multiple alternatives is considered decided in favor of one alternative if it has received the most votes in favor, and a vote from at least two thirds of those eligible to vote. Should no alternative reach this quorum, another vote on a reduced number of options may be called separately.
