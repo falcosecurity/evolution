@@ -23,73 +23,111 @@ In particular, repositories essential for building, installing, running, documen
 
 [OWNERS](https://www.kubernetes.dev/docs/guide/owners/) files are used to designate responsibility over different parts of The Falco Project codebase, and serve as the implementation mechanism for the code review process. Each repository must have an `OWNERS` file in the root directory, and can optionally have other `OWNERS` files in subdirectories. The `OWNERS` file applies to everything within the directory, including the OWNERS file itself, sibling files, and child directories.
 
-## Maintainers
+## Community roles
 
-The list of the current [maintainers](./maintainers.yaml) is automatically updated by the [Falco Infra](https://github.com/falcosecurity/test-infra).
+The below section outlines the different roles of community members within the project, along with the responsibilities and privileges that come with them.
 
-## Process for becoming a maintainer
+### Adopters 
 
-* Express interest to the existing maintainers that you or your organization is interested in becoming a
-  maintainer. Becoming a maintainer generally means that you are going to be spending substantial
-  time (>25%) for the foreseeable future.
-* Depending on which project you want to become a maintainer for, you should have domain expertise and be extremely
-  proficient in its main language. Ultimately your goal is to become a maintainer that will represent your
-  organization.
-  * For example, to become a `falcosecurity/falco` maintainer you will need C++ proficiency.
-  * On the other hand, to become a `falcosecurity/falcosidekick` maintainer, you will need Go proficiency.
-* We will expect you to start contributing increasingly complicated PRs, under the guidance
-  of the existing maintainers.
-* We may ask you to do some PRs from our backlog.
-* As you gain experience with the code base and our standards, we will ask you to do code reviews
-  for incoming PRs (i.e., all maintainers are expected to shoulder a proportional share of
-  community reviews).
-* Be active and proactive in communications, lead community calls and help other community members.
-* After a period of approximately 2-3 months of working together and making sure we see eye to eye,
-  the existing maintainers will confer and decide whether to grant maintainer status or not.
-  We make no guarantees on the length of time this will take, but 2-3 months is the approximate
-  goal.
+Adopters are any organizations publicly stating that they successfully leveraged The Falco Project, or repackaged it as a component of a service offering. See the [CNCF Adopters definition](https://github.com/cncf/toc/blob/main/FAQ.md#what-is-the-definition-of-an-adopter) for more details.
 
-## Maintainer responsibilities
+Defined by:
+ - The [ADOPTERS.md](https://github.com/falcosecurity/falco/blob/master/ADOPTERS.md) document.
 
-* Monitor Slack (delayed response is perfectly acceptable).
-* Triage GitHub issues and perform pull request reviews for other maintainers and the community.
-* During GitHub issue triage, apply all applicable [labels](https://github.com/falcosecurity/falco/labels)
-  to each new issue. Labels are extremely useful for future issue follow up. Which labels to apply
-  is somewhat subjective so just use your best judgment.
-* Make sure that ongoing PRs are moving forward at the right pace or closing them.
-* Participate when called upon in the security releases. Note that although this should be a rare
-  occurrence, if a serious vulnerability is found, the process may take up to several full days of
-  work to implement. This reality should be taken into account when discussing time commitment
-  obligations with employers.
-* In general continue to be willing to spend at least 25% of one's time working on Falco (~1.25
-  business days per week).
+Responsibilities:
+ - Publicly announcing they are adopters of The Falco Project.
 
-## When does a maintainer lose maintainer status
+### Community Members
 
-Maintainers can be removed from the projects if they require so, or due to project inactivity.
+Community Members are all users who interact with the project. This could be through Slack, GitHub discussions, joining public project meetings, mailing lists, etc.
 
-### How to step down
+Responsibilities:
+ - Respect the [Code Of Conduct](https://github.com/falcosecurity/.github/blob/master/CODE_OF_CONDUCT.md).
 
-It's totally normal that a maintainer's life changes and they now suddenly have different life priorities.
-When this happens, a maintainer is expected to make sure to help other maintainers to keep up their started work.
+### Contributors
 
-If this decision is final, please remember to remove yourself from the OWNERS files to avoid being flooded with requests
-when you don't really want to.
+Contributors are [Community Members](#community-members) who [contribute](https://opensource.guide/how-to-contribute/#what-it-means-to-contribute) directly to the project and add value to it. This can be through code, documentation, taking part in bug scrubs, opening issues, proposing a pull request, etc.
 
-This kind of decision is hard, remember to reach to another maintainer if you need support with your reasoning, the community
-is always there to help!
+Defined by:
+ - Having valid contributions (as per [GitHub definition](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-settings-on-your-profile/viewing-contributions-on-your-profile#what-counts-as-a-contribution)) under the [falcosecurity](https://github.com/falcosecurity) GitHub organization.
+ - Any non-GitHub contribution but considered relevant for the project, as documented in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository.
 
-### Project inactivity
+Responsibilities:
+ - Respect the [Contribution Guidelines](https://github.com/falcosecurity/.github/blob/master/CONTRIBUTING.md).
+ - [Sign off](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---signoff) Git Commits to certify they adhere to the [Developer Certificate of Origin (DCO)](https://developercertificate.org/).
 
-Any existing maintainer that does not show significant activity on the project they maintain can be removed.
-Periodically, maintainers review the list of maintainers and their activity during the past six months.
+### Reviewers
 
-In case the maintainer involvement in the past six months doesn't meet the requirements in this file they will be contacted
-to ask wether they want to continue being a maintainer. If they decide to step down they open a pull request to be removed
-from the OWNERS files.
+Reviewers are [Contributors](#contributors) who have technical experience in an area of the project, and are willing to help in reviewing pull requests. They are added or removed at the sole discretion of repository maintainers. They are also [members](https://github.com/orgs/falcosecurity/people) of the [falcosecurity](https://github.com/falcosecurity) GitHub organization.
 
-In case the maintainer on the other hand wants to continue with the role but can't perform maintainer duties, other maintainers
-will open a votation to discuss the removal by following the [next section](#conflict-resolution-and-voting) process.
+Defined by:
+ - The OWNERS file `reviewers` entry.
+
+Responsibilities:
+ - Review pull requests.
+ - Follow the [Maintainers](#maintainers) guidelines.
+
+### Maintainers
+
+Maintainers are [Contributors](#contributors) who have shown significant and sustained contribution. They are highly experienced reviewers and contributors to a specific area of the project. They are also [members](https://github.com/orgs/falcosecurity/people) of the [falcosecurity](https://github.com/falcosecurity) GitHub organization.
+
+Defined by: 
+ - The OWNERS file `approvers` entry.
+
+Requirements:
+ - Active contribution and participation in one or more areas of the project.
+ - Domain expertise and a good understanding of the code-base of those areas.
+
+Responsibilities:
+ - Be active and proactive in communications, lead community calls, and help other community members.
+ - Monitor [official communication channels](https://github.com/falcosecurity/community). Delayed responses are  acceptable.
+ - Triage GitHub issues and review pull requests (PRs).
+ - Make sure that PRs are moving forward at the right pace, or closing them.
+ - Participate when called upon in security releases. Although this should be a rare occurrence, if a serious vulnerability is found it may take up to several full days of work.
+
+To become a maintainer, [Contributors](#contributors) must express interest to the existing maintainers. The full process is documented in the [MAINTAINERS-GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS-GUIDELINES.md) file.
+
+The list of current [maintainers](./maintainers.yaml) is automatically updated by our infra (see the [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra) repository).
+
+### Core Maintainers 
+
+Core Maintainers are [Maintainers](#maintainers) of at least one of the [core repositories](#core-repositories).
+The Core Maintainers form a team that drives the direction, values, and governance of the overall project. They also serve as an escalation point for the overall project, and anything not easily managed by the maintainers of each repository.
+
+Defined by:
+ - The OWNERS file `approvers` entry of any [core repository](#core-repositories) (only the OWNERS file in the root directory must be considered).
+
+Requirements:
+ - Same as for [Maintainers](#maintainers).
+
+Responsibilities and privileges:
+ - Overseeing the overall project health and growth.
+ - Speaking on behalf of the project.
+ - Maintaining the brand, mission, vision, values, and scope of the project.
+ - Defining general guidelines for the project.
+ - Administering the [falcosecurity](https://github.com/falcosecurity) GitHub organization.
+ - Administering any assets or services owned or assigned to project.
+ - Look out for issues or conflict in any area of the project.
+ - Serve as the last escalation point for an issue that can't be solved by other community roles.
+ - Ability to create committees and delegate powers to them.
+
+The full process to become a Core Maintainer is documented in the [MAINTAINERS-GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS-GUIDELINES.md) file. 
+
+### Emeritus Maintainers
+
+Emeritus Maintainers are former [Maintainers](#maintainers) of a specific project area (they can still be an active maintainer of another project area). The only path to this role is to be previously listed in the `approvers` entry of an OWNERS file of that project area.
+
+Maintainers who are domain experts over certain areas of the codebase but can no longer dedicate the time needed to handle the responsibilities of reviewing and approving changes are encouraged to add themselves in the OWNERS file `emeritus_approvers` entry.
+
+When an emeritus maintainer returns to being more active, they may be promoted back at the discretion of the current [Maintainers](#maintainers) of the relevant area of the project.
+
+Defined by:
+- The OWNERS file `emeritus_approvers` entry.
+
+Responsibilities:
+ - Lead by example.
+ - May be consulted by [Maintainers](#maintainers).
+ - May serve as sponsors, and commit to the long-term success of The Falco Project.
 
 ## Conflict resolution and voting
 
