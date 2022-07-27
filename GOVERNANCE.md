@@ -23,7 +23,9 @@ In particular, repositories essential for building, installing, running, documen
 
 [OWNERS](https://www.kubernetes.dev/docs/guide/owners/) files are used to designate responsibility over different parts of The Falco Project codebase, and serve as the implementation mechanism for the code review process. Each repository must have an `OWNERS` file in the root directory, and can optionally have other `OWNERS` files in subdirectories. The `OWNERS` file applies to everything within the directory, including the OWNERS file itself, sibling files, and child directories.
 
-## Community roles
+## Community
+
+The Falco Project is driven by its community. The [falcosecurity/community](https://github.com/falcosecurity/community) repository documents the official communication channels, community calls, and other initiatives. 
 
 The below section outlines the different roles of community members within the project, along with the responsibilities and privileges that come with them.
 
