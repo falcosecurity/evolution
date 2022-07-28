@@ -197,6 +197,8 @@ Notes:
 
 When a decision cannot be taken within its default scope, or there are less than two eligible voters, the decision must be escalated to the parent scope.
 
+No organization or company should be allowed more than 40% of eligible votes. If more than 40% of eligible votes are affiliated with an organization or company, they must decide who will cast votes. Affiliations must be publicly stated or acknowledged when a person is associated with or employed by an organization or company. If there are not enough organizations or companies to meet this rule, any [Maintainers](#maintainers) can request to escalate to the parent scope.
+
 ### Consensus
 
 The default decision making mechanism for The Falco Project is [lazy consensus](https://openoffice.apache.org/docs/governance/lazyConsensus.html). This means that any decision is considered supported by all concerned persons, as long as nobody objects.
