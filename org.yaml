@@ -63,11 +63,13 @@ orgs:
         description: Go client and SDK for Falco
         has_projects: true
       client-py:
+        archived: true
         allow_merge_commit: false
         description: Python client and SDK for Falco
         has_projects: true
         has_wiki: false
       client-rs:
+        archived: true
         description: The rust language implementation of the Falco client
         has_projects: true
       community:
@@ -176,6 +178,7 @@ orgs:
         description: System inspection library
         has_projects: true
       pdig:
+        archived: true
         description: ptrace-based event producer for udig
         has_projects: true
         has_wiki: false
