@@ -2,6 +2,16 @@
 
 This document describes the fundamental principles **The Falco Project** adheres to. It defines the project governance, and regulates its extension and modification.
 
+## Principles
+
+The Falco Project and its community adhere to the following principles:
+ - **Open**: Falco is open source and open to contribution, accessible and welcoming for everyone.
+ - **Respectful**: the community pledges to respect all people involved in the project.
+ - **Transparent**: discussions, collaboration, and decision-making are done in public.
+ - **Vibrant**: evolution is better than stagnation.
+
+The Falco Project is part of the broader [CNCF](https://www.cncf.io/) community, and adheres to its values.
+
 ## Project Evolution
 
 The project source code and documentation live in various repositories under the [falcosecurity](https://github.com/falcosecurity) GitHub organization. Each repository represents a component or a subproject of The Falco Project. For transparency, project decisions are publicly made using GitHub issues and pull requests.
