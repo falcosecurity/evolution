@@ -151,6 +151,8 @@ Our [communication channels](https://github.com/falcosecurity/community) should 
 
 Material changes to this document must be discussed publicly on the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository, via GitHub issues or pull requests. Any change requires a [supermajority vote](#supermajority-vote) of [Core Maintainers](#core-maintainers).
 
+The open nature of The Falco Project, its first [principle](#principles), will never be a matter of change.
+
 #### Editorial changes
 
 Editorial changes are changes that fix spelling or grammar, update links, or similar; they update the style, or keep the document up to date with obvious external changes. They do not change the intent or meaning of anything in this document. Such changes must be made via pull request, and are accepted by [lazy consensus](#consensus).
