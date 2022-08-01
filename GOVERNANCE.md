@@ -119,6 +119,7 @@ Responsibilities and privileges:
  - Defining general guidelines for the project.
  - Administering the [falcosecurity](https://github.com/falcosecurity) GitHub organization.
  - Administering any assets or services owned or assigned to project.
+ - Handle lincense and copyright issues.
  - Look out for issues or conflict in any area of the project.
  - Serve as the last escalation point for an issue that can't be solved by other community roles.
  - Ability to create committees and delegate powers to them.
@@ -242,3 +243,15 @@ Votes may take the form of a single proposal, with the option to vote yes or no,
 A vote on a single proposal is considered successful if at least two thirds of those eligible vote in favor.
 
 If there are multiple alternatives, members may vote for one or more alternatives, or vote “no” to object to all alternatives. A vote on multiple alternatives is considered decided in favor of one alternative if it has received the most votes in favor, and a vote from at least two thirds of those eligible to vote. Should no alternative reach this quorum, another vote on a reduced number of options may be called separately.
+
+## License
+
+Repository contents must be licensed under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) or adhere to the [Allowed Third-Party License Policy of the CNCF](https://github.com/cncf/foundation/blob/main/allowed-third-party-license-policy.md). 
+
+Documentation is distributed under the [Creative Commons License version 4.0](https://creativecommons.org/licenses/by/4.0/legalcode).
+
+Licensing exceptions are subject to review and approval by the [Core Maintainers](#core-maintainers).
+
+In each repository, copyright notices can either be included in each contributed file or stored in designated files. Copyright notices must contain the `Copyright (C) XXXX The Falco Authors` statement (see the [CNCF Copyright Notices](https://github.com/cncf/foundation/blob/main/copyright-notices.md#copyright-notices) document), where `XXXX` is the most recent year the file was updated.
+
+[Developer Certificate of Origin (DCO)](https://developercertificate.org/) commit sign-off is required for all new code contributions.
