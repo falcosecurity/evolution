@@ -2,6 +2,34 @@
 
 This document describes the fundamental principles **The Falco Project** adheres to. It defines the project governance, and regulates its extension and modification.
 
+**Table of Contents**
+
+- [Principles](#principles)
+- [Project Evolution](#project-evolution)
+- [Repositories](#repositories)
+  - [Core repositories](#core-repositories)
+  - [Repository ownership](#repository-ownership)
+- [Community](#community)
+  - [Adopters](#adopters)
+  - [Community Members](#community-members)
+  - [Contributors](#contributors)
+  - [Reviewers](#reviewers)
+  - [Maintainers](#maintainers)
+  - [Core Maintainers](#core-maintainers)
+  - [Emeritus Maintainers](#emeritus-maintainers)
+- [Technical Advisory Groups](#technical-advisory-groups)
+- [Decision making](#decision-making)
+  - [Governance changes](#governance-changes)
+    - [Editorial changes](#editorial-changes)
+  - [Maintainership](#maintainership)
+  - [Sensitive decisions](#sensitive-decisions)
+  - [Ordinary decisions](#ordinary-decisions)
+- [Voting](#voting)
+  - [Consensus](#consensus)
+  - [Majority vote](#majority-vote)
+  - [Supermajority vote](#supermajority-vote)
+- [License](#license)
+
 ## Principles
 
 The Falco Project and its community adhere to the following principles:
