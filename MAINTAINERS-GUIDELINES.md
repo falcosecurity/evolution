@@ -47,11 +47,27 @@ Furthermore, former [Reviewers](GOVERNANCE.md#reviewers) are removed from the [o
 
 ## Offboarding a Maintainer
 
-Maintainers of a repository (or a directory) can lose their status by voluntarily stepping down for personal reasons, or due to inactivity.
+Maintainers of a repository (or a directory) can lose their status by voluntarily stepping down for personal reasons, or due to [inactivity](#review-maintainers-activity).
 
 In such a case, a PR is required to move the person in question from the `approvers` entry to the `emeritus_approvers` entry of the respective [OWNERS](REPOSITORIES.md#owners) file. 
 
 The person in question must be mentioned in the body of the PR. This acts as a final contact attempt so that they can provide their feedback.
 
 Another PR is required to remove them from GitHub team defined by the [org.yaml](https://github.com/falcosecurity/test-infra/blob/master/config/org.yaml) file.
+
+## Review maintainers activity
+
+The [Maintainers](GOVERNANCE.md#maintainers)' activity is periodically reviewed. Any [Maintainer](GOVERNANCE.md#maintainers) that does not show significant [activity](#how-inactivity-is-measured) on the repository (or the subdirectory) they maintain can be removed from the `approvers` entry of the respective [OWNERS](REPOSITORIES.md#owners) of the repository (or the subdirectory), as described in the [Offboarding a Maintainer](#offboarding-a-maintainer) section.
+
+[Maintanership decisions](GOVERNANCE.md#maintainership) must be made on a per-OWNERS-file basis. So, a maintainer can be inactive in a project area but still involved elsewhere.
+
+Inactive maintainers are proposed for review by any other [Maintainer](GOVERNANCE.md#maintainers) or, whenever possible, by the automation. The review is performed by opening a PR where other maintainers of the repository (or the subdirectory) can discuss and decide. If the persons under consideration voluntarily step down, the PR can be merged by [lazy consensus](GOVERNANCE.md#consensus); otherwise, a [majority vote](GOVERNANCE.md#majority-vote) is needed.
+
+### How inactivity is measured
+
+[Maintainers](GOVERNANCE.md#maintainers) contributions can be measured by using the CNCF [DevStats](https://devstats.cncf.io/) project (see also [API reference](https://github.com/cncf/devstatscode/blob/master/API.md)).
+
+An inactive person is defined as someone with less than 10 recorded contributions within the past six months.
+
+Since this method does not consider other [Maintainers](GOVERNANCE.md#maintainers)' duties that the person in question may perform, exceptions can be made at the sole discretion of existing maintainers. In particular, the criteria can be loose and tightened as needed for [*Special*](REPOSITORIES.md#status) repositories and those with very little activity.
 
