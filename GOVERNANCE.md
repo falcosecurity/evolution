@@ -220,6 +220,8 @@ Notes:
   - If the matter regards multiple repositories, maintainers from those repositories can join and make a voting together.
   - Some decisions are reserved for [Core Maintainers](#core-maintainers), such as [changes in governance](#governance-changes).
 
+In case of vacation or prolonged absence, eligible voters may temporarily delegate their voting power to another [Maintainer](#maintainers) or [Emeritus Maintainer](#emeritus-maintainers) for up to three months. The appointed person, the initial and final dates of their assignment period must be publicly recorded.
+
 When a decision cannot be taken within its default scope, or there are less than two eligible voters, the decision must be escalated to the parent scope.
 
 No organization or company should be allowed more than 40% of eligible votes. If more than 40% of eligible votes are affiliated with an organization or company, they must decide who will cast votes. Affiliations must be publicly stated or acknowledged when a person is associated with or employed by an organization or company. If there are not enough organizations or companies to meet this rule, any [Maintainers](#maintainers) can request to escalate to the parent scope.
