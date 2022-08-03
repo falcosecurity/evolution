@@ -142,6 +142,18 @@ Responsibilities:
  - May be consulted by [Maintainers](#maintainers).
  - May serve as sponsors, and commit to the long-term success of The Falco Project.
 
+## Technical Advisory Groups
+
+Technical Advisory Groups (TAGs) are groups of [Community Members](#community-members) with considerable technical experience on a specific matter of The Falco Project. TAGs have the purpose of helping foster project maturity, casting recommendations, and advancing the project concerning a particular topic.
+
+Each TAG must have a charter specifying its name, interest topic, scope, mission, membership rules, and governance processes. TAGs must have at least one TAG chair at any given time. The TAG chairs are intended to be organizers and facilitators, responsible for the overall direction and governance of the TAG.
+
+TAGs must respect The Falco Project's [principles](#principles), communicate in the open using [communication channels](https://github.com/falcosecurity/community), and periodically share a high-level summary of their work with the [community](#community).
+
+Anyone can propose a new TAG. Proposals must first be submitted to the community. Once a sufficient discussion has occurred, the [Core Maintainers](#core-maintainers) consider the community feedback and will eventually approve using a majority vote.
+
+A [repository](#repositories) is assigned to each new accepted TAG. TAG's charter must define the requirements and responsibilities for the repository's [owners](#repository-ownership), who effectively are [Maintainers](#maintainers) of a repository and therefore are subject to the same rules.
+
 ## Decision making
 
 The Falco Project tries by default to find consensus. Using lazy consensus has to date never resulted in later disputes. However, sometimes voting is required to solve disputes, or for specific matters, as described in this section.
