@@ -8,11 +8,11 @@ Repositories host specific parts of The Falco Project such as core codebase comp
 
 ## Owners
 
-Repositories must contain [OWNERS](https://www.kubernetes.dev/docs/guide/owners/) files following the Kubernetes specific. OWNERS files are used to designate responsibility over different parts of the repository codebase and serve as the implementation mechanism for the two-phase code review process used by each project. 
+Repositories must contain [OWNERS](https://www.kubernetes.dev/docs/guide/owners/) files following the Kubernetes specification. OWNERS files are used to designate responsibility over different parts of the repository codebase and serve as the implementation mechanism for the two-phase code review process used by each project. 
 
 Each repository must have an `OWNERS` file in the root directory. Each sub-directory that contains a unit of independent code or content may also contain an OWNERS file. This file applies to everything within its directory, including the OWNERS file itself, sibling files, and child directories. There must be only one OWNERS file per directory.
 
-As for the [Kubernetes specific](https://www.kubernetes.dev/docs/guide/owners/), OWNERS files are in YAML format and support a given set of keys, of which The Falco Project observes the following:
+As for the [Kubernetes specification](https://www.kubernetes.dev/docs/guide/owners/), OWNERS files are in YAML format and support a given set of keys, of which The Falco Project observes the following:
 
 - `approvers`: Users that can `/approve` or `/lgtm` PRs. See [GOVERNANCE.md](GOVERNANCE.md#maintainers) for more details.
 - `reviewers`: Users that are good candidates to `/lgtm` PRs. See [GOVERNANCE.md](GOVERNANCE.md#reviewers) for more details.
