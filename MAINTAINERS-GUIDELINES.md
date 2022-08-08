@@ -1,6 +1,6 @@
 # Maintainers Guidelines
 
-Maintainership-related decisions must be taken with respect to the rules established in our [governace](GOVERNANCE.md#maintainership). This document provides guidelines for the implementation of these decisions.
+Maintainership-related decisions must be taken with respect to the rules established in our [governance](GOVERNANCE.md#maintainership). This document provides guidelines for the implementation of these decisions.
 
 [Reviewers](GOVERNANCE.md#reviewers) have no maintainers power, but behave similarly and therefore this document include also guidelines for reviewers. Although they can be added and removed at the sole discretion of the maintainers, it is recommended to use similar criteria when doing so.
 
