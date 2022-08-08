@@ -33,6 +33,7 @@ orgs:
       - Kaizhe
       - kris-nova
       - leodido
+      - LucaGuerra
       - mfdii
       - markyjackson-taulia
       - maxgio92
@@ -392,6 +393,7 @@ orgs:
           - fededp
           - andreagit97
           - molter73
+          - LucaGuerra
         privacy: closed
         repos:
           libs: maintain
