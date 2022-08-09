@@ -292,8 +292,6 @@ Repository contents must be licensed under [Apache-2.0](https://www.apache.org/l
 
 Documentation is distributed under the [Creative Commons License version 4.0](https://creativecommons.org/licenses/by/4.0/legalcode).
 
-Licensing exceptions are subject to review and approval by the [Core Maintainers](#core-maintainers).
-
 In each repository, copyright notices can either be included in each contributed file or stored in designated files. Copyright notices must contain the `Copyright (C) XXXX The Falco Authors` statement (see the [CNCF Copyright Notices](https://github.com/cncf/foundation/blob/main/copyright-notices.md#copyright-notices) document), where `XXXX` is the most recent year the file was updated.
 
 [Developer Certificate of Origin (DCO)](https://developercertificate.org/) commit sign-off is required for all new code contributions.
