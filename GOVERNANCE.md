@@ -82,7 +82,7 @@ Responsibilities:
 Community Members are all users who interact with the project. This could be through Slack, GitHub discussions, joining public project meetings, mailing lists, etc.
 
 Responsibilities:
- - Respect the [Code Of Conduct](https://github.com/falcosecurity/.github/blob/master/CODE_OF_CONDUCT.md).
+ - Respect the [Code Of Conduct](CODE_OF_CONDUCT.md).
 
 ### Contributors
 
