@@ -2,7 +2,7 @@
 
 Maintainership-related decisions must be taken with respect to the rules established in our [governance](GOVERNANCE.md#maintainership). This document provides guidelines for the implementation of these decisions.
 
-[Reviewers](GOVERNANCE.md#reviewers) have no maintainers power, but behave similarly and therefore this document include also guidelines for reviewers. Although they can be added and removed at the sole discretion of the maintainers, it is recommended to use similar criteria when doing so.
+[Reviewers](GOVERNANCE.md#reviewers) have no maintainers power, but behave similarly and therefore this document include also guidelines for reviewers.
 
 Both [Maintainers](GOVERNANCE.md#maintainers) and [Reviewers](GOVERNANCE.md#reviewers) are defined by [OWNERS](REPOSITORIES.md#owners) files. Most of the processes described below involve making pull requests (PRs) to correctly make changes to those files.
 
@@ -23,7 +23,7 @@ If [Community Members](GOVERNANCE.md#community-members) believe they match the c
 
 [Maintainers](GOVERNANCE.md#maintainers) will review the PR and decide.
 
-If the decision is to grant the revier status, then the person in question must become a member of the [falcosecurity](https://github.com/falcosecurity) Github organization (see the [Organization membership](#organization-membership) section).
+If the decision is to grant the reviewer status, then the person in question must become a member of the [falcosecurity](https://github.com/falcosecurity) Github organization (see the [Organization membership](#organization-membership) section).
 
 ## Onboarding a Maintainer
 
@@ -38,9 +38,9 @@ If the decision is to grant the maintainer status, then the person in question m
 
 ## Offboarding a Reviewer
 
-Reviewers of a repository (or a directory) can lose their status by voluntarily stepping down for personal reasons, or due to [inactivity](#review-maintainer-activity).
+Reviewers of a repository (or a directory) can lose their status by voluntarily stepping down for personal reasons, an extended period of inactivity, a period of failing to meet the requirements for the role, a violation of the Code of Conduct and/or at the maintainers' discretion.
 
-In such a case, a PR is required to remove the person in question from the `reviewers` entry of the respective [OWNERS](REPOSITORIES.md#owners) file.
+In such a case, a PR is required to remove the person in question from the `reviewers` entry of the respective [OWNERS](REPOSITORIES.md#owners) file. [Maintainers](GOVERNANCE.md#maintainers) will review the PR and decide.
 
 Furthermore, former [Reviewers](GOVERNANCE.md#reviewers) are removed from the [organization members](https://github.com/orgs/falcosecurity/people) if they are no longer listed in any [OWNERS](REPOSITORIES.md#owners) file.
 
