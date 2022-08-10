@@ -21,6 +21,8 @@ Former [Reviewers](GOVERNANCE.md#reviewers) are removed from the [organization m
 
 If [Community Members](GOVERNANCE.md#community-members) believe they match the criteria to become [Reviewers](GOVERNANCE.md#reviewers) of a repository (or a subdirectory) they can propose themselves by opening a PR to add themselves to the `reviewers` entry of the [OWNERS](REPOSITORIES.md#owners) of the repository (or the subdirectory). The person in question must publicly express their interest and should discuss it with the other persons listed in the OWNERS file and the community before proposing themself.
 
+New reviewers can also be proposed and sponsored by existing [Maintainers](GOVERNANCE.md#maintainers) and [Reviewers](GOVERNANCE.md#reviewers).
+
 [Maintainers](GOVERNANCE.md#maintainers) will review the PR and decide.
 
 If the decision is to grant the reviewer status, then the person in question must become a member of the [falcosecurity](https://github.com/falcosecurity) Github organization (see the [Organization membership](#organization-membership) section).
@@ -28,6 +30,8 @@ If the decision is to grant the reviewer status, then the person in question mus
 ## Onboarding a Maintainer
 
 If [Community Members](GOVERNANCE.md#community-members) believe they match the criteria to become [Maintainers](GOVERNANCE.md#maintainers) of a repository (or a subdirectory) they can propose themselves by opening a PR to add themselves to the `approvers` entry of the [OWNERS](REPOSITORIES.md#owners) of the repository (or the subdirectory). The person in question must publicly express their interest and should discuss it with the other persons listed in the OWNERS file and the community before proposing themself.
+
+New maintainers can also be proposed and sponsored by existing [Maintainers](GOVERNANCE.md#maintainers).
 
 [Maintainers](GOVERNANCE.md#maintainers) will review the PR and decide. Before taking the decision, existing maintainers may ask the person in question to shadow them or apply for a reviewer position for a period.
 
