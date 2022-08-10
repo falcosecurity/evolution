@@ -38,7 +38,7 @@ If the decision is to grant the maintainer status, then the person in question m
 
 ## Offboarding a Reviewer
 
-Reviewers of a repository (or a directory) can lose their status by voluntarily stepping down for personal reasons, an extended period of inactivity, a period of failing to meet the requirements for the role, a violation of the Code of Conduct and/or at the maintainers' discretion.
+Reviewers of a repository (or a directory) can lose their status by voluntarily stepping down for personal reasons, an extended period of inactivity, a period of failing to meet the requirements for the role, a violation of the [Code Of Conduct](CODE_OF_CONDUCT.md) and/or at the maintainers' discretion.
 
 In such a case, a PR is required to remove the person in question from the `reviewers` entry of the respective [OWNERS](REPOSITORIES.md#owners) file. [Maintainers](GOVERNANCE.md#maintainers) will review the PR and decide.
 
