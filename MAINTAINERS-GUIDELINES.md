@@ -73,5 +73,4 @@ Inactive maintainers are proposed for review by any other [Maintainer](GOVERNANC
 
 An inactive person is defined as someone with less than 10 recorded contributions within the past six months.
 
-Since this method does not consider other [Maintainers](GOVERNANCE.md#maintainers)' duties that the person in question may perform, exceptions can be made at the sole discretion of existing maintainers. In particular, the criteria can be loose and tightened as needed for [*Special*](REPOSITORIES.md#status) repositories and those with very little activity.
-
+Exceptions are allowed for vacation, sick leave, maternity and paternity leave, or planned absences. Moreover, since this method does not consider special situations and does not track all [Maintainers](GOVERNANCE.md#maintainers) duties, other exceptions can be made at the discretion of existing maintainers. In particular, the criteria can be loose and tightened as needed for [*Special*](REPOSITORIES.md#status) repositories and those with very little activity.
