@@ -38,6 +38,9 @@ The status of each repository is tracked in the [README.md](README.md) file of t
 
 This section describes the lifecycle of the repositories hosted under the [falcosecurity](https://github.com/falcosecurity) GitHub organization.
 
+Anyone can submit proposals regarding repositories' lifecycle by opening a GitHub issue in the
+[falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository (see below sections). The [Core Maintainers](GOVERNANCE.md#core-maintainers) will take into account the community feedback and decide on the proposal.
+
 ### Addition
 
 New projects can be contributed to the falcosecurity organization by opening a GitHub issue in the
