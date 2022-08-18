@@ -2,7 +2,7 @@
 
 Maintainership-related decisions must be taken with respect to the rules established in our [governance](GOVERNANCE.md#maintainership). This document provides guidelines for the implementation of these decisions.
 
-[Reviewers](GOVERNANCE.md#reviewers) have no maintainers power, but behave similarly and therefore this document include also guidelines for reviewers.
+[Reviewers](GOVERNANCE.md#reviewers) have no maintainers power, but behave similarly and therefore this document includes also guidelines for reviewers.
 
 Both [Maintainers](GOVERNANCE.md#maintainers) and [Reviewers](GOVERNANCE.md#reviewers) are defined by [OWNERS](REPOSITORIES.md#owners) files. Most of the processes described below involve making pull requests (PRs) to correctly make changes to those files.
 
