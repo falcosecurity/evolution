@@ -68,11 +68,11 @@ Archived repositories can be proposed for unarchiviation by opening a GitHub iss
 
 ### Removal
 
-Repositories that show little relevance, are not maintained, or no longer have purpose inside The Falco Project, can be proposed for removal by opening a GitHub issue in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository. Removed repositories will stop being maintained and will no longer be part of the falcosecurity GitHub organization. In such a case, one of the falcosecurity GitHub organization admins will assist the issue opener in transferring the repository to the [Falco Projects Retirement Home](https://github.com/falcosecurity-retire) GitHub organization and removing its configuration from [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra).
+Repositories that show little relevance, are not maintained, or no longer have a purpose inside The Falco Project, can be proposed for removal by opening a GitHub issue in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository. Removed repositories will stop being maintained and will no longer be part of the falcosecurity GitHub organization. In such a case, one of the falcosecurity GitHub organization admins will assist the issue opener in transferring the repository to the [Falco Projects Retirement Home](https://github.com/falcosecurity-retire) GitHub organization and removing its configuration from [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra).
 
 ### Core Maintainers duties and privileges
 
-Since [Core Maintainers](GOVERNANCE.md#core-maintainers) as a team are responsible for the maintenance of the falcosecurity GitHub organization, they conseguently have the following reserved powers:
+Since [Core Maintainers](GOVERNANCE.md#core-maintainers) as a team are responsible for the maintenance of the falcosecurity GitHub organization, they consequently have the following reserved powers:
  - decide on assigning or removing the "Official" status of a repository;
  - become maintainer of "Special" repositories;
  - become maintainer (or take control over) non-functioning or abandoned repositories (i.e., repositories with less than two active maintainers or disputed ones);

@@ -120,7 +120,7 @@ Requirements:
 
 Responsibilities:
  - Be active and proactive in communications, lead community calls, and help other community members.
- - Monitor [official communication channels](https://github.com/falcosecurity/community). Delayed responses are  acceptable.
+ - Monitor [official communication channels](https://github.com/falcosecurity/community). Delayed responses are acceptable.
  - Triage GitHub issues and review pull requests (PRs).
  - Make sure that PRs are moving forward at the right pace, or closing them.
  - Participate when called upon in security releases. Although this should be a rare occurrence, if a serious vulnerability is found it may take up to several full days of work.
@@ -147,8 +147,8 @@ Responsibilities and privileges:
  - Defining general guidelines for the project.
  - Administering the [falcosecurity](https://github.com/falcosecurity) GitHub organization.
  - Administering any assets or services owned or assigned to project.
- - Handle lincense and copyright issues.
- - Look out for issues or conflict in any area of the project.
+ - Handle license and copyright issues.
+ - Look out for issues or conflicts in any area of the project.
  - Serve as the last escalation point for an issue that can't be solved by other community roles.
  - Ability to create committees and delegate powers to them.
 
@@ -156,7 +156,7 @@ The full process to become a Core Maintainer is documented in the [MAINTAINERS-G
 
 ### Emeritus Maintainers
 
-Emeritus Maintainers are former [Maintainers](#maintainers) of a specific project area (they can still be an active maintainer of another project area). The only path to this role is to be previously listed in the `approvers` entry of an OWNERS file of that project area.
+Emeritus Maintainers are former [Maintainers](#maintainers) of a specific project area (they can still be active maintainers of another project area). The only path to this role is to be previously listed in the `approvers` entry of an OWNERS file of that project area.
 
 Maintainers who are domain experts over certain areas of the codebase but can no longer dedicate the time needed to handle the responsibilities of reviewing and approving changes are encouraged to add themselves in the OWNERS file `emeritus_approvers` entry.
 
@@ -258,7 +258,7 @@ No organization or company should be allowed more than 40% of eligible votes. If
 
 The default decision making mechanism for The Falco Project is [lazy consensus](https://openoffice.apache.org/docs/governance/lazyConsensus.html). This means that any decision is considered supported by all concerned persons, as long as nobody objects.
 
-Silence on any consensus decision is implicit agreement, and equivalent to explicit agreement. Explicit agreement may be stated at will. Decisions may, but do not need to, be called out and put up for discussion on any [communication channels](https://github.com/falcosecurity/community) at any time and by anyone.
+Silence on any consensus decision is an implicit agreement, and equivalent to an explicit agreement. Explicit agreement may be stated at will. Decisions may, but do not need to, be called out and put up for discussion on any [communication channels](https://github.com/falcosecurity/community) at any time and by anyone.
 
 Consensus decisions can never override or go against the spirit of an earlier explicit vote.
 
