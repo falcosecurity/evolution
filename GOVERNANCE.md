@@ -35,6 +35,7 @@ This document describes the fundamental principles **The Falco Project** adheres
 The Falco Project and its community adhere to the following principles:
  - **Open**: Falco is open source and open to contribution, accessible and welcoming for everyone.
  - **Respectful**: the community pledges to respect all people involved in the project.
+ - **Diverse**: the project furthers the interest in the diversity of representation.
  - **Transparent**: discussions, collaboration, and decision-making are done in public.
  - **Vibrant**: evolution is better than stagnation.
 
