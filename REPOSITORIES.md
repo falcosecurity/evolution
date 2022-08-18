@@ -46,7 +46,7 @@ Anyone can submit proposals regarding repositories' lifecycle by opening a GitHu
 New projects can be contributed to the falcosecurity organization by opening a GitHub issue in the
 [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository.
 
-If the decision is to add the proposed project, then one of the falcosecurity GitHub organization admins will assist the issue opener in transferring the repository to the falcosecurity organization and configuring it in [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra). Upon addition, the repository must be reviewed to make sure it respects the [criteria](#criteria), [owners](#owners), and [license](#license) points of this document. In particular, when a repository is added, the proposed owners are reviewed as described by the [MAINTAINERS-GUIDELINES.md](MAINTAINERS-GUIDELINES.md) and eventually accepted.
+If the decision is to add the proposed project, then one of the falcosecurity GitHub organization admins will assist the issue opener in transferring the repository to the falcosecurity organization and configuring it in [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra). Upon addition, the repository must be reviewed to make sure it respects the [criteria](#criteria), [owners](#owners), and [license](#license) points of this document. In particular, when a repository is added, the proposed owners are reviewed as described by the [MAINTAINERS_GUIDELINES.md](MAINTAINERS_GUIDELINES.md) and eventually accepted.
 
 Once the project is added to the falcosecurity GitHub organization, it will be owned and licensed by The Falco Project and will be subject to its [governance](GOVERNANCE.md).
 
@@ -64,7 +64,7 @@ Repositories showing little to no activity during the time span of a year can be
 
 ### Unarchiviation
 
-Archived repositories can be proposed for unarchiviation by opening a GitHub issue in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository. If the decision is to unarchive the repository, then it must be reviewed to make sure it respects the [criteria](#criteria), [owners](#owners), and [license](#license) points of this document. In general, the same rules as for new repositories apply. The new proposed owners are reviewed as described by the [MAINTAINERS-GUIDELINES.md](MAINTAINERS-GUIDELINES.md) and eventually accepted.
+Archived repositories can be proposed for unarchiviation by opening a GitHub issue in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository. If the decision is to unarchive the repository, then it must be reviewed to make sure it respects the [criteria](#criteria), [owners](#owners), and [license](#license) points of this document. In general, the same rules as for new repositories apply. The new proposed owners are reviewed as described by the [MAINTAINERS_GUIDELINES.md](MAINTAINERS_GUIDELINES.md) and eventually accepted.
 
 ### Removal
 
