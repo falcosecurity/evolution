@@ -49,7 +49,6 @@ The Falco Project documents its evolution in the [falcosecurity/evolution](https
  - make decisions that regard the whole project, and
  - define rules and structures which span beyond the extent of a single repository (i.e., organization-wide).
 
-
 ## Repositories
 
 The process of adding, removing, and managing repositories under the [falcosecurity](https://github.com/falcosecurity) GitHub organization is described in [REPOSITORIES.md](REPOSITORIES.md). The document assigns a scope and a status to each repository.
@@ -125,6 +124,7 @@ Responsibilities:
  - Triage GitHub issues and review pull requests (PRs).
  - Make sure that PRs are moving forward at the right pace, or closing them.
  - Participate when called upon in security releases. Although this should be a rare occurrence, if a serious vulnerability is found it may take up to several full days of work.
+ - Mentoring, encouraging, and sponsoring new reviewers and maintainers.
 
 To become a maintainer, [Contributors](#contributors) must express interest to the existing maintainers. The full process is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS_GUIDELINES.md) file.
 

@@ -74,3 +74,15 @@ Inactive maintainers are proposed for review by any other [Maintainer](GOVERNANC
 An inactive person is defined as someone with less than 10 recorded contributions within the past six months.
 
 Exceptions are allowed for vacation, sick leave, maternity and paternity leave, or planned absences. Moreover, since this method does not consider special situations and does not track all [Maintainers](GOVERNANCE.md#maintainers) duties, other exceptions can be made at the discretion of existing maintainers. In particular, the criteria can be loose and tightened as needed for [*Special*](REPOSITORIES.md#status) repositories and those with very little activity.
+
+## Mentoring programs
+
+The community promotes initiatives to seek new maintainers to ensure that the project grows healthy and increases the maintainers' diversity.
+
+Existing maintainers regularly open mentoring programs for aspirant maintainers. Mentorship is the most practical way to share knowledge. The goal is to help aspirants understand the maintainer's activities and duties.
+
+Mentoring programs may be tailored to the needs of a particular repository or area of the project. However, they must at least include:
+- a mentoring period where one or more maintainers with enough experience guide the participants, who will learn the dynamics of being a maintainer by performing concrete activities;
+- an evaluation process that must consider the technical merit, the participation in the community, as well as the other requirements to become a maintainer.
+
+Whenever a new program starts, it must be announced to the community via the official [communication channels](https://github.com/falcosecurity/community).
