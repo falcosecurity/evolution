@@ -17,8 +17,6 @@
 
 > /kind feature
 
-> /kind sandbox
-
 > /kind incubating
 
 > /kind officialsupport
@@ -31,12 +29,6 @@ Please remove the leading whitespace before the `/kind <>` you uncommented.
 **Any specific area of the project related to this PR?**
 
 > Uncomment one (or more) `/area <>` lines:
-
-> /area deploy
-
-> /area examples
-
-> /area integrations
 
 > /area proposals
 
