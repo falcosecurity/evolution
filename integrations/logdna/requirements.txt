@@ -1,2 +1,0 @@
-logdna
--e git://github.com/falcosecurity/client-py#egg=falco
