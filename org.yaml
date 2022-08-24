@@ -80,7 +80,7 @@ orgs:
         has_wiki: false
       contrib:
         allow_merge_commit: false
-        description: The Falco Project Community
+        description: Community sandbox to test-drive ideas/projects/code
         has_projects: true
         has_wiki: false
       deploy-kubernetes:
