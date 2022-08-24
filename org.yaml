@@ -78,6 +78,11 @@ orgs:
         description: The Falco Project Community
         has_projects: true
         has_wiki: false
+      contrib:
+        allow_merge_commit: false
+        description: The Falco Project Community
+        has_projects: true
+        has_wiki: false
       deploy-kubernetes:
         allow_merge_commit: false
         allow_squash_merge: false
@@ -259,6 +264,15 @@ orgs:
         privacy: closed
         repos:
           community: maintain
+      contrib-maintainers:
+        description: maintainers of falcosecurity/contrib
+        members:
+          - leogr
+          - maxgio92
+          - jasondellaluce
+        privacy: closed
+        repos:
+          community: maintain
       deploy-kubernetes-maintainers:
         description: maintainers of falcosecurity/deploy-kubernetes
         members:
@@ -420,6 +434,7 @@ orgs:
           client-py: admin
           client-rs: admin
           community: admin
+          contrib: admin
           deploy-kubernetes: admin
           driverkit: admin
           event-generator: admin
