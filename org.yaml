@@ -272,7 +272,7 @@ orgs:
           - jasondellaluce
         privacy: closed
         repos:
-          community: maintain
+          contrib: maintain
       deploy-kubernetes-maintainers:
         description: maintainers of falcosecurity/deploy-kubernetes
         members:
