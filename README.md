@@ -6,7 +6,7 @@
 
 This repo aims to document the evolution process of The Falco Project.
 
-It is also a place for various community-maintained resources. In particular, this repository provides a space for the community to work, document, and build out third-party integrations in a safe, and productive way.
+In particular, this repository provides a space for the community to work together, discuss ideas, document processes, and productively make decisions.
 
 ## Adoption model
 
@@ -14,16 +14,7 @@ The criteria will remain loose and tightened as needed at the discretion of the 
 
 ### Sandbox
 
-The "*Sandbox*" level serves as a place for the community to test-drive ideas/projects/code. 
-
-Resources with this status can be found within this repo:
-
-- [`/deploy`](deploy/) - deployment resources
-- [`/examples`](examples/) - various examples
-- [`/integrations`](integrations/) - third-party integrations
-- *More will come soon!*
-
-> When adding a new directory, propose your motivations to the [maintainers](OWNERS).
+You can find "*Sandbox*" level ideas/projects/code under the [falcosecurity/contrib](https://github.com/falcosecurity/contrib) repository.
 
 ### Incubating
 
@@ -35,7 +26,6 @@ This status is assigned as needed, and can best be measured by the need to cut a
 
 As the need for a project grows, it can ultimately achieve the highest and most coveted status within The Falco Project: "*Official support*."
 
-## Projects
 
 As per [our governance model](https://github.com/falcosecurity/.github/blob/master/GOVERNANCE.md#adding-new-projects-to-the-falcosecurity-github-organization), to request a project to be added or promoted, please open an [issue](https://github.com/falcosecurity/evolution/issues/new/choose), and choose the appropriate template. Once a sufficient discussion has taken place and the proposal has been accepted, the project will be listed in the table below with the given status.
 
