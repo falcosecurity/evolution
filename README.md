@@ -10,7 +10,7 @@ It is also a place for various community-maintained resources. In particular, th
 
 ## Adoption model
 
-The criteria will remain loose, and tighten as needed at the discretion of the Falco open source community.
+The criteria will remain loose and tightened as needed at the discretion of the Falco open source community.
 
 ### Sandbox
 
@@ -37,7 +37,7 @@ As the need for a project grows, it can ultimately achieve the highest and most 
 
 ## Projects
 
-As per [our governance model](https://github.com/falcosecurity/.github/blob/master/GOVERNANCE.md#adding-new-projects-to-the-falcosecurity-github-organization), to request a project to be added or promoted, please open an [issue](https://github.com/falcosecurity/evolution/issues/new/choose), and choose the appropriate template. Once sufficient discussion has taken place and the proposal has been accepted, the project will be listed in the table below with the given status.
+As per [our governance model](https://github.com/falcosecurity/.github/blob/master/GOVERNANCE.md#adding-new-projects-to-the-falcosecurity-github-organization), to request a project to be added or promoted, please open an [issue](https://github.com/falcosecurity/evolution/issues/new/choose), and choose the appropriate template. Once a sufficient discussion has taken place and the proposal has been accepted, the project will be listed in the table below with the given status.
 
 
 | Project | Status | Note |
@@ -77,7 +77,7 @@ Some repositories have a special meaning and do not fit the above statuses. Thes
 
 In general, a repository can be archived at the discretion of The Falco Project community. Usually, maintainers can decide to archive a project that has not been maintained for a long time or does not fit the guidelines for the projects under the [falcosecurity](https://falcosecurity) GitHub's organization anymore. In other cases, a repository is archived to reserve its name for future use.
 
-The list of archivied repository can be found [here](https://github.com/falcosecurity?q=&type=archived&language=&sort=name).
+The list of archived repositories can be found [here](https://github.com/falcosecurity?q=&type=archived&language=&sort=name).
 
 ### Retired projects
 
