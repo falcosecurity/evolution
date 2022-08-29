@@ -1,0 +1,68 @@
+- name: .github
+  status: Special
+  description: Default community health files
+- name: charts
+  status: Official
+  description: Community managed Helm charts for running Falco with Kubernetes
+- name: client-go
+  status: Incubating
+  description: Go client and SDK for Falco
+- name: community
+  status: Special
+  description: The Falco Project Community
+- name: contrib
+  status: Sandbox
+  description: Community sandbox to test-drive ideas/projects/code
+- name: deploy-kubernetes
+  status: Official
+  description: Kubernetes deployment resources for Falco
+- name: driverkit
+  status: Incubating
+  description: "Kit for building Falco drivers: kernel modules or eBPF probes"
+- name: event-generator
+  status: Incubating
+  description: Generate a variety of suspect actions that are detected by Falco rulesets
+- name: evolution
+  status: Special
+  description: Evolution process of The Falco Project
+- name: falco
+  status: Official
+  description: Cloud Native Runtime Security
+- name: falco-exporter
+  status: Incubating
+  description: Prometheus Metrics Exporter for Falco output events
+- name: falco-aws-terraform
+  status: Incubating
+- name: falco-website
+  status: Official
+  description: Hugo content to generate website content. Hosted by the CNCF
+- name: falcoctl
+  status: Incubating
+  description: Administrative tooling for Falco
+- name: falcosidekick
+  status: Incubating
+  description: Connect Falco to your ecosystem
+- name: falcosidekick-ui
+  status: Incubating
+  description: A simple WebUI with latest events from Falco
+- name: kernel-crawler
+  status: Incubating
+  description: A tool to crawl Linux kernel versions
+- name: kilt
+  status: Incubating
+  description: Kilt is a project that defines how to inject foreign apps into containers
+- name: libs
+  status: Official
+  description: libsinsp, libscap, the kernel module driver, and the eBPF driver sources
+- name: libs-sdk-go
+  status: Incubating
+  description: Go SDK for Falco libs
+- name: plugin-sdk-cpp
+  status: Incubating
+- name: plugin-sdk-go
+  status: Official
+- name: plugins
+  status: Official
+- name: test-infra
+  status: Incubating
+  description: Falco workflow & testing infrastructure
