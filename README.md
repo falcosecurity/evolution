@@ -16,11 +16,35 @@ The criteria will remain loose and tightened as needed at the discretion of the 
 
 You can find "*Sandbox*" level ideas/projects/code under the [falcosecurity/contrib](https://github.com/falcosecurity/contrib) repository.
 
+<!-- REPOSITORY-SANDBOX-TABLE -->
+|                               NAME                                |                     DESCRIPTION                     |
+|-------------------------------------------------------------------|-----------------------------------------------------|
+| [falcosecurity/contrib](https://github.com/falcosecurity/contrib) | Community sandbox to test-drive ideas/projects/code |
+<!-- /REPOSITORY-SANDBOX-TABLE -->
+
 ### Incubating
 
 The "*Incubating*" level refers to those projects (usually promoted from "*Sandbox*") that need their repository.
 
 This status is assigned as needed, and can best be measured by the need to cut a release and use the GitHub release features.
+
+<!-- REPOSITORY-INCUBATING-TABLE -->
+|                                           NAME                                            |                                DESCRIPTION                                |
+|-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| [falcosecurity/client-go](https://github.com/falcosecurity/client-go)                     | Go client and SDK for Falco                                               |
+| [falcosecurity/driverkit](https://github.com/falcosecurity/driverkit)                     | Kit for building Falco drivers: kernel modules or eBPF probes             |
+| [falcosecurity/event-generator](https://github.com/falcosecurity/event-generator)         | Generate a variety of suspect actions that are detected by Falco rulesets |
+| [falcosecurity/falco-exporter](https://github.com/falcosecurity/falco-exporter)           | Prometheus Metrics Exporter for Falco output events                       |
+| [falcosecurity/falco-aws-terraform](https://github.com/falcosecurity/falco-aws-terraform) |                                                                           |
+| [falcosecurity/falcoctl](https://github.com/falcosecurity/falcoctl)                       | Administrative tooling for Falco                                          |
+| [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick)             | Connect Falco to your ecosystem                                           |
+| [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui)       | A simple WebUI with latest events from Falco                              |
+| [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler)           | A tool to crawl Linux kernel versions                                     |
+| [falcosecurity/kilt](https://github.com/falcosecurity/kilt)                               | Kilt is a project that defines how to inject foreign apps into containers |
+| [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go)                 | Go SDK for Falco libs                                                     |
+| [falcosecurity/plugin-sdk-cpp](https://github.com/falcosecurity/plugin-sdk-cpp)           |                                                                           |
+| [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra)                   | Falco workflow & testing infrastructure                                   |
+<!-- /REPOSITORY-INCUBATING-TABLE -->
 
 ### Official Support
 
@@ -29,40 +53,29 @@ As the need for a project grows, it can ultimately achieve the highest and most 
 
 As per [our governance model](https://github.com/falcosecurity/.github/blob/master/GOVERNANCE.md#adding-new-projects-to-the-falcosecurity-github-organization), to request a project to be added or promoted, please open an [issue](https://github.com/falcosecurity/evolution/issues/new/choose), and choose the appropriate template. Once a sufficient discussion has taken place and the proposal has been accepted, the project will be listed in the table below with the given status.
 
-
-| Project | Status | Note |
-| --- | --- | --- |
-| [falcosecurity/charts](https://github.com/falcosecurity/charts) | Official support | Each chart inherits its status from the related project, for example the Falco chart is official |
-| [falcosecurity/deploy-kubernetes](https://github.com/falcosecurity/deploy-kubernetes) | Official support | Each artifacts group inherits its status from the related project, for example the Falco manifests are official |
-| [falcosecurity/falco](https://github.com/falcosecurity/falco) | Official support | The list of official artifacts can be found within the [official documentation](https://falco.org/docs/download/). These artifacts will be refined and amended as per the [Falco Artifacts Scope - Part 2](https://github.com/falcosecurity/falco/blob/master/proposals/20200506-artifacts-scope-part-2.md).  |
-| [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website) | Official support | | 
-| [falcosecurity/libs](https://github.com/falcosecurity/libs) | Official support | Artifacts will be available once [Versioning and release process of the libs artifacts](https://github.com/falcosecurity/libs/blob/master/proposals/20210524-versioning-and-release-of-the-libs-artifacts.md) proposal is fully implemented. |
-| [falcosecurity/plugins](https://github.com/falcosecurity/plugins) | Official support | |
-| [falcosecurity/plugin-sdk-go](https://github.com/falcosecurity/plugin-sdk-go) | Official support | |
-| [falcosecurity/client-go](https://github.com/falcosecurity/client-go) | Incubating | |
-| [falcosecurity/driverkit](https://github.com/falcosecurity/driverkit) | Incubating | |
-| [falcosecurity/event-generator](https://github.com/falcosecurity/event-generator) | Incubating | |
-| [falcosecurity/falco-exporter](https://github.com/falcosecurity/falco-exporter) | Incubating | |
-| [falcosecurity/falco-aws-terraform](https://github.com/falcosecurity/falco-aws-terraform) | Incubating | |
-| [falcosecurity/falcoctl](https://github.com/falcosecurity/falcoctl) | Incubating | |
-| [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick) | Incubating | |
-| [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui) | Incubating | |
-| [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler) | Incubating | |
-| [falcosecurity/kilt](https://github.com/falcosecurity/kilt) | Incubating | |
-| [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go) | Incubating | |
-| [falcosecurity/plugin-sdk-cpp](https://github.com/falcosecurity/plugin-sdk-cpp) | Incubating | |
-| [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra) | Incubating | The prebuilt-driver artifacts are provided on a best-effort basis. |
+<!-- REPOSITORY-OFFICIAL-TABLE -->
+|                                         NAME                                          |                               DESCRIPTION                                |
+|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| [falcosecurity/charts](https://github.com/falcosecurity/charts)                       | Community managed Helm charts for running Falco with Kubernetes          |
+| [falcosecurity/deploy-kubernetes](https://github.com/falcosecurity/deploy-kubernetes) | Kubernetes deployment resources for Falco                                |
+| [falcosecurity/falco](https://github.com/falcosecurity/falco)                         | Cloud Native Runtime Security                                            |
+| [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website)         | Hugo content to generate website content. Hosted by the CNCF             |
+| [falcosecurity/libs](https://github.com/falcosecurity/libs)                           | libsinsp, libscap, the kernel module driver, and the eBPF driver sources |
+| [falcosecurity/plugin-sdk-go](https://github.com/falcosecurity/plugin-sdk-go)         |                                                                          |
+| [falcosecurity/plugins](https://github.com/falcosecurity/plugins)                     |                                                                          |
+<!-- /REPOSITORY-OFFICIAL-TABLE -->
 
 ### Special repositories
 
 Some repositories have a special meaning and do not fit the above statuses. These are:
 
-| Repository | Description |
-| --- | --- |
-| [falcosecurity/.github](https://github.com/falcosecurity/.github) |  This repository holds default community health files, such as the [`CONTRIBUTING.md`](https://github.com/falcosecurity/.github/blob/master/CONTRIBUTING.md), [`CODE_OF_CONDUCT.md`](https://github.com/falcosecurity/.github/blob/master/CODE_OF_CONDUCT.md), and [`GOVERNANCE.md`](https://github.com/falcosecurity/.github/blob/master/GOVERNANCE.md) files.  |
-| [falcosecurity/community](https://github.com/falcosecurity/community) |  Community-related stuff of The Falco Project.  |
-| [falcosecurity/contrib](https://github.com/falcosecurity/contrib) |  Community sandbox to test-drive ideas/projects/code.  |
-| [falcosecurity/evolution](https://github.com/falcosecurity/evolution) |  This repository holds the evolution process of The Falco Project.  |
+<!-- REPOSITORY-SPECIAL-TABLE -->
+|                                 NAME                                  |              DESCRIPTION               |
+|-----------------------------------------------------------------------|----------------------------------------|
+| [falcosecurity/.github](https://github.com/falcosecurity/.github)     | Default community health files         |
+| [falcosecurity/community](https://github.com/falcosecurity/community) | The Falco Project Community            |
+| [falcosecurity/evolution](https://github.com/falcosecurity/evolution) | Evolution process of The Falco Project |
+<!-- /REPOSITORY-SPECIAL-TABLE -->
 
 ### Archivied repositories
 
