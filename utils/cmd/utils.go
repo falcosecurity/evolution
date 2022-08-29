@@ -19,8 +19,15 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
 
+	"github.com/falcosecurity/evolution/utils/pkg/utils"
 	"github.com/spf13/cobra"
+)
+
+var (
+	latestUpdateTextStartTag = "<!-- LATEST-UPDATE -->"
+	latestUpdateTextEndTag   = "<!-- /LATEST-UPDATE -->"
 )
 
 var rootCmd = &cobra.Command{
@@ -29,6 +36,15 @@ var rootCmd = &cobra.Command{
 	Run: func(c *cobra.Command, args []string) {
 		c.Help()
 	},
+}
+
+func latestUpdateTextEditor(s string) (string, error) {
+	if len(s) == 0 {
+		s = latestUpdateTextStartTag + latestUpdateTextEndTag
+	}
+
+	str := time.Now().UTC().Format(time.RFC3339)
+	return utils.ReplaceTextTags(s, latestUpdateTextStartTag, latestUpdateTextEndTag, str)
 }
 
 func main() {

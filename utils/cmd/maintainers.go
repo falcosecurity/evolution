@@ -99,6 +99,7 @@ var maintainersCmd = &cobra.Command{
 		}
 		return utils.EditCreateTextFile(
 			maintainersOutFilePath,
+			latestUpdateTextEditor,
 			maintainersTextEditorCore,
 			maintainersTextEditorAll,
 		)
