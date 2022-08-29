@@ -128,7 +128,7 @@ Responsibilities:
 
 To become a maintainer, [Contributors](#contributors) must express interest to the existing maintainers. The full process is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS_GUIDELINES.md) file.
 
-The list of current [maintainers](./maintainers.yaml) is automatically updated by our infra (see the [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra) repository).
+The list of current [maintainers](./MAINTAINERS.md) is automatically updated by our infra (see the [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra) repository).
 
 ### Core Maintainers 
 
