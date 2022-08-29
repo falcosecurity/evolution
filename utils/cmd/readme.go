@@ -29,53 +29,58 @@ import (
 var (
 	readmeRepoFilePath    string
 	readmeOutFilePath     string
-	readmeTextStartTag    = "<!-- REPOSITORY-TABLE -->\n"
-	readmeTextEndTag      = "<!-- /REPOSITORY-TABLE -->\n"
-	readmeTextTitleStyle  = "###"
-	readmeRepoStatusOrder = []utils.RepositoryStatus{
-		utils.RepositoryStatusOfficial,
-		utils.RepositoryStatusIncubating,
-		utils.RepositoryStatusSandbox,
-		utils.RepositoryStatusSpecial,
-	}
+	readmeTextStartTagFmt = "<!-- REPOSITORY-%s-TABLE -->\n"
+	readmeTextEndTagFmt   = "<!-- /REPOSITORY-%s-TABLE -->\n"
 )
 
-func readmeTextEditor(s string) (string, error) {
+func readmeTextEditor(s string, status utils.RepositoryStatus) (string, error) {
+	startTag := fmt.Sprintf(readmeTextStartTagFmt, strings.ToUpper(status.String()))
+	endTag := fmt.Sprintf(readmeTextEndTagFmt, strings.ToUpper(status.String()))
 	if len(s) == 0 {
-		s = readmeTextStartTag + readmeTextEndTag
+		s = startTag + endTag
 	}
 	repos, err := utils.ReadRepositoriesFromFile(readmeRepoFilePath)
 	if err != nil {
 		return "", err
 	}
 
-	var res strings.Builder
-	for _, status := range readmeRepoStatusOrder {
-		var buf bytes.Buffer
-		empty := true
-		table := tablewriter.NewWriter(&buf)
-		table.SetHeader([]string{"Name", "Description"})
-		table.SetBorders(tablewriter.Border{Left: true, Top: false, Right: true, Bottom: false})
-		table.SetCenterSeparator("|")
-		table.SetRowSeparator("-")
-		table.SetAutoWrapText(false)
-		for _, r := range repos {
-			if r.Status == status {
-				row := []string{}
-				row = append(row, fmt.Sprintf("[falcosecurity/%s](https://github.com/falcosecurity/%s)", r.Name, r.Name))
-				row = append(row, r.Description)
-				table.Append(row)
-				empty = false
-			}
-		}
-		if !empty {
-			table.Render()
-			res.WriteString(fmt.Sprintf("%s %s repositories\n\n", readmeTextTitleStyle, status))
-			res.WriteString(buf.String())
-			res.WriteString("\n\n")
+	var buf bytes.Buffer
+	empty := true
+	table := tablewriter.NewWriter(&buf)
+	table.SetHeader([]string{"Name", "Description"})
+	table.SetBorders(tablewriter.Border{Left: true, Top: false, Right: true, Bottom: false})
+	table.SetCenterSeparator("|")
+	table.SetRowSeparator("-")
+	table.SetAutoWrapText(false)
+	for _, r := range repos {
+		if r.Status == status {
+			row := []string{}
+			row = append(row, fmt.Sprintf("[falcosecurity/%s](https://github.com/falcosecurity/%s)", r.Name, r.Name))
+			row = append(row, r.Description)
+			table.Append(row)
+			empty = false
 		}
 	}
-	return utils.ReplaceTextTags(s, readmeTextStartTag, readmeTextEndTag, res.String())
+	if !empty {
+		table.Render()
+	}
+	return utils.ReplaceTextTags(s, startTag, endTag, buf.String())
+}
+
+func readmeTextEditorOfficial(s string) (string, error) {
+	return readmeTextEditor(s, utils.RepositoryStatusOfficial)
+}
+
+func readmeTextEditorIncubating(s string) (string, error) {
+	return readmeTextEditor(s, utils.RepositoryStatusIncubating)
+}
+
+func readmeTextEditorSandbox(s string) (string, error) {
+	return readmeTextEditor(s, utils.RepositoryStatusSandbox)
+}
+
+func readmeTextEditorSpecial(s string) (string, error) {
+	return readmeTextEditor(s, utils.RepositoryStatusSpecial)
 }
 
 var readmeCmd = &cobra.Command{
@@ -88,7 +93,13 @@ var readmeCmd = &cobra.Command{
 		if len(readmeOutFilePath) == 0 {
 			return fmt.Errorf("must specify an output markdown file")
 		}
-		return utils.EditCreateTextFile(readmeOutFilePath, readmeTextEditor)
+		return utils.EditCreateTextFile(
+			readmeOutFilePath,
+			readmeTextEditorOfficial,
+			readmeTextEditorIncubating,
+			readmeTextEditorSandbox,
+			readmeTextEditorSpecial,
+		)
 	},
 }
 
