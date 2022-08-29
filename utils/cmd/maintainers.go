@@ -25,18 +25,26 @@ import (
 )
 
 var (
-	maintainersReposFilePath  string
-	maintainersInFilePath     string
-	maintainersOutFilePath    string
-	maintainersTextStartTag   = "<!-- MAINTAINERS-LIST -->\n"
-	maintainersTextEndTag     = "<!-- /MAINTAINERS-LIST -->\n"
-	maintainersTextTitleStyle = "##"
+	maintainersReposFilePath    string
+	maintainersInFilePath       string
+	maintainersOutFilePath      string
+	maintainersTextStartTag     = "<!-- MAINTAINERS-LIST -->\n"
+	maintainersTextEndTag       = "<!-- /MAINTAINERS-LIST -->\n"
+	maintainersTextCoreStartTag = "<!-- MAINTAINERS-CORE-LIST -->\n"
+	maintainersTextCoreEndTag   = "<!-- /MAINTAINERS-CORE-LIST -->\n"
 )
 
-func maintainersTextEditor(s string) (string, error) {
-	if len(s) == 0 {
-		s = maintainersTextStartTag + maintainersTextEndTag
+func maintainersTextEditor(s string, core bool) (string, error) {
+	startTag := maintainersTextStartTag
+	endTag := maintainersTextEndTag
+	if core {
+		startTag = maintainersTextCoreStartTag
+		endTag = maintainersTextCoreEndTag
 	}
+	if len(s) == 0 {
+		s = startTag + endTag
+	}
+
 	maintainers, err := utils.ReadMaintainersFromFile(maintainersInFilePath)
 	if err != nil {
 		return "", err
@@ -46,21 +54,15 @@ func maintainersTextEditor(s string) (string, error) {
 		return "", err
 	}
 
-	var mList utils.Maintainers
-	var mCoreList utils.Maintainers
+	var list utils.Maintainers
 	for _, m := range maintainers {
-		listAdded := false
-		listCoreAdded := false
+		added := false
 		for _, r := range repositories {
 			for _, url := range m.Projects {
 				if url == r.URL() {
-					if !listAdded {
-						mList = append(mList, m)
-						listAdded = true
-					}
-					if !listCoreAdded && r.Status == utils.RepositoryStatusOfficial {
-						mCoreList = append(mCoreList, m)
-						listCoreAdded = true
+					if !added && (!core || r.Status == utils.RepositoryStatusOfficial) {
+						list = append(list, m)
+						added = true
 					}
 				}
 			}
@@ -68,16 +70,18 @@ func maintainersTextEditor(s string) (string, error) {
 	}
 
 	var res strings.Builder
-	res.WriteString(fmt.Sprintf("%s Core Maintainers\n\n", maintainersTextTitleStyle))
-	for _, m := range mCoreList {
+	for _, m := range list {
 		res.WriteString(fmt.Sprintf("- [%s](%s), %s\n", m.Name, m.Github, m.Company))
 	}
-	res.WriteString(fmt.Sprintf("\n%s Maintainers\n\n", maintainersTextTitleStyle))
-	for _, m := range mList {
-		res.WriteString(fmt.Sprintf("- [%s](%s), %s\n", m.Name, m.Github, m.Company))
-	}
+	return utils.ReplaceTextTags(s, startTag, endTag, res.String())
+}
 
-	return utils.ReplaceTextTags(s, maintainersTextStartTag, maintainersTextEndTag, res.String())
+func maintainersTextEditorAll(s string) (string, error) {
+	return maintainersTextEditor(s, false)
+}
+
+func maintainersTextEditorCore(s string) (string, error) {
+	return maintainersTextEditor(s, true)
 }
 
 var maintainersCmd = &cobra.Command{
@@ -93,7 +97,11 @@ var maintainersCmd = &cobra.Command{
 		if len(maintainersOutFilePath) == 0 {
 			return fmt.Errorf("must specify an output markdown file")
 		}
-		return utils.EditCreateTextFile(maintainersOutFilePath, maintainersTextEditor)
+		return utils.EditCreateTextFile(
+			maintainersOutFilePath,
+			maintainersTextEditorCore,
+			maintainersTextEditorAll,
+		)
 	},
 }
 
