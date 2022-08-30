@@ -322,6 +322,7 @@ orgs:
         members:
           - leogr
           - maxgio92
+          - jasondellaluce
         privacy: closed
         repos:
           evolution: maintain
