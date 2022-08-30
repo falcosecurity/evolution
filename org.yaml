@@ -220,7 +220,7 @@ orgs:
         privacy: closed
         repos:
           advocacy: admin
-      core-maitainers:
+      core-maintainers:
         description: Core maintainers of The Falco Project
         members:
           - andreagit97
