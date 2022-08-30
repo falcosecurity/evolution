@@ -1,16 +1,12 @@
 ---
 name: Official support request
-about: 'Request promotion to the "official support" status'
+about: 'Request promotion of a repository to the "official support" status'
 title: ''
 labels: kind/officialsupport
 assignees: ''
 ---
 
-**Description of Request**
-
-<!--
-Describe the project you would like to be promoted to "Official Support".
--->
+**Repository**: <!-- repository URL --> 
 
 **Motivation**
 
