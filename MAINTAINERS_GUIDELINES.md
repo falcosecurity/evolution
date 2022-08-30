@@ -6,6 +6,30 @@ Maintainership-related decisions must be taken with respect to the rules establi
 
 Both [Maintainers](GOVERNANCE.md#maintainers) and [Reviewers](GOVERNANCE.md#reviewers) are defined by [OWNERS](REPOSITORIES.md#owners) files. Most of the processes described below involve making pull requests (PRs) to correctly make changes to those files.
 
+**Table of Contents**
+  - [Organization membership](#organization-membership)
+  - [Onboarding a Reviewer](#onboarding-a-reviewer)
+  - [Onboarding a Maintainer](#onboarding-a-maintainer)
+  - [Offboarding a Reviewer](#offboarding-a-reviewer)
+  - [Offboarding a Maintainer](#offboarding-a-maintainer)
+  - [Review maintainers activity](#review-maintainers-activity)
+    * [How inactivity is measured](#how-inactivity-is-measured)
+  - [Mentoring programs](#mentoring-programs)
+
+**Resources**
+<!-- NAVIGATION_LINKS -->
+ - [Governance](https://github.com/falcosecurity/evolution/blob/main/GOVERNANCE.md)
+ - [Code Of Conduct](https://github.com/falcosecurity/evolution/blob/main/CODE_OF_CONDUCT.md)
+ - [Maintainers Guidelines](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS_GUIDELINES.md)
+ - [Maintainers List](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS.md)
+ - [Repositories Guidelines](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md)
+ - [Repositories List](https://github.com/falcosecurity/evolution/blob/main/README.md#repositories)
+ - [Adopters List](https://github.com/falcosecurity/falco/blob/master/ADOPTERS.md)
+ - [Contributing](https://github.com/falcosecurity/.github/blob/main/CONTRIBUTING.md)
+ - [Security policy](https://github.com/falcosecurity/.github/blob/main/SECURITY.md)
+ - [Join the Community](https://github.com/falcosecurity/community)
+<!-- /NAVIGATION_LINKS -->
+
 ## Organization membership
 
 [Maintainers](GOVERNANCE.md#maintainers) and [Reviewers](GOVERNANCE.md#reviewers) are also [organization members](https://github.com/orgs/falcosecurity/people).
