@@ -30,6 +30,7 @@ Repositories get assigned a status that describes their scope and responsibiltie
 
 - **Official**: [Core repositories](GOVERNANCE.md#core-repositories) of The Falco Project.
 - **Incubating**: Repositories that contain non-core components or any subprojects that don't yet have an adequate level of maturity.
+- **Sandbox**: Intended only for the [falcosecurity/contrib](https://github.com/falcosecurity/contrib) repository.
 - **Special**: Repositories with a special function or a particular purpose for The Falco Project as a whole or the [falcosecurity](https://github.com/falcosecurity) GitHub organization, including but not limited to [this repository](https://github.com/falcosecurity/evolution), the [community](https://github.com/falcosecurity/community), the [.github](https://github.com/falcosecurity/.github) repository, and other particular ones like the [template repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository).
 
 The status of each repository is tracked in the [README.md](README.md) file of the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository.
@@ -61,6 +62,8 @@ This is the path by which projects can be promoted from "Incubating" to "Officia
 ### Archiviation
 
 Repositories showing little to no activity during the time span of a year can be proposed for archiviation by opening a GitHub issue in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository. [Archived repositories](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) will remain inside the falcosecurity GitHub organization but will be read-only and will not be maintained. As such, OWNERS files contained in archived repositories are not valid.
+
+In some cases, a repository is archived to reserve its name for future use.
 
 ### Unarchiviation
 
