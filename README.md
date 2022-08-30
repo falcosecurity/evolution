@@ -40,7 +40,7 @@ or the Linux Foundation mediator, Mishi Choudhary [mishi@linux.com](mailto:mishi
 
 ## Maintainers
 
-The process to become a maintainer is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS_GUIDELINES.md) file.
+The process to become a maintainer is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS_GUIDELINES.md) file.
 
 You can find the list of current maintainers in the [MAINTAINERS.md](./MAINTAINERS.md) file.
 
@@ -123,7 +123,7 @@ Finally, repositories that are no longer maintained or relevant to The Falco Pro
 
 ## Contributing
 
-See the [contributing guide](https://github.com/falcosecurity/.github/blob/master/CONTRIBUTING.md) and the [code of conduct](./CODE_OF_CONDUCT.md).
+See the [contributing guide](https://github.com/falcosecurity/.github/blob/main/CONTRIBUTING.md) and the [code of conduct](./CODE_OF_CONDUCT.md).
 
 ## Security policy
 
