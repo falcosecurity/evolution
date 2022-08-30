@@ -220,6 +220,23 @@ orgs:
         privacy: closed
         repos:
           advocacy: admin
+      core-maitainers:
+        description: Core maintainers of The Falco Project
+        members:
+          - andreagit97
+          - cpanato
+          - fededp
+          - gnosek
+          - issif
+          - jasondellaluce
+          - leogr
+          - lucaguerra
+          - maxgio92
+          - molter73
+          - mstemm
+          - zuc
+        privacy:
+        repos:
       charts-maintainers:
         description: maintainers of falcosecurity/charts
         members:
