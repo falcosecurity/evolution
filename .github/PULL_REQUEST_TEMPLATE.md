@@ -30,7 +30,12 @@ Please remove the leading whitespace before the `/kind <>` you uncommented.
 
 > Uncomment one (or more) `/area <>` lines:
 
+> /area governance
+
 > /area proposals
+
+> /area utils
+
 
 <!--
 Please remove the leading whitespace before the `/area <>` you uncommented.
