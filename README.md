@@ -12,17 +12,17 @@ It provides a space for the community to work together, discuss ideas, and docum
 
  - [Governance](#governance)
  - [Code Of Conduct](#code-of-conduct)
- - [Repositories](#repositories)
-   * [Repositories Guidelines](./REPOSITORIES.md)
-   * [Sandbox](#sandbox)
-   * [Incubating](#incubating)
-   * [Official](#official)
-   * [Special](#special)
-   * [Archivied](#archivied)
-   * [Retired](#retired)
  - [Maintainers](#maintainers)
    * [Maintainers Guidelines](./MAINTAINERS_GUIDELINES.md)
    * [Maintainers List](./MAINTAINERS.md)
+ - [Repositories](#repositories)
+   * [Repositories Guidelines](./REPOSITORIES.md)
+   * [Official](#official)
+   * [Incubating](#incubating)
+   * [Sandbox](#sandbox)
+   * [Special](#special)
+   * [Archivied](#archivied)
+   * [Retired](#retired)
  - [Contributing](#contributing)
  - [Security policy](#security-policy)
  - [Join the Community](#join-the-community)
@@ -38,6 +38,12 @@ We follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/mai
 Please contact [cncf-falco-maintainers@lists.cncf.io](mailto:cncf-falco-maintainers@lists.cncf.io) 
 or the Linux Foundation mediator, Mishi Choudhary [mishi@linux.com](mailto:mishi@linux.com) to report an issue.
 
+## Maintainers
+
+The process to become a maintainer is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS_GUIDELINES.md) file.
+
+You can find the list of current maintainers in the [MAINTAINERS.md](./MAINTAINERS.md) file.
+
 ## Repositories
 
 The Falco Project follows a simple **adoption model** for repositories. Each repository gets a *[status](./REPOSITORIES.md#status)* that indicates the level of adoption (ie. the maturity level) or, for particular repositories, its scope. The criteria for adoption or changing the status will remain loose and tightened as needed at the discretion of the community.
@@ -46,9 +52,24 @@ You can find more details in the [REPOSITORIES.md](./REPOSITORIES.md) file.
 
 In the sections below, we list the repositories grouped by status.
 
-### Sandbox
+### Official
 
-You can find "*Sandbox*" level ideas/projects/code under the [falcosecurity/contrib](https://github.com/falcosecurity/contrib) repository.
+[Core repositories](./GOVERNANCE.md#core-repositories) can ultimately achieve the highest and most coveted status within The Falco Project: "*Official*."
+
+You can request the promotion of a repository by submitting an [issue](https://github.com/falcosecurity/evolution/issues/new?assignees=&labels=kind%2Fofficialsupport&template=officialsupport_request.md).
+
+**List of repositories in *Official* status (core repositories)**
+<!-- REPOSITORY-OFFICIAL-TABLE -->
+|                                         NAME                                          |                               DESCRIPTION                                |
+|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| [falcosecurity/charts](https://github.com/falcosecurity/charts)                       | Community managed Helm charts for running Falco with Kubernetes          |
+| [falcosecurity/deploy-kubernetes](https://github.com/falcosecurity/deploy-kubernetes) | Kubernetes deployment resources for Falco                                |
+| [falcosecurity/falco](https://github.com/falcosecurity/falco)                         | Cloud Native Runtime Security                                            |
+| [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website)         | Hugo content to generate website content. Hosted by the CNCF             |
+| [falcosecurity/libs](https://github.com/falcosecurity/libs)                           | libsinsp, libscap, the kernel module driver, and the eBPF driver sources |
+| [falcosecurity/plugin-sdk-go](https://github.com/falcosecurity/plugin-sdk-go)         |                                                                          |
+| [falcosecurity/plugins](https://github.com/falcosecurity/plugins)                     |                                                                          |
+<!-- /REPOSITORY-OFFICIAL-TABLE -->
 
 ### Incubating
 
@@ -73,24 +94,9 @@ The "*Incubating*" level refers to those repositories that contain non-core comp
 | [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra)                   | Falco workflow & testing infrastructure                                   |
 <!-- /REPOSITORY-INCUBATING-TABLE -->
 
-### Official
+### Sandbox
 
-[Core repositories](./GOVERNANCE.md#core-repositories) can ultimately achieve the highest and most coveted status within The Falco Project: "*Official*."
-
-You can request the promotion of a repository by submitting an [issue](https://github.com/falcosecurity/evolution/issues/new?assignees=&labels=kind%2Fofficialsupport&template=officialsupport_request.md).
-
-**List of repositories in *Official* status (core repositories)**
-<!-- REPOSITORY-OFFICIAL-TABLE -->
-|                                         NAME                                          |                               DESCRIPTION                                |
-|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| [falcosecurity/charts](https://github.com/falcosecurity/charts)                       | Community managed Helm charts for running Falco with Kubernetes          |
-| [falcosecurity/deploy-kubernetes](https://github.com/falcosecurity/deploy-kubernetes) | Kubernetes deployment resources for Falco                                |
-| [falcosecurity/falco](https://github.com/falcosecurity/falco)                         | Cloud Native Runtime Security                                            |
-| [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website)         | Hugo content to generate website content. Hosted by the CNCF             |
-| [falcosecurity/libs](https://github.com/falcosecurity/libs)                           | libsinsp, libscap, the kernel module driver, and the eBPF driver sources |
-| [falcosecurity/plugin-sdk-go](https://github.com/falcosecurity/plugin-sdk-go)         |                                                                          |
-| [falcosecurity/plugins](https://github.com/falcosecurity/plugins)                     |                                                                          |
-<!-- /REPOSITORY-OFFICIAL-TABLE -->
+You can find "*Sandbox*" level ideas/projects/code under the [falcosecurity/contrib](https://github.com/falcosecurity/contrib) repository.
 
 ### Special
 
@@ -114,12 +120,6 @@ The list of archived repositories can be found [here](https://github.com/falcose
 ### Retired
 
 Finally, repositories that are no longer maintained or relevant to The Falco Project will be retired definitively. Periodically, the maintainers clean up the [falcosecurity](https://github.com/falcosecurity) and move these projects to the [Falco Projects Retirement Home](https://github.com/falcosecurity-retire) GitHub's organization.
-
-## Maintainers
-
-The process to become a maintainer is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS_GUIDELINES.md) file.
-
-You can find the list of current maintainers in the [MAINTAINERS.md](./MAINTAINERS.md) file.
 
 ## Contributing
 
