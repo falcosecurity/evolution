@@ -1,16 +1,12 @@
 ---
 name: Incubation request
-about: 'Request adoption or promotion to the "incubating" status'
+about: 'Request adoption or promotion of a repository to the "incubating" status'
 title: ''
 labels: kind/incubating
 assignees: ''
 ---
 
-**Description of Request**
-
-<!--
-Describe the project you would like to be incubated.
--->
+**Repository**: <!-- repository URL --> 
 
 **Motivation**
 
