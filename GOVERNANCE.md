@@ -141,7 +141,7 @@ Responsibilities:
  - Participate when called upon in security releases. Although this should be a rare occurrence, if a serious vulnerability is found it may take up to several full days of work.
  - Mentoring, encouraging, and sponsoring new reviewers and maintainers.
 
-To become a maintainer, [Contributors](#contributors) must express interest to the existing maintainers. The full process is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS_GUIDELINES.md) file.
+To become a maintainer, [Contributors](#contributors) must express interest to the existing maintainers. The full process is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS_GUIDELINES.md) file.
 
 The list of current [maintainers](./MAINTAINERS.md) is automatically updated by our infra (see the [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra) repository).
 
@@ -168,7 +168,7 @@ Responsibilities and privileges:
  - Serve as the last escalation point for an issue that can't be solved by other community roles.
  - Ability to create committees and delegate powers to them.
 
-The full process to become a Core Maintainer is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS_GUIDELINES.md) file. 
+The full process to become a Core Maintainer is documented in the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS_GUIDELINES.md) file. 
 
 ### Emeritus Maintainers
 
@@ -218,7 +218,7 @@ Editorial changes are changes that fix spelling or grammar, update links, or sim
 
 A [Maintainer](#maintainers) may resign by notifying their willing using a GitHub issue or pull request. In such a case, they can be moved to [Emeritus Maintainers](#emeritus-maintainers) using [lazy consensus](#consensus).
 
-[Maintainers](#maintainers) can be added or moved to or from [Emeritus Maintainers](#emeritus-maintainers) with a [majority vote](#majority-vote), if the criteria in this document and the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/master/MAINTAINERS_GUIDELINES.md) file are met. If inactivity is the criteria, at least the past six months must be considered.
+[Maintainers](#maintainers) can be added or moved to or from [Emeritus Maintainers](#emeritus-maintainers) with a [majority vote](#majority-vote), if the criteria in this document and the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS_GUIDELINES.md) file are met. If inactivity is the criteria, at least the past six months must be considered.
 
 In all other cases, to remove [Maintainers](#maintainers) from their role, a [supermajority vote](#supermajority-vote) is required.
 
