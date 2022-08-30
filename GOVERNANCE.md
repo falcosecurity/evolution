@@ -30,6 +30,21 @@ This document describes the fundamental principles **The Falco Project** adheres
   - [Supermajority vote](#supermajority-vote)
 - [License](#license)
 
+**Resources**
+
+<!-- NAVIGATION_LINKS -->
+ - [Governance](https://github.com/falcosecurity/evolution/blob/main/GOVERNANCE.md)
+ - [Code Of Conduct](https://github.com/falcosecurity/evolution/blob/main/CODE_OF_CONDUCT.md)
+ - [Maintainers Guidelines](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS_GUIDELINES.md)
+ - [Maintainers List](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS.md)
+ - [Repositories Guidelines](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md)
+ - [Repositories List](https://github.com/falcosecurity/evolution/blob/main/README.md#repositories)
+ - [Adopters List](https://github.com/falcosecurity/falco/blob/master/ADOPTERS.md)
+ - [Contributing](https://github.com/falcosecurity/.github/blob/main/CONTRIBUTING.md)
+ - [Security policy](https://github.com/falcosecurity/.github/blob/main/SECURITY.md)
+ - [Join the Community](https://github.com/falcosecurity/community)
+<!-- /NAVIGATION_LINKS -->
+
 ## Principles
 
 The Falco Project and its community adhere to the following principles:
@@ -93,7 +108,7 @@ Defined by:
  - Any non-GitHub contribution but considered relevant for the project, as documented in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository.
 
 Responsibilities:
- - Respect the [Contribution Guidelines](https://github.com/falcosecurity/.github/blob/master/CONTRIBUTING.md).
+ - Respect the [Contribution Guidelines](https://github.com/falcosecurity/.github/blob/main/CONTRIBUTING.md).
  - [Sign off](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---signoff) Git Commits to certify they adhere to the [Developer Certificate of Origin (DCO)](https://developercertificate.org/).
 
 ### Reviewers
