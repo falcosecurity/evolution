@@ -23,24 +23,7 @@ assignees: ''
 
 **Screenshots**
 
-
 <!-- If applicable, add screenshots to help explain your problem. -->
-
-**Environment**
-
-<!-- Please complete the following info. -->
-
-- Falco version:
-<!-- Use "falco --version". -->
-- System info:
-<!-- Falco has a built-in support command you can use  "falco --support | jq .system_info" -->
-- Cloud provider or hardware configuration:
-- OS:
-<!-- Eg., output of "cat /etc/os-release". -->
-- Kernel:
-<!-- Eg., output of "uname -a". -->
-- Installation method:
-<!-- Eg., Kubernetes, RPM, DEB, from source? -->
 
 **Additional context**
 
