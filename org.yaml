@@ -156,6 +156,7 @@ orgs:
         allow_merge_commit: false
         allow_rebase_merge: false
         allow_squash_merge: false
+        description: Terraform Module for Falco AWS Resources
         default_branch: main
         has_projects: true
       falco-exporter:
@@ -168,7 +169,7 @@ orgs:
         allow_merge_commit: false
         allow_rebase_merge: false
         allow_squash_merge: false
-        description: Hugo content to generate website content. Hosted by the CNCF
+        description: Source code of the official Falco website
         has_projects: true
         homepage: https://falco.org
       falcoctl:
@@ -255,11 +256,13 @@ orgs:
         allow_merge_commit: false
         allow_rebase_merge: false
         allow_squash_merge: false
+        description: Falco plugins SDK for C++
         has_projects: true
       plugin-sdk-go:
         allow_merge_commit: false
         allow_rebase_merge: false
         allow_squash_merge: false
+        description: Falco plugins SDK for Go
         default_branch: main
         has_projects: true
       plugins:
