@@ -17,14 +17,14 @@ orgs:
       - thelinuxfoundation
 
     members:
-      - araujof
-      - Andreagit97
       - admiral0
+      - Andreagit97
+      - araujof
       - bencer
       - cpanato
       - darryk10
       - dwindsor
-      - fededp
+      - FedeDP
       - fjogeleit
       - gnosek
       - Issif
@@ -34,9 +34,9 @@ orgs:
       - kris-nova
       - leodido
       - LucaGuerra
-      - mfdii
       - markyjackson-taulia
       - maxgio92
+      - mfdii
       - mmat11
       - Molter73
       - terylt
