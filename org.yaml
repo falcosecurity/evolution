@@ -7,6 +7,10 @@ orgs:
     has_organization_projects: true
     has_repository_projects: true
     members_can_create_repositories: false
+    billing_email: ""
+    company: ""
+    email: ""
+    location: ""
 
     admins:
       - caniszczyk
