@@ -218,7 +218,7 @@ Editorial changes are changes that fix spelling or grammar, update links, or sim
 
 A [Maintainer](#maintainers) may resign by notifying their willing using a GitHub issue or pull request. In such a case, they can be moved to [Emeritus Maintainers](#emeritus-maintainers) using [lazy consensus](#consensus).
 
-[Maintainers](#maintainers) can be added or moved to or from [Emeritus Maintainers](#emeritus-maintainers) with a [majority vote](#majority-vote), if the criteria in this document and the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS_GUIDELINES.md) file are met. If inactivity is the criteria, at least the past six months must be considered.
+[Maintainers](#maintainers) can be added (or moved to or from [Emeritus Maintainers](#emeritus-maintainers)) with a [majority vote](#majority-vote), if the criteria in this document and the [MAINTAINERS_GUIDELINES.md](https://github.com/falcosecurity/evolution/blob/main/MAINTAINERS_GUIDELINES.md) file are met. If inactivity is the criteria, at least the past six months must be considered.
 
 In all other cases, to remove [Maintainers](#maintainers) from their role, a [supermajority vote](#supermajority-vote) is required.
 
