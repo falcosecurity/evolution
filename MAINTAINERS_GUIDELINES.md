@@ -62,7 +62,7 @@ New maintainers can also be proposed and sponsored by existing [Maintainers](GOV
 If the decision is to grant the maintainer status, then the person in question must:
 - Become a member of the [falcosecurity](https://github.com/falcosecurity) Github organization, see the [Organization embership](#organization-membership) section.
 - Join with `*-maintainers` [GitHub team](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams) relative to the repository they became maintainer of (i.e. the [`falco-maintainers`](https://github.com/orgs/falcosecurity/teams/falco-maintainers) team for [falcosecurity/falco](https://github.com/falcosecurity/falco)); One can do so by opening a PR to change the [org.yaml](https://github.com/falcosecurity/test-infra/blob/master/config/org.yaml) file.
-- Update the [`persons.json`](https://github.com/falcosecurity/test-infra/blob/master/images/update-maintainers/persons.json) list by opening a PR to add their information.
+- Update the [`people/affiliations.json`](people/affiliations.json) file by opening a PR to add their information.
 
 ## Offboarding a Reviewer
 
