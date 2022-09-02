@@ -46,7 +46,7 @@ orgs:
     repos:
       .github:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         default_branch: main
         description: Default community health files
@@ -54,27 +54,27 @@ orgs:
         has_wiki: false
       advocacy:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         archived: true
         description: Advocacy machinery
         has_projects: true
       charts:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Community managed Helm charts for running Falco with Kubernetes
         has_projects: true
         has_wiki: false
       client-go:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Go client and SDK for Falco
         has_projects: true
       client-py:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         archived: true
         description: Python client and SDK for Falco
@@ -82,14 +82,14 @@ orgs:
         has_wiki: false
       client-rs:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         archived: true
         description: The rust language implementation of the Falco client
         has_projects: true
       community:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         default_branch: main
         description: The Falco Project Community
@@ -97,7 +97,7 @@ orgs:
         has_wiki: false
       contrib:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         default_branch: main
         description: Community sandbox to test-drive ideas/projects/code
@@ -105,7 +105,7 @@ orgs:
         has_wiki: false
       deploy-kubernetes:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         default_branch: main
         description: Kubernetes deployment resources for Falco
@@ -113,20 +113,20 @@ orgs:
         has_wiki: false
       driverkit:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: "Kit for building Falco drivers: kernel modules or eBPF probes"
         has_projects: true
       ebpf-probe:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         archived: true
         description: eBPF probe for syscall events
         has_projects: true
       event-generator:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description:
           Generate a variety of suspect actions that are detected by Falco
@@ -134,7 +134,7 @@ orgs:
         has_projects: true
       evolution:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         default_branch: main
         description: Evolution process of The Falco Project
@@ -142,7 +142,7 @@ orgs:
         has_wiki: false
       falco:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Cloud Native Runtime Security
         has_projects: true
@@ -150,48 +150,48 @@ orgs:
         homepage: https://falco.org
       falco-aws-terraform:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Terraform Module for Falco AWS Resources
         default_branch: main
         has_projects: true
       falco-exporter:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Prometheus Metrics Exporter for Falco output events
         has_projects: true
       falco-website:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Source code of the official Falco website
         has_projects: true
         homepage: https://falco.org
       falcoctl:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Administrative tooling for Falco
         has_projects: true
         has_wiki: false
       falcosidekick:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Connect Falco to your ecosystem
         has_projects: true
         has_wiki: false
       falcosidekick-ui:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: A simple WebUI with latest events from Falco
         has_projects: true
         has_wiki: false
       kernel-crawler:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         default_branch: main
         description: A tool to crawl Linux kernel versions
@@ -199,20 +199,20 @@ orgs:
         has_wiki: false
       kernel-module:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         archived: true
         has_projects: true
       kilt:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Kilt is a project that defines how to inject foreign apps into containers
         has_projects: true
         has_wiki: false
       libs:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description:
           libsinsp, libscap, the kernel module driver, and the eBPF driver
@@ -221,7 +221,7 @@ orgs:
         has_wiki: false
       libs-sdk-go:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         default_branch: main
         description: Go SDK for Falco libs
@@ -229,20 +229,20 @@ orgs:
         has_wiki: false
       libscap:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         archived: true
         has_projects: true
       libsinsp:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         archived: true
         description: "System inspection library "
         has_projects: true
       pdig:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         archived: true
         description: ptrace-based event producer for udig
@@ -250,33 +250,33 @@ orgs:
         has_wiki: false
       plugin-sdk-cpp:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Falco plugins SDK for C++
         has_projects: true
       plugin-sdk-go:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Falco plugins SDK for Go
         default_branch: main
         has_projects: true
       plugins:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Falco plugins registry
         has_projects: true
       template-repository:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         archived: true
         description: Acts as a template for new repositories
         has_projects: true
       test-infra:
         allow_merge_commit: false
-        allow_rebase_merge: false
+        allow_rebase_merge: true
         allow_squash_merge: false
         description: Falco workflow & testing infrastructure
         has_projects: true
