@@ -483,6 +483,7 @@ orgs:
           - leogr
         members:
           - maxgio92
+          - jasondellaluce
         privacy: closed
         repos:
           .github: maintain
