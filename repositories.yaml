@@ -3,7 +3,7 @@
   description: Default community health files
 - name: charts
   status: Official
-  description: Community managed Helm charts for running Falco with Kubernetes
+  description: Helm charts for running Falco with Kubernetes
 - name: client-go
   status: Incubating
   description: Go client and SDK for Falco
@@ -33,6 +33,7 @@
   description: Prometheus Metrics Exporter for Falco output events
 - name: falco-aws-terraform
   status: Incubating
+  description: Terraform Module for Falco AWS Resources
 - name: falco-website
   status: Official
   description: Hugo content to generate website content. Hosted by the CNCF
@@ -56,13 +57,16 @@
   description: libsinsp, libscap, the kernel module driver, and the eBPF driver sources
 - name: libs-sdk-go
   status: Incubating
+  description: Falco plugins SDK for G
   description: Go SDK for Falco libs
 - name: plugin-sdk-cpp
   status: Incubating
+  description: Falco plugins SDK for C++
 - name: plugin-sdk-go
   status: Official
 - name: plugins
   status: Official
+  description: Falco plugins registry
 - name: test-infra
   status: Incubating
   description: Falco workflow & testing infrastructure
