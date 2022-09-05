@@ -127,7 +127,7 @@ See the [contributing guide](https://github.com/falcosecurity/.github/blob/main/
 
 ## Security policy
 
-To report a security vulnerability, please follow our [security policy](./SECURITY.md).
+To report a security vulnerability, please follow our [security policy](https://github.com/falcosecurity/.github/blob/main/SECURITY.md).
 
 ## Join the Community
 
