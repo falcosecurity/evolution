@@ -2,18 +2,18 @@ presubmits:
   falcosecurity/evolution:
     - name: peribolos-pre-submit
       branches:
-        - ^master$
+        - ^main$
       decorate: true
       max_concurrency: 1
       skip_report: false
-      run_if_changed: '^people/org.yaml$|^.prow/peribolos.yaml$'
+      run_if_changed: '^org/org.yaml$|^.prow/peribolos.yaml$'
       spec:
         containers:
           - image: gcr.io/k8s-prow/peribolos:v20220901-5db9cf5fa2
             command:
               - peribolos
             args:
-              - --config-path=people/org.yaml
+              - --config-path=org/org.yaml
               - --fix-org
               - --fix-org-members
               - --fix-repos
@@ -38,11 +38,11 @@ postsubmits:
   falcosecurity/evolution:
     - name: peribolos-post-submit
       branches:
-        - ^master$
+        - ^main$
       decorate: true
       max_concurrency: 1
       skip_report: false
-      run_if_changed: '^people/org.yaml$|^.prow/peribolos.yaml$'
+      run_if_changed: '^org/org.yaml$|^.prow/peribolos.yaml$'
       spec:
         containers:
           - image: gcr.io/k8s-prow/peribolos:v20220901-5db9cf5fa2
@@ -50,7 +50,7 @@ postsubmits:
               - peribolos
             args:
               - --confirm
-              - --config-path=people/org.yaml
+              - --config-path=org/org.yaml
               - --fix-org
               - --fix-org-members
               - --fix-repos
@@ -81,7 +81,7 @@ periodics:
     extra_refs:
       - org: falcosecurity
         repo: evolution 
-        base_ref: master
+        base_ref: main
     spec:
       containers:
         - image: gcr.io/k8s-prow/peribolos:v20220901-5db9cf5fa2
@@ -89,7 +89,7 @@ periodics:
             - peribolos
           args:
             - --confirm
-            - --config-path=people/org.yaml
+            - --config-path=org/org.yaml
             - --fix-org
             - --fix-org-members
             - --fix-repos
