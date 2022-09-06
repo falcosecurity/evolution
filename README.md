@@ -21,7 +21,7 @@ It provides a space for the community to work together, discuss ideas, and docum
    * [Incubating](#incubating)
    * [Sandbox](#sandbox)
    * [Special](#special)
-   * [Archivied](#archivied)
+   * [Archived](#archived)
    * [Retired](#retired)
  - [Contributing](#contributing)
  - [Security policy](#security-policy)
@@ -111,7 +111,7 @@ Some repositories have a special meaning and do not fit the above statuses. They
 | [falcosecurity/evolution](https://github.com/falcosecurity/evolution) | Evolution process of The Falco Project |
 <!-- /REPOSITORY-SPECIAL-TABLE -->
 
-### Archivied
+### Archived
 
 In general, a repository can be archived at the discretion of The Falco Project community. Usually, maintainers can decide to archive a project that has not been maintained for a long time or does not fit the guidelines for the projects under the [falcosecurity](https://github.com/falcosecurity) GitHub's organization anymore. In other cases, a repository is archived to reserve its name for future use.
 
