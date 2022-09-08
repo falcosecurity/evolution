@@ -110,3 +110,9 @@ Mentoring programs may be tailored to the needs of a particular repository or ar
 - an evaluation process that must consider the technical merit, the participation in the community, as well as the other requirements to become a maintainer.
 
 Whenever a new program starts, it must be announced to the community via the official [communication channels](https://github.com/falcosecurity/community).
+
+### Core Maintainers duties
+
+[Core Maintainers](GOVERNANCE.md#core-maintainers) as a team are responsible for maintaining the [falcosecurity](https://github.com/falcosecurity) GitHub organization; thus, they can intervene in any situation concerning their responsibility. If needed, they can ask to [become maintainers of a repository](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#core-maintainers-duties-and-privileges).
+
+[Core Maintainers](GOVERNANCE.md#core-maintainers) who volunteer to intervene must act with the spirit of serving the entire falcosecurity organization.
