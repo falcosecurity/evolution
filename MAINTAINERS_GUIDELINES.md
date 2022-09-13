@@ -65,7 +65,7 @@ If the decision is to grant the maintainer status, then the person in question m
 - Update the [`people/affiliations.json`](people/affiliations.json) file by opening a PR to add their information.
 - Only for first-time core maintainers:
   - go to https://maintainers.cncf.io/ and open a PR to be listed as a Falco maintainer;
-  - ask to be added to the `cncf-falco-maintainers@lists.cncf.io` mailing list.
+  - ask the CNCF to be added to the `cncf-falco-maintainers@lists.cncf.io` mailing list.
 
 ## Offboarding a Reviewer
 
@@ -85,7 +85,7 @@ In such a case:
 - Another PR is required to remove them from GitHub team defined by the [org.yaml](https://github.com/falcosecurity/test-infra/blob/master/config/org.yaml) file.
 - Only for core maintainers who are losing their status:
   - go to https://maintainers.cncf.io/ and open a PR to remove them under Falco;
-  - ask to remove them from the `cncf-falco-maintainers@lists.cncf.io` mailing list.
+  - ask the CNCF to remove them from the `cncf-falco-maintainers@lists.cncf.io` mailing list.
 
 ## Review maintainers activity
 
