@@ -57,7 +57,6 @@
   description: libsinsp, libscap, the kernel module driver, and the eBPF driver sources
 - name: libs-sdk-go
   status: Incubating
-  description: Falco plugins SDK for G
   description: Go SDK for Falco libs
 - name: plugin-sdk-cpp
   status: Incubating
