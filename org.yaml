@@ -458,6 +458,11 @@ orgs:
         description: maintainers of falcosecurity/falcoctl
         maintainers:
           - leogr
+        members:
+          - zuc
+          - maxgio92
+          - fededp
+          - cpanato
         privacy: closed
         repos:
           falcoctl: maintain
