@@ -271,6 +271,14 @@ orgs:
         allow_squash_merge: false
         description: Falco plugins registry
         has_projects: true
+      syscalls-bumper:
+        allow_merge_commit: false
+        allow_rebase_merge: true
+        allow_squash_merge: false
+        default_branch: main
+        description: A tool to automatically update supported syscalls in libs
+        has_projects: false
+        has_wiki: false  
       template-repository:
         allow_merge_commit: false
         allow_rebase_merge: true
@@ -575,6 +583,7 @@ orgs:
           plugin-sdk-cpp: admin
           plugin-sdk-go: admin
           plugins: admin
+          syscalls-bumper: admin
           test-infra: admin
       pdig-maintainers:
         description: maintainers of falcosecurity/pdig
