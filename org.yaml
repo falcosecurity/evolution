@@ -627,6 +627,16 @@ orgs:
         privacy: closed
         repos:
           plugins: maintain
+      syscalls-bumper-maintainers:
+        description: maintainers of falcosecurity/syscalls-bumper
+        maintainers:
+          - leogr
+        members:
+          - FedeDP
+          - Andreagit97
+        privacy: closed
+        repos:
+          syscalls-bumper: maintain
       test-infra-maintainers:
         description: maintainers of falcosecurity/test-infra
         maintainers:
