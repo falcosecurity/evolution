@@ -130,8 +130,14 @@ Defined by:
  - The OWNERS file `approvers` entry.
 
 Requirements:
+ - Consistent engagement in the community for (some time like 6 months or other quantifying characteristic).
  - Active contribution and participation in one or more areas of the project.
- - Domain expertise and a good understanding of the code-base of those areas.
+ - Domain expertise and a good understanding of the code-base of those areas as determined by the existing maintainers.
+ - Comprehensive understanding of project governance.
+ - Known to uphold the projects best interests.
+ - Regarded as a trustworthy curator of contributions.
+
+Measurement of these criteria are subject to the determination of the existing maintainers as attested by the sponsoring maintainer (the person working with the interested contributor to show them the ropes).
 
 Responsibilities:
  - Be active and proactive in communications, lead community calls, and help other community members.
