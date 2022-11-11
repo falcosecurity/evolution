@@ -130,12 +130,10 @@ Defined by:
  - The OWNERS file `approvers` entry.
 
 Requirements:
- - Consistent engagement in the community for (some time like 6 months or other quantifying characteristic).
  - Active contribution and participation in one or more areas of the project.
- - Domain expertise and a good understanding of the code-base of those areas as determined by the existing maintainers.
+ - Domain expertise and a good understanding of the code-base of those areas.
  - Comprehensive understanding of project governance.
  - Known to uphold the projects best interests.
- - Regarded as a trustworthy curator of contributions.
 
 Measurement of these criteria are subject to the determination of the existing maintainers as attested by the sponsoring maintainer (the person working with the interested contributor to show them the ropes).
 
@@ -159,8 +157,9 @@ The Core Maintainers form a team that drives the direction, values, and governan
 Defined by:
  - The OWNERS file `approvers` entry of any [core repository](#core-repositories) (only the OWNERS file in the root directory must be considered).
 
-Requirements:
- - Same as for [Maintainers](#maintainers).
+Requirements (same as for [Maintainers](#maintainers) plus):
+ - Consistent engagement in the community for at least 6 months.
+ - Regarded as a trustworthy curator of contributions.
 
 Responsibilities and privileges:
  - Overseeing the overall project health and growth.
