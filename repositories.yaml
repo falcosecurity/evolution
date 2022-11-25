@@ -69,3 +69,6 @@
 - name: test-infra
   status: Incubating
   description: Falco workflow & testing infrastructure
+- name: syscalls-bumper
+  status: Incubating
+  description: A tool to automatically update supported syscalls in libs
