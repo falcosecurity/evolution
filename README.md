@@ -92,6 +92,7 @@ The "*Incubating*" level refers to those repositories that contain non-core comp
 | [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go)                 | Go SDK for Falco libs                                                     |
 | [falcosecurity/plugin-sdk-cpp](https://github.com/falcosecurity/plugin-sdk-cpp)           | Falco plugins SDK for C++                                                 |
 | [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra)                   | Falco workflow & testing infrastructure                                   |
+| [falcosecurity/syscalls-bumper](https://github.com/falcosecurity/syscalls-bumper)         | A tool to automatically update supported syscalls in libs                 |
 <!-- /REPOSITORY-INCUBATING-TABLE -->
 
 ### Sandbox
