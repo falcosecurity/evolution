@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2022-11-30T15:29:34Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2022-12-02T11:42:22Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -37,6 +37,7 @@ Last update: **<!-- LATEST-UPDATE -->2022-11-30T15:29:34Z<!-- /LATEST-UPDATE -->
 - [Jonah Jones](https://github.com/jonahjon), Amazon
 - [Leonardo Di Donato](https://github.com/leodido), Independent
 - [Leonardo Grasso](https://github.com/leogr), Sysdig
+- [Logan Bond](https://github.com/exoner4ted), Secureworks
 - [Loris Degioianni](https://github.com/ldegio), Sysdig
 - [Luca Guerra](https://github.com/lucaguerra), Sysdig
 - [Mark Stemm](https://github.com/mstemm), Sysdig
@@ -46,5 +47,4 @@ Last update: **<!-- LATEST-UPDATE -->2022-11-30T15:29:34Z<!-- /LATEST-UPDATE -->
 - [Radu Andries](https://github.com/admiral0), Independent
 - [Teryl Taylor](https://github.com/terylt), IBM
 - [Thomas Labarussias](https://github.com/issif), Sysdig
-- [exoner4ted](https://github.com/exoner4ted), Secureworks
 <!-- /MAINTAINERS-LIST -->
