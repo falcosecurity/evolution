@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2022-12-04T09:01:50Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2022-12-05T09:31:16Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -33,6 +33,7 @@ Last update: **<!-- LATEST-UPDATE -->2022-12-04T09:01:50Z<!-- /LATEST-UPDATE -->
 - [Frank Jogeleit](https://github.com/fjogeleit), LOVOO
 - [Fred Araujo](https://github.com/araujof), IBM
 - [Grzegorz Nosek](https://github.com/gnosek), Sysdig
+- [Hendrik Brueckner](https://github.com/hbrueckner), IBM
 - [Jason Dellaluce](https://github.com/jasondellaluce), Sysdig
 - [Jonah Jones](https://github.com/jonahjon), Amazon
 - [Leonardo Di Donato](https://github.com/leodido), Independent
