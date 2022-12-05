@@ -59,8 +59,11 @@ func maintainersTextEditor(s string, core bool) (string, error) {
 		added := false
 		for _, r := range repositories {
 			for _, url := range m.Projects {
-				if url == r.URL() {
-					if !added && (!core || r.Status == utils.RepositoryStatusOfficial) {
+				isCoreRepo := r.Status == utils.RepositoryStatusOfficial
+				isRepoMaintainer := url == r.URL()
+				isSubDirMaintainer := strings.HasPrefix(url, r.URL()+"/")
+				if isRepoMaintainer || isSubDirMaintainer {
+					if !added && (!core || isCoreRepo && !isSubDirMaintainer) {
 						list = append(list, m)
 						added = true
 					}
