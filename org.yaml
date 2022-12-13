@@ -646,6 +646,7 @@ orgs:
           - maxgio92
           - zuc
           - jonahjon
+          - fededp
         privacy: closed
         repos:
           test-infra: maintain
