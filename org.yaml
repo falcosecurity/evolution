@@ -271,6 +271,13 @@ orgs:
         allow_squash_merge: false
         description: Falco plugins registry
         has_projects: true
+      rules:
+        allow_merge_commit: false
+        allow_rebase_merge: true
+        allow_squash_merge: false
+        description: Falco rule repository
+        has_projects: false
+        has_wiki: false
       syscalls-bumper:
         allow_merge_commit: false
         allow_rebase_merge: true
@@ -628,6 +635,14 @@ orgs:
         privacy: closed
         repos:
           plugins: maintain
+      rules-maintainers:
+        description: maintainers of falcosecurity/rules
+        maintainers:
+          - leogr
+          - LucaGuerra
+        privacy: closed
+        repos:
+          rules: maintain
       syscalls-bumper-maintainers:
         description: maintainers of falcosecurity/syscalls-bumper
         maintainers:
