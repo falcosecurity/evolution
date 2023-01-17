@@ -9,7 +9,7 @@ presubmits:
       run_if_changed: '^org/org.yaml$|^.prow/peribolos.yaml$'
       spec:
         containers:
-          - image: gcr.io/k8s-prow/peribolos:v20220901-5db9cf5fa2
+          - image: gcr.io/k8s-prow/peribolos:v20230106-0de7d15106
             command:
               - peribolos
             args:
@@ -45,7 +45,7 @@ postsubmits:
       run_if_changed: '^org/org.yaml$|^.prow/peribolos.yaml$'
       spec:
         containers:
-          - image: gcr.io/k8s-prow/peribolos:v20220901-5db9cf5fa2
+          - image: gcr.io/k8s-prow/peribolos:v20230106-0de7d15106
             command:
               - peribolos
             args:
@@ -84,7 +84,7 @@ periodics:
         base_ref: main
     spec:
       containers:
-        - image: gcr.io/k8s-prow/peribolos:v20220901-5db9cf5fa2
+        - image: gcr.io/k8s-prow/peribolos:v20230106-0de7d15106
           command:
             - peribolos
           args:
