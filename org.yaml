@@ -640,6 +640,11 @@ orgs:
         maintainers:
           - leogr
           - LucaGuerra
+        members:
+          - fededp
+          - jasondellaluce
+          - andreagit97
+          - mstemm
         privacy: closed
         repos:
           rules: maintain
