@@ -38,7 +38,7 @@
   status: Official
   description: Hugo content to generate website content. Hosted by the CNCF
 - name: falcoctl
-  status: Incubating
+  status: Official
   description: Administrative tooling for Falco
 - name: falcosidekick
   status: Incubating
@@ -66,6 +66,9 @@
 - name: plugins
   status: Official
   description: Falco plugins registry
+- name: rules
+  status: Official
+  description: Falco rules repository
 - name: test-infra
   status: Incubating
   description: Falco workflow & testing infrastructure
