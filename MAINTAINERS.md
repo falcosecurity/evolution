@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2023-01-22T09:01:21Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2023-01-26T09:01:36Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
