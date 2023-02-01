@@ -66,9 +66,11 @@ You can request the promotion of a repository by submitting an [issue](https://g
 | [falcosecurity/deploy-kubernetes](https://github.com/falcosecurity/deploy-kubernetes) | Kubernetes deployment resources for Falco                                |
 | [falcosecurity/falco](https://github.com/falcosecurity/falco)                         | Cloud Native Runtime Security                                            |
 | [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website)         | Hugo content to generate website content. Hosted by the CNCF             |
+| [falcosecurity/falcoctl](https://github.com/falcosecurity/falcoctl)                   | Administrative tooling for Falco                                         |
 | [falcosecurity/libs](https://github.com/falcosecurity/libs)                           | libsinsp, libscap, the kernel module driver, and the eBPF driver sources |
 | [falcosecurity/plugin-sdk-go](https://github.com/falcosecurity/plugin-sdk-go)         |                                                                          |
 | [falcosecurity/plugins](https://github.com/falcosecurity/plugins)                     | Falco plugins registry                                                   |
+| [falcosecurity/rules](https://github.com/falcosecurity/rules)                         | Falco rules repository                                                   |
 <!-- /REPOSITORY-OFFICIAL-TABLE -->
 
 ### Incubating
@@ -84,7 +86,6 @@ The "*Incubating*" level refers to those repositories that contain non-core comp
 | [falcosecurity/event-generator](https://github.com/falcosecurity/event-generator)         | Generate a variety of suspect actions that are detected by Falco rulesets |
 | [falcosecurity/falco-exporter](https://github.com/falcosecurity/falco-exporter)           | Prometheus Metrics Exporter for Falco output events                       |
 | [falcosecurity/falco-aws-terraform](https://github.com/falcosecurity/falco-aws-terraform) | Terraform Module for Falco AWS Resources                                  |
-| [falcosecurity/falcoctl](https://github.com/falcosecurity/falcoctl)                       | Administrative tooling for Falco                                          |
 | [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick)             | Connect Falco to your ecosystem                                           |
 | [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui)       | A simple WebUI with latest events from Falco                              |
 | [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler)           | A tool to crawl Linux kernel versions                                     |
