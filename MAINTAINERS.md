@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2023-02-06T09:01:42Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2023-02-07T09:02:29Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -19,6 +19,7 @@ Last update: **<!-- LATEST-UPDATE -->2023-02-06T09:01:42Z<!-- /LATEST-UPDATE -->
 - [Mark Stemm](https://github.com/mstemm), Sysdig
 - [Massimiliano Giovagnoli](https://github.com/maxgio92), Clastix
 - [Mauro Ezequiel Moltrasio](https://github.com/molter73), RedHat
+- [Melissa Kilby](https://github.com/incertum), Apple
 - [Michele Zuccala](https://github.com/zuc), Sysdig
 - [Thomas Labarussias](https://github.com/issif), Sysdig
 <!-- /MAINTAINERS-CORE-LIST -->
@@ -44,9 +45,10 @@ Last update: **<!-- LATEST-UPDATE -->2023-02-06T09:01:42Z<!-- /LATEST-UPDATE -->
 - [Mark Stemm](https://github.com/mstemm), Sysdig
 - [Massimiliano Giovagnoli](https://github.com/maxgio92), Clastix
 - [Mauro Ezequiel Moltrasio](https://github.com/molter73), RedHat
+- [Melissa Kilby](https://github.com/incertum), Apple
 - [Michele Zuccala](https://github.com/zuc), Sysdig
 - [Radu Andries](https://github.com/admiral0), Independent
 - [Teryl Taylor](https://github.com/terylt), IBM
 - [Thomas Labarussias](https://github.com/issif), Sysdig
-- [vjjmiras](https://github.com/vjjmiras), UNKNOWN
+- [Vicente Javier Jiménez Miras](https://github.com/vjjmiras), Sysdig
 <!-- /MAINTAINERS-LIST -->
