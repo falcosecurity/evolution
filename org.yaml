@@ -27,6 +27,7 @@ orgs:
       - cpanato
       - darryk10
       - dwindsor
+      - ewilderj
       - EXONER4TED
       - FedeDP
       - fjogeleit
@@ -173,6 +174,13 @@ orgs:
         description: Source code of the official Falco website
         has_projects: true
         homepage: https://falco.org
+      flycheck-falco-rules:
+        allow_merge_commit: false
+        allow_rebase_merge: true
+        allow_squash_merge: false
+        description: Falco Rules Syntax Checker for Emacs, Using Flycheck
+        default_branch: main
+        has_projects: true
       falcoctl:
         allow_merge_commit: false
         allow_rebase_merge: true
@@ -286,7 +294,7 @@ orgs:
         default_branch: main
         description: A tool to automatically update supported syscalls in libs
         has_projects: false
-        has_wiki: false  
+        has_wiki: false
       template-repository:
         allow_merge_commit: false
         allow_rebase_merge: true
@@ -473,6 +481,15 @@ orgs:
         privacy: closed
         repos:
           falco-website: maintain
+      flycheck-falco-rules-maintainers:
+        description: maintainers of falcosecurity/flycheck-falco-rules
+        maintainers:
+          - mstemm
+          - ewilderj
+        members:
+        privacy: closed
+        repos:
+          flycheck-falco-rules: maintain
       falcoctl-maintainers:
         description: maintainers of falcosecurity/falcoctl
         maintainers:
@@ -588,6 +605,7 @@ orgs:
           falcoctl: admin
           falcosidekick: admin
           falcosidekick-ui: admin
+          flycheck-falco-rules: admin
           kernel-crawler: admin
           kilt: admin
           libs: admin
