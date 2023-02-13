@@ -46,6 +46,9 @@
 - name: falcosidekick-ui
   status: Incubating
   description: A simple WebUI with latest events from Falco
+- name: flycheck-falco-rules
+  status: Incubating
+  description: A custom checker for Falco rules files that can be loaded using the Flycheck syntax checker for GNU Emacs.
 - name: kernel-crawler
   status: Incubating
   description: A tool to crawl Linux kernel versions
