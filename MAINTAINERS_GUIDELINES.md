@@ -60,10 +60,11 @@ New maintainers can also be proposed and sponsored by existing [Maintainers](GOV
 [Maintainers](GOVERNANCE.md#maintainers) will review the PR and decide. Before taking the decision, existing maintainers may ask the person in question to shadow them or apply for a reviewer position for a period.
 
 If the decision is to grant the maintainer status, then the person in question must:
+- Update the [`people/affiliations.json`](people/affiliations.json) file by opening a PR to add their information.
 - If they aren't already, become a member of the [falcosecurity](https://github.com/falcosecurity) Github organization (see the [Organization membership](#organization-membership) section).
 - Join with `*-maintainers` [GitHub team](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams) relative to the repository they became maintainer of (i.e. the [`falco-maintainers`](https://github.com/orgs/falcosecurity/teams/falco-maintainers) team for [falcosecurity/falco](https://github.com/falcosecurity/falco)); One can do so by opening a PR to change the [org.yaml](https://github.com/falcosecurity/test-infra/blob/master/config/org.yaml) file.
-- Update the [`people/affiliations.json`](people/affiliations.json) file by opening a PR to add their information.
 - Only for first-time core maintainers:
+  - also join with [`core-maintainers`](https://github.com/orgs/falcosecurity/teams/core-maintainers) team;
   - go to https://maintainers.cncf.io/ and open a PR to be listed as a Falco maintainer;
   - ask the CNCF to be added to the `cncf-falco-maintainers@lists.cncf.io` mailing list.
 
@@ -84,6 +85,7 @@ In such a case:
 - A PR is required to move the person in question from the `approvers` entry to the `emeritus_approvers` entry of the respective [OWNERS](REPOSITORIES.md#owners) file. The person in question must be mentioned in the body of the PR. This acts as a final contact attempt so that they can provide their feedback.
 - Another PR is required to remove them from GitHub team defined by the [org.yaml](https://github.com/falcosecurity/test-infra/blob/master/config/org.yaml) file.
 - Only for core maintainers who are losing their status:
+  - remove them from the [`core-maintainers`](https://github.com/orgs/falcosecurity/teams/core-maintainers) team;  
   - go to https://maintainers.cncf.io/ and open a PR to remove them under Falco;
   - ask the CNCF to remove them from the `cncf-falco-maintainers@lists.cncf.io` mailing list.
 
