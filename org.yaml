@@ -396,6 +396,7 @@ orgs:
           - Molter73
           - LucaGuerra
           - Andreagit97
+          - incertum
         privacy: closed
       deploy-kubernetes-maintainers:
         description: maintainers of falcosecurity/deploy-kubernetes
