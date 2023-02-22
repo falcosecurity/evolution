@@ -61,6 +61,9 @@
 - name: libs-sdk-go
   status: Incubating
   description: Go SDK for Falco libs
+- name: pigeon
+  status: Incubating
+  description: Secrets and config manager for Falco's infrastructure
 - name: plugin-sdk-cpp
   status: Incubating
   description: Falco plugins SDK for C++
@@ -75,6 +78,9 @@
 - name: test-infra
   status: Incubating
   description: Falco workflow & testing infrastructure
+- name: testing
+  status: Incubating
+  description: All-purpose test suite for Falco and its ecosystem
 - name: syscalls-bumper
   status: Incubating
   description: A tool to automatically update supported syscalls in libs
