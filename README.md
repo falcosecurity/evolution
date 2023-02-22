@@ -79,21 +79,22 @@ The "*Incubating*" level refers to those repositories that contain non-core comp
 
 **List of repositories in *Incubating* status**
 <!-- REPOSITORY-INCUBATING-TABLE -->
-|                                           NAME                                            |                                DESCRIPTION                                |
-|-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| [falcosecurity/client-go](https://github.com/falcosecurity/client-go)                     | Go client and SDK for Falco                                               |
-| [falcosecurity/driverkit](https://github.com/falcosecurity/driverkit)                     | Kit for building Falco drivers: kernel modules or eBPF probes             |
-| [falcosecurity/event-generator](https://github.com/falcosecurity/event-generator)         | Generate a variety of suspect actions that are detected by Falco rulesets |
-| [falcosecurity/falco-exporter](https://github.com/falcosecurity/falco-exporter)           | Prometheus Metrics Exporter for Falco output events                       |
-| [falcosecurity/falco-aws-terraform](https://github.com/falcosecurity/falco-aws-terraform) | Terraform Module for Falco AWS Resources                                  |
-| [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick)             | Connect Falco to your ecosystem                                           |
-| [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui)       | A simple WebUI with latest events from Falco                              |
-| [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler)           | A tool to crawl Linux kernel versions                                     |
-| [falcosecurity/kilt](https://github.com/falcosecurity/kilt)                               | Kilt is a project that defines how to inject foreign apps into containers |
-| [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go)                 | Go SDK for Falco libs                                                     |
-| [falcosecurity/plugin-sdk-cpp](https://github.com/falcosecurity/plugin-sdk-cpp)           | Falco plugins SDK for C++                                                 |
-| [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra)                   | Falco workflow & testing infrastructure                                   |
-| [falcosecurity/syscalls-bumper](https://github.com/falcosecurity/syscalls-bumper)         | A tool to automatically update supported syscalls in libs                 |
+|                                            NAME                                             |                                                DESCRIPTION                                                 |
+|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| [falcosecurity/client-go](https://github.com/falcosecurity/client-go)                       | Go client and SDK for Falco                                                                                |
+| [falcosecurity/driverkit](https://github.com/falcosecurity/driverkit)                       | Kit for building Falco drivers: kernel modules or eBPF probes                                              |
+| [falcosecurity/event-generator](https://github.com/falcosecurity/event-generator)           | Generate a variety of suspect actions that are detected by Falco rulesets                                  |
+| [falcosecurity/falco-exporter](https://github.com/falcosecurity/falco-exporter)             | Prometheus Metrics Exporter for Falco output events                                                        |
+| [falcosecurity/falco-aws-terraform](https://github.com/falcosecurity/falco-aws-terraform)   | Terraform Module for Falco AWS Resources                                                                   |
+| [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick)               | Connect Falco to your ecosystem                                                                            |
+| [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui)         | A simple WebUI with latest events from Falco                                                               |
+| [falcosecurity/flycheck-falco-rules](https://github.com/falcosecurity/flycheck-falco-rules) | A custom checker for Falco rules files that can be loaded using the Flycheck syntax checker for GNU Emacs. |
+| [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler)             | A tool to crawl Linux kernel versions                                                                      |
+| [falcosecurity/kilt](https://github.com/falcosecurity/kilt)                                 | Kilt is a project that defines how to inject foreign apps into containers                                  |
+| [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go)                   | Go SDK for Falco libs                                                                                      |
+| [falcosecurity/plugin-sdk-cpp](https://github.com/falcosecurity/plugin-sdk-cpp)             | Falco plugins SDK for C++                                                                                  |
+| [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra)                     | Falco workflow & testing infrastructure                                                                    |
+| [falcosecurity/syscalls-bumper](https://github.com/falcosecurity/syscalls-bumper)           | A tool to automatically update supported syscalls in libs                                                  |
 <!-- /REPOSITORY-INCUBATING-TABLE -->
 
 ### Sandbox

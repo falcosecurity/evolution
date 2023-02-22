@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2023-02-19T09:02:01Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2023-02-22T09:02:52Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -30,6 +30,7 @@ Last update: **<!-- LATEST-UPDATE -->2023-02-19T09:02:01Z<!-- /LATEST-UPDATE -->
 - [Andrea Terzolo](https://github.com/andreagit97), Polytechnic of Turin
 - [Carlos Tadeu Panato Junior](https://github.com/cpanato), Chainguard
 - [David Windsor](https://github.com/dwindsor), Secureworks
+- [Edd Wilder-James](https://github.com/ewilderj), Sysdig
 - [Federico Di Pierro](https://github.com/fededp), Sysdig
 - [Frank Jogeleit](https://github.com/fjogeleit), LOVOO
 - [Fred Araujo](https://github.com/araujof), IBM
