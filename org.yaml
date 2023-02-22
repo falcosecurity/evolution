@@ -261,6 +261,14 @@ orgs:
         description: ptrace-based event producer for udig
         has_projects: true
         has_wiki: false
+      pigeon:
+        allow_merge_commit: false
+        allow_rebase_merge: true
+        allow_squash_merge: false
+        default_branch: main
+        description: Secrets and config manager for Falco's infrastructure
+        has_projects: true
+        has_wiki: false
       plugin-sdk-cpp:
         allow_merge_commit: false
         allow_rebase_merge: true
@@ -310,6 +318,14 @@ orgs:
         has_projects: true
         has_wiki: false
         homepage: https://prow.falco.org
+      testing:
+        allow_merge_commit: false
+        allow_rebase_merge: true
+        allow_squash_merge: false
+        default_branch: main
+        description: All-purpose test suite for Falco and its ecosystem
+        has_projects: true
+        has_wiki: false
 
     teams:
       admins:
@@ -612,11 +628,13 @@ orgs:
           libs: admin
           libs-sdk-go: admin
           pdig: admin
+          pigeon: admin
           plugin-sdk-cpp: admin
           plugin-sdk-go: admin
           plugins: admin
           syscalls-bumper: admin
           test-infra: admin
+          testing: admin
       pdig-maintainers:
         description: maintainers of falcosecurity/pdig
         maintainers:
@@ -627,6 +645,16 @@ orgs:
         privacy: closed
         repos:
           pdig: maintain
+      pigeon-maintainers:
+        description: maintainers of falcosecurity/pigeon
+        maintainers:
+          - jasondellaluce
+        members:
+          - cappellinsamuele
+          - fededp
+        privacy: closed
+        repos:
+          pigeon: maintain
       plugin-sdk-cpp-maintainers:
         description: maintainers of falcosecurity/plugin-sdk-cpp
         maintainers:
@@ -693,3 +721,14 @@ orgs:
         privacy: closed
         repos:
           test-infra: maintain
+      testing-maintainers:
+        description: maintainers of falcosecurity/testing
+        maintainers:
+          - jasondellaluce
+          - leogr
+        members:
+          - andreagit97
+          - lucaguerra
+        privacy: closed
+        repos:
+          testing: maintain
