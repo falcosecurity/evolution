@@ -92,8 +92,10 @@ The "*Incubating*" level refers to those repositories that contain non-core comp
 | [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler)             | A tool to crawl Linux kernel versions                                                                      |
 | [falcosecurity/kilt](https://github.com/falcosecurity/kilt)                                 | Kilt is a project that defines how to inject foreign apps into containers                                  |
 | [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go)                   | Go SDK for Falco libs                                                                                      |
+| [falcosecurity/pigeon](https://github.com/falcosecurity/pigeon)                             | Secrets and config manager for Falco's infrastructure                                                      |
 | [falcosecurity/plugin-sdk-cpp](https://github.com/falcosecurity/plugin-sdk-cpp)             | Falco plugins SDK for C++                                                                                  |
 | [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra)                     | Falco workflow & testing infrastructure                                                                    |
+| [falcosecurity/testing](https://github.com/falcosecurity/testing)                           | All-purpose test suite for Falco and its ecosystem                                                         |
 | [falcosecurity/syscalls-bumper](https://github.com/falcosecurity/syscalls-bumper)           | A tool to automatically update supported syscalls in libs                                                  |
 <!-- /REPOSITORY-INCUBATING-TABLE -->
 
