@@ -434,6 +434,7 @@ orgs:
           - dwindsor
           - FedeDP
           - EXONER4TED
+          - Lowaiz
         privacy: closed
         repos:
           driverkit: maintain
