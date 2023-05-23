@@ -52,6 +52,21 @@ In OWNERS files, users are referenced by their GitHub usernames or aliases. In a
 
 Refer to [GOVERNANCE.md](GOVERNANCE.md#license).
 
+## Scope
+
+Every repository within [falcosecurity](https://github.com/falcosecurity) GitHub organization must have an assigned scope, which characterizes its role and responsibilities. This scope is determined by the maintainers following the standard [decision-making process]((https://github.com/falcosecurity/evolution/blob/main/GOVERNANCE.md#decision-making)). The only exception to this process is for [core repositories](https://github.com/falcosecurity/evolution/blob/main/GOVERNANCE.md#core-repositories), as our governance explicitly defines.
+
+The descriptions for the currently defined scopes are provided in the table below.
+
+| Scope | Description |
+| --- | --- |
+| **core** | Repositories that provides the essential components necessary for building, installing, running, documenting, or using Falco, as specified in [our governance](https://github.com/falcosecurity/evolution/blob/main/GOVERNANCE.md#core-repositories).  |
+| **ecosystem** | Repositories that contain optional components that are useful to Falco and its ecosystem. |
+| **infra** | Repositories dedicated to supporting the infrastructure of The Falco Project. They are not intended to be consumed by adopters but serve as the backbone for the functioning, management, and maintenance of the project's infrastructure. |
+| **special** | Repositories with an unique function or a particular purpose for The Falco Project as a whole or the [falcosecurity](https://github.com/falcosecurity) GitHub organization, including but not limited to: [the evolution (this) repository](https://github.com/falcosecurity/evolution), the [community](https://github.com/falcosecurity/community), the [.github](https://github.com/falcosecurity/.github) repository, forks, mirrors and other particular ones like the [template repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository). Repositories without an explicitly defined scope are assumed to be special repositories. |
+
+Please note that the assigned scope pertains to the repository and does not necessarily reflect the hosted components or the artifacts it provides. For example, a mono repo that contains different components may still be scoped as *core* if its function or some hosted components align with the *core* definition. Notable examples include the [charts](https://github.com/falcosecurity/charts) and the [plugins](https://github.com/falcosecurity/plugins) repositories.
+
 ## Status
 
 Repositories get assigned a status that describes their scope and responsibilties inside The Falco Project.
@@ -59,7 +74,7 @@ Repositories get assigned a status that describes their scope and responsibiltie
 - **Official**: [Core repositories](GOVERNANCE.md#core-repositories) of The Falco Project.
 - **Incubating**: Repositories that contain non-core components or any subprojects that don't yet have an adequate level of maturity.
 - **Sandbox**: Intended only for the [falcosecurity/contrib](https://github.com/falcosecurity/contrib) repository.
-- **Special**: Repositories with a special function or a particular purpose for The Falco Project as a whole or the [falcosecurity](https://github.com/falcosecurity) GitHub organization, including but not limited to [this repository](https://github.com/falcosecurity/evolution), the [community](https://github.com/falcosecurity/community), the [.github](https://github.com/falcosecurity/.github) repository, and other particular ones like the [template repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository).
+- **Archived**: Repositories that are no longer maintained and are kept for historical purposes.
 
 The status of each repository is tracked in the [README.md](README.md) file of the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository.
 
