@@ -263,6 +263,14 @@ orgs:
         description: ptrace-based event producer for udig
         has_projects: true
         has_wiki: false
+      peribolos-syncer:
+        allow_merge_commit: false
+        allow_rebase_merge: true
+        allow_squash_merge: false
+        default_branch: main
+        description: Tool to synchronize Peribolos configuration with GitHub people sources of truth.
+        has_projects: true
+        has_wiki: false
       pigeon:
         allow_merge_commit: false
         allow_rebase_merge: true
@@ -633,6 +641,7 @@ orgs:
           libs: admin
           libs-sdk-go: admin
           pdig: admin
+          peribolos-syncer: admin
           pigeon: admin
           plugin-sdk-cpp: admin
           plugin-sdk-go: admin
@@ -650,6 +659,14 @@ orgs:
         privacy: closed
         repos:
           pdig: maintain
+      peribolos-syncer-maintainers:
+        description: maintainers of falcosecurity/perperibolos-syncer
+        maintainers:
+          - maxgio92
+        members: []
+        privacy: closed
+        repos:
+          peribolos-syncer: maintain
       pigeon-maintainers:
         description: maintainers of falcosecurity/pigeon
         maintainers:
