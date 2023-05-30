@@ -70,7 +70,7 @@ The process of adding, removing, and managing repositories under the [falcosecur
 
 ### Core repositories
 
-In particular, repositories essential for building, installing, running, documenting, or using Falco are considered **core repositories** and are given the *Official* status.
+In particular, repositories essential for building, installing, running, documenting, or using Falco are considered **core repositories** and are given the *core* scope.
 
 ### Repository ownership
 
