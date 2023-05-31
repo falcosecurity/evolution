@@ -124,9 +124,11 @@ Repositories with the status *sandbox* are in the earliest stage of development.
 
 Generally, the criteria for adopting a project or a component with the status of *sandbox* are flexible and may be tightened as needed at the discretion of the community. Ideas, projects, or codes intended for the *sandbox* should generally be adopted under [falcosecurity/contrib](https://github.com/falcosecurity/contrib). A dedicated repository may only be requested for justified technical reasons.
 
-### Archived
+### Deprecated
 
-Repositories with the status *archived* are no longer maintained or updated and are only kept for historical purposes. They are not recommended for any use, and contributions are not accepted.
+Repositories with the status *deprecated* are no longer maintained or updated and are only kept for historical purposes. They are not recommended for any use, and contributions are not accepted.
+
+Deprecated respositories are usually [archived](#archiviation) and read-only.
 
 ## Lifecycle
 
@@ -154,7 +156,7 @@ For instance, this is the path by which projects can be promoted from *incubatin
 
 #### Archiviation
 
-Repositories showing little to no activity during the time span of a year can be proposed for archiviation by opening a GitHub issue in the [falcosecurity/evolution](https://github.com/falcosecurity/evolution) repository. [Archived repositories](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) will remain inside the falcosecurity GitHub organization but will be read-only and will not be maintained. As such, OWNERS files contained in archived repositories are not valid.
+Repositories showing little to no activity during the time span of a year can be proposed for [deprecation](#deprecated) by opening a GitHub [issue](https://github.com/falcosecurity/evolution/issues/new?labels=kind%2Fdeprecation&template=repo_deprecation_request.md). Once the proposal has been accepted, they can be archived. [Archived repositories](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) will remain inside the falcosecurity GitHub organization but will be read-only and will not be maintained. As such, OWNERS files contained in archived repositories are not valid.
 
 In some cases, a repository is archived to reserve its name for future use.
 
