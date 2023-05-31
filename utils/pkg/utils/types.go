@@ -32,24 +32,38 @@ type Maintainer struct {
 
 type Maintainers []Maintainer
 
+type RepositoryScope string
+
 type RepositoryStatus string
 
 type Repository struct {
 	Name        string           `yaml:"name"`
 	Description string           `yaml:"description,omitempty"`
-	Status      RepositoryStatus `yaml:"status"`
+	Scope       RepositoryScope  `yaml:"scope"`
+	Status      RepositoryStatus `yaml:"status,omitempty"`
 }
 
 type Repositories []Repository
 
 const (
-	RepositoryStatusOfficial   RepositoryStatus = "Official"
+	RepositoryStatusStable     RepositoryStatus = "Stable"
 	RepositoryStatusIncubating RepositoryStatus = "Incubating"
 	RepositoryStatusSandbox    RepositoryStatus = "Sandbox"
-	RepositoryStatusSpecial    RepositoryStatus = "Special"
+	RepositoryStatusDeprecated RepositoryStatus = "Deprecated"
+)
+
+const (
+	RepositoryScopeCore      RepositoryScope = "Core"
+	RepositoryScopeEcosystem RepositoryScope = "Ecosystem"
+	RepositoryScopeInfra     RepositoryScope = "Infra"
+	RepositoryScopeSpecial   RepositoryScope = "Special"
 )
 
 func (r RepositoryStatus) String() string {
+	return string(r)
+}
+
+func (r RepositoryScope) String() string {
 	return string(r)
 }
 

@@ -27,13 +27,20 @@ import (
 )
 
 var (
-	readmeRepoFilePath    string
-	readmeOutFilePath     string
-	readmeTextStartTagFmt = "<!-- REPOSITORY-%s-TABLE -->\n"
-	readmeTextEndTagFmt   = "<!-- /REPOSITORY-%s-TABLE -->\n"
+	readmeRepoFilePath        string
+	readmeOutFilePath         string
+	readmeTextStartTagFmt     = "<!-- REPOSITORY-%s-TABLE -->\n"
+	readmeTextEndTagFmt       = "<!-- /REPOSITORY-%s-TABLE -->\n"
+	readmeStatusBadgeTpl      = "[![%s](https://img.shields.io/badge/status-%s-%s?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#%s)"
+	readmeStatusBadgeColorMap = map[utils.RepositoryStatus]string{
+		utils.RepositoryStatusStable:     "brightgreen",
+		utils.RepositoryStatusIncubating: "orange",
+		utils.RepositoryStatusSandbox:    "red",
+		utils.RepositoryStatusDeprecated: "inactive",
+	}
 )
 
-func readmeTextEditor(s string, status utils.RepositoryStatus) (string, error) {
+func readmeTextEditor(s string, status utils.RepositoryScope) (string, error) {
 	startTag := fmt.Sprintf(readmeTextStartTagFmt, strings.ToUpper(status.String()))
 	endTag := fmt.Sprintf(readmeTextEndTagFmt, strings.ToUpper(status.String()))
 	if len(s) == 0 {
@@ -47,15 +54,16 @@ func readmeTextEditor(s string, status utils.RepositoryStatus) (string, error) {
 	var buf bytes.Buffer
 	empty := true
 	table := tablewriter.NewWriter(&buf)
-	table.SetHeader([]string{"Name", "Description"})
+	table.SetHeader([]string{"Name", "Status", "Description"})
 	table.SetBorders(tablewriter.Border{Left: true, Top: false, Right: true, Bottom: false})
 	table.SetCenterSeparator("|")
 	table.SetRowSeparator("-")
 	table.SetAutoWrapText(false)
 	for _, r := range repos {
-		if r.Status == status {
+		if r.Scope == status {
 			row := []string{}
 			row = append(row, fmt.Sprintf("[falcosecurity/%s](https://github.com/falcosecurity/%s)", r.Name, r.Name))
+			row = append(row, readmePrintStatusBadge(r.Status))
 			row = append(row, r.Description)
 			table.Append(row)
 			empty = false
@@ -67,20 +75,32 @@ func readmeTextEditor(s string, status utils.RepositoryStatus) (string, error) {
 	return utils.ReplaceTextTags(s, startTag, endTag, buf.String())
 }
 
-func readmeTextEditorOfficial(s string) (string, error) {
-	return readmeTextEditor(s, utils.RepositoryStatusOfficial)
+func readmeTextEditorCore(s string) (string, error) {
+	return readmeTextEditor(s, utils.RepositoryScopeCore)
 }
 
-func readmeTextEditorIncubating(s string) (string, error) {
-	return readmeTextEditor(s, utils.RepositoryStatusIncubating)
+func readmeTextEditorEcosystem(s string) (string, error) {
+	return readmeTextEditor(s, utils.RepositoryScopeEcosystem)
 }
 
-func readmeTextEditorSandbox(s string) (string, error) {
-	return readmeTextEditor(s, utils.RepositoryStatusSandbox)
+func readmeTextEditorInfra(s string) (string, error) {
+	return readmeTextEditor(s, utils.RepositoryScopeInfra)
 }
 
 func readmeTextEditorSpecial(s string) (string, error) {
-	return readmeTextEditor(s, utils.RepositoryStatusSpecial)
+	return readmeTextEditor(s, utils.RepositoryScopeSpecial)
+}
+
+func readmePrintStatusBadge(status utils.RepositoryStatus) string {
+	s := status.String()
+
+	if s == "" {
+		return "*n/a*"
+	}
+
+	ls := strings.ToLower(s)
+
+	return fmt.Sprintf(readmeStatusBadgeTpl, s, ls, readmeStatusBadgeColorMap[status], ls)
 }
 
 var readmeCmd = &cobra.Command{
@@ -95,9 +115,9 @@ var readmeCmd = &cobra.Command{
 		}
 		return utils.EditCreateTextFile(
 			readmeOutFilePath,
-			readmeTextEditorOfficial,
-			readmeTextEditorIncubating,
-			readmeTextEditorSandbox,
+			readmeTextEditorCore,
+			readmeTextEditorEcosystem,
+			readmeTextEditorInfra,
 			readmeTextEditorSpecial,
 		)
 	},
