@@ -64,6 +64,8 @@ The descriptions for the currently defined scopes are provided in the below sub-
 
 ### Core Scope
 
+[![Falco Core Repository](./repos/badges/falco-core-blue.svg)](#core-scope)
+
 Core repositories form the heart of Falco and are critically important. Our [governance](https://github.com/falcosecurity/evolution/blob/main/GOVERNANCE.md#core-repositories) precisely defines them as:
 
 > repositories essential for building, installing, running, documenting, or using Falco
@@ -72,13 +74,19 @@ They provide foundational code, primary libraries, crucial APIs, deployment tool
 
 ### Ecosystem Scope
 
+[![Falco Ecosystem Repository](./repos/badges/falco-ecosystem-blue.svg)](#ecosystem-scope)
+
 Repositories under the ecosystem scope are extensions of the core project. They provide optional components that may be useful to Falco and its adopters. While they may not be necessary for the basic functioning of Falco, ecosystem repositories often offer value-added features, integrations, utilities, and services that help adopters make the most out of Falco.
 
 ### Infra Scope
 
+[![Falco Infra Repository](./repos/badges/falco-infra-blue.svg)](#infra-scope)
+
 Repositories under the infra scope are dedicated to supporting the infrastructure of The Falco Project. They are not intended to be consumed by adopters but serve as the backbone for the functioning, management, and maintenance of the project and [falcosecurity](https://github.com/falcosecurity) GitHub organization. The most notable repository in this scope is [test-infra](https://github.com/falcosecurity/test-infra).
 
 ### Special Scope
+
+*No badge is required for special repositories*
 
 Any other repository not matching a specific scope is included in this category. This includes repositories with a unique function or a particular purpose for The Falco Project as a whole or the [falcosecurity](https://github.com/falcosecurity) GitHub organization, including (but not limited to) the [evolution](https://github.com/falcosecurity/evolution) repository, the [community](https://github.com/falcosecurity/community) repository, the [.github](https://github.com/falcosecurity/.github) repository, forks, mirrors, and other particular ones like the [template repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository). These repositories are curated by [Core Maintainers](GOVERNANCE.md#core-maintainers).
 
@@ -96,6 +104,8 @@ The definitions for each status are outlined in the below sub-sections.
 
 ### Stable
 
+[![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable)
+
 Repositories with the status *stable* have reached a high degree of maturity and reliability and are actively curated by maintainers. The components provided by those repositories are intended to be used in production by adopters and are officially supported by The Falco Project. Significant changes or updates are typically less frequent.
 
 Criteria to achieve the *stable* status include:
@@ -109,6 +119,8 @@ Criteria to achieve the *stable* status include:
 
 ### Incubating
 
+[![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating)
+
 Repositories with the status *incubating* are in an intermediate stage of maturity. These repositories may still be subject to significant changes as feedback is gathered and improvements are made. The components provided by those repositories might be used in production by adopters, but it's not recommended. Generally, those projects are not safe for mission-critical purposes. The level of support for those projects may vary case by case.
 
 Criteria to achieve the *incubating* status include:
@@ -120,11 +132,15 @@ Criteria to achieve the *incubating* status include:
 
 ### Sandbox 
 
+[![Sandbox](https://img.shields.io/badge/status-sandbox-red?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#sandbox)
+
 Repositories with the status *sandbox* are in the earliest stage of development. The componentes provided by these repositories are not recommended for production use but are intended for users interested in experimenting with cutting-edge features, contributing to early-stage development, or providing feedback. Usually, no support is provided for these projects.
 
 Generally, the criteria for adopting a project or a component with the status of *sandbox* are flexible and may be tightened as needed at the discretion of the community. Ideas, projects, or codes intended for the *sandbox* should generally be adopted under [falcosecurity/contrib](https://github.com/falcosecurity/contrib). A dedicated repository may only be requested for justified technical reasons.
 
 ### Deprecated
+
+[![Deprecated](https://img.shields.io/badge/status-deprecated-inactive?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#deprecated)
 
 Repositories with the status *deprecated* are no longer maintained or updated and are only kept for historical purposes. They are not recommended for any use, and contributions are not accepted.
 
