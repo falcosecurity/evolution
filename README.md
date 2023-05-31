@@ -17,9 +17,9 @@ It provides a space for the community to work together, discuss ideas, and docum
    * [Maintainers List](./MAINTAINERS.md)
  - [Repositories](#repositories)
    * [Repositories Guidelines](./REPOSITORIES.md)
-   * [Official](#official)
-   * [Incubating](#incubating)
-   * [Sandbox](#sandbox)
+   * [Core](#core)
+   * [Ecosystem](#ecosystem)
+   * [Infra](#infra)
    * [Special](#special)
    * [Archived](#archived)
    * [Retired](#retired)
@@ -46,74 +46,86 @@ You can find the list of current maintainers in the [MAINTAINERS.md](./MAINTAINE
 
 ## Repositories
 
-The Falco Project follows a simple **adoption model** for repositories. Each repository gets a *[status](./REPOSITORIES.md#status)* that indicates the level of adoption (ie. the maturity level) or, for particular repositories, its scope. The criteria for adoption or changing the status will remain loose and tightened as needed at the discretion of the community.
+The Falco Project applies a straightforward **adoption model** for its repositories. Each repository is given a *[scope](./REPOSITORIES.md#scope)*, which outlines its purpose, and a *[status](./REPOSITORIES.md#status)* that indicates its maturity level.
 
-You can find more details in the [REPOSITORIES.md](./REPOSITORIES.md) file.
+For more detailed information, please refer to the [REPOSITORIES.md](./REPOSITORIES.md) file.
 
-In the sections below, we list the repositories grouped by status.
+In the sections that follow, we present the repositories, grouped by their *scope*.
 
-### Official
+### Core
 
-[Core repositories](./GOVERNANCE.md#core-repositories) can ultimately achieve the highest and most coveted status within The Falco Project: "*Official*."
+Core repositories, as defined by Falco's [governance](https://github.com/falcosecurity/evolution/blob/main/GOVERNANCE.md#core-repositories), are critically important as they are essential for building, installing, running, documenting, and using Falco.
 
-You can request the promotion of a repository by submitting an [issue](https://github.com/falcosecurity/evolution/issues/new?assignees=&labels=kind%2Fofficialsupport&template=officialsupport_request.md).
+For more information, click on the badge below.
 
-**List of repositories in *Official* status (core repositories)**
-<!-- REPOSITORY-OFFICIAL-TABLE -->
-|                                         NAME                                          |                               DESCRIPTION                                |
-|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| [falcosecurity/charts](https://github.com/falcosecurity/charts)                       | Helm charts for running Falco with Kubernetes                            |
-| [falcosecurity/deploy-kubernetes](https://github.com/falcosecurity/deploy-kubernetes) | Kubernetes deployment resources for Falco                                |
-| [falcosecurity/falco](https://github.com/falcosecurity/falco)                         | Cloud Native Runtime Security                                            |
-| [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website)         | Hugo content to generate website content. Hosted by the CNCF             |
-| [falcosecurity/falcoctl](https://github.com/falcosecurity/falcoctl)                   | Administrative tooling for Falco                                         |
-| [falcosecurity/libs](https://github.com/falcosecurity/libs)                           | libsinsp, libscap, the kernel module driver, and the eBPF driver sources |
-| [falcosecurity/plugin-sdk-go](https://github.com/falcosecurity/plugin-sdk-go)         |                                                                          |
-| [falcosecurity/plugins](https://github.com/falcosecurity/plugins)                     | Falco plugins registry                                                   |
-| [falcosecurity/rules](https://github.com/falcosecurity/rules)                         | Falco rules repository                                                   |
-<!-- /REPOSITORY-OFFICIAL-TABLE -->
+[![Falco Core Repository](./repos/badges/falco-core-blue.svg)](./REPOSITORIES.md#core-scope)
 
-### Incubating
+<!-- REPOSITORY-CORE-TABLE -->
+|                                         NAME                                          |                                                                                STATUS                                                                                |                               DESCRIPTION                                |
+|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| [falcosecurity/charts](https://github.com/falcosecurity/charts)                       | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable) | Helm charts for running Falco with Kubernetes                            |
+| [falcosecurity/deploy-kubernetes](https://github.com/falcosecurity/deploy-kubernetes) | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable) | Kubernetes deployment resources for Falco                                |
+| [falcosecurity/falco](https://github.com/falcosecurity/falco)                         | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable) | Cloud Native Runtime Security                                            |
+| [falcosecurity/falco-website](https://github.com/falcosecurity/falco-website)         | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable) | Hugo content to generate website content. Hosted by the CNCF             |
+| [falcosecurity/falcoctl](https://github.com/falcosecurity/falcoctl)                   | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable) | Administrative tooling for Falco                                         |
+| [falcosecurity/libs](https://github.com/falcosecurity/libs)                           | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable) | libsinsp, libscap, the kernel module driver, and the eBPF driver sources |
+| [falcosecurity/plugin-sdk-go](https://github.com/falcosecurity/plugin-sdk-go)         | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable) |                                                                          |
+| [falcosecurity/plugins](https://github.com/falcosecurity/plugins)                     | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable) | Falco plugins registry                                                   |
+| [falcosecurity/rules](https://github.com/falcosecurity/rules)                         | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable) | Falco rules repository                                                   |
+<!-- /REPOSITORY-CORE-TABLE -->
 
-The "*Incubating*" level refers to those repositories that contain non-core components or any subprojects that don't yet have an adequate level of maturity. You can request the incubation of a repository by submitting an [issue](https://github.com/falcosecurity/evolution/issues/new?assignees=&labels=kind%2Fincubating&template=incubating_request.md).
+### Ecosystem
 
-**List of repositories in *Incubating* status**
-<!-- REPOSITORY-INCUBATING-TABLE -->
-|                                            NAME                                             |                                                DESCRIPTION                                                 |
-|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [falcosecurity/client-go](https://github.com/falcosecurity/client-go)                       | Go client and SDK for Falco                                                                                |
-| [falcosecurity/driverkit](https://github.com/falcosecurity/driverkit)                       | Kit for building Falco drivers: kernel modules or eBPF probes                                              |
-| [falcosecurity/event-generator](https://github.com/falcosecurity/event-generator)           | Generate a variety of suspect actions that are detected by Falco rulesets                                  |
-| [falcosecurity/falco-exporter](https://github.com/falcosecurity/falco-exporter)             | Prometheus Metrics Exporter for Falco output events                                                        |
-| [falcosecurity/falco-aws-terraform](https://github.com/falcosecurity/falco-aws-terraform)   | Terraform Module for Falco AWS Resources                                                                   |
-| [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick)               | Connect Falco to your ecosystem                                                                            |
-| [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui)         | A simple WebUI with latest events from Falco                                                               |
-| [falcosecurity/flycheck-falco-rules](https://github.com/falcosecurity/flycheck-falco-rules) | A custom checker for Falco rules files that can be loaded using the Flycheck syntax checker for GNU Emacs. |
-| [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler)             | A tool to crawl Linux kernel versions                                                                      |
-| [falcosecurity/kilt](https://github.com/falcosecurity/kilt)                                 | Kilt is a project that defines how to inject foreign apps into containers                                  |
-| [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go)                   | Go SDK for Falco libs                                                                                      |
-| [falcosecurity/pigeon](https://github.com/falcosecurity/pigeon)                             | Secrets and config manager for Falco's infrastructure                                                      |
-| [falcosecurity/plugin-sdk-cpp](https://github.com/falcosecurity/plugin-sdk-cpp)             | Falco plugins SDK for C++                                                                                  |
-| [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra)                     | Falco workflow & testing infrastructure                                                                    |
-| [falcosecurity/testing](https://github.com/falcosecurity/testing)                           | All-purpose test suite for Falco and its ecosystem                                                         |
-| [falcosecurity/syscalls-bumper](https://github.com/falcosecurity/syscalls-bumper)           | A tool to automatically update supported syscalls in libs                                                  |
-<!-- /REPOSITORY-INCUBATING-TABLE -->
+Ecosystem repositories extend the core project by providing optional components, including value-added features, integrations, utilities, and services that, while not essential for basic Falco functioning, enrich its utility for adopters.
 
-### Sandbox
+For more information, click on the badge below.
 
-You can find "*Sandbox*" level ideas/projects/code under the [falcosecurity/contrib](https://github.com/falcosecurity/contrib) repository.
+[![Falco Ecosystem Repository](./repos/badges/falco-ecosystem-blue.svg)](./REPOSITORIES.md#ecosystem-scope)
+
+<!-- REPOSITORY-ECOSYSTEM-TABLE -->
+|                                            NAME                                             |                                                                                   STATUS                                                                                    |                                                DESCRIPTION                                                 |
+|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| [falcosecurity/client-go](https://github.com/falcosecurity/client-go)                       | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | Go client and SDK for Falco                                                                                |
+| [falcosecurity/contrib](https://github.com/falcosecurity/contrib)                           | [![Sandbox](https://img.shields.io/badge/status-sandbox-red?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#sandbox)             | Community sandbox to test-drive ideas/projects/code                                                        |
+| [falcosecurity/driverkit](https://github.com/falcosecurity/driverkit)                       | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | Kit for building Falco drivers: kernel modules or eBPF probes                                              |
+| [falcosecurity/event-generator](https://github.com/falcosecurity/event-generator)           | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | Generate a variety of suspect actions that are detected by Falco rulesets                                  |
+| [falcosecurity/falco-exporter](https://github.com/falcosecurity/falco-exporter)             | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable)        | Prometheus Metrics Exporter for Falco output events                                                        |
+| [falcosecurity/falco-aws-terraform](https://github.com/falcosecurity/falco-aws-terraform)   | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | Terraform Module for Falco AWS Resources                                                                   |
+| [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick)               | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable)        | Connect Falco to your ecosystem                                                                            |
+| [falcosecurity/falcosidekick-ui](https://github.com/falcosecurity/falcosidekick-ui)         | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | A simple WebUI with latest events from Falco                                                               |
+| [falcosecurity/flycheck-falco-rules](https://github.com/falcosecurity/flycheck-falco-rules) | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | A custom checker for Falco rules files that can be loaded using the Flycheck syntax checker for GNU Emacs. |
+| [falcosecurity/kilt](https://github.com/falcosecurity/kilt)                                 | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | Kilt is a project that defines how to inject foreign apps into containers                                  |
+| [falcosecurity/libs-sdk-go](https://github.com/falcosecurity/libs-sdk-go)                   | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | Go SDK for Falco libs                                                                                      |
+| [falcosecurity/plugin-sdk-cpp](https://github.com/falcosecurity/plugin-sdk-cpp)             | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | Falco plugins SDK for C++                                                                                  |
+<!-- /REPOSITORY-ECOSYSTEM-TABLE -->
+
+### Infra
+
+Infra repositories, such as the prominent [test-infra](https://github.com/falcosecurity/test-infra), underpin The Falco Project's infrastructure, serving the project's functioning, management, and maintenance.
+
+For more information, click on the badge below.
+
+[![Falco Infra Repository](./repos/badges/falco-infra-blue.svg)](./REPOSITORIES.md#infra-scope)
+<!-- REPOSITORY-INFRA-TABLE -->
+|                                       NAME                                        |                                                                                   STATUS                                                                                    |                        DESCRIPTION                        |
+|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| [falcosecurity/kernel-crawler](https://github.com/falcosecurity/kernel-crawler)   | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | A tool to crawl Linux kernel versions                     |
+| [falcosecurity/pigeon](https://github.com/falcosecurity/pigeon)                   | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | Secrets and config manager for Falco's infrastructure     |
+| [falcosecurity/test-infra](https://github.com/falcosecurity/test-infra)           | [![Stable](https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#stable)        | Falco workflow & testing infrastructure                   |
+| [falcosecurity/testing](https://github.com/falcosecurity/testing)                 | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | All-purpose test suite for Falco and its ecosystem        |
+| [falcosecurity/syscalls-bumper](https://github.com/falcosecurity/syscalls-bumper) | [![Incubating](https://img.shields.io/badge/status-incubating-orange?style=for-the-badge)](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#incubating) | A tool to automatically update supported syscalls in libs |
+<!-- /REPOSITORY-INFRA-TABLE -->
 
 ### Special
 
-Some repositories have a special meaning and do not fit the above statuses. They serve a particular purpose or function in the [falcosecurity](https://github.com/falcosecurity) organization and are curated by [core maintainers](./GOVERNANCE.md#core-maintainers).
+Finally, some repositories have a special meaning and do not fit the above scopes. They serve a particular purpose or function in the [falcosecurity](https://github.com/falcosecurity) organization and are curated by [core maintainers](./GOVERNANCE.md#core-maintainers).
 
-**List of *Special* repositories**
 <!-- REPOSITORY-SPECIAL-TABLE -->
-|                                 NAME                                  |              DESCRIPTION               |
-|-----------------------------------------------------------------------|----------------------------------------|
-| [falcosecurity/.github](https://github.com/falcosecurity/.github)     | Default community health files         |
-| [falcosecurity/community](https://github.com/falcosecurity/community) | The Falco Project Community            |
-| [falcosecurity/evolution](https://github.com/falcosecurity/evolution) | Evolution process of The Falco Project |
+|                                 NAME                                  | STATUS |              DESCRIPTION               |
+|-----------------------------------------------------------------------|--------|----------------------------------------|
+| [falcosecurity/.github](https://github.com/falcosecurity/.github)     | *n/a*  | Default community health files         |
+| [falcosecurity/community](https://github.com/falcosecurity/community) | *n/a*  | The Falco Project Community            |
+| [falcosecurity/evolution](https://github.com/falcosecurity/evolution) | *n/a*  | Evolution process of The Falco Project |
 <!-- /REPOSITORY-SPECIAL-TABLE -->
 
 ### Archived
@@ -124,7 +136,7 @@ The list of archived repositories can be found [here](https://github.com/falcose
 
 ### Retired
 
-Finally, repositories that are no longer maintained or relevant to The Falco Project will be retired definitively. Periodically, the maintainers clean up the [falcosecurity](https://github.com/falcosecurity) and move these projects to the [Falco Projects Retirement Home](https://github.com/falcosecurity-retire) GitHub's organization.
+Repositories that are no longer maintained or relevant to The Falco Project will be retired definitively. Periodically, the maintainers clean up the [falcosecurity](https://github.com/falcosecurity) and move these projects to the [Falco Projects Retirement Home](https://github.com/falcosecurity-retire) GitHub's organization.
 
 ## Contributing
 
