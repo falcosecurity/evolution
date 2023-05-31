@@ -59,7 +59,7 @@ func maintainersTextEditor(s string, core bool) (string, error) {
 		added := false
 		for _, r := range repositories {
 			for _, url := range m.Projects {
-				isCoreRepo := r.Status == utils.RepositoryStatusOfficial
+				isCoreRepo := r.Scope == utils.RepositoryScopeCore
 				isRepoMaintainer := url == r.URL()
 				isSubDirMaintainer := strings.HasPrefix(url, r.URL()+"/")
 				if isRepoMaintainer || isSubDirMaintainer {
