@@ -1,64 +1,64 @@
 - name: .github
   scope: Special
-  description: Default community health files
+  description: Default files for all repos in the Falcosecurity GitHub org.
 - name: charts
   scope: Core
   status: Stable
-  description: Helm charts for running Falco with Kubernetes
+  description: Helm charts repository for Falco and its ecosystem.
 - name: client-go
   scope: Ecosystem
   status: Incubating
-  description: Go client and SDK for Falco
+  description: Go client and SDK for Falco.
 - name: community
   scope: Special
-  description: The Falco Project Community
+  description: Falco community content and resources.
 - name: contrib
   scope: Ecosystem
   status: Sandbox
-  description: Community sandbox to test-drive ideas/projects/code
+  description: Sandbox repository to test-drive ideas/projects/code.
 - name: deploy-kubernetes
   scope: Core
   status: Stable
-  description: Kubernetes deployment resources for Falco
+  description: Kubernetes deployment resources for Falco and its ecosystem.
 - name: driverkit
   scope: Ecosystem
   status: Incubating
-  description: "Kit for building Falco drivers: kernel modules or eBPF probes"
+  description: "Kit for building Falco drivers (kernel modules or eBPF probes)."
 - name: event-generator
   scope: Ecosystem
   status: Incubating
-  description: Generate a variety of suspect actions that are detected by Falco rulesets
+  description: Testing tool to generate a variety of suspect actions that are detected by Falco rules.
 - name: evolution
   scope: Special
-  description: Evolution process of The Falco Project
+  description: A space for the community to work together, discuss ideas, define processes, and document the evolution of Falco.
 - name: falco
   scope: Core
   status: Stable
-  description: Cloud Native Runtime Security
+  description: Falco is a cloud native runtime security tool for Linux operating systems. It is designed to detect and alert on abnormal behavior and potential security threats in real-time.
 - name: falco-exporter
   scope: Ecosystem
   status: Stable
-  description: Prometheus Metrics Exporter for Falco output events
+  description: Prometheus Metrics Exporter for Falco output events.
 - name: falco-aws-terraform
   scope: Ecosystem
   status: Incubating
-  description: Terraform Module for Falco AWS Resources
+  description: Terraform Module for Falco AWS Resources.
 - name: falco-website
   scope: Core
   status: Stable
-  description: Hugo content to generate website content. Hosted by the CNCF
+  description: Falco website and documentation repository.
 - name: falcoctl
   scope: Core
   status: Stable
-  description: Administrative tooling for Falco
+  description: The official CLI tool for working with Falco and its ecosystem components.
 - name: falcosidekick
   scope: Ecosystem
   status: Stable
-  description: Connect Falco to your ecosystem
+  description: Falcosidekick seamlessly integrates Falco with your ecosystem, enabling event forwarding to multiple outputs in a fan-out manner.
 - name: falcosidekick-ui
   scope: Ecosystem
   status: Incubating
-  description: A simple WebUI with latest events from Falco
+  description: A simple WebUI with latest events from Falco.
 - name: flycheck-falco-rules
   scope: Ecosystem
   status: Incubating
@@ -66,47 +66,48 @@
 - name: kernel-crawler
   scope: Infra
   status: Incubating
-  description: A tool to crawl Linux kernel versions
+  description: A tool to crawl Linux kernel versions.
 - name: kilt
   scope: Ecosystem
   status: Incubating
-  description: Kilt is a project that defines how to inject foreign apps into containers
+  description: Kilt is a project that defines how to inject foreign apps into containers.
 - name: libs
   scope: Core
   status: Stable
-  description: libsinsp, libscap, the kernel module driver, and the eBPF driver sources
+  description: Foundational libraries that constitute the core of Falco's functionality, offering essential features including kernel drivers and eBPF probes.
 - name: libs-sdk-go
   scope: Ecosystem
   status: Incubating
-  description: Go SDK for Falco libs
+  description: Go SDK for Falco libs.
 - name: pigeon
   scope: Infra
   status: Incubating
-  description: Secrets and config manager for Falco's infrastructure
+  description: Secrets and config manager for Falco's infrastructure.
 - name: plugin-sdk-cpp
   scope: Ecosystem
   status: Incubating
-  description: Falco plugins SDK for C++
+  description: Falco plugins SDK for C++.
 - name: plugin-sdk-go
   scope: Core
   status: Stable
+  description: Plugins SDK for Go that facilitates writing plugins for Falco or applications built on top of Falco's libs.
 - name: plugins
   scope: Core
   status: Stable
-  description: Falco plugins registry
+  description: Plugins serve as extensions for Falco and applications built on top of Falco's libraries. This repository contains the official registry for all Falco plugins and host plugins maintained by The Falco Project.
 - name: rules
   scope: Core
   status: Stable
-  description: Falco rules repository
+  description: Official rulesets for Falco provide pre-defined detection rules for various security threats and abnormal behaviors.
 - name: test-infra
   scope: Infra
   status: Stable
-  description: Falco workflow & testing infrastructure
+  description: Test infrastructure and automation workflows for The Falco Project.
 - name: testing
   scope: Infra
   status: Incubating
-  description: All-purpose test suite for Falco and its ecosystem
+  description: All-purpose test suite for Falco and its ecosystem.
 - name: syscalls-bumper
   scope: Infra
   status: Incubating
-  description: A tool to automatically update supported syscalls in libs
+  description: A tool to automatically update supported syscalls in libs.
