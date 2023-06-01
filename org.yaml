@@ -663,6 +663,7 @@ orgs:
         description: maintainers of falcosecurity/perperibolos-syncer
         maintainers:
           - maxgio92
+          - leogr
         members: []
         privacy: closed
         repos:
