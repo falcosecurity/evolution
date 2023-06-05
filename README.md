@@ -118,7 +118,9 @@ For more information, click on the badge below.
 
 ### Special
 
-Finally, some repositories have a special meaning and do not fit the above scopes. They serve a particular purpose or function in the [falcosecurity](https://github.com/falcosecurity) organization and are curated by [core maintainers](./GOVERNANCE.md#core-maintainers).
+Finally, some repositories have a special meaning and do not fit the above scopes. They serve a particular purpose or function in the [falcosecurity](https://github.com/falcosecurity) organization and are curated by [core maintainers](./GOVERNANCE.md#core-maintainers). 
+
+See [REPOSITORIES.md#special-scope](./REPOSITORIES.md#special-scope) for more information.
 
 <!-- REPOSITORY-SPECIAL-TABLE -->
 |                                 NAME                                  | STATUS |                                                    DESCRIPTION                                                    |
