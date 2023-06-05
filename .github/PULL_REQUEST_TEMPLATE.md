@@ -17,9 +17,13 @@
 
 > /kind feature
 
+> /kind stable
+
 > /kind incubating
 
-> /kind officialsupport
+> /kind sandbox
+
+> /kind deprecated
 
 
 <!--
