@@ -77,7 +77,7 @@
   description: Foundational libraries that constitute the core of Falco's functionality, offering essential features including kernel drivers and eBPF probes.
 - name: libs-sdk-go
   scope: Ecosystem
-  status: Incubating
+  status: Sandbox
   description: Go SDK for Falco libs.
 - name: pigeon
   scope: Infra
@@ -85,7 +85,7 @@
   description: Secrets and config manager for Falco's infrastructure.
 - name: plugin-sdk-cpp
   scope: Ecosystem
-  status: Incubating
+  status: Sandbox
   description: Falco plugins SDK for C++.
 - name: plugin-sdk-go
   scope: Core
