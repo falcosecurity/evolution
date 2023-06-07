@@ -66,11 +66,11 @@ The Falco Project documents its evolution in the [falcosecurity/evolution](https
 
 ## Repositories
 
-The process of adding, removing, and managing repositories under the [falcosecurity](https://github.com/falcosecurity) GitHub organization is described in [REPOSITORIES.md](REPOSITORIES.md). The document assigns a scope and a status to each repository.
+The process of adding, removing, and managing repositories under the [falcosecurity](https://github.com/falcosecurity) GitHub organization is described in [REPOSITORIES.md](REPOSITORIES.md). The document assigns a [scope](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#scope) and a [status](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#status) to each repository.
 
 ### Core repositories
 
-In particular, repositories essential for building, installing, running, documenting, or using Falco are considered **core repositories** and are given the *core* scope.
+In particular, repositories essential for building, installing, running, documenting, or using Falco are considered [core repositories](https://github.com/falcosecurity/evolution#core) and are given the [*core*](https://github.com/falcosecurity/evolution/blob/main/REPOSITORIES.md#core-scope) scope.
 
 ### Repository ownership
 
