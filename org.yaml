@@ -487,6 +487,7 @@ orgs:
           - FedeDP
           - jasondellaluce
           - Andreagit97
+          - incertum
         privacy: closed
         repos:
           falco: maintain
@@ -700,6 +701,7 @@ orgs:
           - jasondellaluce
           - andreagit97
           - mstemm
+          - incertum
         privacy: closed
         repos:
           rules: maintain
