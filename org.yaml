@@ -20,6 +20,7 @@ orgs:
 
     members:
       - admiral0
+      - ahmedameenaim
       - alacuku
       - Andreagit97
       - araujof
@@ -707,6 +708,7 @@ orgs:
           - mstemm
         members:
           - jasondellaluce
+          - ahmedameenaim
         privacy: closed
         repos:
           plugins: maintain
