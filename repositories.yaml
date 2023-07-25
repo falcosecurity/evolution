@@ -111,3 +111,7 @@
   scope: Infra
   status: Incubating
   description: A tool to automatically update supported syscalls in libs.
+- name: kernel-testing
+  scope: Infra
+  status: Incubating
+  description: Ansible playbooks to provision firecracker VMs and run Falco kernel tests.
