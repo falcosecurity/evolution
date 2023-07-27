@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2023-07-26T09:03:54Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2023-07-27T09:03:11Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -27,6 +27,8 @@ Last update: **<!-- LATEST-UPDATE -->2023-07-26T09:03:54Z<!-- /LATEST-UPDATE -->
 ## Maintainers
 
 <!-- MAINTAINERS-LIST -->
+- [Ahmed Amin](https://github.com/ahmedameenaim), Zartis
+- [Aldo Lacuku](https://github.com/alacuku), Sysdig
 - [Andrea Terzolo](https://github.com/andreagit97), Polytechnic of Turin
 - [Carlos Tadeu Panato Junior](https://github.com/cpanato), Chainguard
 - [David Windsor](https://github.com/dwindsor), Secureworks
@@ -43,6 +45,7 @@ Last update: **<!-- LATEST-UPDATE -->2023-07-26T09:03:54Z<!-- /LATEST-UPDATE -->
 - [Logan Bond](https://github.com/exoner4ted), Secureworks
 - [Loris Degioianni](https://github.com/ldegio), Sysdig
 - [Luca Guerra](https://github.com/lucaguerra), Sysdig
+- [Lyonel Martinez](https://github.com/lowaiz), Numberly
 - [Mark Stemm](https://github.com/mstemm), Sysdig
 - [Massimiliano Giovagnoli](https://github.com/maxgio92), Clastix
 - [Mauro Ezequiel Moltrasio](https://github.com/molter73), RedHat
@@ -53,7 +56,4 @@ Last update: **<!-- LATEST-UPDATE -->2023-07-26T09:03:54Z<!-- /LATEST-UPDATE -->
 - [Teryl Taylor](https://github.com/terylt), IBM
 - [Thomas Labarussias](https://github.com/issif), Sysdig
 - [Vicente Javier Jiménez Miras](https://github.com/vjjmiras), Sysdig
-- [ahmedameenaim](https://github.com/ahmedameenaim), UNKNOWN
-- [alacuku](https://github.com/alacuku), UNKNOWN
-- [lowaiz](https://github.com/lowaiz), UNKNOWN
 <!-- /MAINTAINERS-LIST -->
