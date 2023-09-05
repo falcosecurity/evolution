@@ -115,3 +115,7 @@
   scope: Infra
   status: Incubating
   description: Ansible playbooks to provision firecracker VMs and run Falco kernel tests.
+- name: falco-playground
+  scope: Infra
+  status: Sandbox
+  description: falco-playground is a web application used to validate Falco rules and test against scap files.
