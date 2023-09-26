@@ -16,6 +16,10 @@
   scope: Ecosystem
   status: Sandbox
   description: Sandbox repository to test-drive ideas/projects/code.
+- name: dbg-go
+  scope: Infra
+  status: Incubating
+  description: "A go tool to work with falcosecurity drivers build grid."
 - name: deploy-kubernetes
   scope: Core
   status: Stable
