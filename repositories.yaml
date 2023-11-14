@@ -123,3 +123,7 @@
   scope: Infra
   status: Sandbox
   description: falco-playground is a web application used to validate Falco rules and test against scap files.
+- name: k8s-metacollector
+  scope: Ecosystem
+  status: Incubating
+  description: Fetches the metadata from kubernetes API server and dispatches them to Falco instances. 
