@@ -71,10 +71,6 @@
   scope: Infra
   status: Incubating
   description: A tool to crawl Linux kernel versions.
-- name: kilt
-  scope: Ecosystem
-  status: Incubating
-  description: Kilt is a project that defines how to inject foreign apps into containers.
 - name: libs
   scope: Core
   status: Stable
