@@ -9,6 +9,10 @@
   scope: Ecosystem
   status: Incubating
   description: Go client and SDK for Falco.
+- name: cncf-green-review-testing
+  scope: Infra
+  status: Sandbox
+  description: Falco configurations intended for testing with the CNCF Green Reviews Working Group.
 - name: community
   scope: Special
   description: Falco community content and resources.
