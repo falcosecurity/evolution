@@ -4,12 +4,12 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2023-12-22T09:03:17Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2024-01-03T09:03:38Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
 <!-- MAINTAINERS-CORE-LIST -->
-- [Andrea Terzolo](https://github.com/andreagit97), Polytechnic of Turin
+- [Andrea Terzolo](https://github.com/andreagit97), Sysdig
 - [Carlos Tadeu Panato Junior](https://github.com/cpanato), Chainguard
 - [Federico Di Pierro](https://github.com/fededp), Sysdig
 - [Grzegorz Nosek](https://github.com/gnosek), Sysdig
@@ -29,7 +29,7 @@ Last update: **<!-- LATEST-UPDATE -->2023-12-22T09:03:17Z<!-- /LATEST-UPDATE -->
 <!-- MAINTAINERS-LIST -->
 - [Ahmed Amin](https://github.com/ahmedameenaim), Zartis
 - [Aldo Lacuku](https://github.com/alacuku), Sysdig
-- [Andrea Terzolo](https://github.com/andreagit97), Polytechnic of Turin
+- [Andrea Terzolo](https://github.com/andreagit97), Sysdig
 - [Carlos Tadeu Panato Junior](https://github.com/cpanato), Chainguard
 - [David Windsor](https://github.com/dwindsor), Independent
 - [Edd Wilder-James](https://github.com/ewilderj), Sysdig
