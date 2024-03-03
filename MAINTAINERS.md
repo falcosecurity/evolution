@@ -17,7 +17,7 @@ Last update: **<!-- LATEST-UPDATE -->2024-02-29T09:03:07Z<!-- /LATEST-UPDATE -->
 - [Leonardo Grasso](https://github.com/leogr), Sysdig
 - [Luca Guerra](https://github.com/lucaguerra), Sysdig
 - [Mark Stemm](https://github.com/mstemm), Sysdig
-- [Massimiliano Giovagnoli](https://github.com/maxgio92), Clastix
+- [Massimiliano Giovagnoli](https://github.com/maxgio92), Proximus
 - [Mauro Ezequiel Moltrasio](https://github.com/molter73), RedHat
 - [Melissa Kilby](https://github.com/incertum), Apple
 - [Michele Zuccala](https://github.com/zuc), Sysdig
@@ -47,7 +47,7 @@ Last update: **<!-- LATEST-UPDATE -->2024-02-29T09:03:07Z<!-- /LATEST-UPDATE -->
 - [Luca Guerra](https://github.com/lucaguerra), Sysdig
 - [Lyonel Martinez](https://github.com/lowaiz), Numberly
 - [Mark Stemm](https://github.com/mstemm), Sysdig
-- [Massimiliano Giovagnoli](https://github.com/maxgio92), Clastix
+- [Massimiliano Giovagnoli](https://github.com/maxgio92), Proximus
 - [Mauro Ezequiel Moltrasio](https://github.com/molter73), RedHat
 - [Melissa Kilby](https://github.com/incertum), Apple
 - [Michele Zuccala](https://github.com/zuc), Sysdig
