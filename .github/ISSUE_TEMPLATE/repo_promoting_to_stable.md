@@ -11,5 +11,5 @@ assignees: ''
 **Motivation**
 
 <!--
-Please describe why you believe this project should be adopted with the "incubating" status.
+Please describe why you believe this project should be adopted with the "stable" status.
 -->
