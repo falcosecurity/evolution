@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2024-06-16T09:03:25Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2024-06-17T09:03:35Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -33,6 +33,7 @@ Last update: **<!-- LATEST-UPDATE -->2024-06-16T09:03:25Z<!-- /LATEST-UPDATE -->
 - [Andrea Terzolo](https://github.com/andreagit97), Sysdig
 - [Carlos Tadeu Panato Junior](https://github.com/cpanato), Chainguard
 - [David Windsor](https://github.com/dwindsor), Independent
+- [Edd Wilder-James](https://github.com/ewilderj), Sysdig
 - [Federico Di Pierro](https://github.com/fededp), Sysdig
 - [Frank Jogeleit](https://github.com/fjogeleit), LOVOO
 - [Fred Araujo](https://github.com/araujof), IBM
@@ -43,6 +44,7 @@ Last update: **<!-- LATEST-UPDATE -->2024-06-16T09:03:25Z<!-- /LATEST-UPDATE -->
 - [Leonardo Di Donato](https://github.com/leodido), Independent
 - [Leonardo Grasso](https://github.com/leogr), Sysdig
 - [Logan Bond](https://github.com/exoner4ted), Secureworks
+- [Lorenzo Susini](https://github.com/loresuso), Sysdig
 - [Loris Degioianni](https://github.com/ldegio), Sysdig
 - [Luca Guerra](https://github.com/lucaguerra), Sysdig
 - [Lyonel Martinez](https://github.com/lowaiz), Numberly
@@ -59,5 +61,4 @@ Last update: **<!-- LATEST-UPDATE -->2024-06-16T09:03:25Z<!-- /LATEST-UPDATE -->
 - [Teryl Taylor](https://github.com/terylt), IBM
 - [Thomas Labarussias](https://github.com/issif), Sysdig
 - [Vicente Javier Jiménez Miras](https://github.com/vjjmiras), Sysdig
-- [loresuso](https://github.com/loresuso), UNKNOWN
 <!-- /MAINTAINERS-LIST -->
