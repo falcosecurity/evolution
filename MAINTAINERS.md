@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2024-06-17T09:03:35Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2024-06-20T09:03:59Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -33,7 +33,7 @@ Last update: **<!-- LATEST-UPDATE -->2024-06-17T09:03:35Z<!-- /LATEST-UPDATE -->
 - [Andrea Terzolo](https://github.com/andreagit97), Sysdig
 - [Carlos Tadeu Panato Junior](https://github.com/cpanato), Chainguard
 - [David Windsor](https://github.com/dwindsor), Independent
-- [Edd Wilder-James](https://github.com/ewilderj), Sysdig
+- [Edd Wilder-James](https://github.com/ewilderj), Independent
 - [Federico Di Pierro](https://github.com/fededp), Sysdig
 - [Frank Jogeleit](https://github.com/fjogeleit), LOVOO
 - [Fred Araujo](https://github.com/araujof), IBM
@@ -60,5 +60,5 @@ Last update: **<!-- LATEST-UPDATE -->2024-06-17T09:03:35Z<!-- /LATEST-UPDATE -->
 - [Sverre Boschman](https://github.com/sboschman), Topicus.Education
 - [Teryl Taylor](https://github.com/terylt), IBM
 - [Thomas Labarussias](https://github.com/issif), Sysdig
-- [Vicente Javier Jiménez Miras](https://github.com/vjjmiras), Sysdig
+- [Vicente Javier Jiménez Miras](https://github.com/vjjmiras), Independent
 <!-- /MAINTAINERS-LIST -->
