@@ -202,5 +202,9 @@
     "loresuso": {
         "name": "Lorenzo Susini",
         "company": "Sysdig"
+    },
+    "sgaist": {
+        "name": "Samuel Gaist",
+        "company": "Idiap Research Institute"
     }
 }
