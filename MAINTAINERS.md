@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2024-06-20T09:03:59Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2024-07-09T09:03:38Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -23,6 +23,7 @@ Last update: **<!-- LATEST-UPDATE -->2024-06-20T09:03:59Z<!-- /LATEST-UPDATE -->
 - [Melissa Kilby](https://github.com/incertum), Apple
 - [Michele Zuccala](https://github.com/zuc), Sysdig
 - [Thomas Labarussias](https://github.com/issif), Sysdig
+- [sgaist](https://github.com/sgaist), UNKNOWN
 <!-- /MAINTAINERS-CORE-LIST -->
 
 ## Maintainers
@@ -61,4 +62,5 @@ Last update: **<!-- LATEST-UPDATE -->2024-06-20T09:03:59Z<!-- /LATEST-UPDATE -->
 - [Teryl Taylor](https://github.com/terylt), IBM
 - [Thomas Labarussias](https://github.com/issif), Sysdig
 - [Vicente Javier Jiménez Miras](https://github.com/vjjmiras), Independent
+- [sgaist](https://github.com/sgaist), UNKNOWN
 <!-- /MAINTAINERS-LIST -->
