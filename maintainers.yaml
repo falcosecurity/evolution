@@ -198,7 +198,7 @@
   - https://github.com/falcosecurity/rules
 - name: Massimiliano Giovagnoli
   github: https://github.com/maxgio92
-  company: Proximus
+  company: Chainguard
   projects:
   - https://github.com/falcosecurity/.github
   - https://github.com/falcosecurity/cncf-green-review-testing
