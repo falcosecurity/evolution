@@ -127,3 +127,7 @@
   scope: Ecosystem
   status: Incubating
   description: Fetches the metadata from kubernetes API server and dispatches them to Falco instances. 
+- name: falco-talon
+  scope: Ecosystem
+  status: Incubating
+  description: Response Engine for managing threats in your Kubernetes.
