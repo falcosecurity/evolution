@@ -131,3 +131,7 @@
   scope: Ecosystem
   status: Incubating
   description: Response Engine for managing threats in your Kubernetes.
+- name: plugin-sdk-rs
+  scope: Ecosystem
+  status: Incubating
+  description: Falco plugins SDK for Rust.
