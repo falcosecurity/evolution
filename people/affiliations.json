@@ -206,5 +206,9 @@
     "sgaist": {
         "name": "Samuel Gaist",
         "company": "Idiap Research Institute"
+    },
+    "mrgian": {
+        "name": "Gianmatteo Palmieri",
+        "company": "Sysdig"
     }
 }
