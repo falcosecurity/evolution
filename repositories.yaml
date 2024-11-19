@@ -135,3 +135,7 @@
   scope: Ecosystem
   status: Incubating
   description: Falco plugins SDK for Rust.
+- name: falco-actions
+  scope: Ecosystem
+  status: Sandbox
+  description: Run Falco in a GitHub Actions to detect suspicious behavior in your CI/CD.
