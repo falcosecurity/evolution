@@ -10,7 +10,7 @@ assignees: ''
 NOTICE: This is a request to adopt a repository with the "sandbox" status.
 
 Ideas, projects, or codes intended for the sandbox should generally be adopted under https://github.com/falcosecurity/contrib. A dedicated repository may only be requested for justified technical reasons.
-If you don't need a dedicated repository, please open you request directly in https://github.com/falcosecurity/contrib.
+If you don't need a dedicated repository, please open your request directly in https://github.com/falcosecurity/contrib.
 -->
 
 **Repository**: <!-- Please insert the URL of the repository here --> 
@@ -18,5 +18,5 @@ If you don't need a dedicated repository, please open you request directly in ht
 **Motivation**
 
 <!--
-Please describe why you believe this project should be adopted with the "sandbox" status and why uou need a dedicated repository for this project. 
+Please describe why you believe this project should be adopted with the "sandbox" status and why you need a dedicated repository for this project. 
 -->
