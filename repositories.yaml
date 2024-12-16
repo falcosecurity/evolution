@@ -45,7 +45,7 @@
   description: Falco is a cloud native runtime security tool for Linux operating systems. It is designed to detect and alert on abnormal behavior and potential security threats in real-time.
 - name: falco-exporter
   scope: Ecosystem
-  status: Stable
+  status: Deprecated
   description: Prometheus Metrics Exporter for Falco output events.
 - name: falco-aws-terraform
   scope: Ecosystem
