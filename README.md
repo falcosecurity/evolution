@@ -130,11 +130,12 @@ Finally, some repositories have a special meaning and do not fit the above scope
 See [REPOSITORIES.md#special-scope](./REPOSITORIES.md#special-scope) for more information.
 
 <!-- REPOSITORY-SPECIAL-TABLE -->
-|                                 NAME                                  | STATUS |                                                    DESCRIPTION                                                    |
-|-----------------------------------------------------------------------|--------|-------------------------------------------------------------------------------------------------------------------|
-| [falcosecurity/.github](https://github.com/falcosecurity/.github)     | *n/a*  | Default files for all repos in the Falcosecurity GitHub org.                                                      |
-| [falcosecurity/community](https://github.com/falcosecurity/community) | *n/a*  | Falco community content and resources.                                                                            |
-| [falcosecurity/evolution](https://github.com/falcosecurity/evolution) | *n/a*  | A space for the community to work together, discuss ideas, define processes, and document the evolution of Falco. |
+|                                    NAME                                     | STATUS |                                                    DESCRIPTION                                                    |
+|-----------------------------------------------------------------------------|--------|-------------------------------------------------------------------------------------------------------------------|
+| [falcosecurity/.github](https://github.com/falcosecurity/.github)           | *n/a*  | Default files for all repos in the Falcosecurity GitHub org.                                                      |
+| [falcosecurity/community](https://github.com/falcosecurity/community)       | *n/a*  | Falco community content and resources.                                                                            |
+| [falcosecurity/elftoolchain](https://github.com/falcosecurity/elftoolchain) | *n/a*  | Local version of https://sourceforge.net/projects/elftoolchain/                                                   |
+| [falcosecurity/evolution](https://github.com/falcosecurity/evolution)       | *n/a*  | A space for the community to work together, discuss ideas, define processes, and document the evolution of Falco. |
 <!-- /REPOSITORY-SPECIAL-TABLE -->
 
 ### Archived
