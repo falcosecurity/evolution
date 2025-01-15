@@ -92,7 +92,7 @@
   description: Secrets and config manager for Falco's infrastructure.
 - name: plugin-sdk-cpp
   scope: Ecosystem
-  status: Sandbox
+  status: Incubating
   description: Falco plugins SDK for C++.
 - name: plugin-sdk-go
   scope: Core
