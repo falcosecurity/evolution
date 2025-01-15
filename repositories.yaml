@@ -142,3 +142,7 @@
   scope: Ecosystem
   status: Sandbox
   description: Run Falco in a GitHub Actions to detect suspicious behavior in your CI/CD.
+- name: falco-rustlings
+  scope: Ecosystem
+  status: Sandbox
+  description: Small exercises to get you used to writing Falco plugins in Rust.
