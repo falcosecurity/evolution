@@ -164,8 +164,8 @@
         "company": "Apple"
     },
     "ewilderj": {
-	"name": "Edd Wilder-James",
-	"company": "Independent"
+        "name": "Edd Wilder-James",
+        "company": "Independent"
     },
     "cappellinsamuele": {
         "name": "Samuele Cappellin",
@@ -218,5 +218,9 @@
     "scraly": {
         "name": "Aurélie Vache",
         "company": "OVHcloud"
+    },
+    "deepskyblue86": {
+        "name": "Angelo Puglisi",
+        "company": "Sysdig"
     }
 }
