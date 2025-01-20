@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2025-01-17T09:03:35Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2025-01-20T09:03:28Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -33,6 +33,8 @@ Last update: **<!-- LATEST-UPDATE -->2025-01-17T09:03:35Z<!-- /LATEST-UPDATE -->
 - [Ahmed Amin](https://github.com/ahmedameenaim), Zartis
 - [Aldo Lacuku](https://github.com/alacuku), Sysdig
 - [Andrea Terzolo](https://github.com/andreagit97), Sysdig
+- [Angelo Puglisi](https://github.com/deepskyblue86), Sysdig
+- [Aurélie Vache](https://github.com/scraly), OVHcloud
 - [Carlos Tadeu Panato Junior](https://github.com/cpanato), Chainguard
 - [David Windsor](https://github.com/dwindsor), Independent
 - [Edd Wilder-James](https://github.com/ewilderj), Independent
@@ -57,6 +59,7 @@ Last update: **<!-- LATEST-UPDATE -->2025-01-17T09:03:35Z<!-- /LATEST-UPDATE -->
 - [Mauro Ezequiel Moltrasio](https://github.com/molter73), RedHat
 - [Melissa Kilby](https://github.com/incertum), Apple
 - [Michele Zuccala](https://github.com/zuc), Sysdig
+- [Nedim Sabic Sabic](https://github.com/rabbitstack), Sysdig
 - [Roberto Scolaro](https://github.com/therealbobo), Sysdig
 - [Rohith Raju](https://github.com/rohith-raju), Independent
 - [Samuel Gaist](https://github.com/sgaist), Idiap Research Institute
@@ -66,7 +69,4 @@ Last update: **<!-- LATEST-UPDATE -->2025-01-17T09:03:35Z<!-- /LATEST-UPDATE -->
 - [Teryl Taylor](https://github.com/terylt), IBM
 - [Thomas Labarussias](https://github.com/issif), Sysdig
 - [Vicente Javier Jiménez Miras](https://github.com/vjjmiras), Independent
-- [deepskyblue86](https://github.com/deepskyblue86), UNKNOWN
-- [rabbitstack](https://github.com/rabbitstack), UNKNOWN
-- [scraly](https://github.com/scraly), UNKNOWN
 <!-- /MAINTAINERS-LIST -->
