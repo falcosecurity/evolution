@@ -226,5 +226,9 @@
     "rabbitstack": {
         "name": "Nedim Sabic Sabic",
         "company": "Sysdig"
+    },
+    "ekoops": {
+        "name": "Leonardo Di Giovanna",
+        "company": "Sysdig"
     }
 }
