@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2025-05-29T09:03:25Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2025-06-05T09:04:20Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -15,6 +15,7 @@ Last update: **<!-- LATEST-UPDATE -->2025-05-29T09:03:25Z<!-- /LATEST-UPDATE -->
 - [Federico Di Pierro](https://github.com/fededp), Sysdig
 - [Grzegorz Nosek](https://github.com/gnosek), Sysdig
 - [Jason Dellaluce](https://github.com/jasondellaluce), Sysdig
+- [Leonardo Di Giovanna](https://github.com/ekoops), Sysdig
 - [Leonardo Grasso](https://github.com/leogr), Sysdig
 - [Lorenzo Susini](https://github.com/loresuso), Sysdig
 - [Luca Guerra](https://github.com/lucaguerra), Sysdig
