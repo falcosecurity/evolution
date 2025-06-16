@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2025-06-11T09:03:54Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2025-06-16T09:04:14Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -22,7 +22,6 @@ Last update: **<!-- LATEST-UPDATE -->2025-06-11T09:03:54Z<!-- /LATEST-UPDATE -->
 - [Mark Stemm](https://github.com/mstemm), Sysdig
 - [Massimiliano Giovagnoli](https://github.com/maxgio92), Chainguard
 - [Mauro Ezequiel Moltrasio](https://github.com/molter73), RedHat
-- [Melissa Kilby](https://github.com/incertum), Apple
 - [Michele Zuccala](https://github.com/zuc), Sysdig
 - [Samuel Gaist](https://github.com/sgaist), Idiap Research Institute
 - [Thomas Labarussias](https://github.com/issif), Sysdig
@@ -59,7 +58,6 @@ Last update: **<!-- LATEST-UPDATE -->2025-06-11T09:03:54Z<!-- /LATEST-UPDATE -->
 - [Mark Stemm](https://github.com/mstemm), Sysdig
 - [Massimiliano Giovagnoli](https://github.com/maxgio92), Chainguard
 - [Mauro Ezequiel Moltrasio](https://github.com/molter73), RedHat
-- [Melissa Kilby](https://github.com/incertum), Apple
 - [Michele Zuccala](https://github.com/zuc), Sysdig
 - [Nedim Sabic Sabic](https://github.com/rabbitstack), Sysdig
 - [Roberto Scolaro](https://github.com/therealbobo), Sysdig
