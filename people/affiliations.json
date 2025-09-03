@@ -230,5 +230,9 @@
     "ekoops": {
         "name": "Leonardo Di Giovanna",
         "company": "Sysdig"
+    },
+    "geraldcombs": {
+        "name": "Gerald Combs",
+        "company": "Wireshark Foundation"
     }
 }
