@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2025-09-03T09:04:02Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2025-09-04T09:04:04Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -14,6 +14,7 @@ Last update: **<!-- LATEST-UPDATE -->2025-09-03T09:04:02Z<!-- /LATEST-UPDATE -->
 - [Angelo Puglisi](https://github.com/deepskyblue86), Sysdig
 - [Carlos Tadeu Panato Junior](https://github.com/cpanato), Chainguard
 - [Federico Di Pierro](https://github.com/fededp), Sysdig
+- [Gerald Combs](https://github.com/geraldcombs), Wireshark Foundation
 - [Grzegorz Nosek](https://github.com/gnosek), Sysdig
 - [Jason Dellaluce](https://github.com/jasondellaluce), Sysdig
 - [Leonardo Di Giovanna](https://github.com/ekoops), Sysdig
@@ -26,7 +27,6 @@ Last update: **<!-- LATEST-UPDATE -->2025-09-03T09:04:02Z<!-- /LATEST-UPDATE -->
 - [Michele Zuccala](https://github.com/zuc), Sysdig
 - [Samuel Gaist](https://github.com/sgaist), Idiap Research Institute
 - [Thomas Labarussias](https://github.com/issif), Sysdig
-- [geraldcombs](https://github.com/geraldcombs), UNKNOWN
 <!-- /MAINTAINERS-CORE-LIST -->
 
 ## Maintainers
@@ -43,6 +43,7 @@ Last update: **<!-- LATEST-UPDATE -->2025-09-03T09:04:02Z<!-- /LATEST-UPDATE -->
 - [Federico Di Pierro](https://github.com/fededp), Sysdig
 - [Frank Jogeleit](https://github.com/fjogeleit), LOVOO
 - [Fred Araujo](https://github.com/araujof), IBM
+- [Gerald Combs](https://github.com/geraldcombs), Wireshark Foundation
 - [Gianmatteo Palmieri](https://github.com/mrgian), Sysdig
 - [Grzegorz Nosek](https://github.com/gnosek), Sysdig
 - [Hendrik Brueckner](https://github.com/hbrueckner), IBM
@@ -71,5 +72,4 @@ Last update: **<!-- LATEST-UPDATE -->2025-09-03T09:04:02Z<!-- /LATEST-UPDATE -->
 - [Teryl Taylor](https://github.com/terylt), IBM
 - [Thomas Labarussias](https://github.com/issif), Sysdig
 - [Vicente Javier Jiménez Miras](https://github.com/vjjmiras), Independent
-- [geraldcombs](https://github.com/geraldcombs), UNKNOWN
 <!-- /MAINTAINERS-LIST -->
