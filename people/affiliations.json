@@ -234,5 +234,9 @@
     "geraldcombs": {
         "name": "Gerald Combs",
         "company": "Wireshark Foundation"
+    },
+    "deepskyblue86": {
+        "name": "Angelo Puglisi",
+        "company": "Sysdig"
     }
 }
