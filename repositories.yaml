@@ -7,7 +7,7 @@
   description: Helm charts repository for Falco and its ecosystem.
 - name: client-go
   scope: Ecosystem
-  status: Incubating
+  status: Deprecated
   description: Go client and SDK for Falco.
 - name: cncf-green-review-testing
   scope: Infra
