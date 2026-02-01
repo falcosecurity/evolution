@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2026-01-30T09:03:02Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2026-02-01T09:02:57Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -16,6 +16,7 @@ Last update: **<!-- LATEST-UPDATE -->2026-01-30T09:03:02Z<!-- /LATEST-UPDATE -->
 - [Federico Di Pierro](https://github.com/fededp), Sysdig
 - [Gerald Combs](https://github.com/geraldcombs), Wireshark Foundation
 - [Grzegorz Nosek](https://github.com/gnosek), Sysdig
+- [Iacopo Rozzo](https://github.com/irozzo-1a), Sysdig
 - [Jason Dellaluce](https://github.com/jasondellaluce), Replit
 - [Leonardo Di Giovanna](https://github.com/ekoops), Sysdig
 - [Leonardo Grasso](https://github.com/leogr), Sysdig
@@ -27,7 +28,6 @@ Last update: **<!-- LATEST-UPDATE -->2026-01-30T09:03:02Z<!-- /LATEST-UPDATE -->
 - [Michele Zuccala](https://github.com/zuc), Sysdig
 - [Samuel Gaist](https://github.com/sgaist), Idiap Research Institute
 - [Thomas Labarussias](https://github.com/issif), Yubo
-- [irozzo-1a](https://github.com/irozzo-1a), UNKNOWN
 <!-- /MAINTAINERS-CORE-LIST -->
 
 ## Maintainers
@@ -48,6 +48,7 @@ Last update: **<!-- LATEST-UPDATE -->2026-01-30T09:03:02Z<!-- /LATEST-UPDATE -->
 - [Gianmatteo Palmieri](https://github.com/mrgian), Sysdig
 - [Grzegorz Nosek](https://github.com/gnosek), Sysdig
 - [Hendrik Brueckner](https://github.com/hbrueckner), IBM
+- [Iacopo Rozzo](https://github.com/irozzo-1a), Sysdig
 - [Igor Eulalio](https://github.com/igoreulalio), Sysdig
 - [Jason Dellaluce](https://github.com/jasondellaluce), Replit
 - [Jonah Jones](https://github.com/jonahjon), Amazon
@@ -73,5 +74,4 @@ Last update: **<!-- LATEST-UPDATE -->2026-01-30T09:03:02Z<!-- /LATEST-UPDATE -->
 - [Teryl Taylor](https://github.com/terylt), IBM
 - [Thomas Labarussias](https://github.com/issif), Yubo
 - [Vicente Javier Jiménez Miras](https://github.com/vjjmiras), Independent
-- [irozzo-1a](https://github.com/irozzo-1a), UNKNOWN
 <!-- /MAINTAINERS-LIST -->
