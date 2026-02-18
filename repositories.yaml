@@ -146,3 +146,7 @@
   scope: Ecosystem
   status: Incubating
   description: Kubernetes Operator for Falco.
+- name: falco-lsp
+  scope: Ecosystem
+  status: Incubating
+  description: Language Server Protocol and VSCode Extension for Falco rules
