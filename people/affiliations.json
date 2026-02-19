@@ -242,5 +242,9 @@
     "irozzo-1a": {
         "name": "Iacopo Rozzo",
         "company": "Sysdig"
+    },
+    "c2ndev": {
+        "name": "Alessandro Cannarella",
+        "company": "Sysdig"
     }
 }
