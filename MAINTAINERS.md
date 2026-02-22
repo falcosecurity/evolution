@@ -4,7 +4,7 @@ As per our [governance](./GOVERNANCE.md), the lists of current maintainers and c
 
 These lists summarize the content of all [OWNERS](./GOVERNANCE.md#repository-ownership) files across all The Falco Project repositories.
 
-Last update: **<!-- LATEST-UPDATE -->2026-02-19T09:03:38Z<!-- /LATEST-UPDATE -->**
+Last update: **<!-- LATEST-UPDATE -->2026-02-22T09:03:30Z<!-- /LATEST-UPDATE -->**
 
 ## Core Maintainers
 
@@ -36,6 +36,7 @@ Last update: **<!-- LATEST-UPDATE -->2026-02-19T09:03:38Z<!-- /LATEST-UPDATE -->
 <!-- MAINTAINERS-LIST -->
 - [Ahmed Amin](https://github.com/ahmedameenaim), Zartis
 - [Aldo Lacuku](https://github.com/alacuku), Kong
+- [Alessandro Cannarella](https://github.com/c2ndev), Sysdig
 - [Andrea Terzolo](https://github.com/andreagit97), SUSE
 - [Angelo Puglisi](https://github.com/deepskyblue86), Sysdig
 - [Aurélie Vache](https://github.com/scraly), OVHcloud
