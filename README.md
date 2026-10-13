@@ -135,6 +135,7 @@ See [REPOSITORIES.md#special-scope](./REPOSITORIES.md#special-scope) for more in
 |                                    NAME                                     | STATUS |                                                    DESCRIPTION                                                    |
 |-----------------------------------------------------------------------------|--------|-------------------------------------------------------------------------------------------------------------------|
 | [falcosecurity/.github](https://github.com/falcosecurity/.github)           | *n/a*  | Default files for all repos in the Falcosecurity GitHub org.                                                      |
+| [falcosecurity/.project](https://github.com/falcosecurity/.project)         | *n/a*  | Canonical Falco project metadata and maintainer roster for CNCF automation.                                       |
 | [falcosecurity/community](https://github.com/falcosecurity/community)       | *n/a*  | Falco community content and resources.                                                                            |
 | [falcosecurity/elftoolchain](https://github.com/falcosecurity/elftoolchain) | *n/a*  | Local version of https://sourceforge.net/projects/elftoolchain/                                                   |
 | [falcosecurity/evolution](https://github.com/falcosecurity/evolution)       | *n/a*  | A space for the community to work together, discuss ideas, define processes, and document the evolution of Falco. |
