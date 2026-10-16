@@ -1,6 +1,9 @@
 - name: .github
   scope: Special
   description: Default files for all repos in the Falcosecurity GitHub org.
+- name: .project
+  scope: Special
+  description: Canonical Falco project metadata and maintainer roster for CNCF automation.
 - name: charts
   scope: Core
   status: Stable
