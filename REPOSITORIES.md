@@ -67,7 +67,7 @@ Refer to [GOVERNANCE.md](GOVERNANCE.md#license).
 
 Please note that the assigned scope pertains to the repository and might not necessarily reflect all the hosted components or the artifacts it provides. For example, a mono repo that contains different components may still be scoped as *core* if its function or some hosted components align with the *core* definition. Notable examples include the [charts](https://github.com/falcosecurity/charts) and the [plugins](https://github.com/falcosecurity/plugins) repositories.
 
-The *scope* of each repository is tracked by the [repository.yaml](https://github.com/falcosecurity/evolution/blob/main/repositories.yaml) file, and you can find an overview of that in the [README.md](README.md) of this repository.
+The *scope* of each repository is tracked by the [config/repository.yaml](https://github.com/falcosecurity/.project/blob/main/config/repository.yaml) file, and you can find an overview of that in the [README.md](README.md) of this repository.
 
 The descriptions for the currently defined scopes are provided in the below sub-sections.
 
@@ -103,7 +103,7 @@ You can find the list of infra repositories, along with their *status*, [here](h
 
 *No badge is required for special repositories*
 
-Any other repository not matching a specific scope is included in this category. This includes repositories with a unique function or a particular purpose for The Falco Project as a whole or the [falcosecurity](https://github.com/falcosecurity) GitHub organization, including (but not limited to) the [evolution](https://github.com/falcosecurity/evolution) repository, the [community](https://github.com/falcosecurity/community) repository, the [.github](https://github.com/falcosecurity/.github) repository, forks, mirrors, and other particular ones like the [template repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository). These repositories are curated by [Core Maintainers](GOVERNANCE.md#core-maintainers).
+Any other repository not matching a specific scope is included in this category. This includes repositories with a unique function or a particular purpose for The Falco Project as a whole or the [falcosecurity](https://github.com/falcosecurity) GitHub organization, including (but not limited to) the [evolution](https://github.com/falcosecurity/evolution) repository, the [community](https://github.com/falcosecurity/community) repository, the [.github](https://github.com/falcosecurity/.github) repository, forks, mirrors, and other particular ones like the [template repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository). These repositories are curated by [Core Maintainers](GOVERNANCE.md#core-maintainers). Automation proposes updates to their root `OWNERS` approvers whenever core membership changes, including forks such as `elftoolchain`. See [metadata synchronization](METADATA.md).
 
 It's worth noting that *special* repositories usually do not have a designated status. This is because they are not intended to be used by adopters and may not be subject to the same lifecycle as other repositories. You can find the list of special repositories [here](https://github.com/falcosecurity/evolution#infra).
 
@@ -113,7 +113,7 @@ It's worth noting that *special* repositories usually do not have a designated s
 
 Please keep in mind that the status designation refers strictly to the repository itself and might not necessarily reflect the hosted components or the artifacts it provides. This is especially true for mono repos. In such cases, the status of a component or an artifact should be denoted in the corresponding subfolder or documentation.
 
-The *status* of each repository is tracked by the [repository.yaml](https://github.com/falcosecurity/evolution/blob/main/repositories.yaml) file, and you can find an overview of that in the [README.md](README.md) of this repository.
+The *status* of each repository is tracked by the [config/repository.yaml](https://github.com/falcosecurity/.project/blob/main/config/repository.yaml) file, and you can find an overview of that in the [README.md](README.md) of this repository.
 
 The definitions for each status are outlined in the below sub-sections.
 
@@ -195,7 +195,7 @@ For instance, this is the path by which projects can be promoted from *incubatin
 
 #### Archiviation
 
-Repositories showing little to no activity during the time span of a year can be proposed for [deprecation](#deprecated) by opening a GitHub [issue](https://github.com/falcosecurity/evolution/issues/new?labels=kind%2Fdeprecation&template=repo_deprecation_request.md). Once the proposal has been accepted, they can be archived. [Archived repositories](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) will remain inside the falcosecurity GitHub organization but will be read-only and will not be maintained. As such, OWNERS files contained in archived repositories are not valid.
+Repositories showing little to no activity during the time span of a year can be proposed for [deprecation](#deprecated) by opening a GitHub [issue](https://github.com/falcosecurity/evolution/issues/new?labels=kind%2Fdeprecation&template=repo_deprecation_request.md). Once the proposal has been accepted, they can be archived. [Archived repositories](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) will remain inside the falcosecurity GitHub organization but will be read-only and will not be maintained. As such, OWNERS files contained in archived repositories are not valid. Archived repositories are removed from active metadata, GitHub team configuration, and the generated repository lists; their owners do not count toward organization membership. Archive the repository on GitHub before merging metadata cleanup.
 
 In some cases, a repository is archived to reserve its name for future use.
 
