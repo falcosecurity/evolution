@@ -52,6 +52,12 @@ These aliases affect emeritus retention only and grant no active review permissi
 Invalid active accounts stop reconciliation; unusable historical emeritus accounts
 are omitted and reported. Incomplete membership or account reads stop the run.
 
+To request archival, set `archived: true` in `.project/config/org.yaml`.
+Peribolos applies the request. Project-sync waits until GitHub confirms archival,
+then proposes removing the repository from metadata. After that cleanup merges,
+it proposes the downstream documentation changes. Deleting an entry alone does
+not archive a repository.
+
 Archived repositories are removed from all active metadata.
 Purpose-specific teams remain manually maintained. If they retain someone who is
 no longer eligible, reconciliation reports a conflict for maintainers to resolve.
@@ -63,12 +69,16 @@ These GitHub team roles are separate from approval permissions in `OWNERS`.
 
 ## Retired automation
 
-This migration approves archiving `falcosecurity/peribolos-syncer`. Its jobs were
+`falcosecurity/peribolos-syncer` is archived as part of this migration. Its jobs were
 [removed from test-infra](https://github.com/falcosecurity/test-infra/pull/2024),
-and `project-sync` replaces its role. The separate daily maintainer generator and
-this repository's `utils` program are retired in the coordinated migration.
-Peribolos itself remains the component that applies organization configuration.
+and `project-sync` replaces its role. Peribolos applies the archival requested in
+`.project/config/org.yaml` when the companion test-infra changes activate.
+Merge this documentation only after GitHub confirms the repository is archived.
+
+The separate daily maintainer generator and this repository's `utils` program are
+retired in the coordinated migration. Peribolos itself remains the component that
+applies organization configuration. Automation subsequently proposes removing the
+confirmed archival metadata and test-infra's temporary migration configuration.
 
 See the [rollout instructions](https://github.com/falcosecurity/test-infra/blob/master/docs/project-sync-rollout.md)
-for merge order and the explicit GitHub archival step. Removing a catalog entry
-does not archive a repository.
+for merge order, confirmation checks, and automatic cleanup.
