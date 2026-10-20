@@ -34,9 +34,11 @@ Both [Maintainers](GOVERNANCE.md#maintainers) and [Reviewers](GOVERNANCE.md#revi
 
 [Maintainers](GOVERNANCE.md#maintainers) and [Reviewers](GOVERNANCE.md#reviewers) are also [organization members](https://github.com/orgs/falcosecurity/people).
 
-If they are not yet [organization members](https://github.com/orgs/falcosecurity/people), they should open a PR to add them to the `members` entry of [org.yaml](https://github.com/falcosecurity/test-infra/blob/master/config/org.yaml).
+After the relevant OWNERS change merges, automation proposes the organization and team updates in [`.project/config/org.yaml`](https://github.com/falcosecurity/.project/blob/main/config/org.yaml). Review and merge that metadata PR; Peribolos then applies it. See the [metadata process](METADATA.md).
 
 [Maintainers](GOVERNANCE.md#maintainers) are usually not removed from [organization members](https://github.com/orgs/falcosecurity/people) because they become [Emeritus Maintainers](GOVERNANCE.md#emeritus-maintainers), unless they request so.
+
+Automation retains existing emeritus-maintainer membership without inviting absent former members. To honor a requested departure after all active roles have ended, remove the emeritus-only member from `.project/config/org.yaml` through a reviewed PR. Preserve historical OWNERS entries. Archived repositories confer no membership eligibility; manually configured organization admins remain members.
 
 Former [Reviewers](GOVERNANCE.md#reviewers) are removed from the [organization members](https://github.com/orgs/falcosecurity/people) if they are no longer listed in any [OWNERS](REPOSITORIES.md#owners) file.
 
@@ -62,10 +64,10 @@ New maintainers can also be proposed and sponsored by existing [Maintainers](GOV
 If the decision is to grant the maintainer status, then the person in question must:
 - Update the [`.project/config/affiliations.yaml`](https://github.com/falcosecurity/.project/blob/main/config/affiliations.yaml) file by opening a PR to add their information.
 - If they aren't already, become a member of the [falcosecurity](https://github.com/falcosecurity) Github organization (see the [Organization membership](#organization-membership) section).
-- Join with `*-maintainers` [GitHub team](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams) relative to the repository they became maintainer of (i.e. the [`falco-maintainers`](https://github.com/orgs/falcosecurity/teams/falco-maintainers) team for [falcosecurity/falco](https://github.com/falcosecurity/falco)); One can do so by opening a PR to change the [org.yaml](https://github.com/falcosecurity/test-infra/blob/master/config/org.yaml) file.
+- Review the generated metadata PR adding them to the repository's `*-maintainers` GitHub team.
 - Only for first-time core maintainers:
-  - also join with [`core-maintainers`](https://github.com/orgs/falcosecurity/teams/core-maintainers) team;
-  - go to https://maintainers.cncf.io/ and open a PR to be listed as a Falco maintainer;
+  - review the generated metadata PR updating the `core-maintainers` team and the CNCF-managed roster in `.project/maintainers.yaml`;
+  - review the subsequent OWNERS PRs for Special repositories;
   - ask the CNCF to be added to the `cncf-falco-maintainers@lists.cncf.io` mailing list.
 
 ## Offboarding a Reviewer
@@ -83,10 +85,10 @@ Maintainers of a repository (or a directory) can lose their status by voluntaril
 
 In such a case:
 - A PR is required to move the person in question from the `approvers` entry to the `emeritus_approvers` entry of the respective [OWNERS](REPOSITORIES.md#owners) file. The person in question must be mentioned in the body of the PR. This acts as a final contact attempt so that they can provide their feedback.
-- Another PR is required to remove them from GitHub team defined by the [org.yaml](https://github.com/falcosecurity/test-infra/blob/master/config/org.yaml) file.
+- Review the generated metadata PR removing them from repository teams and approver rosters when their remaining active roles no longer qualify. Becoming emeritus alone does not remove existing organization membership.
 - Only for core maintainers who are losing their status:
-  - remove them from the [`core-maintainers`](https://github.com/orgs/falcosecurity/teams/core-maintainers) team;  
-  - go to https://maintainers.cncf.io/ and open a PR to remove them under Falco;
+  - review the generated metadata PR removing them from the `core-maintainers` team and the CNCF-managed roster;
+  - review the subsequent OWNERS PRs for Special repositories;
   - ask the CNCF to remove them from the `cncf-falco-maintainers@lists.cncf.io` mailing list.
 
 ## Review maintainers activity

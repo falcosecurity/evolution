@@ -12,7 +12,7 @@ connects them through reviewed PRs authored by `poiana`.
 | Approvers, reviewers, emeritus roles | Relevant repository's root or nested `OWNERS`; aliases in root `OWNERS_ALIASES` |
 | Repository scope or status | [`.project/config/repository.yaml`](https://github.com/falcosecurity/.project/blob/main/config/repository.yaml) |
 | Repository description, GitHub settings, organization admins, purpose-specific teams | [`.project/config/org.yaml`](https://github.com/falcosecurity/.project/blob/main/config/org.yaml) |
-| Display name or company | [`.project/config/affiliations.yaml`](https://github.com/falcosecurity/.project/blob/main/config/affiliations.yaml) |
+| Display name, company, or verified historical emeritus alias | [`.project/config/affiliations.yaml`](https://github.com/falcosecurity/.project/blob/main/config/affiliations.yaml) |
 
 Generated sections of `MAINTAINERS.md` and `README.md`, and the root `.project/maintainers.yaml`, must not be edited manually.
 Repository teams include all active approvers and reviewers. The CNCF roster lists
@@ -35,14 +35,24 @@ Reviewers must approve each proposal; the tool never merges its own PRs.
 
 ## Organization membership
 
-A valid GitHub user listed as approver, reviewer, or emeritus in any active
-repository's `OWNERS` is eligible for organization membership. Removing the last
-such role removes eligibility. Organization admins are the only exception: their
-list is maintained manually and they remain in the organization.
+Active approvers and reviewers qualify for organization membership. Emeritus
+maintainers retain membership only when already present in both GitHub and the
+accepted `.project/config/org.yaml`; absent emeritus-only accounts are not invited.
+Former reviewers have no emeritus retention exception. Manually configured
+organization admins remain members. Archived repositories contribute no roles.
 
-An invalid active account stops reconciliation. An invalid emeritus account is
-omitted from membership with a report; its historical `OWNERS` entry is preserved.
-Archived repositories contribute no roles and are removed from all active metadata.
+To honor a requested departure after all active roles have ended, remove the
+emeritus-only member from `.project/config/org.yaml` through a reviewed PR. Preserve the
+historical OWNERS entry. Record out-of-band departures before Peribolos next runs,
+since it applies the accepted YAML independently.
+
+Verified historical renames can be recorded with `github_id` and `emeritus_aliases`
+in `.project/config/affiliations.yaml`. The immutable ID must match the existing member.
+These aliases affect emeritus retention only and grant no active review permissions.
+Invalid active accounts stop reconciliation; unusable historical emeritus accounts
+are omitted and reported. Incomplete membership or account reads stop the run.
+
+Archived repositories are removed from all active metadata.
 Purpose-specific teams remain manually maintained. If they retain someone who is
 no longer eligible, reconciliation reports a conflict for maintainers to resolve.
 
